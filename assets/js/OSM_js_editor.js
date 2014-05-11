@@ -90,10 +90,13 @@ function form_from_user(form) {
         beer_tab.del("non_fourni")
         var brewery = beer_tab.join(";")  
         
+        
         var envoi = 0   
 
         //ici, faire les changements de tag nécessaires
         if (beer_tab.length > 0) {edit_tag(OSM_xml,"brewery",brewery); envoi = 1}
+        // s'il n'y avait qu'une bière, et que l'utilisateur la décoche, beer_tab devient vide, il faut donc supprimer le tag
+        else {if(brewery != get_tag(OSM_xml,"brewery")) {del_tag(OSM_xml,"brewery");envoi=1}}
         if (wifi != "chaispas") {edit_tag(OSM_xml,"internet_access", wifi); envoi = 1}
         if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml, "name", name); envoi = 1}
         if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}

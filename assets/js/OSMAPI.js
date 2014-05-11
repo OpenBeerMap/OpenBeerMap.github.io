@@ -61,6 +61,19 @@ function get_tag(xml,key){
       return "non_fourni"  
 }
 
+function del_tag(xml,key){
+      var tous_les_tags = xml.documentElement.getElementsByTagName("tag");
+      /*modifier la valeur d'un tag*/ 
+      for (var i = 0; i < tous_les_tags.length; i++) {
+        if (tous_les_tags[i].getAttribute("k") === key)
+                {
+                //supprimer le tag
+                tous_les_tags[i].parentNode.removeChild(tous_les_tags[i]); 
+                }
+        }
+        return  
+}
+
 function put_node(xml, changeset_id, id){        
         var node = xml.documentElement.getElementsByTagName("node");
         console.log(node[0].getAttribute('changeset'))
