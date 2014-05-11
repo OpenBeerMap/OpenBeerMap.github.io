@@ -1,1 +1,216 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>OpenBeerMap</title>
+
+    <link rel="stylesheet" href="assets/bootstrap-3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/leaflet-0.7.2/leaflet.css">
+    <link rel="stylesheet" href="assets/leaflet-sidebar/L.Control.Sidebar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="apple-touch-icon" href="assets/img/favicon-beer-152.png">
+    <link rel="shortcut icon" sizes="196x196" href="assets/img/favicon-beer-196.png">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">OpenBeerMap</a>
+      </div>
+      <div class="navbar-collapse collapse">
+      <!--  <form class="navbar-form navbar-right" role="search">
+           <div class="form-group has-feedback navbar-right">
+              <input id="searchbox" type="text" placeholder="Search" class="form-control">
+              <span id="searchicon" class="fa fa-search form-control-feedback"></span>
+          </div>
+        </form>-->
+        <ul class="nav navbar-nav">
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+    </div>
+
+    <div id="map"></div>
+    <div id="sidebar">
+      <!--<h2>leaflet-sidebar</h2>-->
+      <form class="form-horizontal" name="edit_form">
+        <fieldset>
+        <!-- Form Name -->
+        <legend>Édition du bar dans OpenBeerMap</legend>
+        <!-- OSM id input-->
+        <div class="form-group">
+          <div class="col-md-4">
+                <input id="OSM_id" name="OSM_id" class="form-control input-md hidden" type="text">
+          </div>
+        </div>
+        <!-- Name input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Nom</label>  
+          <div class="col-md-4">
+                <input id="bar-name" name="bar-name" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <!-- Beer Checkboxes -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="checkboxes">Bière pression dispo</label>
+          <div class="col-md-4">
+          <div class="checkbox">
+            <label for="checkboxes-0">
+              <input type="checkbox" name="beer" id="checkboxes-0" value="chouffe">
+              Chouffe
+            </label>
+	        </div>
+          <div class="checkbox">
+            <label for="checkboxes-1">
+              <input type="checkbox" name="beer" id="checkboxes-1" value="leffe">
+              Leffe
+            </label>
+	        </div>
+          <div class="checkbox">
+            <label for="checkboxes-2">
+              <input type="checkbox" name="beer" id="checkboxes-2" value="tripel_karmeliet">
+              Carmélite Triple
+            </label>
+	        </div>
+          <div class="checkbox">
+            <label for="checkboxes-3">
+              <input type="checkbox" name="beer" id="checkboxes-3" value="guiness">
+              Guiness
+            </label>
+	        </div>
+          </div>
+        </div>
+
+        <!-- Wifi  Radios  -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="radios">Wifi</label>
+          <div class="col-md-4"> 
+            <label class="radio-inline" for="radios-0">
+              <input name="wifi" id="radios-0" value="wlan" type="radio">
+              oui
+            </label> 
+            <label class="radio-inline" for="radios-1">
+              <input name="wifi" id="radios-1" value="no" type="radio">
+              non
+            </label> 
+            <label class="radio-inline" for="radios-2">
+              <input name="wifi" id="radios-2" value="chaispas" type="radio">
+              peut-être
+            </label>
+          </div>
+        </div>
+
+        <!-- Opening_hours input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="opening_hours">Heures d'ouverture</label>  
+          <div class="col-md-4">
+          <input id="opening_hours" name="opening_hours" class="form-control input-md" type="text" disabled>
+          <span class="help-block">exemple : Mo-Fr 11:30-20:00</span>  
+          </div>
+        </div>
+
+        <!-- Happy_hours input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="happy_hours">Happy Hours</label>  
+          <div class="col-md-4">
+          <input id="happy_hours" name="happy_hours" class="form-control input-md" type="text" disabled>
+          <span class="help-block">exemple : Mo-Fr 18:30-20:00</span>  
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singlebutton"></label>
+          <div class="col-md-4">
+            <button id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)">Enregistrer</button>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+    </div>
+    
+    <div id="loading">
+      <div class="loading-indicator">
+        <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-info" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Bienvenue sur OpenBeerMap !</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="aboutTabs">
+              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;À propos</a></li>
+              <li><a href="#credits" data-toggle="tab"><i class="fa fa-globe"></i>&nbsp;Crédits</a></li>
+              <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact</a></li>
+              
+
+            </ul>
+            <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
+              <div class="tab-pane fade active in" id="about">
+                <p>Ce site vous permet de trouver un bar qui sert votre bière préférée !</p>
+                <p>Si les infos proposées sont manquantes ou erronées, n'hésitez pas à contribuer.</p>
+              </div>
+
+             <div id="credits" class="tab-pane fade">
+                <p>Carte fournie par <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> et <a href="http://stamen.com" target="_blank">Stamen</a>.</p>
+                <p>Données sur les bars et les bières fournies par <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> et ses nombreux contributeurs, via <a href="http://www.overpass-api.de" target="_blank">l'API OverPass</a>.</p>
+                <p>Site fait avec amour et <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a> (<a href="http://getbootstrap.com/">Bootstrap 3</a> + <a href="http://leafletjs.com/" target="_blank">Leaflet</a>).</p>
+              </div>
+              <div class="tab-pane fade" id="contact">
+              <div class="panel panel-default">
+               <div class="panel-heading">Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ...</div>
+              
+              <ul class="list-group">
+                    <li class="list-group-item">noemie [point] lehuby [at] gmail [point] com</li>
+                    <li class="list-group-item"><a href='https://twitter.com/nlehuby' target='blank'>@nlehuby</a></li>
+                    <ul>
+                </div>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+    <script src="assets/leaflet-0.7.2/leaflet.js"></script>
+    <script src="assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
+    <script src="assets/js/OverPassLayer.js"></script>
+    <script src="assets/js/OSMAPI.js"></script>
+    <script src="assets/js/OSM_js_editor.js"></script>    
+    <script src="assets/js/BeerLayer.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
