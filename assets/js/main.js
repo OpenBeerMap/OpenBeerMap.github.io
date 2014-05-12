@@ -27,6 +27,14 @@ var sidebar = L.control.sidebar("sidebar", {
     	
     var chouffe = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Chouffe];out;", "assets/img/beer4.png");  
     
+    var chimay = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Chimay];out;", "assets/img/beer1.png");  
+	
+    var guinness = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Guinness];out;", "assets/img/beer1.png");  
+	
+    var karlsberg = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Karlsberg];out;", "assets/img/beer1.png"); 
+	
+    var amstel = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Amstel];out;", "assets/img/beer1.png"); 
+	
     var karmeliet = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Tripel_Karmeliet];out;", "assets/img/beer3.png");
 //les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
     
@@ -38,9 +46,12 @@ var sidebar = L.control.sidebar("sidebar", {
     var overlayMaps = {
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire": tous,
         "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp;Avec de la Chouffe": chouffe,
-	"<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Carmélite Triple": karmeliet,
-	"<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe
-
+        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Carmélite Triple": karmeliet,
+        "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Karlsberg": karlsberg,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Amstel": amstel
     };
     map.addLayer(tous);
 
