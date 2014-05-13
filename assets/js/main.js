@@ -50,7 +50,7 @@ var sidebar = L.control.sidebar("sidebar", {
 	
     var guinness = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Guinness];out;", "assets/img/beer1.png");  
 	
-    var karlsberg = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Karlsberg];out;", "assets/img/beer1.png"); 
+    var carlsberg = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Carlsberg];out;", "assets/img/beer1.png"); 
 	
     var amstel = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~Amstel];out;", "assets/img/beer1.png"); 
 	
@@ -69,7 +69,7 @@ var sidebar = L.control.sidebar("sidebar", {
         "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Carlsberg": karlsberg,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Carlsberg": carlsberg,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Amstel": amstel
     };
     map.addLayer(tous);
