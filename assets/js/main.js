@@ -69,7 +69,7 @@ var sidebar = L.control.sidebar("sidebar", {
         "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Karlsberg": karlsberg,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Carlsberg": karlsberg,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Amstel": amstel
     };
     map.addLayer(tous);
