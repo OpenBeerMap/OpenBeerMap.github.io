@@ -7,18 +7,11 @@ var osm = new L.TileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png
 var map = new L.Map('map').addLayer(osm).setView(new L.LatLng(48.84702,2.37705), 17);
 
 /*User Location*/
-map.locate({setView: true, watch: true})
+map.locate({setView: true})
         .on('locationfound', function(e){
         console.log("localisation utilisateur réussie");
             var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('Vous êtes par ici&nbsp;&nbsp;');
-           /* var circle = L.circle([e.latlng.lat, e.latlng.lng], e.accuracy/2, {
-                weight: 1,
-                color: 'blue',
-                fillColor: '#cacaca',
-                fillOpacity: 0.2
-            });*/
             map.addLayer(marker);
-            //map.addLayer(circle);
         })
        .on('locationerror', function(e){
             console.log(e);
