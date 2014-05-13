@@ -1,3 +1,7 @@
+/*
+ OpenBeerMap OSMAPI.js | noemie.lehuby(at)gmail.com | MIT Licensed
+*/
+
 function basic_auth(){
         return "Basic " + btoa("OpenBeerMapContributor" + ":" + "FtHwuH8w1RDjQpOr0y0gF3AWm8sRsRzncK3hHh9");
 }

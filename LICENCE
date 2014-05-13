@@ -1,8 +1,9 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 Noémie Lehuby <noemie.lehuby(at)gmail.com> (OpenBeerMap : https://github.com/OpenBeerMap/OpenBeerMap.github.io/)
+Copyright (c) 2014 Noémie Lehuby <noemie.lehuby(at)gmail.com> (OpenBeerMap : https://github.com/OpenBeerMap/OpenBeerMap.github.io)
 Copyright (c) 2013 Bryan McBride (BootLeaf : https://github.com/bmcbride/bootleaf)
 Copyright (c) 2013 Karsten Hinz <k.hinz(at)tu-bs.de> (Leaflet Overpass Layer : https://github.com/kartenkarsten/leaflet-layer-overpass)
+Copyright (c) 2013 Tobias Bieniek (Leaflet sidebar : https://github.com/Turbo87/leaflet-sidebar)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

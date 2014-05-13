@@ -1,4 +1,7 @@
-/* Éditeur OSM dans la Leaflet sidebar */
+/*
+ OpenBeerMap OSM_js_editor.js | noemie.lehuby(at)gmail.com | MIT Licensed
+Éditeur OSM dans la Leaflet sidebar */
+
 //les fonctions de manipulation de l'API OSM sont dans OSMAPI.js
 
 //méthode pour pouvoir supprimer facilement un élément d'un tableau

@@ -1,3 +1,7 @@
+/*
+ OpenBeerMap main.js | noemie.lehuby(at)gmail.com | MIT Licensed
+*/
+
 /* Basemap Layers */
 var attr_osm = 'Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors',
       attr_overpass = 'POI via <a href="http://www.overpass-api.de/">Overpass API</a>';
