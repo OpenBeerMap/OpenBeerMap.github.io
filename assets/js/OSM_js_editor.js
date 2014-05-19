@@ -30,6 +30,8 @@ function init_form_from_OSM(form,OSM_id) {
         document.getElementById('opening_hours').value = opening_src 
         // happy hours
         document.getElementById('happy_hours').value = happy_src        
+		//lien iD tout en bas du formulaire
+		document.getElementById("singlelink").href = "http://www.openstreetmap.org/edit?editor=id&node="+ OSM_id.toString() 
         //tout le reste
         var inputForm = form.getElementsByTagName("input"); // récupération ds éléments de type input du formulaire
         var n = inputForm.length;
@@ -92,8 +94,7 @@ function form_from_user(form) {
         // préparation de l'envoi à OSM 
         beer_tab.del("non_fourni")
         var brewery = beer_tab.join(";")  
-        
-        
+             
         var envoi = 0   
 
         //ici, faire les changements de tag nécessaires
@@ -110,6 +111,7 @@ function form_from_user(form) {
         if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}
         if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, "happy_hours", happy); envoi = 1}
         */
+        
         if (envoi != 0)
                 {
                 //ouvrir un changeset
