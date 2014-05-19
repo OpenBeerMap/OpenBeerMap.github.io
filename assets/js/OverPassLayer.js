@@ -82,7 +82,8 @@ L.Control.MinZoomIdenticator = L.Control.extend({
         if (minzoomlevel == -1) {
             this._container.innerHTML = "no layer assigned";
         }else{
-            this._container.innerHTML = "current Zoom-Level: "+this._map.getZoom()+" all data at Level: "+minzoomlevel;
+            //this._container.innerHTML = "current Zoom-Level: "+this._map.getZoom()+" all data at Level: "+minzoomlevel;
+            this._container.innerHTML = "Vous devez zoomer plus pour voir les bars.";
         }
 
         if (this._map.getZoom() >= minzoomlevel) {

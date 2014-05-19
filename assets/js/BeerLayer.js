@@ -41,7 +41,7 @@ function draw_beer(url,icon){
                 if (e.tags["opening_hours"]) {content += "<tr><th>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] + "</td></tr>"}
                 if (e.tags["happy_hours"]) {content += "<tr><th>Happy Hours</th><td>" + e.tags["happy_hours"] + "</td></tr>"}
                 if (e.tags["brewery"]) {content += "<tr><th>Type de bières</th><td>" + e.tags["brewery"] + "</td></tr>"}
-                content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'>Modifier ce bar dans OpenBeerMap</a></td></tr>";
+                content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'>Ajouter des infos sur ce bar</a></td></tr>";
                 //content += "<tr><td colspan='2'><a href='http://www.openstreetmap.org/edit?editor=id&node="+ e.id.toString() +"' target='blank'>Modifier ce bar dans OSM</a></td></tr>"
                 content +="</table>";
 
