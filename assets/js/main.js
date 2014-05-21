@@ -39,19 +39,19 @@ var sidebar = L.control.sidebar("sidebar", {
 /*OverPassAPI overlay*/
     var tous = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];node(BBOX)[amenity=cafe];node(BBOX)[amenity=pub]);out;>;out;", "assets/img/beer1.png");
     
-    var leffe = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[lL]effe'];out;", "assets/img/beer2.png"); 
+    var leffe = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[lL]effe'];out;", "assets/img/beer2.png"); 
     	
     var chouffe = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[cC]houffe'];out;", "assets/img/beer4.png");  
     
-    var chimay = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[Cc]himay'];out;", "assets/img/beer1.png");  
+    var chimay = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]himay'];out;", "assets/img/beer1.png");  
 	
-    var guinness = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[Gg]uinness'];out;", "assets/img/beer1.png");  
+    var guinness = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/beer1.png");  
 	
-    var carlsberg = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[Cc]arlsberg'];out;", "assets/img/beer1.png"); 
+    var carlsberg = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]arlsberg'];out;", "assets/img/beer1.png"); 
 	
-    var amstel = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[Aa]mstel'];out;", "assets/img/beer1.png"); 
+    var amstel = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Aa]mstel'];out;", "assets/img/beer1.png"); 
 	
-    var karmeliet = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[brewery~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
+    var karmeliet = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
 //les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
     
     
