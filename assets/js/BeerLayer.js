@@ -25,7 +25,7 @@ function debug_draw_beer(url,icon){
     
 function draw_beer(url,icon){
         return new L.OverPassLayer({
-	minzoom: 17,
+	minzoom: 14,
 	query: url,
 
 	callback: function(data) {
