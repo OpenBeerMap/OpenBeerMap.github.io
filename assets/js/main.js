@@ -74,7 +74,7 @@ var sidebar = L.control.sidebar("sidebar", {
     var overlayMaps = {
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire": tous,
         "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp;Avec de la Chouffe": chouffe,
-        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Carmélite Triple": karmeliet,
+        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Tripel Karmeliet": karmeliet,
         "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness,
