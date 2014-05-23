@@ -113,7 +113,7 @@ function close_changeset(id){
 }
 
 function put_changeset(){ 
-        xml = "<osm> <changeset> <tag k='created_by' v='OpenBeerMap javascript editor'/> <tag k='comment' v='OpenBeerMar - Modification de bar'/> </changeset></osm>";
+        xml = "<osm> <changeset> <tag k='created_by' v='OpenBeerMap javascript editor'/> <tag k='comment' v='OpenBeerMap - Modification de bar'/> </changeset></osm>";
 // TODO : passer le nom du bar modifié (ou son id si pas de nom) ?
 
         var xhr = new XMLHttpRequest();
