@@ -100,18 +100,17 @@ function form_from_user(form) {
         //ici, faire les changements de tag nécessaires
         if (beer_tab.length > 0) {edit_tag(OSM_xml,"brewery",brewery); envoi = 1}
         // s'il n'y avait qu'une bière, et que l'utilisateur la décoche, beer_tab devient vide, il faut donc supprimer le tag
-        else {if(brewery != get_tag(OSM_xml,"brewery")) {del_tag(OSM_xml,"brewery");envoi=1}}
-        if (wifi != "chaispas") {edit_tag(OSM_xml,"internet_access", wifi); envoi = 1}
+        else {if((brewery != get_tag(OSM_xml,"brewery")) && (beer_tab.length != 0)) {del_tag(OSM_xml,"brewery");envoi=2}}
+        if (wifi != "chaispas") {edit_tag(OSM_xml,"internet_access", wifi); envoi = 3}
         // si wifi n'était pas vide, mais que maintenant, c'est chaispas, il faut supprimer le tag
-        else {if(get_tag(OSM_xml,"internet_access") != "non_fourni") {del_tag(OSM_xml,"internet_access");envoi=1}}
-        if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml, "name", name); envoi = 1}
+        else {if(get_tag(OSM_xml,"internet_access") != "non_fourni") {del_tag(OSM_xml,"internet_access");envoi=4}}
+        if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml, "name", name); envoi = 5}
         //si nom est vide mais qu'avant il y avait qqch, il faut supprimer le tag
-        else {if ((get_tag(OSM_xml,"name") != "non_fourni") && (name == "")) {del_tag(OSM_xml, "name"); envoi = 1}}
+        else {if ((get_tag(OSM_xml,"name") != "non_fourni") && (name == "")) {del_tag(OSM_xml, "name"); envoi = 6}}
         /*
         if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}
         if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, "happy_hours", happy); envoi = 1}
         */
-        
         if (envoi != 0)
                 {
                 //ouvrir un changeset
