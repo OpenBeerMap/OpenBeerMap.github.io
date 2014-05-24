@@ -122,7 +122,8 @@ function form_from_user(form) {
                 //fermer le changeset
                 close_changeset(changeset_id);
                 }
-        //TODO : peut-être replier la sidebar si enregistre sans faire de modif ?
+
+        sidebar.hide();
         };
 
 
