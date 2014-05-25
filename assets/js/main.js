@@ -68,6 +68,19 @@ var sidebar = L.control.sidebar("sidebar", {
  L.control.layers(baseMaps, overlayMaps, {
   collapsed: isCollapsed
 }).addTo(map);
+
+//recherche
+map.addControl( new L.Control.Search({
+			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+			jsonpParam: 'json_callback',
+			propertyName: 'display_name',
+			propertyLoc: ['lat','lon'],
+			markerLocation: true,
+			autoType: false,
+			autoCollapse: true,
+			minLength: 2,
+			zoom:16
+		}) );
  
 /*supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
