@@ -46,6 +46,8 @@ var sidebar = L.control.sidebar("sidebar", {
     var chimay = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]himay'];out;", "assets/img/beer1.png");  
 	
     var guinness = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/beer1.png");  
+
+	var brewdog = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Bb]rewdog'];out;", "assets/img/beer1.png");  
 	
     var karmeliet = draw_beer("http://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
 //les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
@@ -61,6 +63,7 @@ var sidebar = L.control.sidebar("sidebar", {
         "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Tripel Karmeliet": karmeliet,
         "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Brewdog": brewdog,
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness
     };
     map.addLayer(tous);
