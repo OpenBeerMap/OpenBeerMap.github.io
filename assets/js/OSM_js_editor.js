@@ -20,6 +20,7 @@ function init_form_from_OSM(form,OSM_id) {
         opening_src = get_tag(OSM_xml,"opening_hours") ; if (opening_src === "non_fourni") {opening_src = ""}; 
         happy_src = get_tag(OSM_xml,"happy_hours") ; if (happy_src === "non_fourni") {happy_src = ""}; 
         wifi_src = get_tag(OSM_xml,"internet_access").toLowerCase()
+        otherbeer_src = get_tag(OSM_xml,"brewery:note") ; if (otherbeer_src === "non_fourni") {otherbeer_src = ""}  ; 
         
         //écriture des valeurs dans le formulaire
         // id du node, pour pouvoir soumettre le formulaire plus tard
@@ -32,6 +33,8 @@ function init_form_from_OSM(form,OSM_id) {
         document.getElementById('happy_hours').value = happy_src        
 		//lien iD tout en bas du formulaire
 		document.getElementById("singlelink").href = "http://www.openstreetmap.org/edit?editor=id&node="+ OSM_id.toString() 
+        // champ libre pour les bières autres
+        document.getElementById('beer-other').value = otherbeer_src
         //tout le reste
         var inputForm = form.getElementsByTagName("input"); // récupération ds éléments de type input du formulaire
         var n = inputForm.length;
@@ -66,6 +69,7 @@ function form_from_user(form) {
         var opening = document.getElementById('opening_hours').value
         var happy = document.getElementById('happy_hours').value
         var inputForm = form.getElementsByTagName("input"); 
+    	var otherbeer = document.getElementById('beer-other').value
         var n = inputForm.length;
         for (i=0; i<n; i++)
                 {
@@ -107,10 +111,13 @@ function form_from_user(form) {
         if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml, "name", name); envoi = 5}
         //si nom est vide mais qu'avant il y avait qqch, il faut supprimer le tag
         else {if ((get_tag(OSM_xml,"name") != "non_fourni") && (name == "")) {del_tag(OSM_xml, "name"); envoi = 6}}
+    	if ((otherbeer != get_tag(OSM_xml,"brewery:note")) && (otherbeer != "")) {edit_tag(OSM_xml, "brewery:note", otherbeer); envoi = 7}
+    
         /*
         if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}
         if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, "happy_hours", happy); envoi = 1}
         */
+    console.log(envoi)
         if (envoi != 0)
                 {
                 //ouvrir un changeset
