@@ -47,6 +47,8 @@ function draw_beer(url,icon){
 
 		var myicon = L.icon({
                   iconUrl: icon,
+                  iconAnchor:[10, 45],
+                  popupAnchor : [4, -30]
               });
         var marker = L.marker(pos, {icon: myicon}).bindPopup(content);
         this.instance.addLayer(marker);			  
