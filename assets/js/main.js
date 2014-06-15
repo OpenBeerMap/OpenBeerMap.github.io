@@ -3,10 +3,9 @@
 */
 
 /* Basemap Layers */
-var attr_osm = 'Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors',
-      attr_overpass = 'POI via <a href="http://www.overpass-api.de/">Overpass API</a>';
-//var osm = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {opacity: 0.7, attribution: [attr_osm, attr_overpass].join(', ')});
-var osm = new L.TileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {opacity: 0.7, attribution: [attr_osm, attr_overpass].join(', ')});
+var attr_osm = '<span data-l10n-id="attr_osm">Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors </span>',
+      attr_overpass = '<span data-l10n-id="attr_overpass">POI via <a href="http://www.overpass-api.de/">Overpass API</a></span>';
+var osm = new L.TileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {opacity: 0.7, attribution: [attr_overpass,attr_osm].join('| ')});
 
 var map = new L.Map('map').addLayer(osm).setView(new L.LatLng(48.84702,2.37705), 17);
 
@@ -14,12 +13,12 @@ var map = new L.Map('map').addLayer(osm).setView(new L.LatLng(48.84702,2.37705),
 map.locate({setView: true})
         .on('locationfound', function(e){
         console.log("localisation utilisateur réussie");
-            var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('Vous êtes par ici&nbsp;&nbsp;');
+            var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('<span data-l10n-id="locate_ok">Vous êtes par ici&nbsp;&nbsp;</span>');
             map.addLayer(marker);
         })
        .on('locationerror', function(e){
             console.log(e);
-            alert("échec de localisation de l'utilisateur");
+            alert("<span data-l10n-id='locate_ko'>échec de localisation de l'utilisateur</span>");
         });
 
 /* Larger screens get expanded layer control */
@@ -58,13 +57,13 @@ var sidebar = L.control.sidebar("sidebar", {
     };
 
     var overlayMaps = {
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire": tous,
-        "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp;Avec de la Chouffe": chouffe,
-        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Tripel Karmeliet": karmeliet,
-        "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe": leffe,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay": chimay,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Brewdog": brewdog,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness": guinness
+        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
+        "<span data-l10n-id='choix_bieres_chouffe'><img src='assets/img/beer4.png' width='24' height='28'>&nbsp;Avec de la Chouffe</span>": chouffe,
+        "<span data-l10n-id='choix_bieres_carmelite'><img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Tripel Karmeliet</span>": karmeliet,
+        "<span data-l10n-id='choix_bieres_leffe'><img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe</span>": leffe,
+        "<span data-l10n-id='choix_bieres_chimay'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay</span>": chimay,
+        "<span data-l10n-id='choix_bieres_brewdog'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Brewdog</span>": brewdog,
+        "<span data-l10n-id='choix_bieres_guinness'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness</span>": guinness
     };
     map.addLayer(tous);
 

@@ -1,6 +1,6 @@
-/* 
-nlehuby
- */
+/*
+ OpenBeerMap translation file [fr] | noemie.lehuby(at)gmail.com | MIT Licensed
+*/
 
 /* Page d'accueil */
 <a_propos "<i></i>&nbsp; &Agrave; propos"> 
@@ -38,11 +38,20 @@ nlehuby
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Enregistrer"> 
-<bouton_OSM "&Eacute;diter directement dans OpenStreetMap"> 
+<bouton_OSM "&Eacute;diter directemesnt dans OpenStreetMap"> 
 
 /* Éléments de la carte */
-
-
+<attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
+<attr_overpass "donn&eacute;es via l'<a>API Overpass</a>"> 
+<locate_ko ""> /* does not work yet */
+<locate_ok ""> /* does not work yet */
+<choix_bieres_tous "<img> Boire !">
+<choix_bieres_chouffe "<img> &nbsp;Avec de la Chouffe">
+<choix_bieres_leffe "<img> &nbsp;Avec de la Leffe">
+<choix_bieres_carmelite "<img> &nbsp;Avec de la Tripel Karmeliet">
+<choix_bieres_chimay "<img> &nbsp;Avec de la Chimay">
+<choix_bieres_brewdog "<img> &nbsp;Avec de la Brewdog">
+<choix_bieres_guinness "<img> &nbsp;Avec de la Guinness">
  
 
 
