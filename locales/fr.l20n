@@ -38,7 +38,7 @@
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Enregistrer"> 
-<bouton_OSM "&Eacute;diter directemesnt dans OpenStreetMap"> 
+<bouton_OSM "&Eacute;diter directement dans OpenStreetMap"> 
 
 /* Éléments de la carte */
 <attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
@@ -57,7 +57,7 @@
 <popup_happy_hours ""> /* does not work yet */
 <popup_biere ""> /* does not work yet */
 <popup_edit ""> /* does not work yet */
-
+<overpass_err "Vous devez zoomer plus pour voir les bars."> /* does not work yet */
 
 
 

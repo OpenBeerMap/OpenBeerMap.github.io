@@ -67,7 +67,13 @@ var sidebar = L.control.sidebar("sidebar", {
     };
     map.addLayer(tous);
 
- L.control.layers(baseMaps, overlayMaps, {
+//indication utilisateur en cas de dé-zoom
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+className : 'leaflet-control-minZoomIndecator'
+map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
+
+
+L.control.layers(baseMaps, overlayMaps, {
   collapsed: isCollapsed
 }).addTo(map);
 
@@ -84,6 +90,6 @@ map.addControl( new L.Control.Search({
 			zoom:16
 		}) );
  
-/*supprimer la barre de progression quand tout le js est traité */
+//supprimer la barre de progression quand tout le js est traité 
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
 
