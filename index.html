@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title data-l10n-id="title">OpenBeerMap</title>
+    <title>OpenBeerMap</title>
 
     <link rel="localization" href="locales/manifest.json">
     <link rel="stylesheet" href="assets/bootstrap-3.1.1/css/bootstrap.min.css">
@@ -64,7 +64,7 @@
           </div>
         </form>-->
         <ul class="nav navbar-nav">
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -75,7 +75,7 @@
       <form class="form-horizontal" name="edit_form">
         <fieldset>
         <!-- Form Name -->
-        <legend>Édition du bar dans OpenBeerMap</legend>
+        <legend data-l10n-id="titre_formulaire_edition">Édition du bar dans OpenBeerMap</legend>
         <!-- OSM id input-->
         <div class="form-group">
           <div class="col-md-4">
@@ -84,14 +84,14 @@
         </div>
         <!-- Name input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Nom</label>  
+          <label class="col-md-4 control-label" for="textinput" data-l10n-id="nom_du_bar">Nom</label>  
           <div class="col-md-4">
                 <input id="bar-name" name="bar-name" class="form-control input-md" type="text">
           </div>
         </div>
         <!-- Beer Checkboxes -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Bière pression dispo</label>
+          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
           <div class="col-md-4">
           <div class="checkbox">
             <label for="checkboxes-0">
@@ -188,25 +188,25 @@
             
 		<!-- Champ libre input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Autres bières</label>  
+          <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>  
           <div class="col-md-4">
                 <input id="beer-other" name="beer-other" class="form-control input-md" type="text">
           </div>
         </div>
         <!-- Wifi  Radios  -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="radios">Wifi</label>
+          <label class="col-md-4 control-label" for="radios" data-l10n-id="wifi_oupas">Wifi</label>
           <div class="col-md-4"> 
-            <label class="radio-inline" for="radios-0">
+            <label class="radio-inline" for="radios-0" data-l10n-id="wifi_oui">
               <input name="wifi" id="radios-0" value="wlan" type="radio">
               oui
             </label> 
             <label class="radio-inline" for="radios-1">
-              <input name="wifi" id="radios-1" value="no" type="radio">
+              <input name="wifi" id="radios-1" value="no" type="radio" data-l10n-id="wifi_non">
               non
             </label> 
             <label class="radio-inline" for="radios-2">
-              <input name="wifi" id="radios-2" value="chaispas" type="radio">
+              <input name="wifi" id="radios-2" value="chaispas" type="radio" data-l10n-id="wifi_inconnu">
               peut-être
             </label>
           </div>
@@ -214,19 +214,19 @@
 
         <!-- Opening_hours input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="opening_hours">Heures d'ouverture</label>  
+          <label class="col-md-4 control-label" for="opening_hours" data-l10n-id="opening_hours">Heures d'ouverture</label>  
           <div class="col-md-4">
           <input id="opening_hours" name="opening_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block">exemple : Mo-Fr 11:30-20:00</span>  
+          <span class="help-block" data-l10n-id="opening_hours_exemple">exemple : Mo-Fr 11:30-20:00</span>  
           </div>
         </div>
 
         <!-- Happy_hours input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="happy_hours">Happy Hours</label>  
+          <label class="col-md-4 control-label" for="happy_hours" data-l10n-id="happy_hours">Happy Hours</label>  
           <div class="col-md-4">
           <input id="happy_hours" name="happy_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block">exemple : Mo-Fr 18:30-20:00</span>  
+          <span class="help-block" data-l10n-id="happy_hours_exemple">exemple : Mo-Fr 18:30-20:00</span>  
           </div>
         </div>
 
@@ -234,13 +234,13 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton"></label>
           <div class="col-md-4">            
-              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)"><font color="white">Enregistrer</font></a><br> 
+              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br> 
           </div>
         </div>
         <!-- Button -->
         <div class="form-group">
           <div class="col-md-4">
-<a href="http://www.openstreetmap.org/" target="blank" id="singlelink" class="btn btn-link">Éditer directement dans OpenStreetMap</a><br> 
+<a href="http://www.openstreetmap.org/" target="blank" id="singlelink" class="btn btn-link" data-l10n-id="bouton_OSM">Éditer directement dans OpenStreetMap</a><br> 
           </div>
         </div>
            
@@ -261,25 +261,25 @@
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Bienvenue sur OpenBeerMap !</h4>
+            <h4 class="modal-title" data-l10n-id="hello_world">Bienvenue sur OpenBeerMap !</h4>
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs" id="aboutTabs">
-              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;À propos</a></li>
-              <li><a href="#credits" data-toggle="tab"><i class="fa fa-globe"></i>&nbsp;Crédits</a></li>
-              <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact</a></li>
+              <li class="active"><a href="#about" data-toggle="tab" data-l10n-id="about"><i class="fa fa-question-circle"></i>&nbsp;À propos</a></li>
+              <li><a href="#credits" data-toggle="tab" data-l10n-id="credits"><i class="fa fa-globe"></i>&nbsp;Crédits</a></li>
+              <li><a href="#contact" data-toggle="tab" data-l10n-id="contact"><i class="fa fa-envelope"></i>&nbsp;Contact</a></li>
               
 
             </ul>
             <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
-              <div class="tab-pane fade active in" id="about">
+              <div class="tab-pane fade active in" id="about" data-l10n-id="about_contenu">
                 <p>Ce site vous permet de trouver un bar qui sert votre bière préférée !</p>
                 <p>Si les infos proposées sont manquantes ou erronées, n'hésitez pas à contribuer.</p>
                 <p><a href="http://nlehuby.drupalgardens.com/node/81" target="blank">Plus d'infos sur la genèse de ce site sur le blog de l'auteur.</p>
                 
               </div>
 
-             <div id="credits" class="tab-pane fade">
+             <div id="credits" class="tab-pane fade"  data-l10n-id="credits_contenu">
                 <p>Carte fournie par <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> et <a href="http://stamen.com" target="_blank">Stamen</a>.</p>
                 <p>Données sur les bars et les bières fournies par <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> et ses nombreux contributeurs, via <a href="http://www.overpass-api.de" target="_blank">l'API OverPass</a>.</p>
                 <p>Site fait avec amour et <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a> (<a href="http://getbootstrap.com/">Bootstrap 3</a> + <a href="http://leafletjs.com/" target="_blank">Leaflet</a>).</p>
@@ -287,12 +287,12 @@
               </div>
               <div class="tab-pane fade" id="contact">
               <div class="panel panel-default">
-               <div class="panel-heading">Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ...</div>
+               <div class="panel-heading"  data-l10n-id="contact_contenu">Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ...</div>
               
               <ul class="list-group">
                     <li class="list-group-item">noemie [point] lehuby [at] gmail [point] com</li>
                     <li class="list-group-item"><a href='https://twitter.com/nlehuby' target='blank'>@nlehuby</a></li>
-                    <li class="list-group-item"><a href='https://github.com/OpenBeerMap/OpenBeerMap.github.io/issues' target='blank'>Le dépot Github</a></li>
+                    <li class="list-group-item"><a href='https://github.com/OpenBeerMap/OpenBeerMap.github.io/issues' target='blank'  data-l10n-id="repo_github">Le dépot Github</a></li>
                     <ul>
                 </div>
                

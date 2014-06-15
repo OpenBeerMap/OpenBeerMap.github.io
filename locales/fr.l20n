@@ -1,6 +1,54 @@
-<title "OpenBeerMap">
-<form_title "Édition du bar dans OpenBeerMap">
-<form_beer_title "Les bières pression disponibles">
-<attr_osm "Données de la carte : &copy;  les contributeurs <a>OpenStreetMap</a>">
-<overpass_err "Mon niveau de zoom est trop bas">
-<all_checkbox "Boire">
+/* 
+nlehuby
+ */
+
+/* Page d'accueil */
+<a_propos "<i></i>&nbsp; &Agrave; propos"> 
+
+/* Blabla */
+<hello_world "Bienvenue sur OpenBeerMap !"> 
+<about "<i></i>&nbsp;&Agrave; propos"> 
+<about_contenu """
+                <p>Ce site vous permet de trouver un bar qui sert votre bi&egrave;re favorite !</p>
+                <p>Si les infos propos&eacute;es sont manquantes ou erron&eacute;es, n'h&eacute;sitez pas &agrave; contribuer.</p>
+                <p><a>Plus d'infos sur la gen&egrave;se de ce site sur le blog de l'auteur.</p>
+"""> 
+<contact "<i></i>&nbsp;Contact"> 
+<contact_contenu "Pour proposer une bi&egrave;re manquante, signaler un bug, sugg&eacute;rer une &eacute;volution, ou tout simplement me payer une bi&egrave;re ..."> 
+<credits "<i></i>&nbsp;Cr&eacute;dits"> 
+<credits_contenu """
+                <p>Carte fournie par <a>OpenStreetMap</a> et <a>Stamen</a>.</p>
+                <p>Donn&eacute;es sur les bars et les bi&egrave;re fournies par <a>OpenStreetMap</a> et ses nombreux contributeurs, via <a>l'API OverPass</a>.</p>
+                <p>Site fait avec amour et <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Les sources sont ici : <a>Github</a> </p>
+"""> 
+<repo_github "Le d&eacute;pot Github">
+
+/* Formulaire d'édition */
+<titre_formulaire_edition "&Eacute;dition du bar dans OpenBeerMap"> 
+<nom_du_bar "Nom"> 
+<liste_des_bieres "Bi&egrave;re pression dispo"> 
+<champ_libre_bieres "Autres bi&egrave;res">
+<wifi_oupas "Wifi"> 
+<wifi_oui "oui">
+<wifi_non "non">
+<wifi_inconnu "peut-être"> 
+<opening_hours "Heures d'ouverture"> 
+<opening_hours_exemple "exemple : Mo-Fr 11:30-20:00"> 
+<happy_hours "Happy Hours"> 
+<happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Enregistrer"> 
+<bouton_OSM "&Eacute;diter directement dans OpenStreetMap"> 
+
+/* Éléments de la carte */
+
+
+ 
+
+
+
+
+
+
+
+
