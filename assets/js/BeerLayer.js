@@ -53,7 +53,22 @@ function draw_beer(url,icon){
         var marker = L.marker(pos, {icon: myicon}).bindPopup(content);
         this.instance.addLayer(marker);			  
 			  
+        function onPopupClick(e) {
+        document.l10n.localize(['popup_nom', 'popup_opening_hours', 'popup_happy_hours', 'popup_biere', 'popup_edit'], function(l10n) {
+          var node = document.querySelector('[data-l10n-id=popup_nom]');
+          if (node != null ) {node.textContent = l10n.entities.popup_nom.value;}
+          var node = document.querySelector('[data-l10n-id=popup_opening_hours]');
+          if (node != null ) {node.textContent = l10n.entities.popup_opening_hours.value;}       
+          var node = document.querySelector('[data-l10n-id=popup_happy_hours]');
+          if (node != null ) {node.textContent = l10n.entities.popup_happy_hours.value;}           
+          var node = document.querySelector('[data-l10n-id=popup_biere]');
+          if (node != null ) {node.textContent = l10n.entities.popup_biere.value;}  
+          var node = document.querySelector('[data-l10n-id=popup_edit]');
+          if (node != null ) {node.textContent = l10n.entities.popup_edit.value;}                      
+          })
+        }
 
+        marker.on('click', onPopupClick);	
         }
       },
     })
