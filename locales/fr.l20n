@@ -1,0 +1,6 @@
+<title "OpenBeerMap">
+<form_title "Édition du bar dans OpenBeerMap">
+<form_beer_title "Les bières pression disponibles">
+<attr_osm "Données de la carte : &copy;  les contributeurs <a>OpenStreetMap</a>">
+<overpass_err "Mon niveau de zoom est trop bas">
+<all_checkbox "Boire">

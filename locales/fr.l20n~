@@ -1,0 +1,7 @@
+<hello "Salut le monde&nbsp;!">
+<title "voici mon test">
+<form_title "Édition du bar dans OpenBeerMap">
+<form_beer_title "Les bières pression">
+<attr_osm "Données de la carte : &copy;  les contributeurs <a>OpenStreetMap</a>">
+<overpass_err "Mon niveau de zoom">
+<all_checkbox "Boire">
