@@ -1,4 +1,6 @@
-/*OverPass-API layer*/
+/*
+ OpenBeerMap OverPass-API layer | noemie.lehuby(at)gmail.com | MIT Licensed
+*/
 
 function debug_draw_beer(url,icon){
         return new L.OverPassLayer({
@@ -35,14 +37,12 @@ function draw_beer(url,icon){
                 if (e.id in this.instance._ids) return;
                 this.instance._ids[e.id] = true;
                 var pos = new L.LatLng(e.lat, e.lon);
-                //var popup = e.tags["name"]
                 var content = "<table class='table table-striped table-bordered table-condensed'>" 
-                if (e.tags["name"]) {content += "<tr><th>Nom</th><td>" + e.tags["name"] + "</td></tr>"}
-                if (e.tags["opening_hours"]) {content += "<tr><th>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] + "</td></tr>"}
-                if (e.tags["happy_hours"]) {content += "<tr><th>Happy Hours</th><td>" + e.tags["happy_hours"] + "</td></tr>"}
-                if (e.tags["brewery"]) {content += "<tr><th>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
-                content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'>Ajouter des infos sur ce bar</a></td></tr>";
-                //content += "<tr><td colspan='2'><a href='http://www.openstreetmap.org/edit?editor=id&node="+ e.id.toString() +"' target='blank'>Modifier ce bar dans OSM</a></td></tr>"
+                if (e.tags["name"]) {content += "<tr><th data-l10n-id='popup_nom'>Nom</th><td>" + e.tags["name"] + "</td></tr>"}
+                if (e.tags["opening_hours"]) {content += "<tr><th data-l10n-id='popup_opening_hours'>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] + "</td></tr>"}
+                if (e.tags["happy_hours"]) {content += "<tr><th data-l10n-id='popup_happy_hours'>Happy Hours</th><td>" + e.tags["happy_hours"] + "</td></tr>"}
+                if (e.tags["brewery"]) {content += "<tr><th data-l10n-id='popup_biere'>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
+                content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";
                 content +="</table>";
 
 		var myicon = L.icon({
