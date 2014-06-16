@@ -2,7 +2,7 @@
  OpenBeerMap translation file [es] | noemie.lehuby(at)gmail.com | MIT Licensed
  translator : 
 */
-<choix_bieres_tous "<img>  Beber ">
+<choix_bieres_tous "<img> ¡ Beber !">
 <choix_bieres_chouffe "<img> &nbsp;Con Chouffe">
 <choix_bieres_leffe "<img> &nbsp;Con Leffe">
 <choix_bieres_carmelite "<img> &nbsp;Con Tripel Karmeliet">

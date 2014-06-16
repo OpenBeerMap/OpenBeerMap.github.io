@@ -3,46 +3,46 @@
 */
 
 /* Page d'accueil */
-<a_propos "<i></i>&nbsp; &Agrave; propos"> 
+<a_propos "<i></i>&nbsp; À propos"> 
 
 /* Blabla */
 <hello_world "Bienvenue sur OpenBeerMap !"> 
-<about "<i></i>&nbsp;&Agrave; propos"> 
+<about "<i></i>&nbsp; À propos"> 
 <about_contenu """
-                <p>Ce site vous permet de trouver un bar qui sert votre bi&egrave;re favorite !</p>
-                <p>Si les infos propos&eacute;es sont manquantes ou erron&eacute;es, n'h&eacute;sitez pas &agrave; contribuer.</p>
-                <p><a>Plus d'infos sur la gen&egrave;se de ce site sur le blog de l'auteur.</p>
+                <p>Ce site vous permet de trouver un bar qui sert votre bière favorite !</p>
+                <p>Si les infos proposées sont manquantes ou erronées, n'hésitez pas à contribuer.</p>
+                <p><a>Plus d'infos sur la genèse de ce site sur le blog de l'auteur.</p>
 """> 
 <contact "<i></i>&nbsp;Contact"> 
-<contact_contenu "Pour proposer une bi&egrave;re manquante, signaler un bug, sugg&eacute;rer une &eacute;volution, ou tout simplement me payer une bi&egrave;re ..."> 
-<credits "<i></i>&nbsp;Cr&eacute;dits"> 
+<contact_contenu "Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ..."> 
+<credits "<i></i>&nbsp;Crédits"> 
 <credits_contenu """
                 <p>Carte fournie par <a>OpenStreetMap</a> et <a>Stamen</a>.</p>
-                <p>Donn&eacute;es sur les bars et les bi&egrave;re fournies par <a>OpenStreetMap</a> et ses nombreux contributeurs, via <a>l'API OverPass</a>.</p>
+                <p>Donn&eacute;es sur les bars et les bière fournies par <a>OpenStreetMap</a> et ses nombreux contributeurs, via <a>l'API OverPass</a>.</p>
                 <p>Site fait avec amour et <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
                 <p>Les sources sont ici : <a>Github</a> </p>
 """> 
-<repo_github "Le d&eacute;pot Github">
+<repo_github "Le dépot Github">
 
-/* Formulaire d'�dition */
-<titre_formulaire_edition "&Eacute;dition du bar dans OpenBeerMap"> 
+/* Formulaire d'édition */
+<titre_formulaire_edition "Édition du bar dans OpenBeerMap"> 
 <nom_du_bar "Nom"> 
-<liste_des_bieres "Bi&egrave;re pression dispo"> 
-<champ_libre_bieres "Autres bi&egrave;res">
+<liste_des_bieres "Bière pression dispo"> 
+<champ_libre_bieres "Autres bières">
 <wifi_oupas "Wifi"> 
 <wifi_oui "oui">
 <wifi_non "non">
-<wifi_inconnu "peut-�tre"> 
+<wifi_inconnu "peut-être"> 
 <opening_hours "Heures d'ouverture"> 
 <opening_hours_exemple "exemple : Mo-Fr 11:30-20:00"> 
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Enregistrer"> 
-<bouton_OSM "&Eacute;diter directement dans OpenStreetMap"> 
+<bouton_OSM "Éditer directement dans OpenStreetMap"> 
 
-/* �l�ments de la carte */
+/* Éléments de la carte */
 <attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
-<attr_overpass "donn&eacute;es via l'<a>API Overpass</a>"> 
+<attr_overpass "données via l'<a>API Overpass</a>"> 
 <locate_ko ""> /* does not work yet */
 <locate_ok ""> /* does not work yet */
 <choix_bieres_tous "<img> Boire !">
@@ -55,7 +55,7 @@
 <popup_nom "Nom"> 
 <popup_opening_hours "Horaires d'ouverture"> 
 <popup_happy_hours "Happy hours"> 
-<popup_biere "Pression"> 
+<popup_biere "Bières pression"> 
 <popup_edit "Ajouter des infos sur ce bar"> 
 <overpass_err "Vous devez zoomer plus pour voir les bars.">
 
