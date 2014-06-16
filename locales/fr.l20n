@@ -52,7 +52,7 @@
 <choix_bieres_chimay "<img> &nbsp;Avec de la Chimay">
 <choix_bieres_brewdog "<img> &nbsp;Avec de la Brewdog">
 <choix_bieres_guinness "<img> &nbsp;Avec de la Guinness">
-<popup_nom "Nom"> /* does not work yet */
+<popup_nom "Nom"> 
 <popup_opening_hours "Horaires d'ouverture"> 
 <popup_happy_hours "Happy hours"> 
 <popup_biere "Pression"> 

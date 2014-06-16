@@ -1,3 +1,7 @@
-<title "L20n example">
+/*
+ OpenBeerMap translation file [en | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator : 
+*/
+
 <form_title "Edit this bar in OpenBeerMap">
 <attr_osm "Map data &copy; <a>OpenStreetMap</a> contributors">
