@@ -43,8 +43,8 @@
 /* Éléments de la carte */
 <attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
 <attr_overpass "données via l'<a>API Overpass</a>"> 
-<locate_ko ""> /* does not work yet */
-<locate_ok ""> /* does not work yet */
+<locate_ko "Vous êtes ici"> /* does not work yet */
+<locate_ok "Échec de la géolocalisation - Rechargez la page pour réessayer"> /* does not work yet */
 <choix_bieres_tous "<img> Boire !">
 <choix_bieres_chouffe "<img> &nbsp;Avec de la Chouffe">
 <choix_bieres_leffe "<img> &nbsp;Avec de la Leffe">
