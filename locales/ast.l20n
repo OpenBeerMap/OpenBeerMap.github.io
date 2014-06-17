@@ -1,0 +1,62 @@
+/*
+ OpenBeerMap translation file [ast] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: Xuacu Saturio | xuacusk8(at)gmail.com
+*/
+
+/* Páxina d'entrada */
+<a_propos "<i></i>&nbsp; Tocante a"> 
+
+/* Blabla */
+<hello_world "¡Bienvenios a OpenBeerMap!"> 
+<about "<i></i>&nbsp; Tocante a"> 
+<about_contenu """
+                <p>¡Esti sitiu te permite alcontrar un bar que tenga la to cerveza favorita!</p>
+                <p>Si falta información o esta ta enquivocada, afalámoste a collaborar.</p>
+                <p><a>Más información tocante al orixe d'esti sitiu nel blog de la autora.</p>
+"""> 
+<contact "<i></i>&nbsp;Contautu"> 
+<contact_contenu "Pa proponer una cerveza que falte, informar d'un bug, suxerir una evolución, o simplemente pa convidame a una cerveza..."> 
+<credits "<i></i>&nbsp;Creitos"> 
+<credits_contenu """
+                <p>Mapa proporcionáu por <a>OpenStreetMap</a> y <a>Stamen</a>.</p>
+                <p>Datos sobre los bares y les cerveces proporcionaos por <a>OpenStreetMap</a> y los sos numberosos collaboradores, via <a>la API OverPass</a>.</p>
+                <p>Sitiu fechu con amor y <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Les fontes tan equí: <a>Github</a> </p>
+"""> 
+<repo_github "L'almacén Github">
+
+/* Formulariu d'edición */
+<titre_formulaire_edition "Edición del bar en OpenBeerMap"> 
+<nom_du_bar "Nome"> 
+<liste_des_bieres "Cerveza de grifu disponible"> 
+<champ_libre_bieres "Otres cerveces">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> si">
+<wifi_non "<input> non">
+<wifi_inconnu "<input> seique"> 
+<opening_hours "Hores d'apertura"> 
+<opening_hours_exemple "exemplu : Mo-Fr 11:30-20:00"> 
+<happy_hours "Happy Hours"> 
+<happy_hours_exemple "exemplu : Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Guardar"> 
+<bouton_OSM "Editar direutamente n'OpenStreetMap"> 
+
+/* Elementos del mapa */
+<attr_osm "&copy; gracies a los collaboradores de <a>OpenStreetMap</a>"> 
+<attr_overpass "datos via la <a>API Overpass</a>"> 
+<locate_ko "Tas equí"> /* inda nun funciona */
+<locate_ok "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
+<choix_bieres_tous "<img> ¡Beber!">
+<choix_bieres_chouffe "<img> &nbsp;Tien Chouffe">
+<choix_bieres_leffe "<img> &nbsp;Tien Leffe">
+<choix_bieres_carmelite "<img> &nbsp;Tien Tripel Karmeliet">
+<choix_bieres_chimay "<img> &nbsp;Tien Chimay">
+<choix_bieres_brewdog "<img> &nbsp;Tien Brewdog">
+<choix_bieres_guinness "<img> &nbsp;Tien Guinness">
+<popup_nom "Nome"> 
+<popup_opening_hours "Hores d'apertura"> 
+<popup_happy_hours "Happy hours"> 
+<popup_biere "Cerveces de grifu"> 
+<popup_edit "Amestar información d'esti bar"> 
+<overpass_err "Tienes d'averar más pa ver los bares.">
+
