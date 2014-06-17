@@ -44,8 +44,8 @@
 /* Elementos del mapa */
 <attr_osm "&copy; gracies a los collaboradores de <a>OpenStreetMap</a>"> 
 <attr_overpass "datos via la <a>API Overpass</a>"> 
-<locate_ko "Tas equí"> /* inda nun funciona */
-<locate_ok "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
+<locate_ok "Tas equí"> 
+<locate_ko "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
 <choix_bieres_tous "<img> ¡Beber!">
 <choix_bieres_chouffe "<img> &nbsp;Tien Chouffe">
 <choix_bieres_leffe "<img> &nbsp;Tien Leffe">

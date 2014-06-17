@@ -2,7 +2,8 @@
   "locales": [
     "fr",
     "en",
-    "es"
+    "es",
+    "ast"
   ],
   "default_locale": "fr",
   "resources": [

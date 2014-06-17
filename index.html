@@ -37,7 +37,7 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="assets/js/l20n.js"></script>
+    <script src="assets/js/l20n.min.js"></script>
     <script>
       // L20n and document.l10n are now available
       document.l10n.ready(function() {
@@ -201,12 +201,12 @@
               <input name="wifi" id="radios-0" value="wlan" type="radio">
               oui
             </label> 
-            <label class="radio-inline" for="radios-1">
-              <input name="wifi" id="radios-1" value="no" type="radio" data-l10n-id="wifi_non">
+            <label class="radio-inline" for="radios-1"  data-l10n-id="wifi_non">
+              <input name="wifi" id="radios-1" value="no" type="radio">
               non
             </label> 
-            <label class="radio-inline" for="radios-2">
-              <input name="wifi" id="radios-2" value="chaispas" type="radio" data-l10n-id="wifi_inconnu">
+            <label class="radio-inline" for="radios-2" data-l10n-id="wifi_inconnu">
+              <input name="wifi" id="radios-2" value="chaispas" type="radio">
               peut-être
             </label>
           </div>

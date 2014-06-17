@@ -30,9 +30,9 @@
 <liste_des_bieres "Bière pression dispo"> 
 <champ_libre_bieres "Autres bières">
 <wifi_oupas "Wifi"> 
-<wifi_oui "oui">
-<wifi_non "non">
-<wifi_inconnu "peut-être"> 
+<wifi_oui "<input> oui">
+<wifi_non "<input> non">
+<wifi_inconnu "<input> peut-être"> 
 <opening_hours "Heures d'ouverture"> 
 <opening_hours_exemple "exemple : Mo-Fr 11:30-20:00"> 
 <happy_hours "Happy Hours"> 
@@ -43,8 +43,8 @@
 /* Éléments de la carte */
 <attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
 <attr_overpass "données via l'<a>API Overpass</a>"> 
-<locate_ko "Vous êtes ici"> /* does not work yet */
-<locate_ok "Échec de la géolocalisation - Rechargez la page pour réessayer"> /* does not work yet */
+<locate_ok "Vous êtes ici"> 
+<locate_ko "Échec de la géolocalisation - Rechargez la page pour réessayer"> /* does not work yet */
 <choix_bieres_tous "<img> Boire !">
 <choix_bieres_chouffe "<img> &nbsp;Avec de la Chouffe">
 <choix_bieres_leffe "<img> &nbsp;Avec de la Leffe">

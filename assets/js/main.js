@@ -15,11 +15,19 @@ map.locate({setView: true})
         console.log("localisation utilisateur réussie");
             var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('<span data-l10n-id="locate_ok">Vous êtes par ici&nbsp;&nbsp;</span>');
             map.addLayer(marker);
+				function onPopupClick(e) {
+				document.l10n.localize(['locate_ok',], function(l10n) {
+				  var node = document.querySelector('[data-l10n-id=locate_ok]');
+				  if (node != null ) {node.textContent = l10n.entities.locate_ok.value;}                 
+				  })
+				}
+				marker.on('click', onPopupClick);
         })
        .on('locationerror', function(e){
             console.log(e);
-            alert("<span data-l10n-id='locate_ko'>échec de localisation de l'utilisateur</span>");
-        });
+            alert("Échec de localisation de l'utilisateur");
+            //alert("<span data-l10n-id='locate_ko'>échec de localisation de l'utilisateur</span>");
+});
 
 /* Larger screens get expanded layer control */
 if (document.body.clientWidth <= 767) {
