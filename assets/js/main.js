@@ -24,9 +24,8 @@ map.locate({setView: true})
 				marker.on('click', onPopupClick);
         })
        .on('locationerror', function(e){
-            console.log(e);
-            alert("Échec de localisation de l'utilisateur");
-            //alert("<span data-l10n-id='locate_ko'>échec de localisation de l'utilisateur</span>");
+            //console.log(e);
+            console.log("Échec de localisation de l'utilisateur");
 });
 
 /* Larger screens get expanded layer control */
