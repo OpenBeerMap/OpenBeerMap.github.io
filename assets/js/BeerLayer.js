@@ -44,9 +44,12 @@ function draw_beer(url,icon){
                 if (e.tags["brewery"]) {content += "<tr><th data-l10n-id='popup_biere'>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
                 content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";
                 content +="</table>";
-
+                    
+        icon_o = icon            
+		//if (e.tags["brewery"]) {icon_o = "assets/img/beer_empty.png"}
+                    
 		var myicon = L.icon({
-                  iconUrl: icon,
+                  iconUrl: icon_o,
                   iconAnchor:[10, 45],
                   popupAnchor : [4, -30]
               });
@@ -74,4 +77,3 @@ function draw_beer(url,icon){
     })
     };    
     
-

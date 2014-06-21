@@ -43,7 +43,7 @@ var sidebar = L.control.sidebar("sidebar", {
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
 /*OverPassAPI overlay*/
-    var tous = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];node(BBOX)[amenity=cafe];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)[amenity=pub]);out;>;out;", "assets/img/beer1.png");
+	var tous = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];node(BBOX)[amenity=cafe];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)[amenity=pub]);out;>;out;", "assets/img/beer1.png");
     
     var leffe = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[lL]effe'];out;", "assets/img/beer2.png"); 
     	
