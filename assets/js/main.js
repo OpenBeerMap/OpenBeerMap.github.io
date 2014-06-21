@@ -54,6 +54,8 @@ var sidebar = L.control.sidebar("sidebar", {
     var guinness = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/beer1.png");  
 
 	var brewdog = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Bb]rewdog'];out;", "assets/img/beer1.png");  
+
+	var affligem = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]ffligem'];out;", "assets/img/affligem.png");  
 	
     var karmeliet = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
 //les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
@@ -65,12 +67,13 @@ var sidebar = L.control.sidebar("sidebar", {
 
     var overlayMaps = {
         "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
-        "<span data-l10n-id='choix_bieres_chouffe'><img src='assets/img/beer4.png' width='24' height='28'>&nbsp;Avec de la Chouffe</span>": chouffe,
-        "<span data-l10n-id='choix_bieres_carmelite'><img src='assets/img/beer3.png' width='24' height='28'>&nbsp;Avec de la Tripel Karmeliet</span>": karmeliet,
-        "<span data-l10n-id='choix_bieres_leffe'><img src='assets/img/beer2.png' width='24' height='28'>&nbsp;Avec de la Leffe</span>": leffe,
-        "<span data-l10n-id='choix_bieres_chimay'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Chimay</span>": chimay,
-        "<span data-l10n-id='choix_bieres_brewdog'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Brewdog</span>": brewdog,
-        "<span data-l10n-id='choix_bieres_guinness'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Avec de la Guinness</span>": guinness
+        "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; Chouffe": chouffe,
+        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp; Tripel Karmeliet": karmeliet,
+        "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp; Leffe": leffe,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Chimay": chimay,
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Brewdog": brewdog,        
+        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Guinness": guinness,
+        "<img src='assets/img/affligem.png' width='24' height='28'>&nbsp; Affligem": affligem
     };
     map.addLayer(tous);
 
