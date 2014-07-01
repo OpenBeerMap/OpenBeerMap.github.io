@@ -54,6 +54,10 @@ function init_form_from_OSM(form,OSM_id) {
                         if (wifi_src === "no") {if (inputForm[i].value === "no") {inputForm[i].checked = true}}
                         }
                } 
+        
+    	//post-processing
+        	// pass
+        	
         };
 
 function form_from_user(form) {
@@ -101,7 +105,7 @@ function form_from_user(form) {
              
         var envoi = 0   
 
-        //ici, faire les changements de tag nécessaires
+        //TODO : il y a des envois vides à OSM ; refacto à prévoir ici
         if (beer_tab.length > 0) {edit_tag(OSM_xml,"brewery",brewery); envoi = 1}
         // s'il n'y avait qu'une bière, et que l'utilisateur la décoche, beer_tab devient vide, il faut donc supprimer le tag
         else {if((brewery != get_tag(OSM_xml,"brewery")) && (beer_tab.length != 0)) {del_tag(OSM_xml,"brewery");envoi=2}}
@@ -117,7 +121,9 @@ function form_from_user(form) {
         if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}
         if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, "happy_hours", happy); envoi = 1}
         */
-    console.log(envoi)
+    
+    	//envoi à OSM
+    	console.log(envoi)
         if (envoi != 0)
                 {
                 //ouvrir un changeset
@@ -129,7 +135,8 @@ function form_from_user(form) {
                 //fermer le changeset
                 close_changeset(changeset_id);
                 }
-
+    
+        //post-processing
         sidebar.hide();
         };
 
