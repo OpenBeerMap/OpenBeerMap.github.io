@@ -27,36 +27,36 @@
 <repo_github "Github Repository">
 
 /* Edit Form */
-<titre_formulaire_edition "Edit this bar in OpenBeerMap"> 
+<titre_formulaire_edition "Bearbeite diese Kneipe in OpenBeerMap"> 
 <nom_du_bar "Name"> 
-<liste_des_bieres "Draft beer available"> 
-<champ_libre_bieres "Other beers">
-<wifi_oupas "Wifi"> 
-<wifi_oui "<input> yes">
-<wifi_non "<input> no">
-<wifi_inconnu "<input> maybe"> 
-<opening_hours "Opening Hours"> 
-<opening_hours_exemple "example : Mo-Fr 11:30-20:00"> 
+<liste_des_bieres "Gezapfte Biersorten"> 
+<champ_libre_bieres "Andere Biersorten">
+<wifi_oupas "WLAN"> 
+<wifi_oui "<input> ja">
+<wifi_non "<input> nein">
+<wifi_inconnu "<input> vielleicht"> 
+<opening_hours "Öffnungszeiten"> 
+<opening_hours_exemple "bspw. Mo-Fr 11:30-20:00"> 
 <happy_hours "Happy Hours"> 
-<happy_hours_exemple "example : Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Save"> 
-<bouton_OSM "Edit directly to OpenStreetMap"> 
+<happy_hours_exemple "bpw. Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Speichern"> 
+<bouton_OSM "Direkt zu OpenStreetMap"> 
 
 /* Map elements */
-<attr_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
-<attr_overpass "data via <a>Overpass API</a>"> 
-<locate_ok "You are here"> 
-<locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
-<choix_bieres_tous "<img> Drink">
-<choix_bieres_chouffe "<img> &nbsp;With Chouffe">
-<choix_bieres_leffe "<img> &nbsp;With Leffe">
-<choix_bieres_carmelite "<img> &nbsp;With Tripel Karmeliet">
-<choix_bieres_chimay "<img> &nbsp;With Chimay">
-<choix_bieres_brewdog "<img> &nbsp;With Brewdog">
-<choix_bieres_guinness "<img> &nbsp;With Guinness">
+<attr_osm "Kartendaten &copy; <a>OpenStreetMap</a> Mitwirkende"> 
+<attr_overpass "Daten via <a>Overpass API</a>"> 
+<locate_ok "Du bist hier"> 
+<locate_ko "Geolocation-Fehler - Lade die Seite neu, um es erneut zu versuchen"> /* does not work yet */
+<choix_bieres_tous "<img> Getränkt">
+<choix_bieres_chouffe "<img> &nbsp;Mit Chouffe">
+<choix_bieres_leffe "<img> &nbsp;Mit Leffe">
+<choix_bieres_carmelite "<img> &nbsp;Mit Tripel Karmeliet">
+<choix_bieres_chimay "<img> &nbsp;Mit Chimay">
+<choix_bieres_brewdog "<img> &nbsp;Mit Brewdog">
+<choix_bieres_guinness "<img> &nbsp;Mit Guinness">
 <popup_nom "Name"> 
-<popup_opening_hours "Opening hours"> 
-<popup_happy_hours "Happy hours"> 
-<popup_biere "Draft beer"> 
-<popup_edit "Add information about this bar"> 
-<overpass_err "You must zoom in to see more bars.">
+<popup_opening_hours "Öffnungszeiten"> 
+<popup_happy_hours "Happy Hours"> 
+<popup_biere "Gezapfte Biersorten"> 
+<popup_edit "Füge Informationen zu dieser Kneipe hinzu"> 
+<overpass_err "Du musst näher heranzoomen, um Kneipen angezeigt zu bekommen">
