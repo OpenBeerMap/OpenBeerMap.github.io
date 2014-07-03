@@ -1,0 +1,62 @@
+/*
+ OpenBeerMap translation file [de] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: Philip Gillißen | guerda(at)freenet.de
+*/
+
+
+/* Home Page */
+<a_propos "<i></i>&nbsp; &Uuml;ber"> 
+
+/* Blabla */
+<hello_world "Willkommen auf der OpenBeerMap!"> 
+<about "<i></i>&nbsp; &Uuml;ber"> 
+<about_contenu """
+                <p>Diese Seite ermöglicht es dir, eine Bar zu finden, die deine Lieblingsbiersorte serviert.</p>
+                <p>Wenn die verfügbaren Informationen falsch sind oder fehlen, zögere nicht und trage zum Datenbestand bei!</p>
+                <p><a>Weitere Informationen über den Ursprung dieser Seite findest du auf dem Blog des Autors.</a></p>
+"""> 
+<contact "<i></i>&nbsp;Kontakt"> 
+<contact_contenu "Um eine fehlende Biersorte einzutragen, melde einen Fehler, mach neue Vorschläge oder lade mich auf ein Bier ein..."> 
+<credits "<i></i>&nbsp;Mitwirkende"> 
+<credits_contenu """
+                <p>Karte von <a> OpenStreetMap </a> und <a> Stamen Design</a>.</p>
+                <p>Daten von Bars und Biersorten von <a>OpenStreetMap</a> und seinen Mitwirkenden, via <a>Overpass API</a>.</p>
+                <p>Diese Seite wurde erstellt mit Liebe und <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Quelltexte findest du hier: <a>Github</a> </p>
+"""> 
+<repo_github "Github Repository">
+
+/* Edit Form */
+<titre_formulaire_edition "Edit this bar in OpenBeerMap"> 
+<nom_du_bar "Name"> 
+<liste_des_bieres "Draft beer available"> 
+<champ_libre_bieres "Other beers">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> yes">
+<wifi_non "<input> no">
+<wifi_inconnu "<input> maybe"> 
+<opening_hours "Opening Hours"> 
+<opening_hours_exemple "example : Mo-Fr 11:30-20:00"> 
+<happy_hours "Happy Hours"> 
+<happy_hours_exemple "example : Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Save"> 
+<bouton_OSM "Edit directly to OpenStreetMap"> 
+
+/* Map elements */
+<attr_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
+<attr_overpass "data via <a>Overpass API</a>"> 
+<locate_ok "You are here"> 
+<locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
+<choix_bieres_tous "<img> Drink">
+<choix_bieres_chouffe "<img> &nbsp;With Chouffe">
+<choix_bieres_leffe "<img> &nbsp;With Leffe">
+<choix_bieres_carmelite "<img> &nbsp;With Tripel Karmeliet">
+<choix_bieres_chimay "<img> &nbsp;With Chimay">
+<choix_bieres_brewdog "<img> &nbsp;With Brewdog">
+<choix_bieres_guinness "<img> &nbsp;With Guinness">
+<popup_nom "Name"> 
+<popup_opening_hours "Opening hours"> 
+<popup_happy_hours "Happy hours"> 
+<popup_biere "Draft beer"> 
+<popup_edit "Add information about this bar"> 
+<overpass_err "You must zoom in to see more bars.">
