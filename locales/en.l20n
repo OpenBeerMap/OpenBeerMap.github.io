@@ -47,13 +47,6 @@
 <attr_overpass "data via <a>Overpass API</a>"> 
 <locate_ok "You are here"> 
 <locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
-<choix_bieres_tous "<img> Drink">
-<choix_bieres_chouffe "<img> &nbsp;With Chouffe">
-<choix_bieres_leffe "<img> &nbsp;With Leffe">
-<choix_bieres_carmelite "<img> &nbsp;With Tripel Karmeliet">
-<choix_bieres_chimay "<img> &nbsp;With Chimay">
-<choix_bieres_brewdog "<img> &nbsp;With Brewdog">
-<choix_bieres_guinness "<img> &nbsp;With Guinness">
 <popup_nom "Name"> 
 <popup_opening_hours "Opening hours"> 
 <popup_happy_hours "Happy hours"> 
