@@ -45,13 +45,6 @@
 <attr_overpass "données via l'<a>API Overpass</a>"> 
 <locate_ok "Vous êtes ici"> 
 <locate_ko "Échec de la géolocalisation - Rechargez la page pour réessayer"> /* does not work yet */
-<choix_bieres_tous "<img> Boire !">
-<choix_bieres_chouffe "<img> &nbsp;Avec de la Chouffe">
-<choix_bieres_leffe "<img> &nbsp;Avec de la Leffe">
-<choix_bieres_carmelite "<img> &nbsp;Avec de la Tripel Karmeliet">
-<choix_bieres_chimay "<img> &nbsp;Avec de la Chimay">
-<choix_bieres_brewdog "<img> &nbsp;Avec de la Brewdog">
-<choix_bieres_guinness "<img> &nbsp;Avec de la Guinness">
 <popup_nom "Nom"> 
 <popup_opening_hours "Horaires d'ouverture"> 
 <popup_happy_hours "Happy hours"> 
