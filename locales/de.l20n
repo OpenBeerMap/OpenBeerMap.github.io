@@ -5,11 +5,11 @@
 
 
 /* Home Page */
-<a_propos "<i></i>&nbsp; &Uuml;ber"> 
+<a_propos "<i></i>&nbsp; Über"> 
 
 /* Blabla */
 <hello_world "Willkommen auf der OpenBeerMap!"> 
-<about "<i></i>&nbsp; &Uuml;ber"> 
+<about "<i></i>&nbsp; Über"> 
 <about_contenu """
                 <p>Diese Seite ermöglicht es dir, eine Bar zu finden, die deine Lieblingsbiersorte serviert.</p>
                 <p>Wenn die verfügbaren Informationen falsch sind oder fehlen, zögere nicht und trage zum Datenbestand bei!</p>
@@ -36,24 +36,18 @@
 <wifi_non "<input> nein">
 <wifi_inconnu "<input> vielleicht"> 
 <opening_hours "Öffnungszeiten"> 
-<opening_hours_exemple "bspw. Mo-Fr 11:30-20:00"> 
+<opening_hours_exemple "Beispiel: Mo-Fr 11:30-20:00"> 
 <happy_hours "Happy Hours"> 
-<happy_hours_exemple "bpw. Mo-Fr 18:30-20:00"> 
+<happy_hours_exemple "Beispiel: Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Speichern"> 
-<bouton_OSM "Direkt zu OpenStreetMap"> 
+<bouton_OSM "Kneipe in OpenStreetMap bearbeiten"> 
 
 /* Map elements */
 <attr_osm "Kartendaten &copy; <a>OpenStreetMap</a> Mitwirkende"> 
 <attr_overpass "Daten via <a>Overpass API</a>"> 
 <locate_ok "Du bist hier"> 
 <locate_ko "Geolocation-Fehler - Lade die Seite neu, um es erneut zu versuchen"> /* does not work yet */
-<choix_bieres_tous "<img> Getränkt">
-<choix_bieres_chouffe "<img> &nbsp;Mit Chouffe">
-<choix_bieres_leffe "<img> &nbsp;Mit Leffe">
-<choix_bieres_carmelite "<img> &nbsp;Mit Tripel Karmeliet">
-<choix_bieres_chimay "<img> &nbsp;Mit Chimay">
-<choix_bieres_brewdog "<img> &nbsp;Mit Brewdog">
-<choix_bieres_guinness "<img> &nbsp;Mit Guinness">
+<choix_bieres_tous "<img> Andere Biersorten">
 <popup_nom "Name"> 
 <popup_opening_hours "Öffnungszeiten"> 
 <popup_happy_hours "Happy Hours"> 

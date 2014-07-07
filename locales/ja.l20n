@@ -47,12 +47,6 @@
 <locate_ok "現在地"> 
 <locate_ko "ジオロケーションエラー - ページを再読み込みしてください"> /* does not work yet */
 <choix_bieres_tous "<img> カンパイ！">
-<choix_bieres_chouffe "<img> &nbsp;Chouffeあり">
-<choix_bieres_leffe "<img> &nbsp;Leffeあり">
-<choix_bieres_carmelite "<img> &nbsp;Tripel Karmelietあり">
-<choix_bieres_chimay "<img> &nbsp;Chimayあり">
-<choix_bieres_brewdog "<img> &nbsp;Brewdogあり">
-<choix_bieres_guinness "<img> &nbsp;Guinnessあり">
 <popup_nom "店名"> 
 <popup_opening_hours "開店時間"> 
 <popup_happy_hours "ハッピーアワー"> 

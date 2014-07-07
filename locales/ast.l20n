@@ -47,12 +47,6 @@
 <locate_ok "Tas equí"> 
 <locate_ko "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
 <choix_bieres_tous "<img> ¡Beber!">
-<choix_bieres_chouffe "<img> &nbsp;Tien Chouffe">
-<choix_bieres_leffe "<img> &nbsp;Tien Leffe">
-<choix_bieres_carmelite "<img> &nbsp;Tien Tripel Karmeliet">
-<choix_bieres_chimay "<img> &nbsp;Tien Chimay">
-<choix_bieres_brewdog "<img> &nbsp;Tien Brewdog">
-<choix_bieres_guinness "<img> &nbsp;Tien Guinness">
 <popup_nom "Nome"> 
 <popup_opening_hours "Hores d'apertura"> 
 <popup_happy_hours "Happy hours"> 
