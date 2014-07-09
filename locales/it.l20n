@@ -29,7 +29,7 @@
 /* Edit Form */
 <titre_formulaire_edition "Modifica questo bar su OpenBeerMap"> 
 <nom_du_bar "Nome"> 
-<liste_des_bieres "Draft beer available"> 
+<liste_des_bieres "Birre alla spina disponibili"> 
 <champ_libre_bieres "Altre birre">
 <wifi_oupas "Wifi"> 
 <wifi_oui "<input> sì">
@@ -51,6 +51,6 @@
 <popup_nom "Nome"> 
 <popup_opening_hours "Orario"> 
 <popup_happy_hours "Happy hour"> 
-<popup_biere "Draft beer"> 
+<popup_biere "Birra alla spina"> 
 <popup_edit "Aggiungi le informazioni su questo bar"> 
 <overpass_err "Devi ingrandire la mappa per vedere maggiori bar.">
