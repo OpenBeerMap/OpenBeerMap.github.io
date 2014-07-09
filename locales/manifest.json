@@ -3,11 +3,12 @@
     "ast",
     "de",
     "en",
+    "eo",
     "es",
     "fr",
-    "it"
-    "ja"
-    "pl",
+    "it",
+    "ja",
+    "pl"
   ],
   "default_locale": "fr",
   "resources": [
