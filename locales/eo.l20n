@@ -29,13 +29,13 @@
 /* Edit Form */
 <titre_formulaire_edition "Redakti ĉi tiun drinkejon en OpenBeerMap"> 
 <nom_du_bar "Nomo"> 
-<liste_des_bieres "Draft beer available"> 
+<liste_des_bieres "Elbarelaj bieroj disponeblas"> 
 <champ_libre_bieres "Aliaj bieroj">
 <wifi_oupas "Sendrata konekto"> 
 <wifi_oui "<input> jes">
 <wifi_non "<input> ne">
 <wifi_inconnu "<input> eble"> 
-<opening_hours "Opening Hours"> 
+<opening_hours "Horaro"> 
 <opening_hours_exemple "ekzemple: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
 <happy_hours "Happy Hour"> 
 <happy_hours_exemple "ekzemple: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
@@ -51,6 +51,6 @@
 <popup_nom "Nomo"> 
 <popup_opening_hours "Horaro"> 
 <popup_happy_hours "Happy hour"> 
-<popup_biere "Draft beer"> 
+<popup_biere "Elbarela biero"> 
 <popup_edit "Aldoni informojn pri ĉi tiu drinkejo"> 
 <overpass_err "Vi pligrandigu la mapon por vidi pliajn drinkejojn.">
