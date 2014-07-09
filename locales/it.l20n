@@ -37,7 +37,7 @@
 <wifi_inconnu "<input> forse"> 
 <opening_hours "Orario"> 
 <opening_hours_exemple "esempio: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
-<happy_hours "Happy Hour"> 
+<happy_hours "Happy hour"> 
 <happy_hours_exemple "esempio: Mo-Fr 18:30-20:00, 21:30-23:30; Sa 09:00-23:30; Su off"> 
 <bouton_enregistrer "Salva"> 
 <bouton_OSM "Modifica direttamente su OpenStreetMap"> 
