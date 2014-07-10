@@ -1,12 +1,14 @@
 {
   "locales": [
-    "fr",
-    "en",
-    "es",
     "ast",
-    "pl",
     "de",
-    "ja"
+    "en",
+    "eo",
+    "es",
+    "fr",
+    "it",
+    "ja",
+    "pl"
   ],
   "default_locale": "fr",
   "resources": [

@@ -1,0 +1,56 @@
+/*
+ OpenBeerMap translation file [it] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: Michael Moroni | michael.moroni(at)mailoo.org
+*/
+
+
+/* Home Page */
+<a_propos "<i></i>&nbsp; Informazioni"> 
+
+/* Blabla */
+<hello_world "Benvenuto su OpenBeerMap!"> 
+<about "<i></i>&nbsp; Informazioni"> 
+<about_contenu """
+                <p>Questo sito permette di trovare un bar che serve la tua birra preferita!</p>
+                <p>Se l'informazione non è corretta o mancanta, non esitare a contribuire.</p>
+                <p><a>Maggiori informazioni sulle origini del sito sono disponibili sul blog dell'autore.</p>
+"""> 
+<contact "<i></i>&nbsp;Contatti"> 
+<contact_contenu "Per inserire una birra mancante, segnala un bug, suggerisci i cambiamenti o comprami una birra..."> 
+<credits "<i></i>&nbsp;Crediti"> 
+<credits_contenu """
+                <p>Mappa da <a> OpenStreetMap </a> e <a> Stamen Design</a>.</p>
+                <p>Dati sui bar e sulle birre da <a>OpenStreetMap</a> e i vari contributori, grazie alle <a>API diOverpass</a>.</p>
+                <p>Sito fatto con amore da <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a>Leaflet</a>).</p>
+                <p>Il codice sorgente è disponibile su <a>Github</a> </p>
+"""> 
+<repo_github "Repository di Github">
+
+/* Edit Form */
+<titre_formulaire_edition "Modifica questo bar su OpenBeerMap"> 
+<nom_du_bar "Nome"> 
+<liste_des_bieres "Birre alla spina disponibili"> 
+<champ_libre_bieres "Altre birre">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> sì">
+<wifi_non "<input> no">
+<wifi_inconnu "<input> forse"> 
+<opening_hours "Orario"> 
+<opening_hours_exemple "esempio: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
+<happy_hours "Happy hour"> 
+<happy_hours_exemple "esempio: Mo-Fr 18:30-20:00, 21:30-23:30; Sa 09:00-23:30; Su off"> 
+<bouton_enregistrer "Salva"> 
+<bouton_OSM "Modifica direttamente su OpenStreetMap"> 
+
+/* Map elements */
+<attr_osm "Dati della mappa &copy; contributori di <a>OpenStreetMap</a>"> 
+<attr_overpass "dati presi grazie alle <a>API di Overpass</a>"> 
+<locate_ok "Tu sei qui"> 
+<locate_ko "Errore di geolocazione - Ricarica la pagina per riprovare"> /* does not work yet */
+<choix_bieres_tous "<img> Bevi">
+<popup_nom "Nome"> 
+<popup_opening_hours "Orario"> 
+<popup_happy_hours "Happy hour"> 
+<popup_biere "Birra alla spina"> 
+<popup_edit "Aggiungi le informazioni su questo bar"> 
+<overpass_err "Devi ingrandire la mappa per vedere maggiori bar.">

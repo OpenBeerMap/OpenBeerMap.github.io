@@ -1,0 +1,56 @@
+/*
+ OpenBeerMap translation file [eo] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: Michael Moroni | michael.moroni(at)mailoo.org
+*/
+
+
+/* Home Page */
+<a_propos "<i></i>&nbsp; Pri"> 
+
+/* Blabla */
+<hello_world "Bonvenon en OpenBeerMap!"> 
+<about "<i></i>&nbsp; Pri"> 
+<about_contenu """
+                <p>Ĉi tiu retejo permesas vin trovi drinkejon, kiu servas vian preferatan bieron!</p>
+                <p>Se la informo estas nekorekta aŭ tute mankas, ne hezitu kontribui.</p>
+                <p><a>Pliaj informoj pri origino de la retejo disponeblas en blogo de aŭtoro.</p>
+"""> 
+<contact "<i></i>&nbsp;Kontaktoj"> 
+<contact_contenu "Por aldoni mankantan bieron, raportu cimon, sugesti ŝanĝojn aŭ simple aĉetu al mi bieron..."> 
+<credits "<i></i>&nbsp;Kreditoj"> 
+<credits_contenu """
+                <p>Mapo el <a> OpenStreetMap </a> kaj <a> Stamen Design</a>.</p>
+                <p>Datumoj pri drinkejoj kaj bieroj el <a>OpenStreetMap</a> kaj ĝiaj kontribuantoj, per <a>API de Overpass</a>.</p>
+                <p>Retejo kreita per amo kaj <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a>Leaflet</a>).</p>
+                <p>Fontkodo disponeblas en <a>Github</a> </p>
+"""> 
+<repo_github "Deponejo de Github">
+
+/* Edit Form */
+<titre_formulaire_edition "Redakti ĉi tiun drinkejon en OpenBeerMap"> 
+<nom_du_bar "Nomo"> 
+<liste_des_bieres "Elbarelaj bieroj disponeblas"> 
+<champ_libre_bieres "Aliaj bieroj">
+<wifi_oupas "Sendrata konekto"> 
+<wifi_oui "<input> jes">
+<wifi_non "<input> ne">
+<wifi_inconnu "<input> eble"> 
+<opening_hours "Horaro"> 
+<opening_hours_exemple "ekzemple: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
+<happy_hours "Happy Hour"> 
+<happy_hours_exemple "ekzemple: Mo-Fr 11:30-20:00, 21:30-23:30; Sa 09:00-22:00; Su off"> 
+<bouton_enregistrer "Konservi"> 
+<bouton_OSM "Redakti rekte en OpenStreetMap"> 
+
+/* Map elements */
+<attr_osm "Datumoj de mapo &copy; kontribuantoj de <a>OpenStreetMap</a>"> 
+<attr_overpass "datumoj per <a>API de Overpass</a>"> 
+<locate_ok "Vi estas ĉi tie"> 
+<locate_ko "Eraro de geolokado - Reŝargi la paĝon kaj klopodu denove"> /*ankoraŭ ne funkcias */
+<choix_bieres_tous "<img> Drinku!">
+<popup_nom "Nomo"> 
+<popup_opening_hours "Horaro"> 
+<popup_happy_hours "Happy hour"> 
+<popup_biere "Elbarela biero"> 
+<popup_edit "Aldoni informojn pri ĉi tiu drinkejo"> 
+<overpass_err "Vi pligrandigu la mapon por vidi pliajn drinkejojn.">
