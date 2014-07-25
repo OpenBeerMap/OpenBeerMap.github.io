@@ -52,5 +52,5 @@
 <popup_opening_hours "Öppettider"> 
 <popup_happy_hours "Happy hour-period"> 
 <popup_biere "Fatöl"> 
-<popup_edit "Lägg till information om denna pub."> 
-<overpass_err "Du måste zooma in för att se fler pubar.">
+<popup_edit "Lägg till information om detta ställe."> 
+<overpass_err "Du måste zooma in för att se fler serveringar.">
