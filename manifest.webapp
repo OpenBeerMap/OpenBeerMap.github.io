@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "name": "OpenBeerMap",
+  "description": "La carte libre et éditable des bars et bières pression qui y sont servies", 
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/assets/img/mobile/icon-16.png", 
+    "48": "/assets/img/mobile/icon-48.png",
+    "60": "/assets/img/mobile/icon-60.png", 
+    "128": "/assets/img/mobile/icon-128.png"
+  },
+  "developer": {
+    "name": "nlehuby",
+    "url": "https://github.com/OpenBeerMap/OpenBeerMap.github.io"
+  },
+  "locales": {
+    "en": {
+      "description": "This app allows you to find a bar that serves your favorite beer and to add info about it"
+    },
+    "es": {
+      "description": "Mapa de bares en todo el mundo libre y editable "
+    }
+  },
+  "default_locale": "fr",
+  "permissions": {
+      "geolocation": {
+        "description": "Nécessaire pour centrer la carte au bon endroit"
+      }
+	}
+}
