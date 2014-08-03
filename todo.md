@@ -11,13 +11,14 @@
 ## Site openbeermap.github.io 
 * Amélioration : Ajouter la présence de terrasse dans la pop up du marqueur et dans la modale d'édition (tag terrace = yes)
 * Amélioration : Trouver un moyen plus simple et ergonomique pour renseigner les bières : les cases à cocher ne sont pas super adaptées ...
+* Amélioration : Remplacer les picto des bières par les images des verres à bière qui vont bien. Image vectorielle (SVG) et utilisable sans violer la propriété intellectuelle de quiconque ;)
 
  
  
 ## Applications mobiles 
 * Bug : https://github.com/OpenBeerMap/OpenBeerMap.github.io/issues/16
 * Porter le site en appli mobiles plus ou moins "natives", en l'encapsulant dans une webview (Cordova ou autre) ?
-
+* Amélioration : refaire le logo, on doit pouvoir faire plus joli !
  
  
 ## Internationalisation 
