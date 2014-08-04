@@ -54,8 +54,13 @@
 <overpass_err "Vous devez zoomer plus pour voir les bars.">
 
 
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 
-
-
+<app_description """
+                La carte libre et éditable des bars et bières pression qui y sont servies.
+                Les données proviennent d'OpenStreetMap et toute contribution y est reversée.
+                Aussi disponible à l'adresse http://openbeermap.github.io/
+"""> 
+<why_is_geoloc_needed "Nécessaire pour centrer la carte au bon endroit">
 
 
