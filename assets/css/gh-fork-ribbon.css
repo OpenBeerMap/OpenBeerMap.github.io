@@ -1,6 +1,7 @@
 /*!
  * "Fork me on GitHub" CSS ribbon v0.1.1 | MIT License
  * https://github.com/simonwhitaker/github-fork-ribbon-css
+ * This is not the original file - it has been tweaked to make side ribbon
 */
 
 /* Left will inherit from right (so we don't need to duplicate code) */
@@ -60,7 +61,7 @@
 
 .github-fork-ribbon-wrapper {
   width: 150px;
-  height: 150px;
+  height: 2250px;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -95,14 +96,15 @@
 }
 
 .github-fork-ribbon-wrapper.right .github-fork-ribbon {
-  top: 42px;
-  right: -43px;
+  top: 480px;
+  left: 36px;
 
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .github-fork-ribbon-wrapper.left .github-fork-ribbon {

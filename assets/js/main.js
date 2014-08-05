@@ -78,7 +78,6 @@ var sidebar = L.control.sidebar("sidebar", {
     map.addLayer(tous);
 
 //indication utilisateur en cas de dé-zoom
-L.control.layers(baseMaps, overlayMaps).addTo(map);
 className : 'leaflet-control-minZoomIndecator'
 map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
 
