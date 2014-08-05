@@ -61,7 +61,7 @@
 
 .github-fork-ribbon-wrapper {
   width: 150px;
-  height: 2250px;
+  height: 1050px;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -96,7 +96,7 @@
 }
 
 .github-fork-ribbon-wrapper.right .github-fork-ribbon {
-  top: 480px;
+  top: 320px;
   left: 36px;
 
 
