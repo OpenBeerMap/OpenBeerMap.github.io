@@ -31,7 +31,7 @@
   /* Set the font */
   font: 700 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  z-index: 9999;
+  z-index: 1; /*9999;*/
   pointer-events: auto;
 }
 
@@ -65,7 +65,7 @@
   position: absolute;
   overflow: hidden;
   top: 0;
-  z-index: 9999;
+  z-index: 9;
   pointer-events: none;
 }
 
@@ -75,6 +75,7 @@
 
 .github-fork-ribbon-wrapper.left {
   left: 0;
+  z-index: 9;
 }
 
 .github-fork-ribbon-wrapper.right {
@@ -99,7 +100,6 @@
   top: 320px;
   left: 36px;
 
-
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -108,14 +108,14 @@
 }
 
 .github-fork-ribbon-wrapper.left .github-fork-ribbon {
-  top: 42px;
-  left: -43px;
+  top: 320px;
+  left: -90px;
 
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 
