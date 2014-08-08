@@ -80,12 +80,28 @@ function del_tag(xml,key){
         return  
 }
 
+ function xml_to_string(xml_node)
+    {
+        if (xml_node.xml)
+            return xml_node.xml;
+        else if (XMLSerializer)
+        {
+            var xml_serializer = new XMLSerializer();
+            return xml_serializer.serializeToString(xml_node);
+        }
+        else
+        {
+            console.log("ERROR: Extremely old browser");
+            return "";
+        }
+    };
+
 function put_node(xml, changeset_id, id){        
         var node = xml.documentElement.getElementsByTagName("node");
         //console.log(node[0].getAttribute('changeset'))
         node[0].setAttribute('changeset', changeset_id); 
        
-        var tous_les_tags = xml.documentElement.getElementsByTagName("tag");
+        //var tous_les_tags = xml.documentElement.getElementsByTagName("tag");
 		/*
     	//debug    
         for (var i = 0; i < tous_les_tags.length; i++) {
@@ -96,11 +112,9 @@ function put_node(xml, changeset_id, id){
         var xhr = new XMLHttpRequest();
         xhr.open("PUT", "http://api.openstreetmap.org/api/0.6/node/"+id, false);
         xhr.setRequestHeader("Authorization", basic_auth());
-        xhr.send(xml);
+        xhr.send(xml_to_string(xml));
 
-        console.log("PUT node/ : " + xhr.status);
-       
-        
+        console.log("PUT node/ : " + xhr.status);       
 }
 
 function close_changeset(id){ 
