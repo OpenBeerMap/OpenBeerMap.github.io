@@ -95,6 +95,7 @@ input[type="radio"], input[type="checkbox"] {
   top: 5px;
   background: transparent;
 }
+.leaflet-right{z-index : 10000;}
 @media (max-width: 992px) {
   .navbar .navbar-brand {
     font-size: 18px;

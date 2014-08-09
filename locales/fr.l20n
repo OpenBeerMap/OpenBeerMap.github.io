@@ -38,6 +38,7 @@
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Enregistrer"> 
+<sidebar_discard_button "Annuler"> 
 <bouton_OSM "Éditer directement dans OpenStreetMap"> 
 
 /* Éléments de la carte */
