@@ -16,7 +16,6 @@
  
  
 ## Applications mobiles 
-* Bug : https://github.com/OpenBeerMap/OpenBeerMap.github.io/issues/16
 * Porter le site en appli mobiles plus ou moins "natives", en l'encapsulant dans une webview (Cordova ou autre) ?
 * Amélioration : refaire le logo, on doit pouvoir faire plus joli !
  
