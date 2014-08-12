@@ -1,4 +1,8 @@
-/*OverPassAPI overlay*/
+/*
+ OpenBeerMap Beerlist.js | noemie.lehuby(at)gmail.com | MIT Licensed
+*/
+
+/*OverpassAPI overlay > controls and form checkboxes */
 BeerList = new Array();
 BeerName = new Array();
 
@@ -17,7 +21,7 @@ BeerName = new Array();
 	BeerList["affligem"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]ffligem'];out;", "assets/img/affligem.png");  
 	BeerName["affligem"] = "Affligem";	
     BeerList["karmeliet"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
-    BeerName["karmeliet"] = "Karmeliet";
+    BeerName["karmeliet"] = "Tripel Karmeliet";
     BeerList["amstel"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]mstel'];out;", "assets/img/beer3.png");
     BeerName["amstel"] = "Amstel";
     BeerList["carlsberg"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[cC]Carlsberg'];out;", "assets/img/beer3.png");

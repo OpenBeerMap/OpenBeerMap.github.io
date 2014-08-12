@@ -42,30 +42,23 @@ var sidebar = L.control.sidebar("sidebar", {
 }).addTo(map);
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
+/* les contrôles */
     var baseMaps = {
         "OpenStreetMap": osm,
     };
-
-    items = localStorage.length;
-     // Check boxes depending on storage
-     /*
-    var overlayMaps = {
-        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
-     }
-     for (var i = 0; i < items; i++) {
-        overlayMaps += "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;" + localStorage.getItem(i) + "</span>":localStorage.getItem(i)
-        }
-      */
- //    alert("pouet");
-
+   
       var overlayMaps = {
         "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
      }
+
+     items = localStorage.length;
      for (var i = 0; i < items; i++) {
       overlayMaps["<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
       }
+      // les fonctions liées à la récupération des bières à afficher dans les contrôles sont dans localStorage.js
 
-/*
+/* //OLD - TO DELETE
+    // les contrôles 
     var overlayMaps = {
         "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
         "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; Chouffe": chouffe,
@@ -76,20 +69,20 @@ var sidebar = L.control.sidebar("sidebar", {
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Guinness": guinness,
         "<img src='assets/img/affligem.png' width='24' height='28'>&nbsp; Affligem": affligem
     };*/
-      //-debug-alert (Object.keys(overlayMaps));
+
 
     map.addLayer(tous);
 
-//indication utilisateur en cas de dé-zoom
+/* indication utilisateur en cas de dé-zoom*/
 className : 'leaflet-control-minZoomIndecator'
 map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
 
-
+/* affichage des contrôles*/
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: isCollapsed
 }).addTo(map);
 
-//recherche
+/*recherche */
 map.addControl( new L.Control.Search({
 			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
 			jsonpParam: 'json_callback',
@@ -102,6 +95,6 @@ map.addControl( new L.Control.Search({
 			zoom:16
 		}) );
  
-//supprimer la barre de progression quand tout le js est traité
+/* supprimer la barre de progression quand tout le js est traité*/
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
 

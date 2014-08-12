@@ -6,8 +6,8 @@
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Openbeermap, an open map for draft beers">
+    <meta name="author" content="@nlehuby">
     <title>OpenBeerMap</title>
 
     <link rel="localization" href="locales/manifest.json">
@@ -65,8 +65,8 @@
           </div>
         </form>-->
         <ul class="nav navbar-nav">
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#setupModal').modal('show'); return false;" data-l10n-id="setup"><i class="fa fa-cog" style="color: white"></i>&nbsp;&nbsp;Configurer</a></li>
           <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#setupModal').modal('show'); return false;" data-l10n-id="setup"><i class="fa fa-cog" style="color: white"></i>&nbsp;&nbsp;Configurer</a></li>          
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -232,7 +232,7 @@
           </div>
         </div>
 
-        <!-- Button -->
+        <!-- Buttons -->
         <div class="form-group">
           <label class="col-md-1 control-label" for="singlebutton"></label>
           <div class="col-md-4">            
@@ -276,22 +276,30 @@
               <li class="active"><a href="#setupbeers" data-toggle="tab" data-l10n-id="setupbeers"><i class="fa fa-question-circle"></i>&nbsp;Liste des bières</a></li>
             </ul>
                <div class="tab-content" id="setupTabsContent" style="padding-top: 10px;">
-                <!--<div class="tab-pane fade active in" id="setupbeers" data-l10n-id="setupbeer_contenu">-->
                 <div class="tab-pane fade active in" id="setupbeers">
                   <p data-l10n-id="setupbeers_label">Séléctionnez vos bières favorites :</p>
                   <form id="FormSelectedBeers">
                    <!--Javascript populated-->
                   </form>
                   <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br />
-                  <input type="submit" value="Save" onClick="document.location.reload();" data-l10n-id="bouton_enregistrer"/>
-                  <input type="submit" value="Clear" onClick="ClearStorage()" data-l10n-id="clear"/>
+                <!-- Buttons -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="singlebutton"></label>
+                  <div class="col-md-4">            
+                      <a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br> 
+                  </div>             
+                  <div class="col-md-4">            
+                      <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="document.location.reload();"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br> 
+                  </div>           
+                </div>  
+                                
               </div>
             </div>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <!-- Setup Modal -->
+    </div><!-- /.modal - Setup -->
+
     <!-- About modal -->
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
@@ -336,8 +344,8 @@
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-<!-- About Modal -->
+    </div><!-- /.modal - About -->
+
 
     <div class="github-fork-ribbon-wrapper left">
         <div class="github-fork-ribbon">

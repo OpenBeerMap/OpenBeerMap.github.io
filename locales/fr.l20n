@@ -55,11 +55,11 @@
 <overpass_err "Vous devez zoomer plus pour voir les bars.">
 
 /* Setup */
-<setup "Configurer">
+<setup "<i></i> Personnaliser">
 <setupbeers "Liste des bières">
 <setupbeers_label "Selectionnez vos bière favorites">
 <setupbeer_resultat "Nombre de bières séléctionnées :">
-<clear "Effacer">
+<clear_button "Tout effacer">
 
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
