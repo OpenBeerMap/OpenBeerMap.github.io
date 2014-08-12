@@ -47,7 +47,7 @@
     </script> 
   </head>
 
-  <body>
+  <body onload="init_localstorage()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -65,6 +65,7 @@
           </div>
         </form>-->
         <ul class="nav navbar-nav">
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#setupModal').modal('show'); return false;" data-l10n-id="setup"><i class="fa fa-cog" style="color: white"></i>&nbsp;&nbsp;Configurer</a></li>
           <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
@@ -91,7 +92,7 @@
           </div>
         </div>
         <!-- Beer Checkboxes -->
-        <div class="form-group">
+        <div class="form-group" id="pubeditbeerlist">
           <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
           <div class="col-md-4">
           <div class="checkbox">
@@ -252,7 +253,7 @@
         </fieldset>
         </form>
     </div>
-    
+
     <div id="loading">
       <div class="loading-indicator">
         <div class="progress progress-striped active">
@@ -261,6 +262,37 @@
       </div>
     </div>
 
+
+    <!-- Beer setup Modal -->
+   <div class="modal fade" id="setupModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" data-l10n-id="hello_world">Bienvenue sur OpenBeerMap !</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="setupTabs">
+              <li class="active"><a href="#setupbeers" data-toggle="tab" data-l10n-id="setupbeers"><i class="fa fa-question-circle"></i>&nbsp;Liste des bières</a></li>
+            </ul>
+               <div class="tab-content" id="setupTabsContent" style="padding-top: 10px;">
+                <!--<div class="tab-pane fade active in" id="setupbeers" data-l10n-id="setupbeer_contenu">-->
+                <div class="tab-pane fade active in" id="setupbeers">
+                  <p data-l10n-id="setupbeers_label">Séléctionnez vos bières favorites :</p>
+                  <form id="FormSelectedBeers">
+                   <!--Javascript populated-->
+                  </form>
+                  <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br />
+                  <input type="submit" value="Save" onClick="document.location.reload();" data-l10n-id="bouton_enregistrer"/>
+                  <input type="submit" value="Clear" onClick="ClearStorage()" data-l10n-id="clear"/>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Setup Modal -->
+    <!-- About modal -->
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -273,15 +305,13 @@
               <li class="active"><a href="#about" data-toggle="tab" data-l10n-id="about"><i class="fa fa-question-circle"></i>&nbsp;À propos</a></li>
               <li><a href="#credits" data-toggle="tab" data-l10n-id="credits"><i class="fa fa-globe"></i>&nbsp;Crédits</a></li>
               <li><a href="#contact" data-toggle="tab" data-l10n-id="contact"><i class="fa fa-envelope"></i>&nbsp;Contact</a></li>
-              
-
             </ul>
+   
             <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
               <div class="tab-pane fade active in" id="about" data-l10n-id="about_contenu">
                 <p>Ce site vous permet de trouver un bar qui sert votre bière préférée !</p>
                 <p>Si les infos proposées sont manquantes ou erronées, n'hésitez pas à contribuer.</p>
                 <p><a href="http://nlehuby.drupalgardens.com/node/81" target="_blank">Plus d'infos sur la genèse de ce site sur le blog de l'auteur.</p>
-                
               </div>
 
              <div id="credits" class="tab-pane fade"  data-l10n-id="credits_contenu">
@@ -302,12 +332,12 @@
                 
                </div>
               </div>
-              
             </div>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+<!-- About Modal -->
 
     <div class="github-fork-ribbon-wrapper left">
         <div class="github-fork-ribbon">
@@ -323,6 +353,8 @@
     <script src="assets/OSM_js_editor/OSMAPI.js"></script>
     <script src="assets/OSM_js_editor/OSM_js_editor.js"></script>    
     <script src="assets/js/BeerLayer.js"></script>
+    <script src="assets/js/BeerList.js"></script>
+    <script src="assets/js/localStorage.js"></script>
     <script src="assets/js/leaflet-search.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

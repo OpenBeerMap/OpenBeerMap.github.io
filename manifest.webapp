@@ -4,9 +4,9 @@
   "description": "La carte libre et éditable des bars et bières pression qui y sont servies", 
   "launch_path": "/index.html",
   "icons": {
-    "16": "/assets/img/mobile/icon-16.png", 
+    "16": "/assets/img/mobile/icon-16.png",
     "48": "/assets/img/mobile/icon-48.png",
-    "60": "/assets/img/mobile/icon-60.png", 
+    "60": "/assets/img/mobile/icon-60.png",
     "128": "/assets/img/mobile/icon-128.png"
   },
   "developer": {
@@ -23,8 +23,8 @@
   },
   "default_locale": "fr",
   "permissions": {
-      "geolocation": {
-        "description": "Nécessaire pour centrer la carte au bon endroit"
-      }
-	}
+    "geolocation": {
+      "description": "Nécessaire pour centrer la carte au bon endroit"
+    }
+  }
 }

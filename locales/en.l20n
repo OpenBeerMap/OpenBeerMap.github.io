@@ -55,3 +55,10 @@
 <popup_biere "Draft beer"> 
 <popup_edit "Add information about this bar"> 
 <overpass_err "You must zoom in to see more bars.">
+
+/* Setup */
+<setup "Setup">
+<setupbeers "Beer list">
+<setupbeers_label "Select your favorite beers from our selection !">
+<setupbeer_resultat "Number of selected beers :">
+<clear "Clear">

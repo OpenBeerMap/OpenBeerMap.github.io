@@ -42,29 +42,30 @@ var sidebar = L.control.sidebar("sidebar", {
 }).addTo(map);
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
-/*OverPassAPI overlay*/
-	var tous = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];node(BBOX)[amenity=cafe];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];node(BBOX)[amenity=pub]);out;>;out;", "assets/img/beer1.png");
-    
-    var leffe = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[lL]effe'];out;", "assets/img/beer2.png"); 
-    	
-    var chouffe = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[cC]houffe'];out;", "assets/img/beer4.png");  
-    
-    var chimay = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]himay'];out;", "assets/img/beer1.png");  
-	
-    var guinness = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/beer1.png");  
-
-	var brewdog = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Bb]rewdog'];out;", "assets/img/beer1.png");  
-
-	var affligem = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]ffligem'];out;", "assets/img/affligem.png");  
-	
-    var karmeliet = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
-//les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
-    
-    
     var baseMaps = {
         "OpenStreetMap": osm,
     };
 
+    items = localStorage.length;
+     // Check boxes depending on storage
+     /*
+    var overlayMaps = {
+        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
+     }
+     for (var i = 0; i < items; i++) {
+        overlayMaps += "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;" + localStorage.getItem(i) + "</span>":localStorage.getItem(i)
+        }
+      */
+ //    alert("pouet");
+
+      var overlayMaps = {
+        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
+     }
+     for (var i = 0; i < items; i++) {
+      overlayMaps["<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+      }
+
+/*
     var overlayMaps = {
         "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
         "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; Chouffe": chouffe,
@@ -74,7 +75,9 @@ var sidebar = L.control.sidebar("sidebar", {
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Brewdog": brewdog,        
         "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Guinness": guinness,
         "<img src='assets/img/affligem.png' width='24' height='28'>&nbsp; Affligem": affligem
-    };
+    };*/
+      //-debug-alert (Object.keys(overlayMaps));
+
     map.addLayer(tous);
 
 //indication utilisateur en cas de dé-zoom
@@ -99,6 +102,6 @@ map.addControl( new L.Control.Search({
 			zoom:16
 		}) );
  
-//supprimer la barre de progression quand tout le js est traité 
+//supprimer la barre de progression quand tout le js est traité
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
 
