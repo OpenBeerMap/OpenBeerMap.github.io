@@ -48,7 +48,7 @@
 <attr_overpass "data via <a>Overpass API</a>"> 
 <locate_ok "You are here"> 
 <locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
-<choix_bieres_tous "<img> Drink">
+<choix_bieres_tous " Drink">
 <popup_nom "Name"> 
 <popup_opening_hours "Opening hours"> 
 <popup_happy_hours "Happy hours"> 

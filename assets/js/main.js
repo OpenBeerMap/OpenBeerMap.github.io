@@ -54,8 +54,9 @@ function RefreshCtrl() {
       Ctrl.removeFrom(map);
    }
    var overlayMaps = {
-   "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
+   "<img src='assets/img/beer1.png' width='24' height='28'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
 };
+
 
    items = localStorage.length;
    for (var i = 0; i < items; i++) {
@@ -70,6 +71,13 @@ html += "$('#setupModal').modal('show'); return false;"
 html += '" data-l10n-id="setup"><i class="fa fa-cog" style="color: black"></i>&nbsp;&nbsp;Configurer</a>'
 //console.log(Ctrl['_overlaysList'].innerHTML)
 Ctrl['_overlaysList'].innerHTML = html;
+
+        // l10n
+        		document.l10n.localize(['choix_bieres_tous',], function(l10n) {
+				  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');
+				  console.log(node)
+				  if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}                 
+				  })
 
 }
 

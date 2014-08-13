@@ -47,7 +47,7 @@
 <attr_overpass "data z <a>Overpass API</a>">
 <locate_ok "Jste zde">
 <locate_ko "Chyba geolokace - Obnovte stránku pro opakování"> /* does not work yet */
-<choix_bieres_tous "<img> Pivo">
+<choix_bieres_tous " Pivo">
 <popup_nom "Název">
 <popup_opening_hours "Otevírací doba">
 <popup_happy_hours "Happy Hour">
