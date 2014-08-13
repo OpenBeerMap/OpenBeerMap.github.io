@@ -46,6 +46,7 @@
    else { 
       // Remove item from localStorage
       delete localStorage.removeItem(element.value);
+                    map.removeLayer(BeerList[element.value])
    }  
    RefreshTxt(); // Refresh notification
   };

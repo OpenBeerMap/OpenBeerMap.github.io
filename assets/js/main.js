@@ -43,31 +43,38 @@ var sidebar = L.control.sidebar("sidebar", {
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
 /* les contrôles */
-    var baseMaps = {
-        "OpenStreetMap": osm,
-    };
-   
-      var overlayMaps = {
-        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
-     }
+var baseMaps = {
+   "OpenStreetMap": osm
+};
 
-     items = localStorage.length;
-     for (var i = 0; i < items; i++) {
+/* Function to refresh controler */
+var Ctrl = undefined;
+function RefreshCtrl() {
+   if (Ctrl != undefined) {
+      Ctrl.removeFrom(map);
+   }
+   var overlayMaps = {
+   "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous
+};
+
+   items = localStorage.length;
+   for (var i = 0; i < items; i++) {
       overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
       }
-      // les fonctions liées à la récupération des bières à afficher dans les contrôles sont dans localStorage.js
+map.addLayer(tous);
+Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed}).addTo(map);
+}
 
-    map.addLayer(tous);
-
+RefreshCtrl();
 /* indication utilisateur en cas de dé-zoom*/
 className : 'leaflet-control-minZoomIndecator'
 map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
 
 /* affichage des contrôles*/
-L.control.layers(baseMaps, overlayMaps, {
-  collapsed: isCollapsed
-}).addTo(map);
+//var myControlOptions = ;
 
+
+   
 /*recherche */
 map.addControl( new L.Control.Search({
 			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
