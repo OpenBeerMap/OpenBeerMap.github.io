@@ -56,9 +56,9 @@
 
 /* Setup */
 <setup "<i></i> Personnaliser">
-<setupbeers "Liste des bières">
-<setupbeers_label "Selectionnez vos bière favorites">
-<setupbeer_resultat "Nombre de bières séléctionnées :">
+<setupbeers "<i></i> Liste des bières">
+<setupbeers_label "Selectionnez vos bières favorites parmi notre selection :">
+<setupbeer_resultat "Nombre de bières séléctionnées : ">
 <clear_button "Tout effacer">
 
 

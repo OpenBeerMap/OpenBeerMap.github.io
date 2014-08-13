@@ -53,23 +53,9 @@ var sidebar = L.control.sidebar("sidebar", {
 
      items = localStorage.length;
      for (var i = 0; i < items; i++) {
-      overlayMaps["<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+      overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
       }
       // les fonctions liées à la récupération des bières à afficher dans les contrôles sont dans localStorage.js
-
-/* //OLD - TO DELETE
-    // les contrôles 
-    var overlayMaps = {
-        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
-        "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; Chouffe": chouffe,
-        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp; Tripel Karmeliet": karmeliet,
-        "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp; Leffe": leffe,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Chimay": chimay,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Brewdog": brewdog,        
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Guinness": guinness,
-        "<img src='assets/img/affligem.png' width='24' height='28'>&nbsp; Affligem": affligem
-    };*/
-
 
     map.addLayer(tous);
 

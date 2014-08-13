@@ -58,7 +58,7 @@
 
 /* Setup */
 <setup "<i></i> Customize">
-<setupbeers "Beer list">
+<setupbeers "<i></i> Beer list">
 <setupbeers_label "Select your favorite beers from our selection !">
 <setupbeer_resultat "Number of selected beers :">
 <clear_button "Reset">

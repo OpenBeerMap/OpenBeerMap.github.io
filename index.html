@@ -93,99 +93,7 @@
         </div>
         <!-- Beer Checkboxes -->
         <div class="form-group" id="pubeditbeerlist">
-          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
-          <div class="col-md-4">
-          <div class="checkbox">
-            <label for="checkboxes-0">
-              <input type="checkbox" name="beer" id="checkboxes-0" value="chouffe">
-              Chouffe
-            </label>
-	        </div>
-          <div class="checkbox">
-            <label for="checkboxes-1">
-              <input type="checkbox" name="beer" id="checkboxes-1" value="leffe">
-              Leffe
-            </label>
-	        </div>
-          <div class="checkbox">
-            <label for="checkboxes-2">
-              <input type="checkbox" name="beer" id="checkboxes-2" value="tripel_karmeliet">
-              Tripel Karmeliet
-            </label>
-	        </div>
-          <div class="checkbox">
-            <label for="checkboxes-3">
-              <input type="checkbox" name="beer" id="checkboxes-3" value="guinness">
-              Guinness
-            </label>
-	        </div>
-          <div class="checkbox">
-            <label for="checkboxes-4">
-              <input type="checkbox" name="beer" id="checkboxes-4" value="chimay">
-              Chimay
-            </label>
-	        </div>
-          <div class="checkbox">
-            <label for="checkboxes-5">
-              <input type="checkbox" name="beer" id="checkboxes-5" value="amstel">
-              Amstel
-            </label>
-	        </div>	              
-          <div class="checkbox">
-            <label for="checkboxes-6">
-              <input type="checkbox" name="beer" id="checkboxes-6" value="carlsberg">
-              Carlsberg
-            </label>
-	        </div>  
-          <div class="checkbox">
-            <label for="checkboxes-7">
-              <input type="checkbox" name="beer" id="checkboxes-7" value="fischer">
-              Fischer
-            </label>
-	        </div>	
-          <div class="checkbox">
-            <label for="checkboxes-8">
-              <input type="checkbox" name="beer" id="checkboxes-8" value="heineken">
-              Heineken
-            </label>
-	        </div>  
-          <div class="checkbox">
-            <label for="checkboxes-9">
-              <input type="checkbox" name="beer" id="checkboxes-9" value="pelforth">
-              Pelforth
-            </label>
-	        </div>   
-          <div class="checkbox">
-            <label for="checkboxes-10">
-              <input type="checkbox" name="beer" id="checkboxes-10" value="kronenbourg">
-              Kronenbourg
-            </label>
-	        </div> 
-          <div class="checkbox">
-            <label for="checkboxes-11">
-              <input type="checkbox" name="beer" id="checkboxes-11" value="grimbergen">
-              Grimbergen
-            </label>
-	        </div>  
-          <div class="checkbox">
-            <label for="checkboxes-12">
-              <input type="checkbox" name="beer" id="checkboxes-12" value="1664">
-              1664
-            </label>
-              </div>
-           <div class="checkbox">
-            <label for="checkboxes-13">
-              <input type="checkbox" name="beer" id="checkboxes-13" value="brewdog">
-              Brewdog
-            </label>
-	        </div>
-           <div class="checkbox">
-            <label for="checkboxes-14">
-              <input type="checkbox" name="beer" id="checkboxes-14" value="affligem">
-              Affligem
-            </label>
-	        </div>	                      
-          </div>
+           <!--Javascript populated : localStorage.js -->
         </div>
             
 		<!-- Champ libre input-->
@@ -273,13 +181,13 @@
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs" id="setupTabs">
-              <li class="active"><a href="#setupbeers" data-toggle="tab" data-l10n-id="setupbeers"><i class="fa fa-question-circle"></i>&nbsp;Liste des bières</a></li>
+              <li class="active"><a href="#setupbeers" data-toggle="tab" data-l10n-id="setupbeers"><i class="fa fa-beer"></i>&nbsp;Liste des bières</a></li>
             </ul>
                <div class="tab-content" id="setupTabsContent" style="padding-top: 10px;">
                 <div class="tab-pane fade active in" id="setupbeers">
                   <p data-l10n-id="setupbeers_label">Séléctionnez vos bières favorites :</p>
                   <form id="FormSelectedBeers">
-                   <!--Javascript populated-->
+                   <!--Javascript populated : localStorage.js -->
                   </form>
                   <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br />
                 <!-- Buttons -->

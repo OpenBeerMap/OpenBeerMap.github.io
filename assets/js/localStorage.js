@@ -6,23 +6,18 @@
 
   function init_localstorage() { 
   // Onload func
-      UpdateBeerList(); // Update beers in setup form
+      UpdateBeerList_Setup_Form(); // Update beers in setup form
       UpdateBeerList_Edition_Form(); // update beers list in OSM form
       localstorageitems = localStorage.length // Count items in local storage
      
-     // Check boxes depending on storage
-     for (var i = 0; i < localstorageitems; i++) {
-        document.getElementById(localStorage.key(i)).checked = true;
-        //console.log(localStorage.key(i));
-        }
-
+     /*
      // Choose default if localStorage is empty 
         var NoneChecked = true; 
-        var inputForm = FormSelectedBeers.getElementsByTagName("input"); // récupération ds éléments de type input du formulaire
+        var inputForm = FormSelectedBeers.getElementsByTagName("input"); 
         var n = inputForm.length;
         for (i=0; i<n; i++)
                 {
-                if ( inputForm[i].type.toLowerCase()==="checkbox")  // si c'est une case à cocher 
+                if ( inputForm[i].type.toLowerCase()==="checkbox")  
                         {
                         if (inputForm[i].checked) {NoneChecked = false; break;} ; 
                         }
@@ -31,9 +26,9 @@
      if (NoneChecked == true) {
             localStorage.setItem('chouffe','1'); document.getElementById('chouffe').checked = true;
             localStorage.setItem('affligem','1'); document.getElementById('affligem').checked = true;
-            localStorage.setItem('karmeliet','1'); document.getElementById('karmeliet').checked = true;
+            localStorage.setItem('tripel_karmeliet','1'); document.getElementById('tripel_karmeliet').checked = true;
             }
-
+    */
      
      RefreshTxt(); // Display/Update notification
   };
@@ -62,13 +57,20 @@
      document.location.reload(); // Page reload 
   };
   
-  function UpdateBeerList() {
+  function UpdateBeerList_Setup_Form() {
       var htmlBieres = '';
+      var checked = '';
       for (var myi in BeerName) {
          if (BeerName.hasOwnProperty(myi)) {
             var TempBeerName = BeerName[myi];
-            var TempBeerNameLowercase = myi; 
-            TempLine = '<input type="checkbox" name="'+ TempBeerNameLowercase +'" value="' + TempBeerNameLowercase + '" id="' + TempBeerNameLowercase + '" onClick="Store(this)" />&nbsp;&nbsp;' + TempBeerName + '<br />';
+            var TempBeerNameLowercase = myi;
+            if (localStorage.getItem(TempBeerNameLowercase) != null) {
+                  checked = 'checked="checked"';
+            }
+            else {
+               checked = '';
+            }
+            TempLine = '<input type="checkbox" '+checked+' name="'+ TempBeerNameLowercase +'" value="' + TempBeerNameLowercase + '" id="' + TempBeerNameLowercase + '" onClick="Store(this)" />&nbsp;&nbsp;' + TempBeerName + '<br />';
             htmlBieres += TempLine;
             }
          }
