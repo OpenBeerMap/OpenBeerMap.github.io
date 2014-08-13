@@ -57,7 +57,7 @@
 <overpass_err "You must zoom in to see more bars.">
 
 /* Setup */
-<setup "<i></i> Customize">
+<setup " Customize">
 <setupbeers "<i></i> Beer list">
 <setupbeers_label "Select your favorite beers from our selection !">
 <setupbeer_resultat "Number of selected beers :">

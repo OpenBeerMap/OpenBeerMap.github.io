@@ -55,7 +55,7 @@
 <overpass_err "Vous devez zoomer plus pour voir les bars.">
 
 /* Setup */
-<setup "<i></i> Personnaliser">
+<setup " Personnaliser">
 <setupbeers "<i></i> Liste des bières">
 <setupbeers_label "Selectionnez vos bières favorites parmi notre selection :">
 <setupbeer_resultat "Nombre de bières séléctionnées : ">

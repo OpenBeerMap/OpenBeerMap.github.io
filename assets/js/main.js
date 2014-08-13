@@ -65,18 +65,21 @@ function RefreshCtrl() {
 map.addLayer(tous);
 
 Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed}).addTo(map);
-var html = Ctrl['_overlaysList'].innerHTML
-html += '<a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="'
+var html = Ctrl['_separator'].innerHTML
+console.log(Ctrl)
+
+html += '<i class="fa fa-cog" style="color: black"></i><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="'
 html += "$('#setupModal').modal('show'); return false;"
-html += '" data-l10n-id="setup"><i class="fa fa-cog" style="color: black"></i>&nbsp;&nbsp;Configurer</a>'
+html += '" data-l10n-id="setup">&nbsp;&nbsp;Configurer</a>'
 //console.log(Ctrl['_overlaysList'].innerHTML)
-Ctrl['_overlaysList'].innerHTML = html;
+Ctrl['_separator'].innerHTML = html;
 
         // l10n
-        		document.l10n.localize(['choix_bieres_tous',], function(l10n) {
-				  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');
-				  console.log(node)
-				  if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}                 
+        		document.l10n.localize(['choix_bieres_tous','setup'], function(l10n) {
+				  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');				  
+				  if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}
+				  var node2 = document.querySelector('[data-l10n-id=setup]');				  
+				  if (node2 != null ) {node2.textContent = l10n.entities.setup.value;}                  
 				  })
 
 }
