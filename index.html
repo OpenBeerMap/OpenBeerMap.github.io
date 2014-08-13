@@ -65,8 +65,7 @@
           </div>
         </form>-->
         <ul class="nav navbar-nav">
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#setupModal').modal('show'); return false;" data-l10n-id="setup"><i class="fa fa-cog" style="color: white"></i>&nbsp;&nbsp;Configurer</a></li>          
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>       
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -93,7 +92,7 @@
         </div>
         <!-- Beer Checkboxes -->
         <div class="form-group" id="pubeditbeerlist">
-          <!-- Javascript populated -->
+          <!-- Javascript populated : localStorage.js -->
         </div>
             
 		<!-- Champ libre input-->
@@ -187,7 +186,7 @@
                 <div class="tab-pane fade active in" id="setupbeers">
                   <p data-l10n-id="setupbeers_label">Séléctionnez vos bières favorites :</p>
                   <form id="FormSelectedBeers">
-                   <!--Javascript populated-->
+                   <!--Javascript populated : localStorage.js -->
                   </form>
                   <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br />
                 <!-- Buttons -->

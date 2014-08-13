@@ -62,7 +62,15 @@ function RefreshCtrl() {
       overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
       }
 map.addLayer(tous);
+
 Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed}).addTo(map);
+var html = Ctrl['_overlaysList'].innerHTML
+html += '<a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="'
+html += "$('#setupModal').modal('show'); return false;"
+html += '" data-l10n-id="setup"><i class="fa fa-cog" style="color: black"></i>&nbsp;&nbsp;Configurer</a>'
+//console.log(Ctrl['_overlaysList'].innerHTML)
+Ctrl['_overlaysList'].innerHTML = html;
+
 }
 
 RefreshCtrl();
