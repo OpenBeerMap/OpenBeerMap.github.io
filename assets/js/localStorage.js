@@ -46,16 +46,25 @@
    else { 
       // Remove item from localStorage
       delete localStorage.removeItem(element.value);
-                    map.removeLayer(BeerList[element.value])
+      if (map.hasLayer(BeerList[element.value])) {map.removeLayer(BeerList[element.value]);}
    }  
    RefreshTxt(); // Refresh notification
   };
   
   function ClearStorage() {
-     // Reset localStorage
+     // Reset localStorage , uncheck boxes, and remove map layer
+     for (var myi in BeerName) {
+       if (BeerName.hasOwnProperty(myi)) {
+         var TempBeerName = myi;
+         if (document.getElementById(TempBeerName).checked == true) {document.getElementById(TempBeerName).checked = false;}
+         //alert(TempBeerName);
+         if (map.hasLayer(BeerList[TempBeerName])) {map.removeLayer(BeerList[TempBeerName]);alert("removed layer : "+TempBeerName);}
+      }
+     }
      localStorage.clear();
-     document.getElementById('FormSelectedBeers').reset(); // Uncheck boxes   
-     document.location.reload(); // Page reload 
+     RefreshTxt(); // Refresh notification
+     //document.getElementById('FormSelectedBeers').reset(); // Uncheck boxes   
+     //document.location.reload(); // Page reload 
   };
   
   function UpdateBeerList_Setup_Form() {
@@ -65,12 +74,8 @@
          if (BeerName.hasOwnProperty(myi)) {
             var TempBeerName = BeerName[myi];
             var TempBeerNameLowercase = myi;
-            if (localStorage.getItem(TempBeerNameLowercase) != null) {
-                  checked = 'checked="checked"';
-            }
-            else {
-               checked = '';
-            }
+            if (localStorage.getItem(TempBeerNameLowercase) != null) {checked = 'checked="checked"';}
+            else {checked = '';}
             TempLine = '<input type="checkbox" '+checked+' name="'+ TempBeerNameLowercase +'" value="' + TempBeerNameLowercase + '" id="' + TempBeerNameLowercase + '" onClick="Store(this)" />&nbsp;&nbsp;' + TempBeerName + '<br />';
             htmlBieres += TempLine;
             }

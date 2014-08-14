@@ -49,52 +49,54 @@ var baseMaps = {
 
 /* Function to refresh controler */
 var Ctrl = undefined;
+/* Function to refresh topright controler */
 function RefreshCtrl() {
-   if (Ctrl != undefined) {
-      Ctrl.removeFrom(map);
+		   if (Ctrl != undefined) {
+					  Ctrl.removeFrom(map); 
+				   };
+			   
+		   var overlayMaps = {
+			  "<img src='assets/img/beer1.png' width='24' height='28'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
+		   };
+	   
+		   items = localStorage.length;
+		   for (var i = 0; i < items; i++) {
+		   if (BeerName[localStorage.key(i)] != undefined) {
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+		   }}
+console.log(tous)
+console.log(overlayMaps)
+		   
+console.log('test')
+		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
+console.log('test')
+		   Ctrl.addTo(map);
+		console.log('test')   
+		   var html = Ctrl['_separator'].innerHTML;
+
+
+		   html += '<i class="fa fa-cog" style="color: black"></i><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
+		   html += "$('#setupModal').modal('show'); return false;";
+		   html += '" data-l10n-id="setup">&nbsp;&nbsp;Configurer</a>';
+		   //console.log(Ctrl['_overlaysList'].innerHTML);
+		   Ctrl['_separator'].innerHTML = html;
+
+		   // l10n
+		   document.l10n.localize(['choix_bieres_tous','setup'], function(l10n) {
+			  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');				  
+				if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}
+				var node2 = document.querySelector('[data-l10n-id=setup]');				  
+				if (node2 != null ) {node2.textContent = l10n.entities.setup.value;}                  
+				})
    }
-   var overlayMaps = {
-   "<img src='assets/img/beer1.png' width='24' height='28'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
-};
-
-
-   items = localStorage.length;
-   for (var i = 0; i < items; i++) {
-      overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
-      }
-map.addLayer(tous);
-
-Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed}).addTo(map);
-var html = Ctrl['_separator'].innerHTML
-console.log(Ctrl)
-
-html += '<i class="fa fa-cog" style="color: black"></i><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="'
-html += "$('#setupModal').modal('show'); return false;"
-html += '" data-l10n-id="setup">&nbsp;&nbsp;Configurer</a>'
-//console.log(Ctrl['_overlaysList'].innerHTML)
-Ctrl['_separator'].innerHTML = html;
-
-        // l10n
-        		document.l10n.localize(['choix_bieres_tous','setup'], function(l10n) {
-				  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');				  
-				  if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}
-				  var node2 = document.querySelector('[data-l10n-id=setup]');				  
-				  if (node2 != null ) {node2.textContent = l10n.entities.setup.value;}                  
-				  })
-
-}
-
+// Refresh controler on page load
 RefreshCtrl();
+map.addLayer(tous);
 /* indication utilisateur en cas de dé-zoom*/
 className : 'leaflet-control-minZoomIndecator'
 map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
-
-/* affichage des contrôles*/
-//var myControlOptions = ;
-
-
    
-/*recherche */
+/* Search layer */
 map.addControl( new L.Control.Search({
 			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
 			jsonpParam: 'json_callback',
@@ -107,6 +109,5 @@ map.addControl( new L.Control.Search({
 			zoom:16
 		}) );
  
-/* supprimer la barre de progression quand tout le js est traité*/
+/* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
-
