@@ -64,14 +64,13 @@ function RefreshCtrl() {
 		   if (BeerName[localStorage.key(i)] != undefined) {
 			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
 		   }}
-console.log(tous)
-console.log(overlayMaps)
+
 		   
-console.log('test')
+
 		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
-console.log('test')
+
 		   Ctrl.addTo(map);
-		console.log('test')   
+   
 		   var html = Ctrl['_separator'].innerHTML;
 
 

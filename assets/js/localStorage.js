@@ -53,16 +53,23 @@
   
   function ClearStorage() {
      // Reset localStorage , uncheck boxes, and remove map layer
+     localStorage.clear();
+      UpdateBeerList_Setup_Form()
+      RefreshTxt()
+      for (var myi in BeerList) {
+          if (map.hasLayer(BeerList[myi])) {map.removeLayer(BeerList[myi]);console.log("removed layer : "+myi);}
+      }
+     /* TO DELETE
      for (var myi in BeerName) {
        if (BeerName.hasOwnProperty(myi)) {
          var TempBeerName = myi;
          if (document.getElementById(TempBeerName).checked == true) {document.getElementById(TempBeerName).checked = false;}
          //alert(TempBeerName);
-         if (map.hasLayer(BeerList[TempBeerName])) {map.removeLayer(BeerList[TempBeerName]);alert("removed layer : "+TempBeerName);}
+         if (map.hasLayer(BeerList[TempBeerName])) {map.removeLayer(BeerList[TempBeerName]);console.log("removed layer : "+TempBeerName);}
       }
      }
      localStorage.clear();
-     RefreshTxt(); // Refresh notification
+     RefreshTxt(); // Refresh notification*/
      //document.getElementById('FormSelectedBeers').reset(); // Uncheck boxes   
      //document.location.reload(); // Page reload 
   };
