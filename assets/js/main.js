@@ -75,9 +75,9 @@ console.log('test')
 		   var html = Ctrl['_separator'].innerHTML;
 
 
-		   html += '<i class="fa fa-cog" style="color: black"></i><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
+		   html += '<a href="#" class="btn btn-warning" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
 		   html += "$('#setupModal').modal('show'); return false;";
-		   html += '" data-l10n-id="setup">&nbsp;&nbsp;Configurer</a>';
+		   html += '"><i class="fa fa-cogs" style="color: white"></i><font color="white" data-l10n-id="setup">&nbsp;&nbsp;Configurer</font></a>';
 		   //console.log(Ctrl['_overlaysList'].innerHTML);
 		   Ctrl['_separator'].innerHTML = html;
 
