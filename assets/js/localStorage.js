@@ -5,36 +5,25 @@
 //les variables liées aux données sur les bières sont dans BeerList.js
 
   function init_localstorage() { 
+	// set default for the first visit
+      if (localStorage.getItem('ItIsMyFirstVisit') == undefined) {
+            localStorage.setItem('chouffe','1'); 
+            localStorage.setItem('affligem','1'); 
+            localStorage.setItem('tripel_karmeliet','1');
+         localStorage.setItem('ItIsMyFirstVisit','not any more')
+      }
+      
   // Onload func
       UpdateBeerList_Setup_Form(); // Update beers in setup form
       UpdateBeerList_Edition_Form(); // update beers list in OSM form
       localstorageitems = localStorage.length // Count items in local storage
      
-     /*
-     // Choose default if localStorage is empty 
-        var NoneChecked = true; 
-        var inputForm = FormSelectedBeers.getElementsByTagName("input"); 
-        var n = inputForm.length;
-        for (i=0; i<n; i++)
-                {
-                if ( inputForm[i].type.toLowerCase()==="checkbox")  
-                        {
-                        if (inputForm[i].checked) {NoneChecked = false; break;} ; 
-                        }
-                }
-     //console.log(NoneChecked)
-     if (NoneChecked == true) {
-            localStorage.setItem('chouffe','1'); document.getElementById('chouffe').checked = true;
-            localStorage.setItem('affligem','1'); document.getElementById('affligem').checked = true;
-            localStorage.setItem('tripel_karmeliet','1'); document.getElementById('tripel_karmeliet').checked = true;
-            }
-    */
-     
-     RefreshTxt(); // Display/Update notification
+     RefreshTxt(); // Display/update txt notification
   };
   
   function RefreshTxt() {
-     // Display small notification
+     // DEBUG
+     //  Display small notification (remove hidden in the html file to debug)
      document.getElementById('ResultLocalStorage').innerHTML = localStorage.length;
   };
   
@@ -56,22 +45,10 @@
      localStorage.clear();
       UpdateBeerList_Setup_Form()
       RefreshTxt()
+      localStorage.setItem('ItIsMyFirstVisit','nope')
       for (var myi in BeerList) {
           if (map.hasLayer(BeerList[myi])) {map.removeLayer(BeerList[myi]);console.log("removed layer : "+myi);}
       }
-     /* TO DELETE
-     for (var myi in BeerName) {
-       if (BeerName.hasOwnProperty(myi)) {
-         var TempBeerName = myi;
-         if (document.getElementById(TempBeerName).checked == true) {document.getElementById(TempBeerName).checked = false;}
-         //alert(TempBeerName);
-         if (map.hasLayer(BeerList[TempBeerName])) {map.removeLayer(BeerList[TempBeerName]);console.log("removed layer : "+TempBeerName);}
-      }
-     }
-     localStorage.clear();
-     RefreshTxt(); // Refresh notification*/
-     //document.getElementById('FormSelectedBeers').reset(); // Uncheck boxes   
-     //document.location.reload(); // Page reload 
   };
   
   function UpdateBeerList_Setup_Form() {
@@ -87,6 +64,7 @@
             htmlBieres += TempLine;
             }
          }
+      
       document.getElementById('FormSelectedBeers').innerHTML = htmlBieres;
   };
 
