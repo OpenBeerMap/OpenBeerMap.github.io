@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "name": "OpenBeerMap",
-  "description": "La carte libre et éditable des bars et bières pression qui y sont servies", 
+  "description": "La carte libre et éditable des bars et bières pression qui y sont servies. Les données proviennent d'OpenStreetMap et toute contribution y est reversée. Aussi disponible à l'adresse http://openbeermap.github.io/", 
   "launch_path": "/index.html",
   "icons": {
     "16": "/assets/img/mobile/icon-16.png", 
@@ -16,6 +16,9 @@
   "locales": {
     "en": {
       "description": "This app allows you to find a bar that serves your favorite beer and to add info about it"
+    },   
+    "hu": {
+      "description": "Ingyenes és szerkeszthető térkép a kocsmákról és a felszolgált sörökről. Az adatok az OpenStreetMap-ből származnak és hozzáadott/módosított információ is oda kerül. Elérhető a http://openbeermap.github.io/ címen is. "
     },
     "es": {
       "description": "Mapa de bares en todo el mundo libre y editable "
