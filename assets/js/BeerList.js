@@ -13,7 +13,7 @@ BeerImage = new Array();
     BeerImage["leffe"] = "beer1";
     BeerList["leffe"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[lL]effe'];out;", "assets/img/"+BeerImage['leffe']+".png"); 
     //
-    BeerImage["chouffe"] = "beer4";
+    BeerImage["chouffe"] = "beers/chouffe";
     BeerName["chouffe"] = "Chouffe";
     BeerList["chouffe"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[cC]houffe'];out;", "assets/img/"+BeerImage['chouffe']+".png");
     //
@@ -22,20 +22,24 @@ BeerImage = new Array();
     BeerList["chimay"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]himay'];out;", "assets/img/"+BeerImage['chimay']+".png");  
     //
     BeerName["guinness"] = "Guinness";
-    BeerImage["guinness"] = "beer1";
+    BeerImage["guinness"] = "beers/guinness";
     BeerList["guinness"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/"+BeerImage['guinness']+".png");
     //
     BeerImage["brewdog"] = "beer1";
     BeerName["brewdog"] = "Brewdog";
     BeerList["brewdog"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Bb]rewdog'];out;", "assets/img/"+BeerImage['brewdog']+".png");  
     //
-    BeerImage["affligem"] = "affligem";
+    BeerImage["affligem"] = "beers/affligem";
     BeerName["affligem"] = "Affligem";	
 	 BeerList["affligem"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]ffligem'];out;", "assets/img/"+BeerImage['affligem']+".png");
     //
-    BeerImage["tripel_karmeliet"] = "beer3";
+    BeerImage["tripel_karmeliet"] = "beers/karmeliet";
     BeerName["tripel_karmeliet"] = "Tripel Karmeliet";
     BeerList["tripel_karmeliet"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/"+BeerImage['tripel_karmeliet']+".png");
+    //
+    BeerImage["kwak"] = "beers/kwak";
+    BeerName["kwak"] = "Kwak";
+    BeerList["kwak"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[kK]wak'];out;", "assets/img/"+BeerImage['kwak']+".png");
     //
     BeerImage["amstel"] = "beer3";
     BeerName["amstel"] = "Amstel";

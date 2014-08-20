@@ -56,13 +56,13 @@ function RefreshCtrl() {
 				   };
 			   
 		   var overlayMaps = {
-			  "<img src='assets/img/beer1.png' width='24' height='28'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
+			  "<img src='assets/img/beer1.png'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
 		   };
 	   
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
 		   if (BeerName[localStorage.key(i)] != undefined) {
-			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
 		   }}
 
 		   
