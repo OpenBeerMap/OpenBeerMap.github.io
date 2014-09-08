@@ -62,7 +62,7 @@ function RefreshCtrl() {
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
 		   if (BeerName[localStorage.key(i)] != undefined) {
-			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
 		   }}
 
 		   
