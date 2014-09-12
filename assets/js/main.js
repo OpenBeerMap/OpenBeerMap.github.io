@@ -48,6 +48,7 @@ var baseMaps = {
 };
 
 /* Function to refresh controler */
+init_localstorage()
 var Ctrl = undefined;
 /* Function to refresh topright controler */
 function RefreshCtrl() {
