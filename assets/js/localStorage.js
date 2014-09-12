@@ -1,5 +1,5 @@
 /*
- OpenBeerMap localStorage.js | noemie.lehuby(at)gmail.com | MIT Licensed
+ OpenBeerMap localStorage.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
 */
 
 //les variables liées aux données sur les bières sont dans BeerList.js

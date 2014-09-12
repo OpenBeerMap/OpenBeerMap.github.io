@@ -1,5 +1,5 @@
 /*
- OpenBeerMap Beerlist.js | noemie.lehuby(at)gmail.com | MIT Licensed
+ OpenBeerMap Beerlist.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
 */
 
 /*OverpassAPI overlay > controls and form checkboxes */
