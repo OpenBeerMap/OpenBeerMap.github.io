@@ -76,4 +76,8 @@ BeerImage = new Array();
     BeerImage["1664"] = "beer3";
     BeerName["1664"] = "1664";
     BeerList["1664"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'1664'];out;", "assets/img/"+BeerImage['1664']+".png");
+    // Coucou !
+    BeerImage["rebelred"] = "beer4";
+    BeerName["rebelred"] = "Rebel Red";
+    BeerList["rebelred"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[rR]ebel red'];out;", "assets/img/"+BeerImage['rebelred']+".png");
 //les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js
