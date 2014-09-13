@@ -48,10 +48,17 @@
 <attr_overpass "data via <a>Overpass API</a>"> 
 <locate_ok "You are here"> 
 <locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
-<choix_bieres_tous "<img> Drink">
+<choix_bieres_tous " Drink">
 <popup_nom "Name"> 
 <popup_opening_hours "Opening hours"> 
 <popup_happy_hours "Happy hours"> 
 <popup_biere "Draft beer"> 
 <popup_edit "Add information about this bar"> 
 <overpass_err "You must zoom in to see more bars.">
+
+/* Setup */
+<setup " Customize">
+<setupbeers "<i></i> Beer list">
+<setupbeers_label "Select your favorite beers from our selection !">
+<setupbeer_resultat "Number of selected beers :">
+<clear_button "Reset">

@@ -42,51 +42,61 @@ var sidebar = L.control.sidebar("sidebar", {
 }).addTo(map);
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
-/*OverPassAPI overlay*/
-	var tous = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];node(BBOX)[amenity=cafe];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];node(BBOX)[amenity=pub]);out;>;out;", "assets/img/beer1.png");
-    
-    var leffe = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[lL]effe'];out;", "assets/img/beer2.png"); 
-    	
-    var chouffe = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[cC]houffe'];out;", "assets/img/beer4.png");  
-    
-    var chimay = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Cc]himay'];out;", "assets/img/beer1.png");  
-	
-    var guinness = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Gg]uinness'];out;", "assets/img/beer1.png");  
+/* les contrôles */
+var baseMaps = {
+   "OpenStreetMap": osm
+};
 
-	var brewdog = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[Bb]rewdog'];out;", "assets/img/beer1.png");  
+/* Function to refresh controler */
+init_localstorage()
+var Ctrl = undefined;
+/* Function to refresh topright controler */
+function RefreshCtrl() {
+		   if (Ctrl != undefined) {
+					  Ctrl.removeFrom(map); 
+				   };
+			   
+		   var overlayMaps = {
+			  "<img src='assets/img/beer1.png'><span data-l10n-id='choix_bieres_tous'>&nbsp;Boire</span>": tous
+		   };
+	   
+		   items = localStorage.length;
+		   for (var i = 0; i < items; i++) {
+		   if (BeerName[localStorage.key(i)] != undefined) {
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+		   }}
 
-	var affligem = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[aA]ffligem'];out;", "assets/img/affligem.png");  
-	
-    var karmeliet = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];out;", "assets/img/beer3.png");
-//les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js   
-    
-    
-    var baseMaps = {
-        "OpenStreetMap": osm,
-    };
+		   
 
-    var overlayMaps = {
-        "<span data-l10n-id='choix_bieres_tous'><img src='assets/img/beer1.png' width='24' height='28'>&nbsp;Boire</span>": tous,
-        "<img src='assets/img/beer4.png' width='24' height='28'>&nbsp; Chouffe": chouffe,
-        "<img src='assets/img/beer3.png' width='24' height='28'>&nbsp; Tripel Karmeliet": karmeliet,
-        "<img src='assets/img/beer2.png' width='24' height='28'>&nbsp; Leffe": leffe,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Chimay": chimay,
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Brewdog": brewdog,        
-        "<img src='assets/img/beer1.png' width='24' height='28'>&nbsp; Guinness": guinness,
-        "<img src='assets/img/affligem.png' width='24' height='28'>&nbsp; Affligem": affligem
-    };
-    map.addLayer(tous);
+		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
 
-//indication utilisateur en cas de dé-zoom
+		   Ctrl.addTo(map);
+   
+		   var html = Ctrl['_separator'].innerHTML;
+
+
+		   html += '<a href="#" class="btn btn-warning" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
+		   html += "$('#setupModal').modal('show'); return false;";
+		   html += '"><i class="fa fa-cogs" style="color: white"></i><font color="white" data-l10n-id="setup">&nbsp;&nbsp;Configurer</font></a>';
+		   //console.log(Ctrl['_overlaysList'].innerHTML);
+		   Ctrl['_separator'].innerHTML = html;
+
+		   // l10n
+		   document.l10n.localize(['choix_bieres_tous','setup'], function(l10n) {
+			  var node = document.querySelector('[data-l10n-id=choix_bieres_tous]');				  
+				if (node != null ) {node.textContent = l10n.entities.choix_bieres_tous.value;}
+				var node2 = document.querySelector('[data-l10n-id=setup]');				  
+				if (node2 != null ) {node2.textContent = l10n.entities.setup.value;}                  
+				})
+   }
+// Refresh controler on page load
+RefreshCtrl();
+map.addLayer(tous);
+/* indication utilisateur en cas de dé-zoom*/
 className : 'leaflet-control-minZoomIndecator'
 map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
-
-
-L.control.layers(baseMaps, overlayMaps, {
-  collapsed: isCollapsed
-}).addTo(map);
-
-//recherche
+   
+/* Search layer */
 map.addControl( new L.Control.Search({
 			url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
 			jsonpParam: 'json_callback',
@@ -99,6 +109,5 @@ map.addControl( new L.Control.Search({
 			zoom:16
 		}) );
  
-//supprimer la barre de progression quand tout le js est traité 
+/* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
-

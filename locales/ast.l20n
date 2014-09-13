@@ -46,7 +46,7 @@
 <attr_overpass "datos via la <a>API Overpass</a>"> 
 <locate_ok "Tas equí"> 
 <locate_ko "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
-<choix_bieres_tous "<img> ¡Beber!">
+<choix_bieres_tous " ¡Beber!">
 <popup_nom "Nome"> 
 <popup_opening_hours "Hores d'apertura"> 
 <popup_happy_hours "Happy hours"> 

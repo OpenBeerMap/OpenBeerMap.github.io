@@ -47,7 +47,7 @@
 <attr_overpass "data via <a>Overpass API</a>"> 
 <locate_ok "Du är här"> 
 <locate_ko "Kunde inte hitta din plats - Ladda om sidan för att försöka igen"> /* does not work yet */
-<choix_bieres_tous "<img> Drycker!">
+<choix_bieres_tous " Drycker!">
 <popup_nom "Namn"> 
 <popup_opening_hours "Öppettider"> 
 <popup_happy_hours "Happy hour-period"> 

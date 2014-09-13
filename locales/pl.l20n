@@ -47,7 +47,7 @@
 <attr_overpass "dane dzięki <a>Overpass API</a>"> 
 <locate_ok "Jesteś tutaj"> 
 <locate_ko "Błąd Geolokacji - Przeładuj stronę, aby ponowić"> /* does not work yet */
-<choix_bieres_tous "<img> Drink">
+<choix_bieres_tous " Drink">
 <popup_nom "Nazwa"> 
 <popup_opening_hours "Godziny otwarcia"> 
 <popup_happy_hours "Happy hours"> 
