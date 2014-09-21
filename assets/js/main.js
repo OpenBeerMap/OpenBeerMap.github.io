@@ -98,7 +98,7 @@ map.zoomIndecator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom
    
 /* Search layer */
 map.addControl( new L.Control.Search({
-			url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+			url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
 			jsonpParam: 'json_callback',
 			propertyName: 'display_name',
 			propertyLoc: ['lat','lon'],
@@ -108,6 +108,9 @@ map.addControl( new L.Control.Search({
 			minLength: 2,
 			zoom:16
 		}) );
- 
+
+/* Hash map (coordinates in the url to make perenne url) */
+var hash = new L.Hash(map);
+
 /* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
