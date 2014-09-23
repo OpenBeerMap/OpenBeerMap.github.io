@@ -6,6 +6,7 @@
 
 /* Home Page */
 <a_propos "<i></i>&nbsp; About"> 
+<the_news "<i></i>&nbsp; News"> 
 
 /* Blabla */
 <hello_world "Welcome to OpenBeerMap!"> 

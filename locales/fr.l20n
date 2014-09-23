@@ -4,6 +4,7 @@
 
 /* Page d'accueil */
 <a_propos "<i></i>&nbsp; À propos"> 
+<the_news "<i></i>&nbsp; Actualités"> 
 
 /* Blabla */
 <hello_world "Bienvenue sur OpenBeerMap !"> 
