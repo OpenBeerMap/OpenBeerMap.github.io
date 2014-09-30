@@ -131,3 +131,11 @@ input[type="radio"], input[type="checkbox"] {
     display: none !important;
   }
 }
+/* OSM opening hours / happy hours parsing */
+.opening-hours-circle {
+    background: grey;
+    width : 15px;
+    height: 15px;
+	border:1px solid #679403;
+	border-radius:50%;
+	}
