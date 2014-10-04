@@ -60,7 +60,7 @@
             var TempBeerNameLowercase = myi;
             if (localStorage.getItem(TempBeerNameLowercase) != null) {checked = 'checked="checked"';}
             else {checked = '';}
-            TempLine = '<input type="checkbox" '+checked+' name="'+ TempBeerNameLowercase +'" value="' + TempBeerNameLowercase + '" id="' + TempBeerNameLowercase + '" onClick="Store(this)" />&nbsp;&nbsp;' + TempBeerName + '<br />';
+            TempLine = '<label><input type="checkbox" '+checked+' name="'+ TempBeerNameLowercase +'" value="' + TempBeerNameLowercase + '" id="' + TempBeerNameLowercase + '" onClick="Store(this)" />&nbsp;&nbsp;' + TempBeerName + '</label><br />';
             htmlBieres += TempLine;
             }
          }
