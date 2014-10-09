@@ -33,18 +33,21 @@ function draw_beer(url,icon){
 	callback: function(data) {
                 for(i=0;i<data.elements.length;i++) {
                 e = data.elements[i];
-
+                //console.log(e)
                 if (e.id in this.instance._ids) return;
-                this.instance._ids[e.id] = true;
-                var pos = new L.LatLng(e.lat, e.lon);
+                this.instance._ids[e.id] = true;   
+                if (e.tags != undefined){
+                    if (e.type === "node") {if (e.tags['amenity']) {var pos = new L.LatLng(e.lat, e.lon);}}
+                    else {var pos = new L.LatLng(e.center.lat, e.center.lon);}
                 var content = "<table class='table table-striped table-bordered table-condensed'>" 
                 if (e.tags["name"]) {content += "<tr><th data-l10n-id='popup_nom'>Nom</th><td>" + e.tags["name"] + "</td></tr>"}
                 if (e.tags["opening_hours"]) {content += "<tr><th data-l10n-id='popup_opening_hours'>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["opening_hours"]) +"'></div></td></tr>"}
                 if (e.tags["happy_hours"]) {content += "<tr><th data-l10n-id='popup_happy_hours'>Happy Hours</th><td>" + e.tags["happy_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["happy_hours"]) +"'></div></td></tr>"}
                 if (e.tags["brewery"]) {content += "<tr><th data-l10n-id='popup_biere'>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
-                content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";
+                    if (e.type == 'node') {node = "node" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,node,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
+                    if (e.type == 'way') {way = "way" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,way,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
                 content +="</table>";
-                    
+//78146476                    
         icon_o = icon            
 		//if (e.tags["brewery"]) {icon_o = "assets/img/beer_empty.png"}
                     
@@ -75,22 +78,21 @@ function draw_beer(url,icon){
                     
                     
         marker.on('click', onPopupClick);	
-        }
+                }}
       },
     })
-    };    
+    };  
  
-
 /* Opening Hours parsing */
 function parse_osm_times(a_string){
       try {
       var oh = new opening_hours(a_string);
       var state      = oh.getStateString();
-        console.log(state)
+       // console.log(state)
       if (state === "open") {colour = "#bfd70e"}
       if (state === "close") {colour = "#ff0000"}
         return colour
       }
 
-      catch(err){console.log("erreur")}       
+      catch(err){console.log("erreur en parsant les horaires")}       
 }

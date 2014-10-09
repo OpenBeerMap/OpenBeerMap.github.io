@@ -12,9 +12,10 @@ Array.prototype.del = function(val){
     }
 }
 
-function init_form_from_OSM(form,OSM_id) { 
+function init_form_from_OSM(form,OSM_type,OSM_id) { 
         // récupération des valeurs actuelles 
-        OSM_xml = get_node(OSM_id)
+        OSM_xml = get_node_or_way(OSM_id,OSM_type)
+    
         beer_src = get_tag(OSM_xml,"brewery").toLowerCase()
         name_src = get_tag(OSM_xml,"name") ; if (name_src === "non_fourni") {name_src = ""}  ;   
         opening_src = get_tag(OSM_xml,"opening_hours") ; if (opening_src === "non_fourni") {opening_src = ""}; 
@@ -23,7 +24,8 @@ function init_form_from_OSM(form,OSM_id) {
         otherbeer_src = get_tag(OSM_xml,"brewery:note") ; if (otherbeer_src === "non_fourni") {otherbeer_src = ""}  ; 
         
         //écriture des valeurs dans le formulaire
-        // id du node, pour pouvoir soumettre le formulaire plus tard
+        // id du node/way, pour pouvoir soumettre le formulaire plus tard
+        document.getElementById('OSM_type').value = OSM_type
         document.getElementById('OSM_id').value = OSM_id
         // nom du bar
         document.getElementById('bar-name').value = name_src
@@ -32,7 +34,7 @@ function init_form_from_OSM(form,OSM_id) {
         // happy hours
         document.getElementById('happy_hours').value = happy_src        
 		//lien iD tout en bas du formulaire
-		document.getElementById("singlelink").href = "http://www.openstreetmap.org/edit?editor=id&node="+ OSM_id.toString() 
+		document.getElementById("singlelink").href = "http://www.openstreetmap.org/edit?editor=id&"+OSM_type+ "=" + OSM_id.toString() 
         // champ libre pour les bières autres
         document.getElementById('beer-other').value = otherbeer_src
         //tout le reste
@@ -62,9 +64,10 @@ function init_form_from_OSM(form,OSM_id) {
 
 function form_from_user(form) {
         OSM_id = document.getElementById('OSM_id').value
+        OSM_type = document.getElementById('OSM_type').value
          
         // récupération des valeurs de bière actuelles       
-        OSM_xml = get_node(OSM_id)
+        OSM_xml = get_node_or_way(OSM_id,OSM_type)
         var beer_tab = get_tag(OSM_xml,"brewery").toLowerCase().split(';');
         
         
@@ -106,20 +109,20 @@ function form_from_user(form) {
         var envoi = 0   
 
         //TODO : il y a des envois vides à OSM ; refacto à prévoir ici
-        if (beer_tab.length > 0) {edit_tag(OSM_xml,"brewery",brewery); envoi = 1}
+        if (beer_tab.length > 0) {edit_tag(OSM_xml,OSM_type,"brewery",brewery); envoi = 1} // TODO : ici, on envoie dès qu'il y a déjà une bière renseignée, même si on ne la change pas
         // s'il n'y avait qu'une bière, et que l'utilisateur la décoche, beer_tab devient vide, il faut donc supprimer le tag
-        else {if((brewery != get_tag(OSM_xml,"brewery")) && (beer_tab.length != 0)) {del_tag(OSM_xml,"brewery");envoi=2}}
-        if (wifi != "chaispas") {edit_tag(OSM_xml,"internet_access", wifi); envoi = 3}
+        else {if((brewery != get_tag(OSM_xml,"brewery")) && (beer_tab.length != 0)) {del_tag(OSM_xml,"brewery");envoi=2}} // fonctionne pas
+        if (wifi != "chaispas") {edit_tag(OSM_xml,OSM_type,"internet_access", wifi); envoi = 3}
         // si wifi n'était pas vide, mais que maintenant, c'est chaispas, il faut supprimer le tag
         else {if(get_tag(OSM_xml,"internet_access") != "non_fourni") {del_tag(OSM_xml,"internet_access");envoi=4}}
-        if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml, "name", name); envoi = 5}
+        if ((name != get_tag(OSM_xml,"name")) && (name != "")) {edit_tag(OSM_xml,OSM_type, "name", name); envoi = 5}
         //si nom est vide mais qu'avant il y avait qqch, il faut supprimer le tag
         else {if ((get_tag(OSM_xml,"name") != "non_fourni") && (name == "")) {del_tag(OSM_xml, "name"); envoi = 6}}
-    	if ((otherbeer != get_tag(OSM_xml,"brewery:note")) && (otherbeer != "")) {edit_tag(OSM_xml, "brewery:note", otherbeer); envoi = 7}
+    	if ((otherbeer != get_tag(OSM_xml,"brewery:note")) && (otherbeer != "")) {edit_tag(OSM_xml,OSM_type, "brewery:note", otherbeer); envoi = 7}
     
         /*
-        if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, "opening_hours", opening); envoi = 1}
-        if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, "happy_hours", happy); envoi = 1}
+        if ((opening != get_tag(OSM_xml,"opening_hours")) && (opening != "")) {edit_tag(OSM_xml, OSM_type, "opening_hours", opening); envoi = 1}
+        if ((happy != get_tag(OSM_xml,"happy_hours")) && (happy != "")) {edit_tag(OSM_xml, OSM_type, "happy_hours", happy); envoi = 1}
         */
     
     	//envoi à OSM
@@ -130,7 +133,7 @@ function form_from_user(form) {
                 changeset_id = put_changeset()
                 
                 //envoyer le nouveau node
-                put_node(OSM_xml, changeset_id, OSM_id)
+                put_node_or_way(OSM_xml, changeset_id, OSM_id,OSM_type)
                 
                 //fermer le changeset
                 close_changeset(changeset_id);
@@ -139,6 +142,7 @@ function form_from_user(form) {
         //post-processing
         sidebar.hide();
         };
+
 
 
 
