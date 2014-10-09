@@ -4,7 +4,8 @@
 */
 
 /* Páxina d'entrada */
-<a_propos "<i></i>&nbsp; Tocante a"> 
+<a_propos "<i></i>&nbsp; Tocante a">
+<the_news "<i></i>&nbsp; Novedaes">  
 
 /* Blabla */
 <hello_world "¡Bienvenios a OpenBeerMap!"> 
@@ -12,7 +13,7 @@
 <about_contenu """
                 <p>¡Esti sitiu te permite alcontrar un bar que tenga la to cerveza favorita!</p>
                 <p>Si falta información o esta ta enquivocada, afalámoste a collaborar.</p>
-                <p><a>Más información tocante al orixe d'esti sitiu nel blog de la autora.</p>
+                <p><a>Más información sobro l'orixe d'esti sitiu nel blog de la autora (en francés).</p>
 """> 
 <contact "<i></i>&nbsp;Contautu"> 
 <contact_contenu "Pa proponer una cerveza que falte, informar d'un bug, suxerir una evolución, o simplemente pa convidame a una cerveza..."> 
@@ -39,6 +40,7 @@
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "exemplu : Mo-Fr 18:30-20:00"> 
 <bouton_enregistrer "Guardar"> 
+<sidebar_discard_button "Anular"> 
 <bouton_OSM "Editar direutamente n'OpenStreetMap"> 
 
 /* Elementos del mapa */
@@ -53,4 +55,21 @@
 <popup_biere "Cerveces de grifu"> 
 <popup_edit "Amestar información d'esti bar"> 
 <overpass_err "Tienes d'averar más pa ver los bares.">
+
+/* Configuración */
+<setup " Personalizar">
+<setupbeers "<i></i> Llista de cerveces">
+<setupbeers_label "Esbilla les tos cerveces favorites de la nuesa seleición:">
+<setupbeer_resultat "Númberu de cerveces esbillaes: ">
+<clear_button "Llimpiar too">
+
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+
+<app_description """
+                El mapa llibre y editable de los bares y cerveces de grifu que se sirven.
+                Los datos vienen d'OpenStreetMap y toles collaboraciones devuélvense allí.
+                Disponible tamién na direición http://openbeermap.github.io/
+"""> 
+<why_is_geoloc_needed "Necesítase pa centrar el mapa nel llugar correutu">
 

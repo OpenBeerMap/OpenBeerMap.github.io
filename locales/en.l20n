@@ -14,7 +14,7 @@
 <about_contenu """
                 <p>This site allows you to find a bar that serves your favorite beer!</p>
                 <p>If the available information is incorrect or missing, do not hesitate to contribute.</p>
-                <p><a>More information on the site's origins are available on the author's blog.</p>
+                <p><a>More information on the site's origins are available on the author's blog (in French).</p>
 """> 
 <contact "<i></i>&nbsp;Contact"> 
 <contact_contenu "To submit a missing beer, report a bug, suggest changes, or just buy me a beer..."> 
