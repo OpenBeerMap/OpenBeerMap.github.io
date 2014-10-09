@@ -5,34 +5,15 @@
 function basic_auth(){
         return "Basic " + btoa("OpenBeerMapContributor" + ":" + "FtHwuH8w1RDjQpOr0y0gF3AWm8sRsRzncK3hHh9");
 }
-        
-function get_node(id){
+
+function get_node_or_way(id,OSM_type){
         var xhr = new XMLHttpRequest();
 
-        xhr.open("GET", "https://api.openstreetmap.org/api/0.6/node/"+id, false);
+        xhr.open("GET", "https://api.openstreetmap.org/api/0.6/"  +OSM_type + "/"+id, false);
         xhr.setRequestHeader("Authorization", basic_auth());
         xhr.send();
 
-        console.log("GET node/ : " + xhr.status);
-        var xmlDocument = xhr.responseXML;
-
-        var tous_les_tags = xmlDocument.documentElement.getElementsByTagName("tag");
-        for (var i = 0; i < tous_les_tags.length; i++) {
-        //console.log(tous_les_tags[i].getAttribute("k") +" : "+ tous_les_tags[i].getAttribute("v"))
-      
-        }
-        return xmlDocument;
-              
-}
-
-function get_way(id){
-        var xhr = new XMLHttpRequest();
-
-        xhr.open("GET", "https://api.openstreetmap.org/api/0.6/way/"+id, false);
-        xhr.setRequestHeader("Authorization", basic_auth());
-        xhr.send();
-
-        console.log("GET way/ : " + xhr.status);
+        console.log("GET " + OSM_type+ "/ : " + xhr.status);
         var xmlDocument = xhr.responseXML;
 
         var tous_les_tags = xmlDocument.documentElement.getElementsByTagName("tag");

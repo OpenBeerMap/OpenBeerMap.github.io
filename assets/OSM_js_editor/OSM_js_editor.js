@@ -14,8 +14,7 @@ Array.prototype.del = function(val){
 
 function init_form_from_OSM(form,OSM_type,OSM_id) { 
         // récupération des valeurs actuelles 
-        if (OSM_type === 'node') { OSM_xml = get_node(OSM_id)}
-        if (OSM_type === 'way') { OSM_xml = get_way(OSM_id)}
+        OSM_xml = get_node_or_way(OSM_id,OSM_type)
     
         beer_src = get_tag(OSM_xml,"brewery").toLowerCase()
         name_src = get_tag(OSM_xml,"name") ; if (name_src === "non_fourni") {name_src = ""}  ;   
@@ -68,8 +67,7 @@ function form_from_user(form) {
         OSM_type = document.getElementById('OSM_type').value
          
         // récupération des valeurs de bière actuelles       
-        if (OSM_type === 'node') { OSM_xml = get_node(OSM_id)}
-        if (OSM_type === 'way') { OSM_xml = get_way(OSM_id)}
+        OSM_xml = get_node_or_way(OSM_id,OSM_type)
         var beer_tab = get_tag(OSM_xml,"brewery").toLowerCase().split(';');
         
         
