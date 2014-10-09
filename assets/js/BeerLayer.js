@@ -44,8 +44,8 @@ function draw_beer(url,icon){
                 if (e.tags["opening_hours"]) {content += "<tr><th data-l10n-id='popup_opening_hours'>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["opening_hours"]) +"'></div></td></tr>"}
                 if (e.tags["happy_hours"]) {content += "<tr><th data-l10n-id='popup_happy_hours'>Happy Hours</th><td>" + e.tags["happy_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["happy_hours"]) +"'></div></td></tr>"}
                 if (e.tags["brewery"]) {content += "<tr><th data-l10n-id='popup_biere'>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
-                    if (e.type == 'node') {content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
-                    if (e.type == 'way') {content += "<tr><td colspan='2'><a href='http://www.openstreetmap.org/edit?editor=id&way=" + e.id.toString()+"' target='_blank'><span data-l10n-id='bouton_OSM'>Éditer directement dans OpenStreetMap</span></a></td></tr>";}
+                    if (e.type == 'node') {node = "node" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,node,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
+                    if (e.type == 'way') {way = "way" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,way,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
                 content +="</table>";
 //78146476                    
         icon_o = icon            
@@ -94,5 +94,5 @@ function parse_osm_times(a_string){
         return colour
       }
 
-      catch(err){console.log("erreur")}       
+      catch(err){console.log("erreur en parsant les horaires")}       
 }

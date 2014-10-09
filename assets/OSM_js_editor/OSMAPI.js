@@ -25,7 +25,26 @@ function get_node(id){
               
 }
 
-function edit_tag(xml,key, value){
+function get_way(id){
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://api.openstreetmap.org/api/0.6/way/"+id, false);
+        xhr.setRequestHeader("Authorization", basic_auth());
+        xhr.send();
+
+        console.log("GET way/ : " + xhr.status);
+        var xmlDocument = xhr.responseXML;
+
+        var tous_les_tags = xmlDocument.documentElement.getElementsByTagName("tag");
+        for (var i = 0; i < tous_les_tags.length; i++) {
+        //console.log(tous_les_tags[i].getAttribute("k") +" : "+ tous_les_tags[i].getAttribute("v"))
+      
+        }
+        return xmlDocument;
+              
+}
+
+function edit_tag(xml,OSM_type,key, value){
         var tous_les_tags = xml.documentElement.getElementsByTagName("tag");
         /*modifier la valeur d'un tag, s'il existe déjà */ 
         for (var i = 0; i < tous_les_tags.length; i++) {
@@ -38,19 +57,20 @@ function edit_tag(xml,key, value){
          }       
         /*sinon, créer un nouveau tag */ 
         newel=xml.createElement("tag");
-        x=xml.getElementsByTagName("node")[0];
+        if (OSM_type === 'node') { x=xml.getElementsByTagName("node")[0];}
+        if (OSM_type === 'way') { x=xml.getElementsByTagName("way")[0];}
+
         x.appendChild(newel); 
         newel.setAttribute("k",key);
-        newel.setAttribute("v", value);  
-        return              
+        newel.setAttribute("v", value);               
         
         /*
         //debug
         for (var i = 0; i < tous_les_tags.length; i++) {     
         console.log(tous_les_tags[i].getAttribute("k") +" : "+ tous_les_tags[i].getAttribute("v"))
-        }
+        }*/
         return 
-        */
+        
 
 }
 
@@ -96,25 +116,34 @@ function del_tag(xml,key){
         }
     };
 
-function put_node(xml, changeset_id, id){        
+function put_node_or_way(xml, changeset_id, id,OSM_type){       
+    if (OSM_type == 'way')
+       {
+        var way = xml.documentElement.getElementsByTagName("way");
+        console.log(way[0].getAttribute('changeset'))
+        way[0].setAttribute('changeset', changeset_id); 
+       }
+    if (OSM_type == 'node')
+      {
         var node = xml.documentElement.getElementsByTagName("node");
-        //console.log(node[0].getAttribute('changeset'))
+        console.log(node[0].getAttribute('changeset'))
         node[0].setAttribute('changeset', changeset_id); 
+      }
        
-        //var tous_les_tags = xml.documentElement.getElementsByTagName("tag");
-		/*
+        /*	
     	//debug    
+        var tous_les_tags = xml.documentElement.getElementsByTagName("tag");    	
         for (var i = 0; i < tous_les_tags.length; i++) {
         console.log(tous_les_tags[i].getAttribute("k") +" : "+ tous_les_tags[i].getAttribute("v"))
-        }
-        */
+        }*/
+        
         
         var xhr = new XMLHttpRequest();
-        xhr.open("PUT", "https://api.openstreetmap.org/api/0.6/node/"+id, false);
+        xhr.open("PUT", "https://api.openstreetmap.org/api/0.6/"+OSM_type+"/"+id, false);
         xhr.setRequestHeader("Authorization", basic_auth());
         xhr.send(xml_to_string(xml));
 
-        console.log("PUT node/ : " + xhr.status);       
+        console.log("PUT " +OSM_type+"/ : " + xhr.status);       
 }
 
 function close_changeset(id){ 
@@ -141,6 +170,7 @@ function put_changeset(){
         return xhr.responseText ;
 
 }
+
 
 
 
