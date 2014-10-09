@@ -16,7 +16,10 @@
   "locales": {
     "en": {
       "description": "This app allows you to find a bar that serves your favorite beer and to add info about it"
-    },   
+    },  
+    "ast": {
+      "description": "El mapa llibre y editable de los bares y cerveces de grifu que se sirven. Los datos vienen d'OpenStreetMap y toles collaboraciones devuélvense allí. Disponible tamién na direición http://openbeermap.github.io/ "
+    },    
     "hu": {
       "description": "Ingyenes és szerkeszthető térkép a kocsmákról és a felszolgált sörökről. Az adatok az OpenStreetMap-ből származnak és hozzáadott/módosított információ is oda kerül. Elérhető a http://openbeermap.github.io/ címen is. "
     },
