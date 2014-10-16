@@ -44,7 +44,7 @@
       document.l10n.ready(function() {
         console.log("Document's context is ready");
       });
-    </script> 
+    </script>
   </head>
 
   <body>
@@ -65,8 +65,8 @@
           </div>
         </form>-->
         <ul class="nav navbar-nav">
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>       
-          <li><a href="https://www.openstreetmap.org/user/OpenBeerMapContributor/diary" target='_blank' data-l10n-id="the_news"><i class="fa fa-rss" style="color: white"></i>&nbsp;&nbsp;Actualités</a></li>         
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;" data-l10n-id="a_propos"><i class="fa fa-question-circle" style="color: white"></i>&nbsp;&nbsp;À propos</a></li>
+          <li><a href="https://www.openstreetmap.org/user/OpenBeerMapContributor/diary" target='_blank' data-l10n-id="the_news"><i class="fa fa-rss" style="color: white"></i>&nbsp;&nbsp;Actualités</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -81,14 +81,14 @@
         <!-- OSM id input-->
         <div class="form-group">
           <div class="col-md-4">
-              <input id="OSM_type" name="OSM_type" class="form-control input-md hidden" type="text">  
+              <input id="OSM_type" name="OSM_type" class="form-control input-md hidden" type="text">
               <input id="OSM_id" name="OSM_id" class="form-control input-md hidden" type="text">
           </div>
         </div>
         <!-- Name input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput" data-l10n-id="nom_du_bar">Nom</label>  
-          <div class="col-md-4">
+          <label class="col-md-4 control-label" for="textinput" data-l10n-id="nom_du_bar">Nom</label>
+          <div class="col-md-8">
                 <input id="bar-name" name="bar-name" class="form-control input-md" type="text">
           </div>
         </div>
@@ -96,26 +96,26 @@
         <div class="form-group" id="pubeditbeerlist">
           <!-- Javascript populated : localStorage.js -->
         </div>
-            
-		<!-- Champ libre input-->
+
+        <!-- Champ libre input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>  
-          <div class="col-md-4">
+          <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>
+          <div class="col-md-8">
                 <input id="beer-other" name="beer-other" class="form-control input-md" type="text">
           </div>
         </div>
         <!-- Wifi  Radios  -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="radios" data-l10n-id="wifi_oupas">Wifi</label>
-          <div class="col-md-4"> 
+          <div class="col-md-8">
             <label class="radio-inline" for="radios-0" data-l10n-id="wifi_oui">
               <input name="wifi" id="radios-0" value="wlan" type="radio">
               oui
-            </label> 
+            </label>
             <label class="radio-inline" for="radios-1"  data-l10n-id="wifi_non">
               <input name="wifi" id="radios-1" value="no" type="radio">
               non
-            </label> 
+            </label>
             <label class="radio-inline" for="radios-2" data-l10n-id="wifi_inconnu">
               <input name="wifi" id="radios-2" value="chaispas" type="radio">
               peut-être
@@ -125,40 +125,40 @@
 
         <!-- Opening_hours input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="opening_hours" data-l10n-id="opening_hours">Heures d'ouverture</label>  
-          <div class="col-md-4">
+          <label class="col-md-4 control-label" for="opening_hours" data-l10n-id="opening_hours">Heures d'ouverture</label>
+          <div class="col-md-8">
           <input id="opening_hours" name="opening_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block" data-l10n-id="opening_hours_exemple">exemple : Mo-Fr 11:30-20:00</span>  
+          <span class="help-block" data-l10n-id="opening_hours_exemple">exemple : Mo-Fr 11:30-20:00</span>
           </div>
         </div>
 
         <!-- Happy_hours input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="happy_hours" data-l10n-id="happy_hours">Happy Hours</label>  
-          <div class="col-md-4">
+          <label class="col-md-4 control-label" for="happy_hours" data-l10n-id="happy_hours">Happy Hours</label>
+          <div class="col-md-8">
           <input id="happy_hours" name="happy_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block" data-l10n-id="happy_hours_exemple">exemple : Mo-Fr 18:30-20:00</span>  
+          <span class="help-block" data-l10n-id="happy_hours_exemple">exemple : Mo-Fr 18:30-20:00</span>
           </div>
         </div>
 
         <!-- Buttons -->
         <div class="form-group">
-          <label class="col-md-1 control-label" for="singlebutton"></label>
-          <div class="col-md-4">            
-              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-default" onClick="sidebar.hide()"><font color="black" data-l10n-id="sidebar_discard_button"> Annuler</font></a><br> 
-          </div>             
-          <div class="col-md-4">            
-              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br> 
-          </div>           
+          <label class="col-md-3 control-label" for="singlebutton"></label>
+          <div class="col-md-3">
+              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-default" onClick="sidebar.hide()"><font color="black" data-l10n-id="sidebar_discard_button"> Annuler</font></a><br>
+          </div>
+          <div class="col-md-3">
+              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br>
+          </div>
         </div>
-          
+
         <!-- Button -->
         <div class="form-group">
           <div class="col-md-4">
-<a href="http://www.openstreetmap.org/" target="_blank" id="singlelink" class="btn btn-link" data-l10n-id="bouton_OSM">Éditer directement dans OpenStreetMap</a><br> 
+              <a href="http://www.openstreetmap.org/" target="_blank" id="singlelink" class="btn btn-link" data-l10n-id="bouton_OSM">Éditer directement dans OpenStreetMap</a><br>
           </div>
         </div>
-           
+
         </fieldset>
         </form>
     </div>
@@ -195,14 +195,14 @@
                 <!-- Buttons -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="singlebutton"></label>
-                  <div class="col-md-4">            
-                      <a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br> 
-                  </div>             
-                  <div class="col-md-4">            
-                      <a href="#" id="singlebutton" name="singlebutton" data-dismiss="modal" class="btn btn-success" onClick="RefreshCtrl();"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br> 
-                  </div>           
-                </div>  
-                                
+                  <div class="col-md-4">
+                      <a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br>
+                  </div>
+                  <div class="col-md-4">
+                      <a href="#" id="singlebutton" name="singlebutton" data-dismiss="modal" class="btn btn-success" onClick="RefreshCtrl();"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@
               <li><a href="#credits" data-toggle="tab" data-l10n-id="credits"><i class="fa fa-globe"></i>&nbsp;Crédits</a></li>
               <li><a href="#contact" data-toggle="tab" data-l10n-id="contact"><i class="fa fa-envelope"></i>&nbsp;Contact</a></li>
             </ul>
-   
+
             <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
               <div class="tab-pane fade active in" id="about" data-l10n-id="about_contenu">
                 <p>Ce site vous permet de trouver un bar qui sert votre bière préférée !</p>
@@ -241,7 +241,7 @@
               <div class="tab-pane fade" id="contact">
               <div class="panel panel-default">
                <div class="panel-heading"  data-l10n-id="contact_contenu">Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ...</div>
-              
+
               <ul class="list-group">
                     <li class="list-group-item">noemie [point] lehuby [at] gmail [point] com</li>
                     <li class="list-group-item"><a href='https://twitter.com/nlehuby' target='_blank'>@nlehuby</a></li>
@@ -255,7 +255,7 @@
                         </li>
                     <li class="list-group-item"><a href='https://github.com/OpenBeerMap/OpenBeerMap.github.io/issues' target='_blank'  data-l10n-id="repo_github">Le dépot Github</a></li>
                     <ul>
-                
+
                </div>
               </div>
             </div>
@@ -270,21 +270,21 @@
             <a href="https://www.openstreetmap.org/user/OpenBeerMapContributor/diary/22349" target="_blank">Translate this website</a>
         </div>
     </div>
-   
+
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/bootstrap-3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/leaflet-0.7.3/leaflet.js"></script>
     <script src="assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
     <script src="assets/OpeningHours/suncalc.js"></script>
-    <script src="assets/OpeningHours/opening_hours.js"></script>          
-    <script src="assets/js/OverPassLayer.js"></script>          
+    <script src="assets/OpeningHours/opening_hours.js"></script>
+    <script src="assets/js/OverPassLayer.js"></script>
     <script src="assets/OSM_js_editor/OSMAPI.js"></script>
-    <script src="assets/OSM_js_editor/OSM_js_editor.js"></script>    
+    <script src="assets/OSM_js_editor/OSM_js_editor.js"></script>
     <script src="assets/js/BeerLayer.js"></script>
     <script src="assets/js/BeerList.js"></script>
     <script src="assets/js/localStorage.js"></script>
     <script src="assets/js/leaflet-search.js"></script>
-    <script src="assets/leaflet-hash/leaflet-hash.js"></script>          
+    <script src="assets/leaflet-hash/leaflet-hash.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
