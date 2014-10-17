@@ -15,7 +15,7 @@
   },
   "locales": {
     "en": {
-      "description": "This app allows you to find a bar that serves your favorite beer and to add info about it"
+      "description": "The free and editable map of bars and served draft beer. Data come from OpenStreetMap and all contributions are transfered to OSM. It is also available at http://openbeermap.github.io/"
     },
     "ast": {
       "description": "El mapa llibre y editable de los bares y cerveces de grifu que se sirven. Los datos vienen d'OpenStreetMap y toles collaboraciones devuélvense allí. Disponible tamién na direición http://openbeermap.github.io/ "
