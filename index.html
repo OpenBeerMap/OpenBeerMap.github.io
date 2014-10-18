@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/font-awesome-4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/leaflet-0.7.3/leaflet.css">
     <link rel="stylesheet" href="assets/leaflet-sidebar/L.Control.Sidebar.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css">	
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/leaflet-search.css">
     <link rel="stylesheet" href="assets/css/leaflet-search.mobile.css">
@@ -96,13 +97,17 @@
         <div class="form-group" id="pubeditbeerlist">
           <!-- Javascript populated : localStorage.js -->
         </div>
-
-        <!-- Champ libre input-->
+        <!-- Champ libre d'ajout de bière -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>
           <div class="col-md-8">
+            <div class="input-group">
                 <input id="beer-other" name="beer-other" class="form-control input-md" type="text">
-          </div>
+                <span class="input-group-btn">
+                <button id="addbutton" class="btn btn-default" type="button">+</button>
+              </span>
+            </div>
+
         </div>
         <!-- Wifi  Radios  -->
         <div class="form-group">
@@ -272,6 +277,7 @@
     </div>
 
     <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/bootstrap-3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/leaflet-0.7.3/leaflet.js"></script>
     <script src="assets/leaflet-sidebar/L.Control.Sidebar.js"></script>

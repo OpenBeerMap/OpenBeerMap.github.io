@@ -139,3 +139,8 @@ input[type="radio"], input[type="checkbox"] {
 	border:1px solid #679403;
 	border-radius:50%;
 	}
+/* Autocomplete */
+
+ul.ui-autocomplete {
+    z-index: 1100;
+}
