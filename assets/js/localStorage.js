@@ -6,11 +6,10 @@
 
   function init_localstorage() { 
 	// set default for the first visit
-      if (localStorage.getItem('ItIsMyFirstVisit') == undefined) {
+    if (localStorage.length == 0) {
             localStorage.setItem('chouffe','1'); 
             localStorage.setItem('affligem','1'); 
             localStorage.setItem('tripel_karmeliet','1');
-         localStorage.setItem('ItIsMyFirstVisit','not any more')
       }
       
   // Onload func
@@ -45,7 +44,6 @@
      localStorage.clear();
       UpdateBeerList_Setup_Form()
       RefreshTxt()
-      localStorage.setItem('ItIsMyFirstVisit','nope')
       for (var myi in BeerList) {
           if (map.hasLayer(BeerList[myi])) {map.removeLayer(BeerList[myi]);console.log("removed layer : "+myi);}
       }
