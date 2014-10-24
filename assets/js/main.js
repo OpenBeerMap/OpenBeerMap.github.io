@@ -119,7 +119,7 @@ $(document).one("ajaxStop", function () {$("#loading").hide(); });
    $( "#beer-other" ).autocomplete({
          source: function( request, response) {
          $.ajax({
-            url: "http://92.243.10.86/json.php?",
+            url: "http://openbeermap.wc.lt/json_hostinger.php",
             dataType: "jsonp",
             data: {
             q: request.term
