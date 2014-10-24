@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<input type="text" name="beername" id="beername" onChange="search(this.value);"/>
+
+
+<!-- --><script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+<!-- --><script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script type="text/javascript">
+   
+   
+   function search(stringvalue) {
+   var selection = ['Michel','Andre'];
+
+   $( "#beername" ).autocomplete({
+      source: selection
+   }); 
+}
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+ <html>
+    
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript">
+   
+   
+   function search(stringvalue) {
+   var selection = [];
+    $.getJSON('http://92.243.10.86/json.php?callback=?','q=' + stringvalue,function(data){
+        var output="<ul>";
+        //alert(data[0].Beername);
+         for (var i in data) {
+            output+="<li>" + data[i].Beername + " (" + data[i].Brewery + ")</li>";
+            selection.push(data[i].Beername);
+        }
+
+
+        output+="</ul>";
+        //document.getElementById("placeholder").innerHTML=output;
+
+    });
+
+   //selection = ['Michel','Andre'];
+
+   $( "#beername" ).autocomplete({
+      source: selection
+   }); 
+}
+</script>
+ <body>
+<input type="text" name="beername" id="beername" onChange="search(this.value);"/>
+<br />
+----
+<br />
+<div id="placeholder">
+</div>
+</body>       

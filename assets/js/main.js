@@ -50,6 +50,7 @@ var baseMaps = {
 /* Function to refresh controler */
 init_localstorage()
 var Ctrl = undefined;
+
 /* Function to refresh topright controler */
 function RefreshCtrl() {
 		   if (Ctrl != undefined) {
@@ -62,9 +63,14 @@ function RefreshCtrl() {
 	   
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
-		   if (BeerName[localStorage.key(i)] != undefined) {
-			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
-		   }}
+            BeerName = localStorage.key(i);
+            BeerImage = localStorage[BeerName];
+            //alert(BeerImage);
+		   //if (BeerName[localStorage.key(i)] != undefined) {
+			  //overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' width='24' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+           overlayMaps["<img src='assets/img/beers/" + BeerImage + "' width='24' height='28'>&nbsp; " + BeerName] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+BeerName+"\",i];out;", "assets/img/beers/" + BeerImage); 
+		   //}
+         }
 
 		   
 

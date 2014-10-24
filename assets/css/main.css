@@ -123,3 +123,10 @@ input[type="radio"], input[type="checkbox"] {
     display: none !important;
   }
 }
+
+/* Autocomplete */
+
+ul.ui-autocomplete {
+    z-index: 1100;
+}
+
