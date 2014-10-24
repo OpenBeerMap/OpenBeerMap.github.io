@@ -140,6 +140,9 @@ $(document).one("ajaxStop", function () {$("#loading").hide(); });
    });
 
         $("#addbutton").on('click', function () {
-        $('#pubeditbeerlist').append('<div class="checkbox"><label><input type="checkbox" name="beer" checked="true" value="' + $("#beer-other").val() +'">'+$("#beer-other").val()+'</label></div>');
-        $('#beer-other').val("");
+           if ($('#beer-other').val()!='')
+            {
+            $('#pubeditbeerlist').append('<div class="checkbox"><label><input type="checkbox" name="beer" checked="true" value="' + $("#beer-other").val() +'">'+$("#beer-other").val()+'</label></div>');
+            $('#beer-other').val("");
+            }
     });
