@@ -63,9 +63,8 @@
       
       document.getElementById('FormSelectedBeers').innerHTML = htmlBieres;
   };
-  
-  
-// pas encore deprecated  
+/* end deprecated */ 
+
   function UpdateBeerList_Edition_Form() {
      var htmlBeers = '          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label><div class="col-md-4">';
      i=0;
@@ -81,7 +80,7 @@
      document.getElementById('pubeditbeerlist').innerHTML = htmlBeers;
 };
 
-/* end deprecated */ 
+
  
 /*New*/ 
    function LocalStorageStore(element,value) {
@@ -91,10 +90,9 @@
       else {
          BeerMetaData = localStorage[element]; // check image name in case of custom image in localstorage
          BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+element+"\",i];out;", "assets/img/beers/"+BeerMetaData);
-         //alert(element);
-         if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);}
-         delete localStorage.removeItem(element);
-         alert('Removing '+element+' with value '+value);
+		  if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);} //TODO : ça marche pas !
+         delete localStorage.removeItem(element); 
+         console.log('Removing '+element+' with value '+value);
       }
       
    }
@@ -102,9 +100,8 @@
    function LocalStorageList() {
       LSlength = localStorage.length;
       TxtList='';
-      //alert(LSlength);
       for (i=0; i<LSlength; i++) {
-         //alert(i + " : " + localStorage.key(i));
+         //console.log(i + " : " + localStorage.key(i));
          TxtList += '<li><input type="button" class="removebutton" value="'+ localStorage.key(i) +'" /></li>';
       }
       $( "#localstoragelist" ).html(TxtList);
@@ -127,7 +124,7 @@ function fixedEncodeURIComponent (str) {
           BeerName = localStorage.key(i);
           BeerMetaData = localStorage[BeerName]; // check image name in case of custom image in localstorage
           BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+BeerName+"\",i];out;", "assets/img/beers/"+BeerMetaData); 
-          if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);console.log("removed layer : "+i);}
+          if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);console.log("removed layer : "+i);} //TODO : ça marche pas !
       }
       localStorage.clear();
       LocalStorageList();
