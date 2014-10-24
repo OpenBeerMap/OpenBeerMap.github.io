@@ -4,8 +4,6 @@ function BeerSearch(stringvalue) {
         var output="<ul>";
         //alert(data[0].Beername);
          for (var i in data) {
-            output+="<li>" + data[i].Beername + " (" + data[i].Brewery + ")</li>";
-               //alert(data[i].Beername);
             if (data[i].Beername && typeof data[i].Beername != 'undefined') {
                beerselection.push(data[i].Beername);
             }
@@ -128,6 +126,6 @@ function ImageQuery(request) {
 
 $('#localstoragelist').on('click', '.removebutton', function(event) {
  //sl.remove($(this).parent().data('value'));
-   LocalStorageStore(this.value,"0");
+   LocalStorageStore(this.value,localStorage[this.value]);
    LocalStorageList();
 });

@@ -92,10 +92,12 @@
          localStorage.setItem(element,value);
       }
       else {
-         BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+element+"\",i];out;", "assets/img/beers/"+value);
+         BeerMetaData = localStorage[element]; // check image name in case of custom image in localstorage
+         BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+element+"\",i];out;", "assets/img/beers/"+BeerMetaData);
          //alert(element);
          if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);}
          delete localStorage.removeItem(element);
+         alert('Removing '+element+' with value '+value);
       }
       
    }
@@ -123,14 +125,11 @@ function fixedEncodeURIComponent (str) {
 
   function ClearStorage() {
      // Reset localStorage , uncheck boxes, and remove map layer
-     /*
-      UpdateBeerList_Setup_Form()
-      RefreshTxt()
-      localStorage.setItem('ItIsMyFirstVisit','nope')
-      */
       LSlength = localStorage.length;
       for (i=0; i<LSlength; i++) {
-          BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+localStorage.key(i)+"\",i];out;", "assets/img/beer1.png"); 
+          BeerName = localStorage.key(i);
+          BeerMetaData = localStorage[BeerName]; // check image name in case of custom image in localstorage
+          BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+BeerName+"\",i];out;", "assets/img/beers/"+BeerMetaData); 
           if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);console.log("removed layer : "+i);}
       }
       localStorage.clear();
