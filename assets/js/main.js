@@ -63,13 +63,10 @@ function RefreshCtrl() {
 	   
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
-            BeerName = localStorage.key(i);
-            BeerImage = localStorage[BeerName];
-           overlayMaps["<img src='assets/img/beers/" + BeerImage + "' width='24' height='28'>&nbsp; " + BeerName] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+BeerName+"\",i];out;", "assets/img/beers/" + BeerImage); 
-         }
-
-
-		   
+			if (BeerName[localStorage.key(i)] != undefined) {			   
+			overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+			}}
+	   
 
 		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
 

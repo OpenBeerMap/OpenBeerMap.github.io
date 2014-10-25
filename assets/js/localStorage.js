@@ -4,7 +4,8 @@
 
 //les variables liées aux données sur les bières sont dans BeerList.js
 
-  function init_localstorage() { 
+
+function init_localstorage() { 
       localstorageitems = localStorage.length // Count items in local storage
 
 	// set default for the first visit
@@ -22,16 +23,16 @@
      
      RefreshTxt(); // Display/update txt notification - debug
   };
-  
-  function RefreshTxt() {
-     // DEBUG
-     //  Display small notification (remove hidden in the html file to debug)
+
+/* debug func*/
+function RefreshTxt() {
+     //  Display small notification (remove hidden in the html file before using)
      document.getElementById('ResultLocalStorage').innerHTML = localStorage.length;
   };
   
   
-/* deprecated*/
-  function Store(element) {
+/* deprecated func*/
+function Store(element) {
      if (element.checked) {
       // Add item to localStorage
       localStorage.setItem(element.value,'1');
@@ -45,8 +46,8 @@
    RefreshTxt(); // Refresh notification
   };
   
-  
-  function UpdateBeerList_Setup_Form() {
+/* deprecated func*/  
+function UpdateBeerList_Setup_Form() {
       var htmlBieres = '<input type="text" id="beersearchinput" name="beersearchinput" onChange="BeerSearch(this.value);"/><br />';
 
       var checked = '';
@@ -65,7 +66,7 @@
   };
 /* end deprecated */ 
 
-  function UpdateBeerList_Edition_Form() {
+function UpdateBeerList_Edition_Form() {
      var htmlBeers = '          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label><div id="checkboxlist" class="col-md-4">';
      i=0;
      for (var myi in BeerName) {
@@ -82,22 +83,23 @@
 
 
  
-/*New*/ 
-   function LocalStorageStore(element,value) {
+
+function LocalStorageStore(element,value) {
       if (localStorage.getItem(element) == null) {
          localStorage.setItem(element,value);
+		 BeerName[element] = element;
+  	 	 BeerImage[element] = localStorage[element];
+   		 BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]+".png"); 
       }
       else {
-         BeerMetaData = localStorage[element]; // check image name in case of custom image in localstorage
-         BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+element+"\",i];out;", "assets/img/beers/"+BeerMetaData);
-		  if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);} //TODO : ça marche pas !
+		  if (map.hasLayer(BeerList[element])) {map.removeLayer(BeerList[element]);}
          delete localStorage.removeItem(element); 
          console.log('Removing '+element+' with value '+value);
       }
       
    }
    
-   function LocalStorageList() {
+function LocalStorageList() {
       LSlength = localStorage.length;
       TxtList='';
       for (i=0; i<LSlength; i++) {
@@ -107,7 +109,7 @@
       $( "#localstoragelist" ).html(TxtList);
    }
 
-/* Fin de New*/
+
 
 /* Encode special chars - useless so far but can be usefull later !*/
 function fixedEncodeURIComponent (str) {
@@ -117,14 +119,12 @@ function fixedEncodeURIComponent (str) {
 }
 
 
-  function ClearStorage() {
+function ClearStorage() {
      // Reset localStorage , uncheck boxes, and remove map layer
       LSlength = localStorage.length;
       for (i=0; i<LSlength; i++) {
-          BeerName = localStorage.key(i);
-          BeerMetaData = localStorage[BeerName]; // check image name in case of custom image in localstorage
-          BeerLayer = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];node(BBOX)[\"brewery\"~\""+BeerName+"\",i];out;", "assets/img/beers/"+BeerMetaData); 
-          if (map.hasLayer(BeerLayer)) {map.removeLayer(BeerLayer);console.log("removed layer : "+i);} //TODO : ça marche pas !
+          element = localStorage.key(i);
+		  if (map.hasLayer(BeerList[element])) {map.removeLayer(BeerList[element]);}
       }
       localStorage.clear();
       LocalStorageList();
