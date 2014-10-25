@@ -31,15 +31,16 @@
   $( "#beersearchsubmit" ).click(function() {
 
         BeerTag = $( "#beersearchinput" ).val();
-        BeerMetaData = $( "#beersearchmetadata" ).val();
+        BeerMetaData = 'beers/' + $( "#beersearchmetadata" ).val();
         // If the user typed the name of the beer by himself, default image
         if (BeerMetaData == "") { BeerMetaData = "beer1.png"; }
         LocalStorageStore(BeerTag,BeerMetaData);
         LocalStorageList();
+	  	$( "#beersearchinput" ).val('') ;
 
      });
-
+/*
 $('#localstoragelist').on('click', '.removebutton', function(event) {
    LocalStorageStore(this.value,localStorage[this.value]);
    LocalStorageList();
-});
+});*/

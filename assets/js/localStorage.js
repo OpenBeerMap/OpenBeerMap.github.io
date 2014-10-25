@@ -56,7 +56,7 @@ function LocalStorageStore(element,value) {
          localStorage.setItem(element,value);
 		 BeerName[element] = element;
   	 	 BeerImage[element] = localStorage[element];
-   		 BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]+".png"); 
+   		 BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
       }
       else {
 		  if (map.hasLayer(BeerList[element])) {map.removeLayer(BeerList[element]);}
@@ -70,8 +70,8 @@ function LocalStorageList() {
       LSlength = localStorage.length;
       TxtList='';
       for (i=0; i<LSlength; i++) {    
-		  console.log(localStorage.key(i))
-		  console.log(localStorage[i])
+		  //console.log(localStorage.key(i))
+		  //console.log(localStorage[localStorage.key(i)])
 		TxtList += '<label><input type="checkbox"  checked name="'+ localStorage.key(i) +'" value="' + localStorage.key(i) + '" id="' + localStorage.key(i) + '" onClick="LocalStorageStore(this.value,localStorage[this.value])" />&nbsp;&nbsp;' + localStorage.key(i) + '</label><br />'		  
       }
       $( "#localstoragelist" ).html(TxtList);

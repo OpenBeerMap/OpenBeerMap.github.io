@@ -64,7 +64,7 @@ function RefreshCtrl() {
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
 			if (BeerName[localStorage.key(i)] != undefined) {			   
-			overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+			overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+"' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
 			}}
 	   
 
@@ -139,7 +139,7 @@ $(document).one("ajaxStop", function () {$("#loading").hide(); });
          minLength: 3
    });
 
-        $("#addbutton").on('click', function () {
+   $("#addbutton").on('click', function () {
            if ($('#beer-other').val()!='')
             {
             $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
