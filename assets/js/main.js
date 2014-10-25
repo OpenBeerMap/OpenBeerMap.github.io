@@ -143,6 +143,9 @@ $(document).one("ajaxStop", function () {$("#loading").hide(); });
    });
 
         $("#addbutton").on('click', function () {
-        $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
-        $('#beer-other').val("");
+           if ($('#beer-other').val()!='')
+            {
+            $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
+            $('#beer-other').val("");
+            }
     });
