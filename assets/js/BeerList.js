@@ -35,16 +35,14 @@ BeerImage = new Array();
     BeerName["affligem"] = "Affligem";	
 	 BeerList["affligem"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[aA]ffligem'];way(BBOX)['brewery'~'[aA]ffligem']);out center;", "assets/img/"+BeerImage['affligem']+".png");
     //
-    //BeerImage["tripel_karmeliet"] = "beer3";
 	BeerImage["tripel_karmeliet"] = "beers/karmeliet";
     BeerName["tripel_karmeliet"] = "Tripel Karmeliet";
     BeerList["tripel_karmeliet"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[tT]ripel_[kK]armeliet'];way(BBOX)['brewery'~'[tT]ripel_[kK]armeliet']);out center;", "assets/img/"+BeerImage['tripel_karmeliet']+".png");
     //
-    //BeerImage["kwak"] = "beer3";
-	BeerImage["kwak"] = "beers/kwak";
+    BeerImage["kwak"] = "beers/kwak";
     BeerName["kwak"] = "Kwak";
     BeerList["kwak"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[kK]wak'];way(BBOX)['brewery'~'[kK]wak']);out center;", "assets/img/"+BeerImage['kwak']+".png");
-    //
+/*    //
     BeerImage["amstel"] = "beer3";
     BeerName["amstel"] = "Amstel";
     BeerList["amstel"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[aA]mstel'];way(BBOX)['brewery'~'[aA]mstel']);out center;", "assets/img/"+BeerImage['amstel']+".png");
@@ -76,7 +74,8 @@ BeerImage = new Array();
     BeerImage["1664"] = "beer3";
     BeerName["1664"] = "1664";
     BeerList["1664"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'1664'];way(BBOX)['brewery'~'1664']);out center;", "assets/img/"+BeerImage['1664']+".png");
-    // 
+*/    
+	// 
     BeerImage["rebelred"] = "beer4";
     BeerName["rebelred"] = "Rebel Red";
 	BeerList["rebelred"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[rR]ebel red'];way(BBOX)['brewery'~'[rR]ebel red']);out center;", "assets/img/"+BeerImage['rebelred']+".png");

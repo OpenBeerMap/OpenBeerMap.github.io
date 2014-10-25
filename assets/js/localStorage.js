@@ -10,15 +10,26 @@ function init_localstorage() {
 
 	// set default for the first visit
     if (localStorage.length == 0) {
-            localStorage.setItem('chouffe','1'); 
-            localStorage.setItem('affligem','1'); 
-            localStorage.setItem('tripel_karmeliet','1');
+            localStorage.setItem('chouffe','beers/chouffe.png'); 
+            localStorage.setItem('affligem','beers/affligem.png'); 
+            localStorage.setItem('tripel_karmeliet','beers/karmeliet.png');
       }
       
   // Onload func
-      // New TODO     
+   
+	 //init layers
+      LSlength = localStorage.length;
+      for (i=0; i<LSlength; i++) {
+		  	element = localStorage.key(i)
+			BeerName[element] = element;
+  	 	 	BeerImage[element] = localStorage[element];
+   		 	BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
+      }  
+   
        LocalStorageList();
+	
       //deprecated-UpdateBeerList_Setup_Form(); // Update beers in setup form
+      
       UpdateBeerList_Edition_Form(); // update beers list in OSM form
      
      RefreshTxt(); // Display/update txt notification - debug
