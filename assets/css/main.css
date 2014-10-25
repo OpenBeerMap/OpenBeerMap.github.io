@@ -100,7 +100,7 @@ input[type="radio"], input[type="checkbox"] {
   top: 5px;
   background: transparent;
 }
-.leaflet-right{z-index : 10000;}
+.leaflet-right{z-index : 10;}
 @media (max-width: 992px) {
   .navbar .navbar-brand {
     font-size: 18px;
@@ -123,8 +123,24 @@ input[type="radio"], input[type="checkbox"] {
     display: none !important;
   }
 }
+ print {
+  .navbar {
+    display: none !important;
+  }
+  .leaflet-control-container {
+    display: none !important;
+  }
+}
+/* OSM opening hours / happy hours parsing */
+.opening-hours-circle {
+    background: grey;
+    width : 15px;
+    height: 15px;
+	border:1px solid #679403;
+	border-radius:50%;
+	}
 
-/* Autocomplete */
+/* Beer - autocomplete */
 
 ul.ui-autocomplete {
     z-index: 1100;

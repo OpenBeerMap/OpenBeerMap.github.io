@@ -87,6 +87,7 @@ function ClearStorage() {
       }
       localStorage.clear();
       LocalStorageList();
+	
       
   };
   

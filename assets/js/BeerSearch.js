@@ -34,14 +34,15 @@ $( "#beersearchinput" ).autocomplete({
 
 
 $( "#beersearchsubmit" ).click(function() {
-
+	if ($('#beersearchinput').val()!=''){	
         BeerTag = $( "#beersearchinput" ).val();
         BeerMetaData = 'beers/' + $( "#beersearchmetadata" ).val();
         // If the user typed the name of the beer by himself, default image
-        if (BeerMetaData == "beers/") { BeerMetaData = "beer1.png"; }
+        if (BeerMetaData == "beers/") { BeerMetaData = "beers/beer1.png"; }
         LocalStorageStore(BeerTag,BeerMetaData);
         LocalStorageList();
-	  	$( "#beersearchinput" ).val('') ;
+	$( "#beersearchinput" ).val('') ;
+}	
 
      });
 

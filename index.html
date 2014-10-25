@@ -195,15 +195,30 @@
                   <p data-l10n-id="setupbeers_label">Séléctionnez vos bières favorites :</p>
                   <form id="FormSelectedBeers">
                      <div id="localstoragecontent"></div>
-                        <ul id="localstoragelist"></ul>                     				  
-                     <input type="text" name="beersearchinput" id="beersearchinput" /><input type="button" id="beersearchsubmit" value="Ajouter" />
+                        <ul id="localstoragelist"></ul> 
+					  <div class="row">
+					  <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>
+					  </div>
+					  <div class="row">
+					  
+					  <div class="col-md-4">
+						<div class="input-group">
+							<input name="beersearchinput" id="beersearchinput" class="form-control input-md" type="text">
+							<span class="input-group-btn">
+							<button id="beersearchsubmit" class="btn btn-success" type="button">+</button>
+						  </span>
+						</div>
+					   </div>
+                  </div>
                      <input type="text" name="beersearchmetadata" id="beersearchmetadata" hidden="true" />
                   </form>
 
                     <span class='hidden'> <!-- remove hidden here to debug -->
                   <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br /></span>
                 <!-- Buttons -->
-                <div class="form-group">
+                <div class="row">
+					</div>
+					<div class="row">
                   <label class="col-md-4 control-label" for="singlebutton"></label>
                   <div class="col-md-4">
                       <a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br>

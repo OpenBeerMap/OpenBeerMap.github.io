@@ -50,7 +50,7 @@ var baseMaps = {
 /* Function to refresh controler */
 init_localstorage()
 var Ctrl = undefined;
-
+console.log(Ctrl)
 /* Function to refresh topright controler */
 function RefreshCtrl() {
 		   if (Ctrl != undefined) {
