@@ -8,28 +8,15 @@ BeerName = new Array();
 BeerImage = new Array();
 
 	var tous = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beer1.png");
-   //
-    BeerName["leffe"] = "Leffe";
-    BeerImage["leffe"] = "beer1";
-    BeerList["leffe"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[lL]effe'];way(BBOX)['brewery'~'[lL]effe']);out center;", "assets/img/"+BeerImage['leffe']+".png"); 
-    //
-    //BeerImage["chouffe"] = "beer4";
+    
+	//
 	BeerImage["chouffe"] = "beers/chouffe";
     BeerName["chouffe"] = "Chouffe";
     BeerList["chouffe"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[cC]houffe'];way(BBOX)['brewery'~'[cC]houffe']);out center;", "assets/img/"+BeerImage['chouffe']+".png");
     //
-    BeerName["chimay"] = "Chimay";	
-    BeerImage["chimay"] = "beer4";
-    BeerList["chimay"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[Cc]himay'];way(BBOX)['brewery'~'[Cc]himay']);out center;", "assets/img/"+BeerImage['chimay']+".png");  
-    //
     BeerName["guinness"] = "Guinness";
-    //BeerImage["guinness"] = "beer1";
 	BeerImage["guinness"] = "beers/guinness";
     BeerList["guinness"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[Gg]uinness'];way(BBOX)['brewery'~'[Gg]uinness']);out;", "assets/img/"+BeerImage['guinness']+".png");
-    //
-    BeerImage["brewdog"] = "beer1";
-    BeerName["brewdog"] = "Brewdog";
-    BeerList["brewdog"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[Bb]rewdog'];way(BBOX)['brewery'~'[Bb]rewdog']);out center;", "assets/img/"+BeerImage['brewdog']+".png");  
     //
     BeerImage["affligem"] = "beers/affligem";
     BeerName["affligem"] = "Affligem";	
@@ -42,6 +29,12 @@ BeerImage = new Array();
     BeerImage["kwak"] = "beers/kwak";
     BeerName["kwak"] = "Kwak";
     BeerList["kwak"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[kK]wak'];way(BBOX)['brewery'~'[kK]wak']);out center;", "assets/img/"+BeerImage['kwak']+".png");
+
+// D'autres bières sont ajoutées à ces trois listes à partir de localStorage.js
+
+//les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js
+
+
 /*    //
     BeerImage["amstel"] = "beer3";
     BeerName["amstel"] = "Amstel";
@@ -73,11 +66,13 @@ BeerImage = new Array();
     //
     BeerImage["1664"] = "beer3";
     BeerName["1664"] = "1664";
-    BeerList["1664"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'1664'];way(BBOX)['brewery'~'1664']);out center;", "assets/img/"+BeerImage['1664']+".png");
-*/    
+    BeerList["1664"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'1664'];way(BBOX)['brewery'~'1664']);out center;", "assets/img/"+BeerImage['1664']+".png");  
 	// 
     BeerImage["rebelred"] = "beer4";
     BeerName["rebelred"] = "Rebel Red";
 	BeerList["rebelred"] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[rR]ebel red'];way(BBOX)['brewery'~'[rR]ebel red']);out center;", "assets/img/"+BeerImage['rebelred']+".png");
+*/ 
 
-//les fonctions utilisées pour récupérer les données et les placer sont dans BeerLayer.js
+
+
+

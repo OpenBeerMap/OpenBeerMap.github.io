@@ -115,34 +115,3 @@ var hash = new L.Hash(map);
 /* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
 
-/* add any beer to the edit bar form, thanks to Poilou webservice */
-   $( "#beer-other" ).autocomplete({
-         source: function( request, response) {
-         $.ajax({
-            url: "http://openbeermap.wc.lt/json_hostinger.php",
-            dataType: "jsonp",
-            data: {
-            q: request.term
-            },
-            success: function( data ) {
-            //console.log(data);
-               ListData = [];
-               for (var i in data) {
-                  if (data[i].Beername && typeof data[i].Beername != 'undefined') {
-                     ListData.push(data[i].BeerTag);
-                     }
-                  }
-               response(ListData);
-               }
-            });
-         },
-         minLength: 3
-   });
-
-   $("#addbutton").on('click', function () {
-           if ($('#beer-other').val()!='')
-            {
-            $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
-            $('#beer-other').val("");
-            }
-    });

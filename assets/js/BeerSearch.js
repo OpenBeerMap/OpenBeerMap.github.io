@@ -1,4 +1,9 @@
-   $( "#beersearchinput" ).autocomplete({
+/*
+ OpenBeerMap main.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
+*/
+
+/* autocomplete beer - setup form */ 
+$( "#beersearchinput" ).autocomplete({
          source: function( request, response) {
          $.ajax({
             url: "http://openbeermap.wc.lt/json_hostinger.php?",
@@ -28,19 +33,48 @@
    });
 
 
-  $( "#beersearchsubmit" ).click(function() {
+$( "#beersearchsubmit" ).click(function() {
 
         BeerTag = $( "#beersearchinput" ).val();
         BeerMetaData = 'beers/' + $( "#beersearchmetadata" ).val();
         // If the user typed the name of the beer by himself, default image
-        if (BeerMetaData == "") { BeerMetaData = "beer1.png"; }
+        if (BeerMetaData == "beers/") { BeerMetaData = "beer1.png"; }
         LocalStorageStore(BeerTag,BeerMetaData);
         LocalStorageList();
 	  	$( "#beersearchinput" ).val('') ;
 
      });
-/*
-$('#localstoragelist').on('click', '.removebutton', function(event) {
-   LocalStorageStore(this.value,localStorage[this.value]);
-   LocalStorageList();
-});*/
+
+
+/* autocomplete beer - bar edit form */
+   $( "#beer-other" ).autocomplete({
+         source: function( request, response) {
+         $.ajax({
+            url: "http://openbeermap.wc.lt/json_hostinger.php",
+            dataType: "jsonp",
+            data: {
+            q: request.term
+            },
+            success: function( data ) {
+            //console.log(data);
+               ListData = [];
+               for (var i in data) {
+                  if (data[i].Beername && typeof data[i].Beername != 'undefined') {
+                     ListData.push(data[i].BeerTag);
+                     }
+                  }
+               response(ListData);
+               }
+            });
+         },
+         minLength: 3
+   });
+
+   $("#addbutton").on('click', function () {
+           if ($('#beer-other').val()!='')
+            {
+            $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
+            $('#beer-other').val("");
+            }
+    });
+
