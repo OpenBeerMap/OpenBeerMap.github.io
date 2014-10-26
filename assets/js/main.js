@@ -50,7 +50,7 @@ var baseMaps = {
 /* Function to refresh controler */
 init_localstorage()
 var Ctrl = undefined;
-console.log(Ctrl)
+
 /* Function to refresh topright controler */
 function RefreshCtrl() {
 		   if (Ctrl != undefined) {
@@ -63,10 +63,11 @@ function RefreshCtrl() {
 	   
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
-			if (BeerName[localStorage.key(i)] != undefined) {			   
-			overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+"' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
-			}}
-	   
+		   if (BeerName[localStorage.key(i)] != undefined) {
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+"' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+		   }}
+
+		   
 
 		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
 
