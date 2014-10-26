@@ -65,9 +65,7 @@ function RefreshCtrl() {
 		   for (var i = 0; i < items; i++) {
 		   if (BeerName[localStorage.key(i)] != undefined) {
 			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+"' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
-		   }}
-
-		   
+		   }}	   
 
 		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
 

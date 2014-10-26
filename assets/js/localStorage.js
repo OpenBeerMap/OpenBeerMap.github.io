@@ -4,6 +4,11 @@
 
 // Onload func
 function init_localstorage() { 
+	//oldies : the use of localStorage have changed so flush it to avoid side effects
+	if (localStorage.getItem('ItIsMyFirstVisit') != null) {
+	localStorage.clear();
+		console.log('nettoyage du localStorage - il est maintenant utilisé différemment')
+	}
   	// set default for the first visit
     if (localStorage.length == 0) {
             localStorage.setItem('chouffe','beers/chouffe.png'); 
