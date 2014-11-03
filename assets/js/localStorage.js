@@ -22,7 +22,7 @@ function init_localstorage() {
 		  	element = localStorage.key(i)
 			BeerName[element] = element;
   	 	 	BeerImage[element] = localStorage[element];
-   		 	BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
+   		 	BeerList[element] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
       }  
    
       LocalStorageList(); // displays localStorage items
@@ -60,7 +60,7 @@ function LocalStorageStore(element,value) {
          localStorage.setItem(element,value);
 		 BeerName[element] = element;
   	 	 BeerImage[element] = localStorage[element];
-   		 BeerList[element] = draw_beer("https://overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
+   		 BeerList[element] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/"+BeerImage[element]); 
       }
       else {
 		  if (map.hasLayer(BeerList[element])) {map.removeLayer(BeerList[element]);}
