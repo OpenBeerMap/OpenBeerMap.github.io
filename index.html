@@ -217,11 +217,16 @@
                   <span data-l10n-id="setupbeer_resultat">Nombre de bières séléctionnées : </span><span id="ResultLocalStorage"></span><br /></span>
                 <!-- Buttons -->
                 <div class="row">
+					&nbsp;
+					</div>
+				<div class="row">
+					<a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br>
 					</div>
 					<div class="row">
                   <label class="col-md-4 control-label" for="singlebutton"></label>
                   <div class="col-md-4">
-                      <a href="#" id="singlebutton" name="singlebutton" class="btn btn-danger" onClick="ClearStorage()"><font color="white" data-l10n-id="clear_button"> Tout effacer </font></a><br>
+                      <a href="#" id="singlebutton" name="singlebutton" data-dismiss="modal" class="btn btn-default" ><font color="black" data-l10n-id="sidebar_discard_button"> Annuler</font></a><br>
+					  
                   </div>
                   <div class="col-md-4">
                       <a href="#" id="singlebutton" name="singlebutton" data-dismiss="modal" class="btn btn-success" onClick="RefreshCtrl();"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br>
