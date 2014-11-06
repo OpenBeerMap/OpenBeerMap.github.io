@@ -50,6 +50,7 @@ var baseMaps = {
 /* Function to refresh controler */
 init_localstorage()
 var Ctrl = undefined;
+
 /* Function to refresh topright controler */
 function RefreshCtrl() {
 		   if (Ctrl != undefined) {
@@ -63,10 +64,8 @@ function RefreshCtrl() {
 		   items = localStorage.length;
 		   for (var i = 0; i < items; i++) {
 		   if (BeerName[localStorage.key(i)] != undefined) {
-			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+".png' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
-		   }}
-
-		   
+			  overlayMaps["<img src='assets/img/"+BeerImage[localStorage.key(i)]+"' height='28'>&nbsp; " + BeerName[localStorage.key(i)]] = BeerList[localStorage.key(i)];
+		   }}	   
 
 		   Ctrl = L.control.layers(baseMaps, overlayMaps, {collapsed: isCollapsed});
 
@@ -114,3 +113,4 @@ var hash = new L.Hash(map);
 
 /* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
+
