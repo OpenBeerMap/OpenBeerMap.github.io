@@ -88,7 +88,7 @@ function form_from_user(form) {
                         {
                         if (inputForm[i].checked) 
                                 {
-                                if (beer_tab.indexOf(inputForm[i].value) === -1 )
+                                if (beer_tab.indexOf(inputForm[i].value.toLowerCase()) === -1 )
                                         {beer_tab.push(inputForm[i].value) }
                                 }
                         else
