@@ -165,7 +165,7 @@ function complete_form_with_already_maped_beers(beer_src){
 		for(var i= 0; i < x.length; i++)
 		{
 		if (!(x[i] in lcBeerName)) { // ne pas ajouter les éléments déjà ajoutés par localstorage
-			console.log(x[i])
+			//console.log(x[i])
 			if (x[i] != "non_fourni"){
 
          TempLine = '<div class="checkbox"><label for="checkboxes-'+x[i]+'"><input type="checkbox" name="beer" id="checkboxes-'+x[i]+'" value="'+x[i]+'">'+x[i]+'</label></div>';
