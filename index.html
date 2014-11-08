@@ -95,9 +95,18 @@
           </div>
         </div>
         <!-- Beer Checkboxes -->
-        <div class="form-group" id="pubeditbeerlist">
-          <!-- Javascript populated : localStorage.js -->
-        </div>
+        <div class="form-group">
+			          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
+			<div id="checkboxlist" class="col-md-4">
+			<div id="beerlist_fromOSM">
+			  <!-- Javascript populated : OSM_js_editor.js -->
+			</div>
+     			
+			<div id="beerlist_fromlocalstorage">
+			  <!-- Javascript populated : localStorage.js -->
+			</div>
+		</div>
+		</div>
         <!-- Champ libre d'ajout de bière -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>

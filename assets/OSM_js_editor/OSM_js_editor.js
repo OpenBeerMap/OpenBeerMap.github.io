@@ -17,6 +17,9 @@ function init_form_from_OSM(form,OSM_type,OSM_id) {
         OSM_xml = get_node_or_way(OSM_id,OSM_type)
     
         beer_src = get_tag(OSM_xml,"brewery").toLowerCase()
+		
+		complete_form_with_already_maped_beers(beer_src) // ajouter les bières déjà présentes dans le formulaire d'édition
+	
         name_src = get_tag(OSM_xml,"name") ; if (name_src === "non_fourni") {name_src = ""}  ;   
         opening_src = get_tag(OSM_xml,"opening_hours") ; if (opening_src === "non_fourni") {opening_src = ""}; 
         happy_src = get_tag(OSM_xml,"happy_hours") ; if (happy_src === "non_fourni") {happy_src = ""}; 
@@ -85,7 +88,7 @@ function form_from_user(form) {
                         {
                         if (inputForm[i].checked) 
                                 {
-                                if (beer_tab.indexOf(inputForm[i].value) === -1 )
+                                if (beer_tab.indexOf(inputForm[i].value.toLowerCase()) === -1 )
                                         {beer_tab.push(inputForm[i].value) }
                                 }
                         else
@@ -144,5 +147,32 @@ function form_from_user(form) {
         };
 
 
+		
+function complete_form_with_already_maped_beers(beer_src){
+		var htmlBeers=''
+		x = beer_src.split(";")
+		
+			// BeerName to lower case
+		var key, keys = Object.keys(BeerName);
+		var n = keys.length;
+		var lcBeerName={}
+		while (n--) {
+		  key = keys[n];
+		  lcBeerName[key.toLowerCase()] = BeerName[key];
+		}	
 
+	
+		for(var i= 0; i < x.length; i++)
+		{
+		if (!(x[i] in lcBeerName)) { // ne pas ajouter les éléments déjà ajoutés par localstorage
+			//console.log(x[i])
+			if (x[i] != "non_fourni"){
 
+         TempLine = '<div class="checkbox"><label for="checkboxes-'+x[i]+'"><input type="checkbox" name="beer" id="checkboxes-'+x[i]+'" value="'+x[i]+'">'+x[i]+'</label></div>';
+         htmlBeers += TempLine;
+         
+         
+			}}}
+	 	document.getElementById('beerlist_fromOSM').innerHTML = htmlBeers;
+	
+}

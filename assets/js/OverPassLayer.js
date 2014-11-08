@@ -197,7 +197,7 @@ L.OverPassLayer = L.FeatureGroup.extend({
   },
 
   onMoveEnd: function () {
-      console.log("load Pois");
+      //console.log("load Pois");
       //console.log(this._map.getBounds());
       if (this._map.getZoom() >= this.options.minzoom) {
           //var bboxList = new Array(this._map.getBounds());
