@@ -10,7 +10,7 @@ var osm = new L.TileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png
 var map = new L.Map('map').addLayer(osm).setView(new L.LatLng(48.84702,2.37705), 17);
 
 /*User Location*/
-map.locate({setView: true})
+map.locate({setView: true, enableHighAccuracy: true, locate: true, maximumAge: 60000,timeout: 8000 })
         .on('locationfound', function(e){
         console.log("localisation utilisateur réussie");
             var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('<span data-l10n-id="locate_ok">Vous êtes par ici&nbsp;&nbsp;</span>');
@@ -27,6 +27,10 @@ map.locate({setView: true})
             //console.log(e);
             console.log("Échec de localisation de l'utilisateur");
 });
+map.addControl(L.control.locate({
+       locateOptions: {
+               setView: true, enableHighAccuracy: true, locate: true, maximumAge: 60000,timeout: 8000
+}}));
 
 /* Larger screens get expanded layer control */
 if (document.body.clientWidth <= 767) {
