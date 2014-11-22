@@ -18,7 +18,7 @@
 """> 
 <contact "<i></i>&nbsp;Hafa samband"> 
 <contact_contenu "Til að senda inn bjór sem vantar, tilkynna villur, leggja til breytingar, eða kaupa handa mér bjór..."> 
-<credits "<i></i>&nbsp;Credits"> 
+<credits "<i></i>&nbsp;Þakkir"> 
 <credits_contenu """
                 <p>Kort frá <a> OpenStreetMap </a> og <a> Stamen Design</a>.</p>
                 <p>Gögn um bari og bjóra frá <a>OpenStreetMap</a> og allir þeir sjálfboðaliðar, í gegnum <a>Overpass API</a>.</p>
