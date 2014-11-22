@@ -1,0 +1,74 @@
+/*
+ OpenBeerMap translation file [is] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translators: Kristján Oddsson (koddsson@gmail.com)
+*/
+
+
+/* Home Page */
+<a_propos "<i></i>&nbsp; Um"> 
+<the_news "<i></i>&nbsp; Fréttir"> 
+
+/* Blabla */
+<hello_world "Velkomin á heimasíðu OpenBeerMap!"> 
+<about "<i></i>&nbsp; Um"> 
+<about_contenu """
+                <p>Þessi síða hjálpar þér að finna bar sem býður uppá uppáhalds bjórinn þinn!</p>
+                <p>Ef eitthvað af upplýsingunum hér er vitlaus eða vantar, ekki hika við að hjálpa til.</p>
+                <p><a>Fleiri upplýsingar um uppruna síðunar eru á bloggi höfundar (á frönsku).</p>
+"""> 
+<contact "<i></i>&nbsp;Hafa samband"> 
+<contact_contenu "Til að senda inn bjór sem vantar, tilkynna villur, leggja til breytingar, eða kaupa handa mér bjór..."> 
+<credits "<i></i>&nbsp;Credits"> 
+<credits_contenu """
+                <p>Kort frá <a> OpenStreetMap </a> og <a> Stamen Design</a>.</p>
+                <p>Gögn um bari og bjóra frá <a>OpenStreetMap</a> og allir þeir sjálfboðaliðar, í gegnum <a>Overpass API</a>.</p>
+                <p>Síðan er gerð með ást og <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Þú getur fundið kóðann hér: <a>Github</a> </p>
+"""> 
+<repo_github "Github gagnageymsla">
+
+/* Edit Form */
+<titre_formulaire_edition "Breyttu upplýsingum fyrir þennan bar á OpenBeerMap"> 
+<nom_du_bar "Nafn"> 
+<liste_des_bieres "Bjór á krana"> 
+<champ_libre_bieres "Aðrir bjórar">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> já">
+<wifi_non "<input> nei">
+<wifi_inconnu "<input> kannski"> 
+<opening_hours "Opnunartímar"> 
+<opening_hours_exemple "Dæmi : Mo-Fr 11:30-20:00"> 
+<happy_hours "Happy Hours"> 
+<happy_hours_exemple "Dæmi : Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Vista"> 
+<sidebar_discard_button "Henda"> 
+<bouton_OSM "Breyta beint frá OpenStreetMap"> 
+
+/* Map elements */
+<attr_osm "Kortagögn frá &copy; <a>OpenStreetMap</a> sjálfboðaliðum">
+<attr_overpass "gögn frá <a>Overpass API</a>"> 
+<locate_ok "Þú ert hér"> 
+<locate_ko "Gagnastaðsetninga Villa - Til að reyna aftur endurhladdu síðuna"> /* does not work yet */
+<choix_bieres_tous " Drykkur">
+<popup_nom "Nafn"> 
+<popup_opening_hours "Opnunartímar"> 
+<popup_happy_hours "Happy hours"> 
+<popup_biere "Bjór á krana"> 
+<popup_edit "Bæta við upplýsingum við þennan bjór"> 
+<overpass_err "Stækkaðu kortið til að sjá fleiri bari">
+
+/* Setup */
+<setup " Breyta">
+<setupbeers "<i></i> Bjór listi">
+<setupbeers_label "Veldu uppáhalds bjórana þína!">
+<setupbeer_resultat "Fjöldi valdra bjóra :">
+<clear_button "Endursetja">
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+
+<app_description """
+                Frítt og breytanlegt kort af börum og bjórum á krana.
+                Gögn koma frá OpenStreetMap og allar breytingar eru færðar til OSM.
+                Þú getur líka farið á http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Verður að miðja kortið á réttum stað.">
