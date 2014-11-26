@@ -1,56 +1,76 @@
 /*
  OpenBeerMap translation file [es] | noemie.lehuby(at)gmail.com | MIT Licensed
- translator : Noémie Lehuby, Xuacu Saturio
+ translator : Noémie Lehuby, Xuacu Saturio, 51114u9
 */
 
+
 /* Página principal */
-<a_propos "<i></i>&nbsp; Acerca de"> 
+<a_propos "<i></i>&nbsp; Acerca de">
+<the_news "<i></i>&nbsp; Noticias">
 
 /* Blabla */
-<hello_world "¡Bienvenidos a OpenBeerMap!"> 
-<about "<i></i>&nbsp; Acerca de"> 
+<hello_world "¡Bienvenido a OpenBeerMap!">
+<about "<i></i>&nbsp; Acerca de">
 <about_contenu """
-                <p>¡Este sitio te permite encontrar un bar que tenga tu cerveza favorita!</p>
+                <p>¡Este sitio te permite encontrar un bar que sirva tu cerveza favorita!</p>
                 <p>Si falta información o esta es errónea, te invitamos a colaborar.</p>
-                <p><a>Más información sobre el origen de este sitio en el blog de la autora.</p>
-"""> 
-<contact "<i></i>&nbsp;Contacto"> 
-<contact_contenu "Para proponer una cerveza que falte, informar de un bug, sugerir una evolución, o simplemente para invitarme a una cerveza..."> 
-<credits "<i></i>&nbsp;Créditos"> 
+                <p><a>Más información sobre el origen de este sitio en el blog de la autora (en Francés).</p>
+""">
+<contact "<i></i>&nbsp;Contacto">
+<contact_contenu "Para proponer una cerveza que falte, informar de un bug, sugerir cambios, o simplemente para invitarme a una cerveza...">
+<credits "<i></i>&nbsp;Créditos">
 <credits_contenu """
-                <p>Mapa proporcionado por <a>OpenStreetMap</a> y <a>Stamen</a>.</p>
-                <p>Datos sobre los bares y las cervezas proporcionados por <a>OpenStreetMap</a> y sus numerosos colaboradores, via <a>la API OverPass</a>.</p>
+                <p>Mapa proporcionado por <a>OpenStreetMap</a> y <a>Stamen Design</a>.</p>
+                <p>Datos de bares y cervezas desde <a>OpenStreetMap</a> y sus numerosos colaboradores, via la <a>API OverPass</a>.</p>
                 <p>Sitio hecho con amor y <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
-                <p>Las fuentes están aquí: <a>Github</a> </p>
-"""> 
-<repo_github "El almacén Github">
+                <p>Las fuentes están aquí: <a>Github</a></p>
+""">
+<repo_github "Repositorio Github">
 
 /* Formulario de edición */
-<titre_formulaire_edition "Edición del bar en OpenBeerMap"> 
-<nom_du_bar "Nombre"> 
-<liste_des_bieres "Cerveza de barril disponible"> 
+<titre_formulaire_edition "Editar este bar en OpenBeerMap">
+<nom_du_bar "Nombre">
+<liste_des_bieres "Cerveza de barril disponible">
 <champ_libre_bieres "Otras cervezas">
-<wifi_oupas "Wifi"> 
+<wifi_oupas "Wifi">
 <wifi_oui  "<input> si">
 <wifi_non "<input> no">
-<wifi_inconnu "<input> quizás"> 
-<opening_hours "Horario de apertura"> 
-<opening_hours_exemple "ejemplo : Mo-Fr 11:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "ejemplo : Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Guardar"> 
+<wifi_inconnu "<input> quizás">
+<opening_hours "Horario de apertura">
+<opening_hours_exemple "ejemplo : Mo-Fr 11:30-20:00">
+<happy_hours "Happy hour">
+<happy_hours_exemple "ejemplo : Mo-Fr 18:30-20:00">
+<bouton_enregistrer "Guardar">
+<sidebar_discard_button "Descartar">
 <bouton_OSM "Editar directamente en OpenStreetMap">
 
 /* Elementos del mapa */
-<attr_osm "&copy; gracias a los colaboradores de <a>OpenStreetMap</a>"> 
-<attr_overpass "datos via la <a>API Overpass</a>"> 
-<locate_ok "Estás aquí"> 
-<locate_ko "Error de geolocalización - Recarga la página para reintentarlo"> /* aún no funciona */
-<choix_bieres_tous "<img> ¡Beber!">
-<popup_nom "Nombre"> 
-<popup_opening_hours "Horario de apertura"> 
-<popup_happy_hours "Happy hours"> 
-<popup_biere "Cervezas de barril"> 
-<popup_edit "Añadir información sobre este bar"> 
+<attr_osm "Datos del mapa &copy; los colaboradores de <a>OpenStreetMap</a>">
+<attr_overpass "datos via la <a>API Overpass</a>">
+<locate_ok "Estás aquí">
+<locate_ko "Error de geolocalización - Recarga la página para reintentarlo"> /* does not work yet */
+<choix_bieres_tous " ¡Beba!">
+<popup_nom "Nombre">
+<popup_opening_hours "Horario de apertura">
+<popup_happy_hours "Happy hour">
+<popup_biere "Cervezas de barril">
+<popup_edit "Añadir información sobre este bar">
 <overpass_err "Debe ampliar más para ver los bares.">
+
+/* Configuración */
+<setup " Personalizar">
+<setupbeers "<i></i> Lista de cervezas">
+<setupbeers_label "Seleccione sus cervezas favoritas de nuestra selección:">
+<setupbeer_resultat "Número seleccionado de cervezas:">
+<clear_button "Limpiar todo">
+
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+
+<app_description """
+                Mapa libre y editable de bares y cervezas que se sirven.
+                Los datos provienen de OpenStreetMap y cualquier contribución se envía de nuevo.
+                También disponible en http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Necesario para centrar el mapa en el lugar adecuado">
 

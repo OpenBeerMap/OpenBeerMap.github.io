@@ -1,10 +1,18 @@
 {
   "locales": [
-    "fr",
     "en",
-    "es",
     "ast",
-    "ja"
+    "de",
+    "eo",
+    "es",
+    "fr",
+	"is",
+    "it",
+    "ja",
+    "pl",
+    "sv",
+    "cs",
+    "hu"
   ],
   "default_locale": "fr",
   "resources": [

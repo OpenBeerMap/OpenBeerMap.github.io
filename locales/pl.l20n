@@ -1,0 +1,56 @@
+/*
+ OpenBeerMap translation file [pl] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: Michal Gatkowski | gatkowski.michal(at)gmail.com
+*/
+
+
+/* Home Page */
+<a_propos "<i></i>&nbsp; O projekcie"> 
+
+/* Blabla */
+<hello_world "Witaj na OpenBeerMap!"> 
+<about "<i></i>&nbsp; O projekcie"> 
+<about_contenu """
+                <p>Ta strona pozwala na znalezienie baru serwującego twoje najlepsze piwo!</p>
+                <p>Jeśli dostępne informacje są nieprawidłowe lub wybrakowane, nie bój się je dodać.</p>
+                <p><a>Więcej informacji o początkach tej strony jest dostępne na blogu autora.</p>
+"""> 
+<contact "<i></i>&nbsp;Kontakt"> 
+<contact_contenu "Aby zgłosić brakujące piwo, błąd, zaproponować zmiany lub po prostu kupić mi piwo.."> 
+<credits "<i></i>&nbsp;Autorzy"> 
+<credits_contenu """
+                <p>Mapa dzięki <a> OpenStreetMap </a> oraz <a> Stamen Design</a>.</p>
+                <p>Dane o barach i piwach pochodzą z <a>OpenStreetMap</a> i wielu współautorów, przez <a>Overpass API</a>.</p>
+                <p>Strona powstała z miłości i projektu <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Kod źródłowy znaleźć można na: <a>Github</a> </p>
+"""> 
+<repo_github "Repozytorium Github">
+
+/* Edit Form */
+<titre_formulaire_edition "Edytuj ten bar w OpenBeerMap"> 
+<nom_du_bar "Nazwa"> 
+<liste_des_bieres "Piwo lane jest dostępne"> 
+<champ_libre_bieres "Inne piwa">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> tak">
+<wifi_non "<input> nie">
+<wifi_inconnu "<input> może"> 
+<opening_hours "Godziny otwarcia"> 
+<opening_hours_exemple "przykład : Mo-Fr 11:30-20:00"> 
+<happy_hours "Happy Hours"> 
+<happy_hours_exemple "przykład : Mo-Fr 18:30-20:00"> 
+<bouton_enregistrer "Zapisz"> 
+<bouton_OSM "Edytuj prosto do OpenStreetMap"> 
+
+/* Map elements */
+<attr_osm "Dane mapy &copy; współautorzy <a>OpenStreetMap</a>"> 
+<attr_overpass "dane dzięki <a>Overpass API</a>"> 
+<locate_ok "Jesteś tutaj"> 
+<locate_ko "Błąd Geolokacji - Przeładuj stronę, aby ponowić"> /* does not work yet */
+<choix_bieres_tous " Drink">
+<popup_nom "Nazwa"> 
+<popup_opening_hours "Godziny otwarcia"> 
+<popup_happy_hours "Happy hours"> 
+<popup_biere "Draft beer"> 
+<popup_edit "Dodaj informacje o tym barze"> 
+<overpass_err "Przybliż, aby zobaczyć więcej barów.">

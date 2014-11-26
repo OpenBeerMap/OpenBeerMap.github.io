@@ -46,7 +46,7 @@
 <attr_overpass "データ提供 <a>API Overpass</a>"> 
 <locate_ok "現在地"> 
 <locate_ko "ジオロケーションエラー - ページを再読み込みしてください"> /* does not work yet */
-<choix_bieres_tous "<img> カンパイ！">
+<choix_bieres_tous " カンパイ！">
 <popup_nom "店名"> 
 <popup_opening_hours "開店時間"> 
 <popup_happy_hours "ハッピーアワー"> 
