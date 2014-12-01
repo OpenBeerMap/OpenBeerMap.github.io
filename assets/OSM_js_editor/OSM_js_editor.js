@@ -168,7 +168,7 @@ function complete_form_with_already_maped_beers(beer_src){
 			//console.log(x[i])
 			if (x[i] != "non_fourni"){
 
-         TempLine = '<div class="checkbox"><label for="checkboxes-'+x[i]+'"><input type="checkbox" name="beer" id="checkboxes-'+x[i]+'" value="'+x[i]+'">'+x[i]+'</label></div>';
+         TempLine = '<div class="checkbox"><input type="checkbox" name="beer" id="checkboxes-'+x[i]+'" value="'+x[i]+'"><label for="checkboxes-'+x[i]+'">'+x[i]+'</label></div>';
          htmlBeers += TempLine;
          
          

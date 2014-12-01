@@ -43,7 +43,7 @@ if (document.body.clientWidth <= 767) {
 var sidebar = L.control.sidebar("sidebar", {
   closeButton: true,
   position: "left"
-}).addTo(map);
+}).addTo(map).show();
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
 /* les contrôles */
@@ -80,7 +80,7 @@ function RefreshCtrl() {
 
 		   html += '<a href="#" class="btn btn-warning" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
 		   html += "$('#setupModal').modal('show'); return false;";
-		   html += '"><i class="fa fa-cogs" style="color: white"></i><font color="white" data-l10n-id="setup">&nbsp;&nbsp;Configurer</font></a>';
+		   html += '"><i class="fa fa-cogs"></i> <span data-l10n-id="setup">Configurer</span></a>';
 		   //console.log(Ctrl['_overlaysList'].innerHTML);
 		   Ctrl['_separator'].innerHTML = html;
 
@@ -118,3 +118,15 @@ var hash = new L.Hash(map);
 /* supprimer la barre de progression quand tout le js est traité */
 $(document).one("ajaxStop", function () {$("#loading").hide(); });
 
+//FIXME: nasty hack because bootstraps radio buttons don't work
+$("[name=wifi]").on("change", function(){
+    $("[name=wifi]").parent().removeClass("active");
+    if($(this).prop("checked"))
+    {
+        $(this).parent().addClass("active");
+    }
+    else
+    {
+        $(this).parent().removeClass("active");
+    }
+});

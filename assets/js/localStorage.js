@@ -46,7 +46,7 @@ function UpdateBeerList_Edition_Form() {
        if (BeerName.hasOwnProperty(myi)) {
          var TempBeerName = BeerName[myi];
          var TempBeerNameLowercase = myi;
-         TempLine = '<div class="checkbox"><label for="checkboxes-'+i+'"><input type="checkbox" name="beer" id="checkboxes-'+i+'" value="'+TempBeerNameLowercase+'">'+TempBeerName+'</label></div>';
+         TempLine = '<div class="checkbox"><input type="checkbox" name="beer" id="checkboxes-'+i+'" value="'+TempBeerNameLowercase+'"><label for="checkboxes-'+i+'">'+TempBeerName+'</label></div>';
          htmlBeers += TempLine;
          i++;
          }
@@ -77,7 +77,7 @@ function LocalStorageList() {
       for (i=0; i<LSlength; i++) {    
 		  //console.log(localStorage.key(i))
 		  //console.log(localStorage[localStorage.key(i)])
-		TxtList += '<label><input type="checkbox"  checked name="'+ localStorage.key(i) +'" value="' + localStorage.key(i) + '" id="' + localStorage.key(i) + '" onClick="LocalStorageStore(this.value,localStorage[this.value])" />&nbsp;&nbsp;' + localStorage.key(i) + '</label><br />'		  
+		TxtList += '<input type="checkbox"  checked name="'+ localStorage.key(i) +'" value="' + localStorage.key(i) + '" id="' + localStorage.key(i) + '" onClick="LocalStorageStore(this.value,localStorage[this.value])" /><label>' + localStorage.key(i) + '</label>'		  
       }
       $( "#localstoragelist" ).html(TxtList);
    }

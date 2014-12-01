@@ -74,7 +74,7 @@ $( "#beersearchsubmit" ).click(function() {
    $("#addbutton").on('click', function () {
            if ($('#beer-other').val()!='')
             {
-            $('#checkboxlist').append('<div class="checkbox"><label for=checkbox-'+$("#beer-other").val()+'><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/>'+ $("#beer-other").val()+'</label></div>');
+            $('#checkboxlist').append('<div class="checkbox"><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/><label for=checkbox-'+$("#beer-other").val()+'>'+ $("#beer-other").val()+'</label></div>');
             $('#beer-other').val("");
             }
     });

@@ -14,8 +14,8 @@
     <link rel="localization" href="locales/manifest.json">
     <link rel="stylesheet" href="assets/bootstrap-3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome-4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/leaflet-0.7.3/leaflet.css">
     <link rel="stylesheet" href="assets/leaflet-sidebar/L.Control.Sidebar.css">
+    <link rel="stylesheet" href="assets/leaflet-0.7.3/leaflet.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/leaflet-search.css">
@@ -77,107 +77,100 @@
     </div>
 
     <div id="map"></div>
+    
     <div id="sidebar">
-      <!--<h2>leaflet-sidebar</h2>-->
-      <form class="form-horizontal" name="edit_form">
-        <fieldset>
-        <!-- Form Name -->
-        <legend data-l10n-id="titre_formulaire_edition">Édition du bar dans OpenBeerMap</legend>
-        <!-- OSM id input-->
-        <div class="form-group">
-          <div class="col-md-4">
-              <input id="OSM_type" name="OSM_type" class="form-control input-md hidden" type="text">
-              <input id="OSM_id" name="OSM_id" class="form-control input-md hidden" type="text">
-          </div>
-        </div>
-        <!-- Name input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput" data-l10n-id="nom_du_bar">Nom</label>
-          <div class="col-md-8">
-                <input id="bar-name" name="bar-name" class="form-control input-md" type="text">
-          </div>
-        </div>
-        <!-- Beer Checkboxes -->
-        <div class="form-group">
-			          <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
-			<div id="checkboxlist" class="col-md-4">
-			<div id="beerlist_fromOSM">
-			  <!-- Javascript populated : OSM_js_editor.js -->
-			</div>
-     			
-			<div id="beerlist_fromlocalstorage">
-			  <!-- Javascript populated : localStorage.js -->
-			</div>
-		</div>
-		</div>
-        <!-- Champ libre d'ajout de bière -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>
-          <div class="col-md-8">
-            <div class="input-group">
-                <input id="beer-other" name="beer-other" class="form-control input-md" type="text">
-                <span class="input-group-btn">
-                <button id="addbutton" class="btn btn-default" type="button">+</button>
-              </span>
+        <h2 data-l10n-id="titre_formulaire_edition">Édition du bar dans OpenBeerMap</h2>
+        <a class="close">&times;</a>
+        <form class="form-horizontal" name="edit_form">
+            <!-- Form Name -->
+<!--             <legend data-l10n-id="titre_formulaire_edition">Édition du bar dans OpenBeerMap</legend> -->
+            <!-- OSM id input-->
+            <div class="form-group hidden">
+                <div class="col-md-4">
+                    <input id="OSM_type" name="OSM_type" class="form-control input-md" type="text">
+                    <input id="OSM_id" name="OSM_id" class="form-control input-md" type="text">
+                </div>
             </div>
-           </div>
-        </div>
-        <!-- Wifi  Radios  -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="radios" data-l10n-id="wifi_oupas">Wifi</label>
-          <div class="col-md-8">
-            <label class="radio-inline" for="radios-0" data-l10n-id="wifi_oui">
-              <input name="wifi" id="radios-0" value="wlan" type="radio">
-              oui
-            </label>
-            <label class="radio-inline" for="radios-1"  data-l10n-id="wifi_non">
-              <input name="wifi" id="radios-1" value="no" type="radio">
-              non
-            </label>
-            <label class="radio-inline" for="radios-2" data-l10n-id="wifi_inconnu">
-              <input name="wifi" id="radios-2" value="chaispas" type="radio">
-              peut-être
-            </label>
-          </div>
-        </div>
+            <!-- Name input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput" data-l10n-id="nom_du_bar">Nom</label>
+                <div class="col-md-8">
+                    <input id="bar-name" name="bar-name" class="form-control input-md" type="text">
+                </div>
+            </div>
+            <!-- Beer Checkboxes -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="checkboxes" data-l10n-id="liste_des_bieres">Bière pression dispo</label>
+                <div id="checkboxlist" class="col-md-8">
+                    <div id="beerlist_fromOSM">
+                        <!-- Javascript populated : OSM_js_editor.js -->
+                    </div>  
+                    <div id="beerlist_fromlocalstorage">
+                        <!-- Javascript populated : localStorage.js -->
+                    </div>
+                </div>
+            </div>
+            <!-- Champ libre d'ajout de bière -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput" data-l10n-id="champ_libre_bieres">Autres bières</label>
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input id="beer-other" name="beer-other" class="form-control" type="text">
+                        <span class="input-group-btn">
+                            <button id="addbutton" class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Wifi  Radios  -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="radios" data-l10n-id="wifi_oupas">Wifi</label>
+                <div class="col-md-8">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default">
+                            <input name="wifi" id="radios-0" value="wlan" type="radio" autocomplete="off" data-l10n-id="wifi_oui"> Oui
+                        </label>
+                        <label class="btn btn-default">
+                            <input name="wifi" id="radios-1" value="no" type="radio" autocomplete="off" data-l10n-id="wifi_non"> Non
+                        </label>
+                        <label class="btn btn-default">
+                            <input name="wifi" id="radios-2" value="chaispas" type="radio"  autocomplete="off" data-l10n-id="wifi_inconnu"> Peut-être
+                        </label>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Opening_hours input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="opening_hours" data-l10n-id="opening_hours">Heures d'ouverture</label>
-          <div class="col-md-8">
-          <input id="opening_hours" name="opening_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block" data-l10n-id="opening_hours_exemple">exemple : Mo-Fr 11:30-20:00</span>
-          </div>
-        </div>
+            <!-- Opening_hours input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="opening_hours" data-l10n-id="opening_hours">Heures d'ouverture</label>
+                <div class="col-md-8">
+                    <input id="opening_hours" name="opening_hours" class="form-control input-md" type="text" disabled>
+                    <span class="help-block" data-l10n-id="opening_hours_exemple">exemple : Mo-Fr 11:30-20:00</span>
+                </div>
+            </div>
 
-        <!-- Happy_hours input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="happy_hours" data-l10n-id="happy_hours">Happy Hours</label>
-          <div class="col-md-8">
-          <input id="happy_hours" name="happy_hours" class="form-control input-md" type="text" disabled>
-          <span class="help-block" data-l10n-id="happy_hours_exemple">exemple : Mo-Fr 18:30-20:00</span>
-          </div>
-        </div>
+            <!-- Happy_hours input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="happy_hours" data-l10n-id="happy_hours">Happy Hours</label>
+                <div class="col-md-8">
+                    <input id="happy_hours" name="happy_hours" class="form-control input-md" type="text" disabled>
+                    <span class="help-block" data-l10n-id="happy_hours_exemple">exemple : Mo-Fr 18:30-20:00</span>
+                </div>
+            </div>
 
-        <!-- Buttons -->
-        <div class="form-group">
-          <label class="col-md-3 control-label" for="singlebutton"></label>
-          <div class="col-md-3">
-              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-default" onClick="sidebar.hide()"><font color="black" data-l10n-id="sidebar_discard_button"> Annuler</font></a><br>
-          </div>
-          <div class="col-md-3">
-              <a href="#" id="singlebutton" name="singlebutton" class="btn btn-success" onClick="form_from_user(edit_form)"><font color="white" data-l10n-id="bouton_enregistrer">Enregistrer</font></a><br>
-          </div>
-        </div>
-
-        <!-- Button -->
-        <div class="form-group">
-          <div class="col-md-4">
-              <a href="http://www.openstreetmap.org/" target="_blank" id="singlelink" class="btn btn-link" data-l10n-id="bouton_OSM">Éditer directement dans OpenStreetMap</a><br>
-          </div>
-        </div>
-
-        </fieldset>
+            <!-- Buttons -->
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-4">
+                    <a href="#" id="singlebutton" name="singlebutton" class="btn btn-default" onClick="sidebar.hide()" data-l10n-id="sidebar_discard_button">Annuler</a>
+                    <a href="#" id="singlebutton" name="singlebutton" class="btn btn-primary" onClick="form_from_user(edit_form)" data-l10n-id="bouton_enregistrer">Enregistrer</a>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-4">
+                    <a href="http://www.openstreetmap.org/" target="_blank" id="singlelink" class="btn btn-default btn-block" data-l10n-id="bouton_OSM">Éditer directement dans OpenStreetMap</a><br>
+                </div>
+            </div>
         </form>
     </div>
 
