@@ -176,15 +176,18 @@ ul.ui-autocomplete {
     padding:5px;
     margin:0;
     display:block;
+    transition:all 0.2s;
 }
 #checkboxlist input[type=checkbox]:checked ~ label{
-    background-color: rgba(188, 232, 241, 0.7);
+    background-color: #3276B1;
+    color:#FFF;
 }
 #checkboxlist input[type=checkbox] ~ label:hover{
     background-color: rgba(188, 232, 241, 0.5);
 }
 #checkboxlist input[type=checkbox]:checked ~ label:hover{
-    background-color: rgba(188, 232, 241, 0.9);
+    background-color: #3276B1;
+    color:#FFF;
 }
 
 /* To test radio buttons
