@@ -33,7 +33,6 @@ function draw_beer(url,icon){
 	callback: function(data) {
                 for(i=0;i<data.elements.length;i++) {
                 e = data.elements[i];
-                //console.log(e)
                 if (e.id in this.instance._ids) return;
                 this.instance._ids[e.id] = true;   
                 if (e.tags != undefined){
@@ -44,8 +43,8 @@ function draw_beer(url,icon){
                 if (e.tags["opening_hours"]) {content += "<tr><th data-l10n-id='popup_opening_hours'>Horaires d'ouvertures</th><td>" + e.tags["opening_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["opening_hours"]) +"'></div></td></tr>"}
                 if (e.tags["happy_hours"]) {content += "<tr><th data-l10n-id='popup_happy_hours'>Happy Hours</th><td>" + e.tags["happy_hours"] +"<div class='opening-hours-circle' style='background:"+ parse_osm_times(e.tags["happy_hours"]) +"'></div></td></tr>"}
                 if (e.tags["brewery"]) {content += "<tr><th data-l10n-id='popup_biere'>Type de bière pression</th><td>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>"}
-                    if (e.type == 'node') {node = "node" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,node,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
-                    if (e.type == 'way') {way = "way" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,way,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
+                if (e.type == 'node') {node = "node" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,node,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
+                if (e.type == 'way') {way = "way" ; content += "<tr><td colspan='2'><a href='#' onClick='sidebar.toggle();init_form_from_OSM(edit_form,way,"+ e.id.toString() +")'><span data-l10n-id='popup_edit'>Ajouter des infos sur ce bar</span></a></td></tr>";}
                 content +="</table>";
 //78146476                    
         icon_o = icon            

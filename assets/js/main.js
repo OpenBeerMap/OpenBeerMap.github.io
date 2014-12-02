@@ -43,7 +43,7 @@ if (document.body.clientWidth <= 767) {
 var sidebar = L.control.sidebar("sidebar", {
   closeButton: true,
   position: "left"
-}).addTo(map).show();
+}).addTo(map);
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
 
 /* les contrôles */
