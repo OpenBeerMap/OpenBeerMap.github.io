@@ -1,0 +1,59 @@
+/* Main panel style */
+.leaflet-control-layers-base{
+    display:none;
+}
+
+.leaflet-control-layers-expanded{
+    padding:0;
+}
+
+.leaflet-control-layers-overlays label input{
+    display:none;
+}
+
+/* Images */
+.leaflet-control-layers-overlays label .image{
+    height:25px;
+    width:25px;
+    display:inline-block;
+    text-align:center;
+    margin-right:1ex;
+}
+.leaflet-control-layers-overlays label img{
+    max-height:25px;
+    max-width:25px;
+    vertical-align:middle;
+}
+
+/* Rounded first control */
+.leaflet-control-layers-overlays label:first-child input ~ span{
+    border-radius:5px 5px 0px 0px;
+}
+
+/* Controls */
+.leaflet-control-layers-overlays label{
+    line-height:25px;
+}
+
+.leaflet-control-layers-overlays input ~ span{
+    display:block;
+    padding:5px;
+    cursor:pointer;
+}
+
+.leaflet-control-layers-overlays input:checked ~ span{
+    background-color: #428BCA;
+    color:#FFF;
+}
+
+.leaflet-control-layers-overlays input:checked ~ span:hover{
+    background-color: #3276B1;
+}
+
+/* Setup button */
+.leaflet-control-layers-separator {
+    height: 37px;
+    padding: 1px;
+    width:100%;
+    margin:0;
+}
