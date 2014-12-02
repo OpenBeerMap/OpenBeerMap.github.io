@@ -14,9 +14,9 @@ BeerImage = new Array();
     BeerName["chouffe"] = "Chouffe";
     BeerList["chouffe"] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[cC]houffe'];way(BBOX)['brewery'~'[cC]houffe']);out center;", "assets/img/"+BeerImage['chouffe']);
     //
+    BeerImage["guinness"] = "beers/guinness.png";
     BeerName["guinness"] = "Guinness";
-	BeerImage["guinness"] = "beers/guinness.png";
-    BeerList["guinness"] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[Gg]uinness'];way(BBOX)['brewery'~'[Gg]uinness']);out;", "assets/img/"+BeerImage['guinness']);
+    BeerList["guinness"] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)['brewery'~'[Gg]uinness'];way(BBOX)['brewery'~'[Gg]uinness']);out;", "assets/img/"+BeerImage["guinness"]);
     //
     BeerImage["affligem"] = "beers/affligem.png";
     BeerName["affligem"] = "Affligem";	

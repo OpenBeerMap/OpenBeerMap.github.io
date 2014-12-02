@@ -29,6 +29,9 @@
 .leaflet-control-layers-overlays label:first-child input ~ span{
     border-radius:5px 5px 0px 0px;
 }
+.leaflet-control-layers-overlays label:last-child input ~ span{
+    border-radius:0px 0px 5px 5px;
+}
 
 /* Controls */
 .leaflet-control-layers-overlays label{
@@ -52,8 +55,13 @@
 
 /* Setup button */
 .leaflet-control-layers-separator {
-    height: 37px;
-    padding: 1px;
+/*     height: 37px; */
+/*     padding: 1px; */
     width:100%;
     margin:0;
+    border-top:none;
+}
+.leaflet-control-layers-separator .btn{
+    position:relative;
+        top:5px;
 }

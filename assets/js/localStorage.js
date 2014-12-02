@@ -10,6 +10,7 @@ function init_localstorage() {
 		console.log('nettoyage du localStorage - il est maintenant utilisé différemment')
 	}
   	// set default for the first visit
+  	//FIXME: These names are wrong and why put default beers?
     if (localStorage.length == 0) {
             localStorage.setItem('chouffe','beers/chouffe.png'); 
             localStorage.setItem('guinness','beers/guinness.png'); 
