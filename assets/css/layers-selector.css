@@ -5,6 +5,7 @@
 
 .leaflet-control-layers-expanded{
     padding:0;
+    max-width:90%;
 }
 
 .leaflet-control-layers-overlays label input{
@@ -42,6 +43,9 @@
     display:block;
     padding:5px;
     cursor:pointer;
+    white-space:nowrap;
+    overflow-x:hidden;
+    text-overflow:ellipsis;
 }
 
 .leaflet-control-layers-overlays input:checked ~ span{

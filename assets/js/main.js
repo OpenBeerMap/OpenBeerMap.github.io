@@ -85,7 +85,7 @@ function RefreshCtrl() {
 
     html += '<a href="#" class="btn btn-default btn-block" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="';
     html += "$('#setupModal').modal('show'); return false;";
-    html += '"><i class="fa fa-cogs"></i> <span data-l10n-id="setup">Configurer</span></a>';
+    html += '"><i class="fa fa-cogs"></i> <span data-l10n-id="setup"></span></a>';
     //console.log(Ctrl['_overlaysList'].innerHTML);
     Ctrl['_separator'].innerHTML = html;
     $(Ctrl['_separator']).insertAfter($(Ctrl['_separator']).next());

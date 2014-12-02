@@ -27,7 +27,6 @@ input[type="radio"], input[type="checkbox"] {
 }
 .navbar .navbar-brand {
   font-weight: bold;
-  font-size: 25px;
   color: white;
 }
 .navbar-collapse.in {
@@ -68,6 +67,19 @@ input[type="radio"], input[type="checkbox"] {
   padding: 3px 0;
   border-bottom: 2px solid #333;
 }
+
+/* Autocomplete suggestions on type */
+.ui-autocomplete{
+    background-color:#FFF;
+}
+.ui-autocomplete .ui-menu-item.ui-state-focus{
+    background-color:#428BCA;
+    color:#FFF;
+    font-weight:normal;
+    border:none;
+    margin:0;
+}
+
 .has-feedback .form-control-feedback {
   position: absolute;
   top: 0;
