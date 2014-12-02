@@ -77,7 +77,7 @@ function LocalStorageList() {
       for (i=0; i<LSlength; i++) {    
 		  //console.log(localStorage.key(i))
 		  //console.log(localStorage[localStorage.key(i)])
-		TxtList += '<label><input type="checkbox"  checked name="'+ localStorage.key(i) +'" value="' + localStorage.key(i) + '" id="' + localStorage.key(i) + '" onClick="LocalStorageStore(this.value,localStorage[this.value])" />&nbsp;&nbsp;' + localStorage.key(i) + '</label><br />'		  
+		TxtList += '<div><input type="checkbox"  checked name="'+ localStorage.key(i) +'" value="' + localStorage.key(i) + '" id="' + localStorage.key(i) + '" onClick="LocalStorageStore(this.value,localStorage[this.value])" /><label for="' + localStorage.key(i) + '">' + localStorage.key(i) + '</label></div>'		  
       }
       $( "#localstoragelist" ).html(TxtList);
    }
