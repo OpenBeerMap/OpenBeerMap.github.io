@@ -45,7 +45,9 @@ var sidebar = L.control.sidebar("sidebar", {
   position: "left"
 }).addTo(map);
 //les fonctions liées à l'éditeur OSM sont dans OSM_js_editor.js
-
+$("#sidebar .close").click(function(){
+   sidebar.hide(); 
+});
 /* les contrôles */
 var baseMaps = {
    "OpenStreetMap": osm

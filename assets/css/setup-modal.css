@@ -32,5 +32,5 @@
 
 #setupModal input[type=checkbox]:checked ~ label:before{
     content:"\f005";
-    color:#FFFF00;
+    color:#FFC329;
 }

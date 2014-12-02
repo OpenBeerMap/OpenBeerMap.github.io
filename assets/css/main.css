@@ -101,12 +101,16 @@ input[type="radio"], input[type="checkbox"] {
   }
 }
 @media (max-width: 767px){
-  .url-break {
-    word-break: break-all;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
+    .url-break {
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    .github-fork-ribbon {
+        display:none;
+    }
 }
 /* Print Handling */
 @media print {
@@ -140,63 +144,6 @@ ul.ui-autocomplete {
     z-index: 1100;
 }
 
-/* Reset styles in side bar */
-.leaflet-container {
-    font:inherit;
-}
-.leaflet-container a.btn-primary, .leaflet-container a.btn-warning {
-    color: #FFF;
-}
-
-.leaflet-container a.btn-default {
-    color: #333;
-}
-
-.leaflet-container h2 {
-    font-size: 24px;
-}
-
-/* Sidebar beers list */
-
-#checkboxlist .checkbox{
-    padding:0;
-    min-height:0;
-}
-
-#checkboxlist input[type=checkbox] {
-    display:none;
-}
-
-#checkboxlist input[type=checkbox] ~ label{
-    background-color: rgba(255, 255, 255, 1);
-    padding:5px;
-    margin:0;
-    display:block;
-    transition:all 0.2s;
-}
-#checkboxlist input[type=checkbox]:checked ~ label{
-    background-color: #428BCA;
-    color:#FFF;
-}
-#checkboxlist input[type=checkbox] ~ label:hover{
-    background-color: rgba(188, 232, 241, 0.5);
-}
-#checkboxlist input[type=checkbox]:checked ~ label:hover{
-    background-color: #3276B1;
-    color:#FFF;
-}
-
-#checkboxlist input[type=checkbox]:checked ~ label:before{
-    font-family:"FontAwesome";
-    content:"\f05d";
-    float:right;
-}
-
-/* To test radio buttons
-[data-toggle="buttons"] > .btn > input[type="radio"], [data-toggle="buttons"] > .btn > input[type="checkbox"] {
-    display: inline;
-}
-*/
 
 /* Minimum zoom indicator */
 .leaflet-control-minZoomIndecator{
