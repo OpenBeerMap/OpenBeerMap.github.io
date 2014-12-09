@@ -3,80 +3,80 @@
 */
 
 /* autocomplete beer - setup form */ 
-$( "#beersearchinput" ).autocomplete({
-         source: function( request, response) {
-         $.ajax({
+$("#setupAddFavoriteInput").autocomplete({
+    source: function(request, response){
+        $.ajax({
             url: "http://openbeermap.wc.lt/json_hostinger.php?",
             dataType: "jsonp",
             data: {
-            q: request.term
+                q: request.term
             },
-            success: function( data ) {
-               ListData = [];
-               for (var i in data) {
-                  temp = {};
-                  if (data[i].Beername && typeof data[i].Beername != 'undefined') {
-                     temp = {value : data[i].BeerTag, label : data[i].BeerTag, image : data[i].ImageName}
-                     ListData.push(temp);
-                     }
-                  }
-               response(ListData);
-               }
-            });
-         },
-         minLength: 3,
-         select: function(event, ui) { 
-			 console.log("image associée : " + ui.item.image);
-               $('#beersearchmetadata').val(ui.item.image);
-               //$('#beersearchinput').value = ui.item.label;
-               }
-   });
-
-
-$( "#beersearchsubmit" ).click(function() {
-    if ($('#beersearchinput').val()!='')
-    {
-        BeerTag = $( "#beersearchinput" ).val();
-        BeerMetaData = 'beers/' + $( "#beersearchmetadata" ).val();
-        // If the user typed the name of the beer by himself, default image
-        if (BeerMetaData == "beers/") { BeerMetaData = "beers/beer1.png"; }
-        LocalStorageStore(BeerTag,BeerMetaData);
-        LocalStorageList();
-        $( "#beersearchinput" ).val('') ;
+            success: function(data){
+                var list = [];
+                for(var i = 0 ; i < data.length ; i++)
+                {
+                    if(data[i].Beername && data[i].Beername !== undefined)
+                    {
+                        list.push({
+                            value : data[i].BeerTag,
+                            label : data[i].BeerTag,
+                            image : data[i].ImageName ? data[i].ImageName : "beer1.png"
+                        });
+                    }
+                }
+                response(list);
+            }
+        });
+    },
+    minLength: 3,
+    select: function(event, ui){
+        $('#beersearchmetadata').val(ui.item.image);
+//         $("#setupAddFavoriteButton").click();
     }
+});
 
+
+$("#setupAddFavoriteButton").click(function(){
+    if($('#setupAddFavoriteInput').val() != '')
+    {
+        add_favorite($('#setupAddFavoriteInput').val());
+        update_setup_list();
+        $("#setupAddFavoriteInput").val('');
+    }
 });
 
 
 /* autocomplete beer - bar edit form */
-   $( "#beer-other" ).autocomplete({
-         source: function( request, response) {
-         $.ajax({
+$("#editAddBeerInput").autocomplete({
+    source: function(request, response){
+        $.ajax({
             url: "http://openbeermap.wc.lt/json_hostinger.php",
             dataType: "jsonp",
             data: {
-            q: request.term
+                q: request.term
             },
-            success: function( data ) {
-            //console.log(data);
-               ListData = [];
-               for (var i in data) {
-                  if (data[i].Beername && typeof data[i].Beername != 'undefined') {
-                     ListData.push(data[i].BeerTag);
-                     }
-                  }
-               response(ListData);
-               }
-            });
-         },
-         minLength: 3
-   });
-
-   $("#addbutton").on('click', function () {
-           if ($('#beer-other').val()!='')
-            {
-            $('#checkboxlist').append('<div class="checkbox"><input type="checkbox" name="beer" checked id="checkbox-' + $("#beer-other").val() +'" value="' + $("#beer-other").val() +'"/><label for=checkbox-'+$("#beer-other").val()+'>'+ $("#beer-other").val()+'</label></div>');
-            $('#beer-other').val("");
+            success: function(data){
+                //console.log(data);
+                var list = [];
+                for(var i = 0 ; i < data.length ; i++)
+                {
+                    if(data[i].Beername && data[i].Beername !== undefined)
+                    {
+                        list.push(data[i].BeerTag);
+                    }
+                }
+                response(list);
             }
-    });
+        });
+    },
+    minLength: 3
+});
 
+$('#editAddBeerButton').on('click', function(){
+    if($('#editAddBeerInput').val() != '')
+    {
+        var i = $("#editBeersListManual label").size() + 1;
+        $('#editBeersListManual').append('<div class="checkbox"><input name="editBeer" id="editBeersListManual-' + i + '" value="' + $('#editAddBeerInput').val() + '" type="checkbox" name="beer" checked><label for="editBeersListManual-' + i + '">' +  $('#editAddBeerInput').val() + '</label></div>');
+        $('#editAddBeerInput').val('');
+    }
+});

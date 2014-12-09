@@ -1,75 +1,91 @@
 /*
- OpenBeerMap translation file [fr] | noemie.lehuby(at)gmail.com | MIT Licensed
+ OpenBeerMap translation file [en] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translators: Ian Lopez (ianlopez1115(at)gmail.com), OranginaRouge (http://orangina-rouge.org)
 */
 
-/* Page d'accueil */
-<a_propos "<i></i>&nbsp; À propos"> 
-<the_news "<i></i>&nbsp; Actualités"> 
 
-/* Blabla */
-<hello_world "Bienvenue sur OpenBeerMap !"> 
-<about "<i></i>&nbsp; À propos"> 
-<about_contenu """
-                <p>Ce site vous permet de trouver un bar qui sert votre bière favorite !</p>
-                <p>Si les infos proposées sont manquantes ou erronées, n'hésitez pas à contribuer.</p>
-                <p><a>Plus d'infos sur la genèse de ce site sur le blog de l'auteur.</p>
-"""> 
-<contact "<i></i>&nbsp;Contact"> 
-<contact_contenu "Pour proposer une bière manquante, signaler un bug, suggérer une évolution, ou tout simplement me payer une bière ..."> 
-<credits "<i></i>&nbsp;Crédits"> 
-<credits_contenu """
-                <p>Carte fournie par <a>OpenStreetMap</a> et <a>Stamen</a>.</p>
-                <p>Donn&eacute;es sur les bars et les bière fournies par <a>OpenStreetMap</a> et ses nombreux contributeurs, via <a>l'API OverPass</a>.</p>
-                <p>Site fait avec amour et <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
-                <p>Les sources sont ici : <a>Github</a> </p>
-"""> 
-<repo_github "Le dépot Github">
+/* Home Page */
+<nav_link_about "<i></i> About"> 
+<nav_link_news "<i></i> News"> 
 
-/* Formulaire d'édition */
-<titre_formulaire_edition "Édition du bar dans OpenBeerMap"> 
-<nom_du_bar "Nom"> 
-<liste_des_bieres "Bière pression dispo"> 
-<champ_libre_bieres "Autres bières">
-<wifi_oupas "Wifi"> 
-<wifi_oui "<input> oui">
-<wifi_non "<input> non">
-<wifi_inconnu "<input> peut-être"> 
-<opening_hours "Heures d'ouverture"> 
-<opening_hours_exemple "exemple : Mo-Fr 11:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "exemple : Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Enregistrer"> 
-<sidebar_discard_button "Annuler"> 
-<bouton_OSM "Éditer directement dans OpenStreetMap"> 
+/* About */
+<modal_about_title "Welcome to OpenBeerMap!">
+<modal_about_title_about "<i></i> About">
+<modal_about_title_contribute "<i></i> Contribute">
+<modal_about_title_credits "<i></i> Credits">
+<modal_about_content_about """
+    <p>This application was built to help people find their favourite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span><i></i> Edit bar information</span> button.</p>
+    <p>You will find more information on the genesis of this application <a>here</a>.</p>
+    <p>You can also contribute by translating or improving this application. You will find more information about that in the <strong>Contribute</strong> tab.</p>
+""">
+<modal_about_category_content "Add content">
+<modal_about_content_content "The simplest way to contribute is to add beers to the bars you know.">
+<modal_about_category_translate "Translate">
+<modal_about_content_translate "Please visit <a>this page</a> to learn how to help translate OpenBeerMap.">
+<modal_about_category_suggestions "Make suggestions">
+<modal_about_content_suggestions "You can write an e-mail to <strong>noemie [dot] lehuby [at] gmail [dot] com</strong> or contact  on Twitter if you have suggestions.">
+<modal_about_category_donate "Donate">
+<modal_about_content_donate "If you want to pay Noémie a beer">
+<modal_about_category_code "Code">
+<modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">
+<modal_about_category_map "Map">
+<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">
+<modal_about_category_data "Data">
+<modal_about_content_data "Bar data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">
+<modal_about_category_design "Design">
+<modal_about_content_design "Site designed with the help of <a>BootLeaf</a> = <a>Bootstrap 3</a> + <a>Leaflet</a>.">
+<modal_about_category_contributors "Contributors">
 
-/* Éléments de la carte */
-<attr_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>"> 
-<attr_overpass "données via l'<a>API Overpass</a>"> 
-<locate_ok "Vous êtes ici"> 
-<locate_ko "Échec de la géolocalisation - Rechargez la page pour réessayer"> /* does not work yet */
-<choix_bieres_tous " Boire !">
-<popup_nom "Nom"> 
-<popup_opening_hours "Horaires d'ouverture"> 
-<popup_happy_hours "Happy hours"> 
-<popup_biere "Bières pression"> 
-<popup_edit "Ajouter des infos sur ce bar"> 
-<overpass_err "Vous devez zoomer plus pour voir les bars.">
+/* Edit Form */
+<edit_title "Bar edition"> 
+<edit_label_name "Name"> 
+<edit_label_beers "Available beers"> 
+<edit_label_add_beer "Add beer">
+<edit_label_wifi "Wifi"> 
+<edit_label_wifi_yes "<input> Yes">
+<edit_label_wifi_no "<input> No">
+<edit_label_wifi_unknown "<input> Unknown"> 
+<edit_label_opening_hours "Opening hours"> 
+<edit_help_opening_hours "example : Mo-Fr 11:30-20:00"> 
+<edit_label_happy_hours "Happy hours"> 
+<edit_help_happy_hours "example : Mo-Fr 18:30-20:00"> 
+<edit_button_save "Save"> 
+<edit_button_discard "Discard">
+<edit_button_more "<i></i> More">
+<edit_button_osm "Edit via OpenStreetMap">
+
+/* Map elements */
+<attribution_osm "&copy; <a>OpenStreetMap</a> contributors">
+<attribution_overpass "<a>Overpass API</a>">
+<overpass_err "Zoom in to see bars">
+<map_popup_name_unknown "Unknown name">
+<map_popup_opening_hours "Opening hours">
+<map_popup_happy_hours "Happy hours">
+<map_popup_beer "Draft beer">
+<map_popup_edit "Edit bar information">
+<map_popup_location "You are here">
+
+/* Layers choice */
+<layers_overlays_all "All beers">
+<layers_setup " Customize">
 
 /* Setup */
-<setup " Personnaliser">
-<setupbeers "<i></i> Liste des bières">
-<setupbeers_label "Selectionnez vos bières favorites parmi notre selection :">
-<setupbeer_resultat "Nombre de bières séléctionnées : ">
-<clear_button "Tout effacer">
-
+<modal_setup_title "Display settings">
+<modal_setup_title_favorites "<i></i> Favourite beers">
+<modal_setup_label_selected "Number of selected beers :">
+<modal_setup_button_clear "<i></i> Clear list">
+<modal_setup_button_save "Save">
+<modal_setup_button_discard "Cancel">
+<modal_setup_label_add "Add favourite beer">
+<modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?">
+<modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field.">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
-
 <app_description """
-                La carte libre et éditable des bars et bières pression qui y sont servies.
-                Les données proviennent d'OpenStreetMap et toute contribution y est reversée.
-                Aussi disponible à l'adresse http://openbeermap.github.io/
-"""> 
-<why_is_geoloc_needed "Nécessaire pour centrer la carte au bon endroit">
-
-
+                The free and editable map of bars and served draft beer.
+                Data come from OpenStreetMap and all contributions are transfered to OSM.
+                It is also available at http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Needed to center the map at the right place.">
+/* Other strings */
+<locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */

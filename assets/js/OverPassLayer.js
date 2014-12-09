@@ -47,16 +47,10 @@ L.Control.MinZoomIdenticator = L.Control.extend({
 
     onAdd: function (map) {
         this._map = map;
-        map.zoomIndecator = this;
+        map.zoomIndicator = this;
 
         var className = this.className;
         container = this._container = L.DomUtil.create('div', className);
-        container.style.fontSize = "2em";
-        container.style.background = "#ffffff";
-        container.style.backgroundColor = "rgba(255,255,255,0.7)";
-        container.style.borderRadius = "10px";
-        container.style.padding = "1px 15px";
-        container.style.oppacity = "0.5";
         map.on('moveend', this._updateBox, this);
         this._updateBox(null);
 
@@ -79,12 +73,6 @@ L.Control.MinZoomIdenticator = L.Control.extend({
             L.DomEvent.preventDefault(event);
         }
         var minzoomlevel = this._getMinZoomLevel();
-        /*
-        if (minzoomlevel == -1) {
-            this._container.innerHTML = "no layer assigned";
-        }else{
-            this._container.innerHTML = "Vous devez zoomer plus pour voir les bars.";
-        }*/
 
         if (this._map.getZoom() >= minzoomlevel) {
             this._container.style.display = 'none';
@@ -93,7 +81,7 @@ L.Control.MinZoomIdenticator = L.Control.extend({
         }
     },
 
-  className : 'leaflet-control-minZoomIndecator'
+  className : 'leaflet-control-minZoomIndicator'
 });
 
 L.LatLngBounds.prototype.toOverpassBBoxString = function (){
@@ -137,7 +125,7 @@ L.OverPassLayer = L.FeatureGroup.extend({
   },
 
   _poiInfo: function(tags,id) {
-    var link = '<a href="http://www.openstreetmap.org/edit?editor=id&node='+id+'">Edit this entry in iD</a><br>';
+    var link = '<a href="http://www.openstreetmap.org/edit?editor=id&node=' + id + '">Edit this entry in iD</a><br>';
     var r = $('<table>');
     for (key in tags)
       r.append($('<tr>').append($('<th>').text(key)).append($('<td>').text(tags[key])));
@@ -234,8 +222,8 @@ L.OverPassLayer = L.FeatureGroup.extend({
 
   onAdd: function (map) {
       this._map = map;
-      if (map.zoomIndecator) {
-          this._zoomControl = map.zoomIndecator;
+      if (map.zoomIndicator) {
+          this._zoomControl = map.zoomIndicator;
           this._zoomControl._addLayer(this);
       }else{
           this._zoomControl = new L.Control.MinZoomIdenticator();
@@ -247,7 +235,6 @@ L.OverPassLayer = L.FeatureGroup.extend({
       if (this.options.query.indexOf("(BBOX)") != -1) {
           map.on('moveend', this.onMoveEnd, this);
       }
-      console.log("add layer");
   },
 
   onRemove: function (map) {

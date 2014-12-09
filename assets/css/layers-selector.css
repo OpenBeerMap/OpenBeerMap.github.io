@@ -5,7 +5,6 @@
 
 .leaflet-control-layers-expanded{
     padding:0;
-    max-width:90%;
 }
 
 .leaflet-control-layers-overlays label input{
@@ -28,10 +27,12 @@
 
 /* Rounded first control */
 .leaflet-control-layers-overlays label:first-child input ~ span{
-    border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
 }
 .leaflet-control-layers-overlays label:last-child input ~ span{
-    border-radius:0px 0px 5px 5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
 }
 
 /* Controls */
@@ -68,4 +69,83 @@
 .leaflet-control-layers-separator .btn{
     position:relative;
         top:5px;
+}
+
+/* Left control buttons */
+.leaflet-control-locate .fa-map-marker{
+    position:relative;
+        left:-1px;
+}
+.leaflet-control-search .search-button{
+    background-image:none;
+}
+.leaflet-control-search .search-button:hover{
+    background-color:#F4F4F4;
+    background-image:none;
+}
+.leaflet-control-search .search-button:hover, .leaflet-control-search .search-button {
+    height:27px;
+    width:27px;
+    color:#333;
+    text-decoration:none;
+}
+
+.leaflet-control-search .search-button:hover:before, .leaflet-control-search .search-button:before{
+    font-family:"FontAwesome";
+    content:"\f002";
+    font-size:18px;
+    margin-left:5px;
+}
+
+.leaflet-control-search.search-exp .search-button:hover:before, .leaflet-control-search.search-exp .search-button:before{
+    content:"\f00d";
+    position:relative;
+        left:2px;
+    color:#A94442;
+}
+
+.leaflet-control-search .search-cancel {
+    background-image: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    right: 34px;
+    margin: 1px;
+}
+
+.leaflet-control-search .search-cancel:before{
+    font-family:"FontAwesome";
+    content:"\f057";
+    font-size:18px;
+    color:#888;
+}
+.leaflet-control-search .search-input{
+    height:21px;
+    font-size:14px;
+    color:#333;
+    border-color:#AAA;
+}
+.leaflet-control-search .search-tooltip{
+   border:none;
+   background-color:#FFF;
+}
+
+.leaflet-control-search  .search-tip{
+    border-radius:0;
+    margin:0;
+}
+.leaflet-control-search  .search-tip.search-tip-select{
+    background-color: #428BCA;
+    color:#FFF;
+}
+
+.leaflet-control-search .search-alert {
+    cursor: default;
+    clear: both;
+    font-size: 14px;
+    margin: 5px 5px 0;
+    padding: 0;
+    color: #A94442;
+    font-weight: normal;
+    font-style:italic;
 }

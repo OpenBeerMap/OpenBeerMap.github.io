@@ -22,7 +22,7 @@ var newObject = new ObjectType();//Objects with camel case starting uppercase
 ```
 * We use HTML5 with the following conventions for classes and IDs:
 ```html
-<div class="some-class" id="someId">
+<div id="someId" class="some-class">
     <p>Block elements should always be on their own line, but <em>inline elements<em> can be used this way</p>
 </div>
 ```

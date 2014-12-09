@@ -5,8 +5,8 @@
 
 
 /* Home Page */
-<a_propos "<i></i>&nbsp; About"> 
-<the_news "<i></i>&nbsp; News"> 
+<nav_link_about "<i></i> About"> 
+<nav_link_news "<i></i> News"> 
 
 /* Blabla */
 <hello_world "Welcome to OpenBeerMap!"> 
@@ -28,28 +28,27 @@
 <repo_github "Github repository">
 
 /* Edit Form */
-<titre_formulaire_edition "Edit this bar in OpenBeerMap"> 
-<nom_du_bar "Name"> 
-<liste_des_bieres "Draft beer available"> 
-<champ_libre_bieres "Other beers">
-<wifi_oupas "Wifi"> 
-<wifi_oui "<input> yes">
-<wifi_non "<input> no">
-<wifi_inconnu "<input> maybe"> 
-<opening_hours "Opening Hours"> 
-<opening_hours_exemple "example : Mo-Fr 11:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "example : Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Save"> 
-<sidebar_discard_button "Discard"> 
-<bouton_OSM "Edit directly to OpenStreetMap"> 
+<edit_title "Bar edition"> 
+<edit_label_name "Name"> 
+<edit_label_beers "Available beers"> 
+<edit_label_add_beer "Add beers">
+<edit_label_wifi "Wifi"> 
+<edit_label_wifi_yes "<input> Yes">
+<edit_label_wifi_no "<input> No">
+<edit_label_wifi_unknown "<input> Unknown"> 
+<edit_label_opening_hours "Opening hours"> 
+<edit_help_opening_hours "example : Mo-Fr 11:30-20:00"> 
+<edit_label_happy_hours "Happy hours"> 
+<edit_help_happy_hours "example : Mo-Fr 18:30-20:00"> 
+<edit_button_save "Save"> 
+<edit_button_discard "Discard"> 
+<edit_button_osm "Edit via OpenStreetMap"> 
 
 /* Map elements */
-<attr_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
-<attr_overpass "data via <a>Overpass API</a>"> 
+<attribution_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
+<attribution_overpass "data via <a>Overpass API</a>"> 
 <locate_ok "You are here"> 
 <locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
-<choix_bieres_tous " Drink">
 <popup_nom "Name"> 
 <popup_opening_hours "Opening hours"> 
 <popup_happy_hours "Happy hours"> 
@@ -57,12 +56,17 @@
 <popup_edit "Add information about this bar"> 
 <overpass_err "You must zoom in to see more bars.">
 
+/* Layers choice */
+<layers_overlays_all "Drink">
+<layers_setup " Customize">
+
 /* Setup */
-<setup " Customize">
-<setupbeers "<i></i> Beer list">
-<setupbeers_label "Select your favorite beers from our selection !">
-<setupbeer_resultat "Number of selected beers :">
-<clear_button "Reset">
+<modal_setup_title_favorites "<i></i> Favourite beers">
+<modal_setup_label_selected "Number of selected beers :">
+<modal_setup_button_clear "Clear favourites">
+<modal_setup_button_save "Save">
+<modal_setup_button_discard "Cancel">
+<modal_setup_label_add "Add favourite">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 

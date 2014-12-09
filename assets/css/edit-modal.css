@@ -1,6 +1,9 @@
 .leaflet-container {
     font:inherit;
 }
+.leaflet-sidebar > .leaflet-control{
+    font-size:inherit;
+}
 .leaflet-container a.btn-primary, .leaflet-container a.btn-warning {
     color: #FFF;
 }
@@ -9,40 +12,49 @@
     color: #333;
 }
 
-.leaflet-container h2 {
+.leaflet-container h2{
     font-size: 24px;
+    margin-top:5px;
+}
+.leaflet-container .close{
+    top:5px;
+    right:15px;
 }
 
-#checkboxlist .checkbox{
+#editBeersList .checkbox{
     padding:0;
     min-height:0;
 }
 
-#checkboxlist input[type=checkbox] {
+#editBeersList input[type=checkbox] {
     display:none;
 }
 
-#checkboxlist input[type=checkbox] ~ label{
+#editBeersList input[type=checkbox] ~ label{
     background-color: rgba(255, 255, 255, 1);
     padding:5px;
     margin:0;
     display:block;
     transition:all 0.2s;
 }
-#checkboxlist input[type=checkbox]:checked ~ label{
+#editBeersList input[type=checkbox]:checked ~ label{
     background-color: #428BCA;
     color:#FFF;
 }
-#checkboxlist input[type=checkbox] ~ label:hover{
+#editBeersList input[type=checkbox] ~ label:hover{
     background-color: rgba(188, 232, 241, 0.5);
 }
-#checkboxlist input[type=checkbox]:checked ~ label:hover{
+#editBeersList input[type=checkbox]:checked ~ label:hover{
     background-color: #3276B1;
     color:#FFF;
 }
 
-#checkboxlist input[type=checkbox]:checked ~ label:before{
+#editBeersList input[type=checkbox]:checked ~ label:before{
     font-family:"FontAwesome";
     content:"\f05d";
     float:right;
+}
+
+#editMoreOptions{
+    display:none;
 }
