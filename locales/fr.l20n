@@ -23,9 +23,9 @@
 <modal_about_category_translate "Translate">
 <modal_about_content_translate "Please visit <a>this page</a> to learn how to help translate OpenBeerMap.">
 <modal_about_category_suggestions "Make suggestions">
-<modal_about_content_suggestions "You can write an e-mail to <strong>noemie [dot] lehuby [at] gmail [dot] com</strong> or contact  on Twitter if you have suggestions.">
+<modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> or <a>contact on Twitter</a> if you have suggestions.">
 <modal_about_category_donate "Donate">
-<modal_about_content_donate "If you want to pay Noémie a beer">
+<modal_about_content_donate "If you want to pay us a beer">
 <modal_about_category_code "Code">
 <modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">
 <modal_about_category_map "Map">

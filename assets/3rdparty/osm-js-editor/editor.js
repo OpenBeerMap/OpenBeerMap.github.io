@@ -2,7 +2,7 @@
  OpenBeerMap OSM_js_editor.js | noemie.lehuby(at)gmail.com | MIT Licensed
 Éditeur OSM dans la Leaflet sidebar */
 
-//les fonctions de manipulation de l'API OSM sont dans OSMAPI.js
+//les fonctions de manipulation de l'API OSM sont dans api.js
 
 $(document).ready(function(){
     $("#editButtonSave").click(function(){
