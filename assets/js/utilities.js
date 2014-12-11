@@ -1,3 +1,8 @@
+/*
+ OpenBeerMap main.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute)
+*/
+
 //This method deletes a given value in an array
 Array.prototype.del = function(val){
     var index = this.indexOf(val);

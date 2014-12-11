@@ -1,5 +1,6 @@
 /*
  OpenBeerMap main.js | noemie.lehuby(at)gmail.com | MIT Licensed
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute), Pierre Rudloff, l-vincent-l,
 */
 
 /* Basemap Layers */

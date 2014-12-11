@@ -1,5 +1,6 @@
 /*
  OpenBeerMap main.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute)
 */
 
 /* autocomplete beer - setup form */ 

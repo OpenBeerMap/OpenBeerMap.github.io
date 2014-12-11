@@ -1,5 +1,6 @@
 /*
  OpenBeerMap OverPass-API layer | noemie.lehuby(at)gmail.com | MIT Licensed
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l
 */
 
 var overlayAll = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beer1.png");
