@@ -27,6 +27,8 @@
 <modal_about_category_donate "Donate">
 <modal_about_content_donate "If you want to pay us a beer">
 <modal_about_category_code "Code">
+<modal_about_content_moderate "If you are an OpenStreetMap contributor and a beer lover, you are very welcome to help moderating the beers added by the other OpenBeerMap user. Please <a>contact the team</a>.">
+<modal_about_category_moderate "Moderate">
 <modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">
 <modal_about_category_map "Map">
 <modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">
