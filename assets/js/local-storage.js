@@ -34,6 +34,7 @@ function init_local_storage()
     var favoriteBeers = get_favorites();
     console.log("user has " + favoriteBeers.length + " favorite beer(s): '" + localStorage.getItem('favoriteBeers') + "'");
 
+	init_layers(); //create the layers objets for the beers already in localStorage
     update_setup_list(); // displays localStorage items
     update_edit_list(); // update beers list in OSM form
     // Display/update txt notification - debug
@@ -41,6 +42,16 @@ function init_local_storage()
     document.getElementById('ResultLocalStorage').innerHTML = favoriteBeers.length;
 }
 
+//Create beer layer objects, in order to make properly work the removeLayer Leaflet function
+function init_layers()
+{
+	var favoriteBeers = get_favorites();
+	for(var i = 0 ; i < favoriteBeers.length ; i++)
+		{
+			element = favoriteBeers[i]
+        	BeerList[element] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beer1.png");
+    	}
+};
 //Create the bar edit form in the sidebar
 function update_edit_list()
 {
@@ -53,29 +64,7 @@ function update_edit_list()
     document.getElementById('editBeersListLocal').innerHTML = htmlBeers;
 };
 
-//Store items to localStorage
-function add_favorite(value)
-{
-    var favoriteBeers = get_favorites();
-    var layer = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beer1.png");
-    if(favoriteBeers.indexOf(value) == -1)
-    {
-        favoriteBeers.push(value);
-        map.addLayer(layer);
-    }
-    else
-    {
-        if(map.hasLayer(layer))
-        {
-            map.removeLayer(layer);
-        }
-        favoriteBeers.del(value);
-        console.log('Removing ' + value + ' from favorite beers');
-    }
-    localStorage.setItem("favoriteBeers", favoriteBeers.join(";"));
-}
-
-// Display the localStorage items
+// Display the localStorage beers items in the modal
 function update_setup_list()
 {
     var favoriteBeers = get_favorites();
@@ -95,26 +84,46 @@ function update_setup_list()
        });
     }
     update_edit_list();
+};
+
+//add/remove beers items to localStorage
+function add_favorite(value)
+{
+    var favoriteBeers = get_favorites();	
+    
+	if(favoriteBeers.indexOf(value) == -1)
+    {
+        favoriteBeers.push(value);
+		BeerList[value] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beer1.png");
+    }
+    else
+    {
+        favoriteBeers.del(value); 
+		if(map.hasLayer(BeerList[value]))
+        {
+            map.removeLayer(BeerList[value]);
+        }
+        console.log('Removing ' + value + ' from favorite beers');
+    }
+    localStorage.setItem("favoriteBeers", favoriteBeers.join(";"));
 }
 
 
-// Reset localStorage , uncheck boxes, and remove map layer
+// Reset localStorage 
 function clear_favorites()
 {
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
-        var layer = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + favoriteBeers[i] + "\",i];way(BBOX)[\"brewery\"~\"" + favoriteBeers[i] + "\",i]);out center;", "assets/img/beer1.png");
-        if(map.hasLayer(layer))
+		element = favoriteBeers[i]
+        if(map.hasLayer(BeerList[element]))
         {
-            map.removeLayer(layer);
+            map.removeLayer(BeerList[element]);
         }
     }
     localStorage.setItem('favoriteBeers', "");
     update_setup_list();
 }
-
-var toBeRemoved = [];
 
 $(document).ready(function(){
    $("#setupClearFavorites").click(function(){

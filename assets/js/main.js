@@ -67,7 +67,8 @@ function refresh_layers_list()
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
-        overlayMaps["<span class='image'><img src='assets/img/beer1.png'></span><span>" + favoriteBeers[i] + "</span>"] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + favoriteBeers[i] + "\",i];way(BBOX)[\"brewery\"~\"" + favoriteBeers[i] + "\",i]);out center;", "assets/img/beer1.png");
+        overlayMaps["<span class='image'><img src='assets/img/beer1.png'></span><span>" + favoriteBeers[i] + "</span>"] = BeerList[favoriteBeers[i]];
+        
     }
 
     layersList = L.control.layers({"OpenStreetMap": osm}, overlayMaps, {collapsed: document.body.clientWidth < 768});
@@ -90,7 +91,7 @@ function refresh_layers_list()
     });
 }
 
-// Refresh controler on page load
+/* Refresh controler on page load */
 refresh_layers_list();
 map.addLayer(overlayAll);
 
