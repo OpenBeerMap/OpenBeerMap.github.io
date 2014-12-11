@@ -17,14 +17,29 @@ function debug_draw_beer(url, icon)
                 if(e.id in this.instance._ids)
                     return;
                 this.instance._ids[e.id] = true;
-                var pos = new L.LatLng(e.lat, e.lon);
+                if(e.tags !== undefined)
+                {
+                    if(e.type === "node")
+                    {//If element is a node
+                        if (e.tags['amenity'])
+                        {
+                            var pos = new L.LatLng(e.lat, e.lon);
+                        }
+                    }
+                    else
+                    {//If element is a way or a relation, get its center
+                        var pos = new L.LatLng(e.center.lat, e.center.lon);
+                    }
                 var popup = this.instance._poiInfo(e.tags, e.id);
+                var icon_o = icon;
+                if (e.tags["brewery"]) {icon_o = "assets/img/beer_empty.png"} 
                 var myicon = L.icon({
-                    iconUrl: icon,
+                    iconUrl: icon_o,
                 });
                 var marker = L.marker(pos, {icon: myicon}).bindPopup(popup);
                 this.instance.addLayer(marker);
             }
+			}
         }
     })
 }
@@ -43,15 +58,14 @@ function draw_beer(query, icon)
                 if(e.tags !== undefined)
                 {
                     if(e.type === "node")
-                    {//If element is a node
+                    {
                         if (e.tags['amenity'])
                         {
                             var pos = new L.LatLng(e.lat, e.lon);
                         }
-                        //FIXME: and what happens in other cases?
                     }
                     else
-                    {//If element is a way (surface), get its center
+                    {
                         var pos = new L.LatLng(e.center.lat, e.center.lon);
                     }
                     var content = "";
@@ -81,13 +95,9 @@ function draw_beer(query, icon)
                     {
                         content += '<p class="action"><a href="#" class="btn btn-default" onClick="sidebar.show();init_form_from_OSM(\'' + e.type + '\', ' + e.id.toString() + ')"><i class="fa fa-edit"></i> <span data-l10n-id="map_popup_edit">Edit bar information</span></a></p>';
                     }
-                    //78146476
-                    //FIXME: icon is not defined in this context...
-                    var icon_o = icon;
-                    //if (e.tags["brewery"]) {icon_o = "assets/img/beer_empty.png"}
 
                     var myicon = L.icon({
-                        iconUrl: icon_o,
+                        iconUrl: icon,
                         iconAnchor:[10, 45],
                         popupAnchor : [4, -30]
                     });
