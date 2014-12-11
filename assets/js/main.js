@@ -67,7 +67,7 @@ function refresh_layers_list()
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
-        overlayMaps["<span class='image'><img src='assets/img/beer1.png'></span><span>" + favoriteBeers[i] + "</span>"] = BeerList[favoriteBeers[i]];
+        overlayMaps["<span class='image'><img src='assets/img/beer1.png'></span><span>" + favoriteBeers[i] + "</span>"] = beerList[favoriteBeers[i]];
         
     }
 

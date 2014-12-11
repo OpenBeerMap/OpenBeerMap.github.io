@@ -49,7 +49,7 @@ function init_layers()
 	for(var i = 0 ; i < favoriteBeers.length ; i++)
 		{
 			element = favoriteBeers[i]
-        	BeerList[element] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beer1.png");
+        	beerList[element] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beer1.png");
     	}
 };
 //Create the bar edit form in the sidebar
@@ -94,14 +94,14 @@ function add_favorite(value)
 	if(favoriteBeers.indexOf(value) == -1)
     {
         favoriteBeers.push(value);
-		BeerList[value] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beer1.png");
+		beerList[value] = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beer1.png");
     }
     else
     {
         favoriteBeers.del(value); 
-		if(map.hasLayer(BeerList[value]))
+		if(map.hasLayer(beerList[value]))
         {
-            map.removeLayer(BeerList[value]);
+            map.removeLayer(beerList[value]);
         }
         console.log('Removing ' + value + ' from favorite beers');
     }
@@ -116,9 +116,9 @@ function clear_favorites()
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
 		element = favoriteBeers[i]
-        if(map.hasLayer(BeerList[element]))
+        if(map.hasLayer(beerList[element]))
         {
-            map.removeLayer(BeerList[element]);
+            map.removeLayer(beerList[element]);
         }
     }
     localStorage.setItem('favoriteBeers', "");
