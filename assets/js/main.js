@@ -140,4 +140,7 @@ $(document).ready(function(){
     $("#editButtonMore").click(function(){
        $("#editMoreOptions").toggle();
     });
+    $("#ContributeMore").click(function(){
+       $("#howToContributeMore").toggle();
+    });	
 });

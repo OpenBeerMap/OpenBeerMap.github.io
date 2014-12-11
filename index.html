@@ -243,8 +243,9 @@
                         <div class="tab-content" id="aboutTabsContent">
                         <div class="tab-pane fade active in" id="modalAboutTabAbout" data-l10n-id="modal_about_content_about">
                             <p>This application was built to help people find their favorite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span class="label label-default"><i class="fa fa-edit"></i> Edit bar information</span> button.</p>
-                            <p>You will find more information on the genesis of this application <a href="http://nlehuby.drupalgardens.com/node/81" target="_blank">here</a>.</p>
+                            <p>You will find more information on the genesis of this application <a href="http://nlehuby.drupalgardens.com/node/81" target="_blank">here</a> (in French).</p>
                             <p>You can also contribute by translating or improving this application. You will find more information about that in the <strong>Contribute</strong> tab.</p>
+							
                         </div>
 
                         <div class="tab-pane fade" id="modalAboutTabContribute">
@@ -255,6 +256,20 @@
                                 <div class="media-body">
                                     <h4 class="media-heading" data-l10n-id="modal_about_category_content">Add content</h4>
                                     <div data-l10n-id="modal_about_content_content">The simplest way to contribute is to add beers to the bars you know.</div>
+									<button id="ContributeMore" class="btn btn-default" type="button" data-l10n-id="modal_about_content_content_more"><i class="fa fa-question-circle"></i> Can't find your bar ?</button>
+									<div class="form-group" id="howToContributeMore">
+										<div class="col-md-8" data-l10n-id="modal_about_content_content_contributemore">
+											<p>If a bar does not appear on OpenBeerMap, you can  <a href="http://osmlab.github.io/osm-note/" target="_blank">file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
+
+											<p>If you are an OpenStreetMap contributor, please make sure that the node or the way have one of the following tags :
+											<ul>	
+											<li>amenity = bar
+											<li>amenity = biergarten
+											<li>amenity = pub
+											</ul></p>
+											<p>The restaurants (amenity = restaurant) and the other amenities may also be displayed if they have the brewery = * tag.</p>
+										</div>
+									</div>
                                 </div>
                             </div>
                             <div class="media">
