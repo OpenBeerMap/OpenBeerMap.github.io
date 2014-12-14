@@ -89,23 +89,21 @@ function send_form_content(form)
     });
     var wifi = $("[name=editWifi]:checked").val();
             
-    //Prevent possible bug
-    //FIXME: this shouldn't happen...
     beers.del("undefined")
+	
     var brewery = beers.join(";");
     
     var send = 0;
 
-    //TODO : there are empty sends to OSM, to be fixed
+
     if(beers.length)
     {
         edit_tag(osmXml, osmType, "brewery", brewery);
-        // TODO: node is sent even if no beers have changed as long as there are beers
+        // FIXME empty send : node/way is sent even if no beers have changed as long as there are beers
         send = 1;
     }
-    else if((brewery != get_tag(osmXml, "brewery")) && (beers.length != 0))
-    {//if beers is empty, delete tag
-        //FIXME: does not work. "If" condition is weird
+    else if((brewery != get_tag(osmXml, "brewery")) && (beers.length == 0))
+    {//if beers is empty and has changed, delete tag
         del_tag(osmXml, "brewery");
         send = 2;
     }
@@ -126,7 +124,6 @@ function send_form_content(form)
     }
     else if(get_tag(osmXml, "name") != "undefined" && name == "")
     {//If name is empty but wasn't previously, delete tag
-        //FIXME: do we really want people to be able to input empty names?
         del_tag(osmXml, "name");
         send = 6;    
     }
@@ -147,13 +144,13 @@ function send_form_content(form)
         send = 1;
     }
     */
-    //send modified XML to OSM
     console.log(send)
+	//if needed, send modified XML to OSM
     if(send != 0)
     {
         //Open changeset
         changeset_id = put_changeset();
-        //Send new node
+        //Send new node/way
         put_node_or_way(osmXml, changeset_id, osmId, osmType);
         //Close changeset
         close_changeset(changeset_id);
