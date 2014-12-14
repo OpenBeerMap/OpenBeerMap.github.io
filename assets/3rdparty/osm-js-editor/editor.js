@@ -49,7 +49,7 @@ function init_form_from_OSM(osmType, osmId)
     document.getElementById('editOpeningHours').value = openingHours;
     document.getElementById('editHappyHours').value = happyHours;
     //Set link to edit entry directly in OSM
-    document.getElementById("editOsmLink").href = "http://www.openstreetmap.org/edit?editor=id& " + osmType + "=" + osmId.toString();
+    document.getElementById("editOsmLink").href = "http://www.openstreetmap.org/edit?editor=id&" + osmType + "=" + osmId.toString();
     //Other beer in free text field
     document.getElementById('editAddBeerInput').value = otherBeer;
     //Disable all radios buttons (wifi)
