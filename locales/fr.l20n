@@ -33,7 +33,7 @@
 <modal_about_category_translate "Translate">
 <modal_about_content_translate "Please visit <a>this page</a> to learn how to help translate OpenBeerMap.">
 <modal_about_category_suggestions "Make suggestions">
-<modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> or <a>contact on Twitter</a> if you have suggestions.">
+<modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> if you have suggestions.">
 <modal_about_category_donate "Donate">
 <modal_about_content_donate "If you want to pay us a beer">
 <modal_about_category_code "Code">
@@ -43,9 +43,7 @@
 <modal_about_category_map "Map">
 <modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">
 <modal_about_category_data "Data">
-<modal_about_content_data "Bar data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">
-<modal_about_category_design "Design">
-<modal_about_content_design "Site designed with the help of <a>BootLeaf</a> = <a>Bootstrap 3</a> + <a>Leaflet</a>.">
+<modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">
 <modal_about_category_contributors "Contributors">
 
 /* Edit Form */

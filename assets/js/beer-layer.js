@@ -133,3 +133,20 @@ function parse_osm_times(hours)
         return "unknown";
     }
 }
+
+/* Custom beers img */
+function get_beer_img(beerName)
+{
+	image = "beer1.png"
+	if (beerName.toLowerCase() == "chouffe")
+		{image = "chouffe.png"}
+	if (beerName.toLowerCase() == "affligem")
+		{image = "affligem.png"}
+	if (beerName.toLowerCase() == "guinness")
+		{image = "guinness.png"}
+	if (beerName.toLowerCase() == "tripel karmeliet")
+		{image = "karmeliet.png"}
+	if (beerName.toLowerCase() == "kwak")
+		{image = "kwak.png"}	
+	return image	
+}
