@@ -51,13 +51,11 @@
 <edit_label_beers "Bière pression dispo"> 
 <edit_label_add_beer "Ajouter des bières"> /* TODO */
 <edit_label_wifi "Wifi"> 
-<edit_label_wifi_yes "<input> Oui"> /* TODO : fonctionne pas ! */
-<edit_label_wifi_no "<input> Non"> /* TODO : fonctionne pas ! */
-<edit_label_wifi_unknown "<input> Peut-être"> /* TODO : fonctionne pas ! */
+<edit_label_wifi_yes "<input> Oui">
+<edit_label_wifi_no "<input>  Non">
+<edit_label_wifi_unknown "<input>  Peut-être">
 <edit_label_opening_hours "Horaires d'ouverture"> 
-<edit_help_opening_hours "exemple : Mo-Fr 11:30-20:00"> /* TODO : pas utilisé !? */
 <edit_label_happy_hours "Happy hours"> 
-<edit_help_happy_hours "exemple : Mo-Fr 18:30-20:00"> /* TODO : pas utilisé !? */
 <edit_button_save "Enregistrer"> 
 <edit_button_discard "Annuler">
 <edit_button_more "<i></i>"> /* TODO */
@@ -65,7 +63,6 @@
 
 /* Map elements */
 <attribution_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>">
-<attribution_overpass "<a>Overpass API</a>"> /* TODO : à virer du code */
 <overpass_err "Zoom in to see bars"> /* TODO */
 <map_popup_name_unknown "Unknown name"> /* TODO */
 <map_popup_opening_hours "Horaires d'ouverture">

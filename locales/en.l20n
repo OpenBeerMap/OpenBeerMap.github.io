@@ -56,9 +56,7 @@
 <edit_label_wifi_no "<input> No">
 <edit_label_wifi_unknown "<input> Unknown"> 
 <edit_label_opening_hours "Opening hours"> 
-<edit_help_opening_hours "example : Mo-Fr 11:30-20:00"> 
 <edit_label_happy_hours "Happy hours"> 
-<edit_help_happy_hours "example : Mo-Fr 18:30-20:00"> 
 <edit_button_save "Save"> 
 <edit_button_discard "Discard">
 <edit_button_more "<i></i> More">
@@ -66,7 +64,6 @@
 
 /* Map elements */
 <attribution_osm "&copy; <a>OpenStreetMap</a> contributors">
-<attribution_overpass "<a>Overpass API</a>">
 <overpass_err "Zoom in to see bars">
 <map_popup_name_unknown "Unknown name">
 <map_popup_opening_hours "Opening hours">
@@ -97,6 +94,3 @@
                 It is also available at http://openbeermap.github.io/
 """>
 <why_is_geoloc_needed "Needed to center the map at the right place.">
-
-/* Other strings */
-<locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */

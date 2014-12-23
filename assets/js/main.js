@@ -8,7 +8,7 @@ var osm = new L.TileLayer(
     'http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
     {
         opacity: 0.7,
-        attribution: '<span data-l10n-id="attribution_overpass">POI via <a href="http://www.overpass-api.de/">Overpass API</a></span> | <span data-l10n-id="attribution_osm">Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors</span>'
+        attribution: '<span data-l10n-id="attribution_osm">Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors</span>'
     }
 );
 
