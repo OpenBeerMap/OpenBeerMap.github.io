@@ -1,0 +1,78 @@
+/*
+ OpenBeerMap translation file [en] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translators: Ian Lopez (ianlopez1115(at)gmail.com), OranginaRouge (http://orangina-rouge.org)
+*/
+
+
+/* Home Page */
+<nav_link_about "<i></i> About"> 
+<nav_link_news "<i></i> News"> 
+
+/* Blabla */
+<hello_world "Welcome to OpenBeerMap!"> 
+<about "<i></i>&nbsp; About"> 
+<about_contenu """
+                <p>This site allows you to find a bar that serves your favorite beer!</p>
+                <p>If the available information is incorrect or missing, do not hesitate to contribute.</p>
+                <p><a>More information on the site's origins are available on the author's blog (in French).</p>
+"""> 
+<contact "<i></i>&nbsp;Contact"> 
+<contact_contenu "To submit a missing beer, report a bug, suggest changes, or just buy me a beer..."> 
+<credits "<i></i>&nbsp;Credits"> 
+<credits_contenu """
+                <p>Map from <a> OpenStreetMap </a> and <a> Stamen Design</a>.</p>
+                <p>Data on bars and beers from <a>OpenStreetMap</a> and its many contributors, via <a>Overpass API</a>.</p>
+                <p>Site made with love and <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Sources are found here: <a>Github</a> </p>
+"""> 
+<repo_github "Github repository">
+
+/* Edit Form */
+<edit_title "Bar edition"> 
+<edit_label_name "Name"> 
+<edit_label_beers "Available beers"> 
+<edit_label_add_beer "Add beers">
+<edit_label_wifi "Wifi"> 
+<edit_label_wifi_yes "<input> Yes">
+<edit_label_wifi_no "<input> No">
+<edit_label_wifi_unknown "<input> Unknown"> 
+<edit_label_opening_hours "Opening hours"> 
+<edit_help_opening_hours "example : Mo-Fr 11:30-20:00"> 
+<edit_label_happy_hours "Happy hours"> 
+<edit_help_happy_hours "example : Mo-Fr 18:30-20:00"> 
+<edit_button_save "Save"> 
+<edit_button_discard "Discard"> 
+<edit_button_osm "Edit via OpenStreetMap"> 
+
+/* Map elements */
+<attribution_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
+<attribution_overpass "data via <a>Overpass API</a>"> 
+<locate_ok "You are here"> 
+<locate_ko "Geolocation Error - Reload the page to retry"> /* does not work yet */
+<popup_nom "Name"> 
+<popup_opening_hours "Opening hours"> 
+<popup_happy_hours "Happy hours"> 
+<popup_biere "Draft beer"> 
+<popup_edit "Add information about this bar"> 
+<overpass_err "You must zoom in to see more bars.">
+
+/* Layers choice */
+<layers_overlays_all "Drink">
+<layers_setup " Customize">
+
+/* Setup */
+<modal_setup_title_favorites "<i></i> Favourite beers">
+<modal_setup_label_selected "Number of selected beers :">
+<modal_setup_button_clear "Clear favourites">
+<modal_setup_button_save "Save">
+<modal_setup_button_discard "Cancel">
+<modal_setup_label_add "Add favourite">
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+
+<app_description """
+                The free and editable map of bars and served draft beer.
+                Data come from OpenStreetMap and all contributions are transfered to OSM.
+                It is also available at http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Needed to center the map at the right place.">
