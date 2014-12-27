@@ -39,6 +39,7 @@
 <opening_hours_exemple "Beispiel: Mo-Fr 11:30-20:00"> 
 <happy_hours "Happy Hours"> 
 <happy_hours_exemple "Beispiel: Mo-Fr 18:30-20:00"> 
+<sidebar_discard_button "Abbrechen">
 <bouton_enregistrer "Speichern"> 
 <bouton_OSM "Kneipe in OpenStreetMap bearbeiten"> 
 
@@ -54,3 +55,20 @@
 <popup_biere "Gezapfte Biersorten"> 
 <popup_edit "Füge Informationen zu dieser Kneipe hinzu"> 
 <overpass_err "Du musst näher heranzoomen, um Kneipen angezeigt zu bekommen">
+<the_news "Aktuelles" />
+
+/* Setup */
+<setup "Einrichten" />
+<setupbeers "Liste der Biere">
+<setupbeers_label "Wähle deine Favoriten aus der Liste:">
+<setupbeer_resultat "Namen der ausgewählten Biere: ">
+<clear_button "Alle Sorten entfernen">
+
+* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+Freie Karte von Kneipen und deren Biersorten, die auch von dir bearbeitet werden kann!
+Die Daten stammen aus OpenStreetMap und jeglicher Beitrag hier wird dorthin zurückgespielt.
+Die Karte ist ebenfalls erreichbar unter http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Notwendig, um die Karte auf deinen aktuellen Ort zu zentrieren">
+
