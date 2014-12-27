@@ -1,0 +1,76 @@
+/*
+ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
+ перевод: Андрей Гуляйкин (Andrei Guliaikin) (lycoris(at)ya.ru)
+*/
+
+/* Главная */
+<a_propos "<i></i>&nbsp; О сервисе"> 
+<the_news "<i></i>&nbsp; Новости"> 
+
+/* Blabla */
+<hello_world "Приветствуем Вас на OpenBeerMap !"> 
+<about "<i></i>&nbsp; О сервисе"> 
+<about_contenu """
+                <p>Данный сервис поможет вам найти питейное заведение с вашими любимыми сортами пива !</p>
+                <p>Если информация некорректна или отсутствует, не стесняйтесь исправить это.</p>
+                <p><a>Более подробную информацию о создателе данного сервиса вы можете посмотреть (на французском языке).</p>
+"""> 
+<contact "<i></i>&nbsp;Контакты"> 
+<contact_contenu "Добавить информацию о недостающем пиве, сообщить о програмных ошибках или просто купить мне пива ..."> 
+<credits "<i></i>&nbsp;При содействии"> 
+<credits_contenu """
+                <p>Карта от <a>OpenStreetMap</a> и <a>Stamen</a>.</p>
+                <p>Данные по заведениям и пиву <a>OpenStreetMap</a> и многочисленных участников, по <a>l'API OverPass</a>.</p>
+                <p>Сайт сделан с любовью и <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
+                <p>Исходный код находится здесь : <a>Github</a> </p>
+"""> 
+<repo_github "Репозитарий Github">
+
+/* Заполните форму */
+<titre_formulaire_edition "Внести изменения в OpenBeerMap"> 
+<nom_du_bar "Название"> 
+<liste_des_bieres "Наличие разливного пива"> 
+<champ_libre_bieres "Другое пиво">
+<wifi_oupas "Wifi"> 
+<wifi_oui "<input> да">
+<wifi_non "<input> нет">
+<wifi_inconnu "<input> возможно"> 
+<opening_hours "Часы работы"> 
+<opening_hours_exemple "пример : Пн-Вск 11:30-23:00"> 
+<happy_hours "Скидки/Акции"> 
+<happy_hours_exemple "пример : Пн-Вск 18:30-23:00"> 
+<bouton_enregistrer "Сообщить"> 
+<sidebar_discard_button "Сброс"> 
+<bouton_OSM "Редактировать прямо на картах OpenStreetMap"> 
+
+/* Элементы карты */
+<attr_osm "&copy; благодарность участникам <a>OpenStreetMap</a>"> 
+<attr_overpass "данные'<a>API Overpass</a>"> 
+<locate_ok "Я здесь"> 
+<locate_ko "Ошибка при геолокализации - Обновите страницу"> /* does not work yet */
+<choix_bieres_tous " Выпить !">
+<popup_nom "Nom"> 
+<popup_opening_hours "Часы работы"> 
+<popup_happy_hours "Скидки/Акции"> 
+<popup_biere "Разливное пиво"> 
+<popup_edit "Добавить информацию о заведении"> 
+<overpass_err "Используйте функцию «Увеличения» для просмотра бóльшего количества пивных заведений.">
+
+/* Setup */ 
+<setup " Настроить">
+<setupbeers "<i></i> Наменование/сорт пива">
+<setupbeers_label "Выберите свой любимый сорта пива из нашего широкого выбора:">
+<setupbeer_resultat "Количество избранных сортов пива : ">
+<clear_button "Очистить всё">
+
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+
+<app_description """
+                Свободно редактируемая карта о наличии разливного/и не только пива в питейных заведениях.
+                Данные поступают от сервиса OpenStreetMap и всех участников представленных в OSM.
+                Вы также можете посмотреть на http://openbeermap.github.io/
+"""> 
+<why_is_geoloc_needed "Центрируйте карту в нужном месте">
+
+

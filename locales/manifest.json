@@ -12,7 +12,8 @@
     "pl",
     "sv",
     "cs",
-    "hu"
+    "hu",
+    "ru"
   ],
   "default_locale": "fr",
   "resources": [
