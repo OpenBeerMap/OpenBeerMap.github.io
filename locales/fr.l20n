@@ -44,6 +44,7 @@
 <modal_about_category_data "Data">/* TODO */
 <modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">/* TODO */
 <modal_about_category_contributors "Contributors">/* TODO */
+<modal_about_category_contributors_list "and many more ..."> /*TODO*/
 
 /* Edit Form */
 <edit_title "Édition du bar"> 
