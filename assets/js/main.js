@@ -31,6 +31,20 @@ map.locate({setView: true, enableHighAccuracy: true, locate: true, maximumAge: 6
     console.log("ERROR: cannot get user position");
 });
 
+/* Search control */
+map.addControl(new L.Control.Search({
+    url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
+    jsonpParam: 'json_callback',
+    propertyName: 'display_name',
+    propertyLoc: ['lat','lon'],
+    markerLocation: true,
+    autoType: false,
+    autoCollapse: true,
+    minLength: 2,
+    zoom:16
+}));
+
+/* Locate control */
 map.addControl(L.control.locate({
     locateOptions: {
         setView: true, enableHighAccuracy: true, locate: true, maximumAge: 60000,timeout: 8000
@@ -98,19 +112,6 @@ map.addLayer(overlayAll);
 
 /* Indicate when zoom level is to low to display bars */
 map.zoomIndicator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
-   
-/* Search layer */
-map.addControl(new L.Control.Search({
-    url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
-    jsonpParam: 'json_callback',
-    propertyName: 'display_name',
-    propertyLoc: ['lat','lon'],
-    markerLocation: true,
-    autoType: false,
-    autoCollapse: true,
-    minLength: 2,
-    zoom:16
-}));
 
 /* Hash map (coordinates in the URL to make them reusable) */
 var hash = new L.Hash(map);

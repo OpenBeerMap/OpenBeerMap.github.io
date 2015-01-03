@@ -98,10 +98,7 @@
 }
 
 .leaflet-control-search.search-exp .search-button:hover:before, .leaflet-control-search.search-exp .search-button:before{
-    content:"\f00d";
-    position:relative;
-        left:2px;
-    color:#A94442;
+    content:"\f064";
 }
 
 .leaflet-control-search .search-cancel {
