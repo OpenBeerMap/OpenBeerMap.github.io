@@ -4,22 +4,25 @@
 
 
 /* Home Page */
-<nav_link_about "<i></i> À propos"> 
-<nav_link_news "<i></i> Actualités"> 
+<nav_link_about "<i></i> À propos">
+<nav_link_news "<i></i> Actualités">
 
 /* About */
 <modal_about_title "Bienvenue sur OpenBeerMap !">
 <modal_about_title_about "<i></i> À propos">
 <modal_about_title_contribute "<i></i> Contribute">/* TODO */
 <modal_about_title_credits "<i></i> Crédits">
-<modal_about_content_content_contributemore """
-	<p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
-	<p>If you are an OpenStreetMap contributor, please make sure that the node or the way have one of the following tags :
-	<ul><li>amenity = bar
-	<li>amenity = biergarten
-	<li>amenity = pub
-	</ul></p>
-	<p>The restaurants (amenity = restaurant) and the other amenities may also be displayed if they have the brewery = * tag.</p>
+<modal_about_category_bar "Add new bar"> /*TODO */
+<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added directly to OpenStreetMap. <a>How?</a>"> /*TODO */
+<modal_about_content_bar_more """
+    <p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
+    <p>If you are an OpenStreetMap contributor, please make sure that the node or the way has one of the following tags:</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Restaurants (<code>amenity = restaurant</code>) and the other amenities may also be displayed if they have the <code>brewery = *</code> tag.</p>
 """> /*TODO */
 <modal_about_category_content "Add content"> /* TODO */
 <modal_about_content_content "The simplest way to contribute is to add beers to the bars you know."> /* TODO */
@@ -47,17 +50,17 @@
 <modal_about_category_contributors_list "and many more ..."> /*TODO*/
 
 /* Edit Form */
-<edit_title "Édition du bar"> 
-<edit_label_name "Nom"> 
-<edit_label_beers "Bière pression dispo"> 
+<edit_title "Édition du bar">
+<edit_label_name "Nom">
+<edit_label_beers "Bière pression dispo">
 <edit_label_add_beer "Ajouter des bières"> /* TODO */
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Oui">
 <edit_label_wifi_no "<input>  Non">
 <edit_label_wifi_unknown "<input>  Peut-être">
-<edit_label_opening_hours "Horaires d'ouverture"> 
-<edit_label_happy_hours "Happy hours"> 
-<edit_button_save "Enregistrer"> 
+<edit_label_opening_hours "Horaires d'ouverture">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Enregistrer">
 <edit_button_discard "Annuler">
 <edit_button_more "<i></i>"> /* TODO */
 <edit_button_osm "Éditer dans OpenStreetMap">
