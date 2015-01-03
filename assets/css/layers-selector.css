@@ -5,6 +5,13 @@
 
 .leaflet-control-layers-expanded{
     padding:0;
+    background:none;
+    box-shadow:none;
+}
+
+.leaflet-control-layers-overlays{
+    box-shadow:0px 1px 5px rgba(0, 0, 0, 0.4);
+    border-radius:5px;
 }
 
 .leaflet-control-layers-overlays label input{
@@ -47,6 +54,7 @@
     white-space:nowrap;
     overflow-x:hidden;
     text-overflow:ellipsis;
+    background-color:#FFF;
 }
 
 .leaflet-control-layers-overlays input:checked ~ span{
@@ -65,11 +73,16 @@
     width:100%;
     margin:0;
     border-top:none;
+    height:auto;
 }
 .leaflet-control-layers-separator .btn{
     position:relative;
         top:5px;
 }
+
+/**
+ * Left controls
+ **/
 
 /* Left control buttons */
 .leaflet-control-locate .fa-map-marker{
