@@ -3,8 +3,8 @@
  contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l
 */
 
-var overlayAll = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beer1.png");
-beerList = new Array();
+var overlayAll = draw_beer("//overpass-api.de/api/interpreter?data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beer/beer1.png");
+var beerList = new Array();
 
 function debug_draw_beer(url, icon)
 {
@@ -31,16 +31,16 @@ function debug_draw_beer(url, icon)
                     {//If element is a way or a relation, get its center
                         var pos = new L.LatLng(e.center.lat, e.center.lon);
                     }
-                var popup = this.instance._poiInfo(e.tags, e.id);
-                var icon_o = icon;
-                if (e.tags["brewery"]) {icon_o = "assets/img/beer_empty.png"} 
-                var myicon = L.icon({
-                    iconUrl: icon_o,
-                });
-                var marker = L.marker(pos, {icon: myicon}).bindPopup(popup);
-                this.instance.addLayer(marker);
+                    var popup = this.instance._poiInfo(e.tags, e.id);
+                    var icon_o = icon;
+                    if (e.tags["brewery"]) {icon_o = "assets/img/beer/beer_empty.png"}
+                    var myicon = L.icon({
+                        iconUrl: icon_o,
+                    });
+                    var marker = L.marker(pos, {icon: myicon}).bindPopup(popup);
+                    this.instance.addLayer(marker);
+                }
             }
-			}
         }
     })
 }
@@ -137,16 +137,19 @@ function parse_osm_times(hours)
 /* Custom beers img */
 function get_beer_img(beerName)
 {
-	image = "beer1.png"
-	if (beerName.toLowerCase() == "chouffe")
-		{image = "chouffe.png"}
-	if (beerName.toLowerCase() == "affligem")
-		{image = "affligem.png"}
-	if (beerName.toLowerCase() == "guinness")
-		{image = "guinness.png"}
-	if (beerName.toLowerCase() == "tripel karmeliet")
-		{image = "karmeliet.png"}
-	if (beerName.toLowerCase() == "kwak")
-		{image = "kwak.png"}	
-	return image	
+    switch(beerName.toLowerCase())
+    {
+        case "chouffe":
+            return  "chouffe.png";
+        case "affligem":
+            return "affligem.png";
+        case "guinness":
+            return "guinness.png";
+        case "tripel karmeliet":
+            return "karmeliet.png";
+        case "kwak":
+            return "kwak.png";
+        default:
+            return "beer1.png";
+    }
 }

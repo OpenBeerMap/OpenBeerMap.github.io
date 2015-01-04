@@ -61,15 +61,13 @@ function refresh_layers_list()
     }
         
     var overlayMaps = {
-        "<span class='image'><img src='assets/img/beer1.png'></span><span data-l10n-id='layers_overlays_all'>All beers</span>": overlayAll
+        "<span class='image'><img src='assets/img/beers/beer1.png'></span><span data-l10n-id='layers_overlays_all'>All beers</span>": overlayAll
     };
     
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
-        img = get_beer_img(favoriteBeers[i])
-		overlayMaps["<span class='image'><img src='assets/img/beers/"+img+"'></span><span>" + favoriteBeers[i] + "</span>"] = beerList[favoriteBeers[i]];
-        
+        overlayMaps["<span class='image'><img src='assets/img/beers/" + get_beer_img(favoriteBeers[i]) + "'></span><span>" + favoriteBeers[i] + "</span>"] = beerList[favoriteBeers[i]];
     }
 
     layersList = L.control.layers({"OpenStreetMap": osm}, overlayMaps, {collapsed: document.body.clientWidth < 768});
