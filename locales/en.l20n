@@ -13,18 +13,20 @@
 <modal_about_title_about "<i></i> About">
 <modal_about_title_contribute "<i></i> Contribute">
 <modal_about_title_credits "<i></i> Credits">
-<modal_about_content_content_contributemore """
-	<p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
-	<p>If you are an OpenStreetMap contributor, please make sure that the node or the way have one of the following tags :
-	<ul><li>amenity = bar
-	<li>amenity = biergarten
-	<li>amenity = pub
-	</ul></p>
-	<p>The restaurants (amenity = restaurant) and the other amenities may also be displayed if they have the brewery = * tag.</p>
+<modal_about_category_bar "Add new bar">
+<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added directly to OpenStreetMap. <a>How?</a>">
+<modal_about_content_bar_more """
+    <p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
+    <p>If you are an OpenStreetMap contributor, please make sure that the node or the way has one of the following tags:</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Restaurants (<code>amenity = restaurant</code>) and the other amenities may also be displayed if they have the <code>brewery = *</code> tag.</p>
 """>
 <modal_about_category_content "Add content">
 <modal_about_content_content "The simplest way to contribute is to add beers to the bars you know.">
-<modal_about_content_content_more "<i></i> Can't find your bar?">
 <modal_about_content_about """
     <p>This application was built to help people find their favourite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span><i></i> Edit bar information</span> button.</p>
     <p>You will find more information on the genesis of this application <a>here</a> (in French).</p>

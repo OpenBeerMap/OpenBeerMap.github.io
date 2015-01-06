@@ -261,3 +261,22 @@ ul.ui-autocomplete {
 #modalAboutDonateForm input{
     vertical-align:middle;
 }
+
+#modalAboutOSM{
+    display:none;
+}
+
+@media (max-width:768px){
+    .modal-dialog{
+        margin:0;
+    }
+    .modal-content{
+        border-radius:0;
+    }
+
+    #aboutTabsContent{
+        margin-top:5px;
+        padding-top:5px;
+        border-top:1px solid #AAA;
+    }
+}
