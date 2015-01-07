@@ -46,6 +46,20 @@ input[type="radio"], input[type="checkbox"] {
 .navbar-collapse.in {
   overflow-y: hidden;
 }
+.navbar .navbar-form.navbar-right{
+    height:34px;
+    line-height:34px;
+}
+.navbar .navbar-form.navbar-right{
+    height:34px;
+}
+
+.navbar .navbar-pulled{
+    position:absolute;
+        right:5px;
+}
+
+
 .typeahead {
   background-color: #FFFFFF;
 }
@@ -130,6 +144,9 @@ input[type="radio"], input[type="checkbox"] {
     margin:5px 0 0;
     text-align:center;
 }
+.leaflet-popup-content .btn{
+    white-space:normal;
+}
 .leaflet-sidebar {
   z-index: 1020;
 }
@@ -153,6 +170,10 @@ input[type="radio"], input[type="checkbox"] {
     
     .github-fork-ribbon {
         display:none;
+    }
+    .navbar .navbar-pulled{
+        position:relative;
+        right:0;
     }
 }
 /* Print Handling */
