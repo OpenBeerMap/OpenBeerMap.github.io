@@ -13,7 +13,7 @@
 <modal_about_title_contribute "<i></i> Contribute">/* TODO */
 <modal_about_title_credits "<i></i> Crédits">
 <modal_about_category_bar "Add new bar"> /*TODO */
-<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added directly to OpenStreetMap. <a>How?</a>"> /*TODO */
+<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added first in OpenStreetMap. <a>How?</a>"> /*TODO */
 <modal_about_content_bar_more """
     <p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
     <p>If you are an OpenStreetMap contributor, please make sure that the node or the way has one of the following tags:</p>
