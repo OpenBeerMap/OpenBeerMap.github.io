@@ -63,7 +63,7 @@
 <edit_button_save "Guardar">
 <edit_button_discard "Anular">
 <edit_button_more "<i></i> More"> /* TODO */
-<edit_button_osm "Editar direutamente n'OpenStreetMap"> //STOP
+<edit_button_osm "Editar direutamente n'OpenStreetMap"> 
 
 /* Elementos del mapa */
 <attribution_osm "&copy; gracies a los collaboradores de <a>OpenStreetMap</a>">

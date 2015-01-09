@@ -82,7 +82,7 @@
 /* Setup */
 <modal_setup_title "Display settings">
 <modal_setup_title_favorites "<i></i> Favourite beers">
-<modal_setup_label_selected "Number of selected beers :">
+<modal_setup_label_selected "Number of selected beers:">
 <modal_setup_button_clear "<i></i> Clear list">
 <modal_setup_button_save "Save">
 <modal_setup_button_discard "Cancel">
