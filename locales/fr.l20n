@@ -10,50 +10,50 @@
 /* About */
 <modal_about_title "Bienvenue sur OpenBeerMap !">
 <modal_about_title_about "<i></i> À propos">
-<modal_about_title_contribute "<i></i> Contribute">/* TODO */
+<modal_about_title_contribute "<i></i> Contribuer">
 <modal_about_title_credits "<i></i> Crédits">
-<modal_about_category_bar "Add new bar"> /*TODO */
-<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added first in OpenStreetMap. <a>How?</a>"> /*TODO */
+<modal_about_category_bar "Ajouter un bar"> 
+<modal_about_content_bar "Si un bar n'apparait pas sur OpenBeerMap, il faut l'ajouter au préalable dans OpenStreetMap. <a>Comment faire ?</a>"> 
 <modal_about_content_bar_more """
-    <p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
-    <p>If you are an OpenStreetMap contributor, please make sure that the node or the way has one of the following tags:</p>
+    <p>Si vous ne trouvez pas votre bar, vous pouvez <a>créer une note</a>. Ajouter autant d'informations possible afin qu'un contributeur OpenStreetMap puisse l'ajouter.</p>
+    <p>Si vous êtes contributeur OpenStreetMap, prenez bien soin de vérifier que le noeud ou le chemin concerné possède l'un des tags suivants :</p>
     <ul>
         <li><code>amenity = bar</code></li>
         <li><code>amenity = biergarten</code></li>
         <li><code>amenity = pub</code></li>
     </ul>
-    <p>Restaurants (<code>amenity = restaurant</code>) and the other amenities may also be displayed if they have the <code>brewery = *</code> tag.</p>
-"""> /*TODO */
-<modal_about_category_content "Add content"> /* TODO */
-<modal_about_content_content "The simplest way to contribute is to add beers to the bars you know."> /* TODO */
-<modal_about_content_content_more "<i></i> Can't find your bar?"> /* TODO */
+    <p>Les restaurants (<code>amenity = restaurant</code>) et d'autres lieux peuvent aussi apparaitre à condition qu'ils aient le tag <code>brewery = *</code>.</p>
+"""> 
+<modal_about_category_content "Ajouter du contenu"> 
+<modal_about_content_content "Le moyen le plus simple de contribuer et d'ajouter des bières aux bars que vous connaissez."> 
+<modal_about_content_content_more "<i></i> Vous ne trouvez pas votre bar ?"> 
 <modal_about_content_about """
-    <p>This application was built to help people find their favourite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span><i></i> Edit bar information</span> button.</p>
-    <p>You will find more information on the genesis of this application <a>here</a> (in French).</p>
-    <p>You can also contribute by translating or improving this application. You will find more information about that in the <strong>Contribute</strong> tab.</p>
-""">/* TODO */
-<modal_about_category_translate "Translate">/* TODO */
-<modal_about_content_translate "Please visit <a>this page</a> to learn how to help translate OpenBeerMap.">/* TODO */
-<modal_about_category_suggestions "Make suggestions">/* TODO */
-<modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> if you have suggestions.">/* TODO */
-<modal_about_category_donate "Donate">/* TODO */
-<modal_about_content_donate "If you want to pay us a beer">/* TODO */
-<modal_about_category_code "Code">/* TODO */
-<modal_about_content_moderate "If you are an OpenStreetMap contributor and a beer lover, you are very welcome to help moderating the beers added by the other OpenBeerMap user. Please <a>contact the team</a>.">/* TODO */
-<modal_about_category_moderate "Moderate">/* TODO */
-<modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">/* TODO */
-<modal_about_category_map "Map">/* TODO */
-<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">/* TODO */
-<modal_about_category_data "Data">/* TODO */
-<modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">/* TODO */
-<modal_about_category_contributors "Contributors">/* TODO */
-<modal_about_category_contributors_list "and many more ..."> /*TODO*/
+    <p>Cette application vous permet de trouver où boire votre bière préférée. Si des informations sont incomplètes ou erronées, n'hésitez pas à contribuer en cliquant sur le bouton <span><i></i> Ajouter des infos sur ce bar</span>.</p>
+    <p>Vous trouverez plus d'information sur la genèse de cette application <a>ici</a>.</p>
+    <p>Vous pouvez aussi contribuer en traduisant ou en améliorant cette application. Pour en savoir plus, consultez l'onglet <strong>Contribuer</strong>.</p>
+""">
+<modal_about_category_translate "Traduire">
+<modal_about_content_translate "Pour découvrir comment traduire OpenBeerMap, <a>rendez-vous sur cette page</a> (en anglais). ">
+<modal_about_category_suggestions "Faire des suggestions"> 
+<modal_about_content_suggestions "Vous pouvez écrire un e-mail à <strong>openbeermap [at] gmail [dot] com</strong> si vous avez des suggestions.">
+<modal_about_category_donate "Faire un don">
+<modal_about_content_donate "Si vous voulez nous payer une bière">
+<modal_about_category_code "Coder">
+<modal_about_content_moderate "Si vous êtes un contributeur OpenStreetMap et un amateur de bières, rejoignez l'équipe pour vérifier les informations ajoutées par les utilisateurs d'OpenBeerMap. <a>Contactez l'équipe de modération</a>.">
+<modal_about_category_moderate "Modérer">
+<modal_about_content_code "Si vous êtes un développeur Javascript ou un designer CSS, vous êtes invités à mettre les mains dans le cambouis. <a>Rendez-vous sur Github</a>.">
+<modal_about_category_map "Carte">
+<modal_about_content_map "Les données de la carte proviennent des contributeurs <a>OpenStreetMap</a>, les tuiles sont de <a>Stamen</a>.">
+<modal_about_category_data "Données">
+<modal_about_content_data "Les données de bar et de bières sont récupérées de la base <a>OpenStreetMap</a>, via l'API <a>OverPass</a>.">
+<modal_about_category_contributors "Contributeurs">
+<modal_about_category_contributors_list "et beaucoup d'autres ..."> 
 
 /* Edit Form */
 <edit_title "Édition du bar">
 <edit_label_name "Nom">
 <edit_label_beers "Bière pression dispo">
-<edit_label_add_beer "Ajouter des bières"> /* TODO */
+<edit_label_add_beer "Ajouter des bières">
 <edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Oui">
 <edit_label_wifi_no "<input>  Non">
@@ -62,13 +62,13 @@
 <edit_label_happy_hours "Happy hours">
 <edit_button_save "Enregistrer">
 <edit_button_discard "Annuler">
-<edit_button_more "<i></i>"> /* TODO */
+<edit_button_more "<i></i>"> 
 <edit_button_osm "Éditer dans OpenStreetMap">
 
 /* Map elements */
 <attribution_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>">
-<overpass_err "Zoom in to see bars"> /* TODO */
-<map_popup_name_unknown "Unknown name"> /* TODO */
+<overpass_err "Zoomer pour voir les bars">
+<map_popup_name_unknown "Nom inconnu"> 
 <map_popup_opening_hours "Horaires d'ouverture">
 <map_popup_happy_hours "Happy hours">
 <map_popup_beer "Bières pression">
@@ -76,24 +76,24 @@
 <map_popup_location "Vous êtes ici">
 
 /* Layers choice */
-<layers_overlays_all "Toutes les bières"> /* TODO */
+<layers_overlays_all "Toutes les bières"> 
 <layers_setup " Personnaliser">
 
 /* Setup */
-<modal_setup_title "Display settings"> /* TODO */
-<modal_setup_title_favorites "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title "Display settings"> 
+<modal_setup_title_favorites "<i></i> Bières préférées"> 
 <modal_setup_label_selected "Nombre de bières séléctionnées :">
 <modal_setup_button_clear "<i></i> Tout effacer">
-<modal_setup_button_save "Save"> /* TODO : à copier de plus haut */
-<modal_setup_button_discard "Cancel"> /* TODO : à copier de plus haut */
-<modal_setup_label_add "Add favourite beer"> /* TODO */
-<modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO  */
-<modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */
+<modal_setup_button_save "Enregistrer"> 
+<modal_setup_button_discard "Annuler"> 
+<modal_setup_label_add "Ajouter une bière préférée">
+<modal_setup_confirm_clear "Êtes-vous sûr de vouloir supprimer toutes vos bières préférées ?"> 
+<modal_setup_favorites_empty "Vous n'avez aucune bière préférée. Pour pouvoir afficher une bière sur la carte, ajoutez-la en utilisant le champ \"Ajouter une bière préférée\".">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
-                The free and editable map of bars and served draft beer.
-                Data come from OpenStreetMap and all contributions are transfered to OSM.
-                It is also available at http://openbeermap.github.io/
+                La carte libre et éditable des bars et bières pression qui y sont servies.
+                Les données proviennent d'OpenStreetMap et toute contribution y est reversée. 
+                Aussi disponible à l'adresse http://openbeermap.github.io/
 """>
-<why_is_geoloc_needed "Needed to center the map at the right place.">
+<why_is_geoloc_needed "Nécessaire pour centrer la carte au bon endroit.">
