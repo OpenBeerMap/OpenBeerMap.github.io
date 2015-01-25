@@ -51,6 +51,7 @@
 
 /* Edit Form */
 <edit_title "Édition du bar">
+<edit_loading "<i> Chargement des informations du bar">
 <edit_label_name "Nom">
 <edit_label_beers "Bières pression disponibles">
 <edit_label_add_beer "Ajouter une bière">
