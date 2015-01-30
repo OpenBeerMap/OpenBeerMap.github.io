@@ -29,6 +29,9 @@
     "ru": {
       "description": "Свободно редактируемая карта о наличии разливного/и не только пива в питейных заведениях. Данные поступают от сервиса OpenStreetMap и всех участников представленных в OpenStreetMap. Вы также можете посмотреть на http://openbeermap.github.io/"
     },
+    "de": {
+      "description": "Freie Karte von Kneipen und deren Biersorten, die auch von dir bearbeitet werden kann! Die Daten stammen aus OpenStreetMap und jeglicher Beitrag hier wird dorthin zurückgespielt. Die Karte ist ebenfalls erreichbar unter http://openbeermap.github.io/"
+    },	
     "es": {
       "description": "Mapa libre y editable de bares y cervezas que se sirven. Los datos provienen de OpenStreetMap y cualquier contribución se envía de nuevo. También disponible en http://openbeermap.github.io/"
     }

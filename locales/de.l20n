@@ -1,12 +1,12 @@
 /*
  OpenBeerMap translation file [de] | noemie.lehuby(at)gmail.com | MIT Licensed
- translator: Philip Gillißen | guerda(at)freenet.de
+ translator: Philip Gillißen | guerda(at)freenet.de, Michael (michael-k)
 */
 
 
 /* Home Page */
-<nav_link_about "<i></i> Über"> 
-<nav_link_news "<i></i> News"> /* TODO */
+<nav_link_about "<i></i>&nbsp; Über">
+<nav_link_news "<i></i>&nbsp; Neuigkeiten">
 
 /* Blabla */
 <modal_about_title "Willkommen auf der OpenBeerMap!">
@@ -78,7 +78,7 @@
 
 /* Layers choice */
 <layers_overlays_all "All beers"> /* TODO */
-<layers_setup " Customize"> /* TODO */
+<layers_setup " Einrichten"> /* TODO */
 
 /* Setup */
 <modal_setup_title "Display settings"> /* TODO */
@@ -86,15 +86,15 @@
 <modal_setup_label_selected "Number of selected beers:"> /* TODO */
 <modal_setup_button_clear "<i></i> Clear list"> /* TODO */
 <modal_setup_button_save "Save"> /* TODO */
-<modal_setup_button_discard "Cancel"> /* TODO */
+<modal_setup_button_discard "Alle Sorten entfernen"> /* TODO */
 <modal_setup_label_add "Add favourite beer"> /* TODO */
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO */
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
-                The free and editable map of bars and served draft beer.
-                Data come from OpenStreetMap and all contributions are transfered to OSM.
-                It is also available at http://openbeermap.github.io/
-"""> /* TODO */
-<why_is_geoloc_needed "Needed to center the map at the right place."> /* TODO */
+Freie Karte von Kneipen und deren Biersorten, die auch von dir bearbeitet werden kann!
+Die Daten stammen aus OpenStreetMap und jeglicher Beitrag hier wird dorthin zurückgespielt.
+Die Karte ist ebenfalls erreichbar unter http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Notwendig, um die Karte auf deinen aktuellen Ort zu zentrieren">
