@@ -5,7 +5,8 @@
 
 
 /* Home Page */
-<a_propos "<i></i>&nbsp; Über"> 
+<a_propos "<i></i>&nbsp; Über">
+<the_news "<i></i>&nbsp; Neuigkeiten">
 
 /* Blabla */
 <hello_world "Willkommen auf der OpenBeerMap!"> 
@@ -55,7 +56,6 @@
 <popup_biere "Gezapfte Biersorten"> 
 <popup_edit "Füge Informationen zu dieser Kneipe hinzu"> 
 <overpass_err "Du musst näher heranzoomen, um Kneipen angezeigt zu bekommen">
-<the_news "Aktuelles" />
 
 /* Setup */
 <setup "Einrichten" />
