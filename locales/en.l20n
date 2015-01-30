@@ -51,7 +51,7 @@
 
 /* Edit Form */
 <edit_title "Bar edition"> 
-<edit_loading "<i> Loading bar information">
+<edit_loading "<i> Loading bar information"> 
 <edit_label_name "Name"> 
 <edit_label_beers "Available draft beers"> 
 <edit_label_add_beer "Add beer">
