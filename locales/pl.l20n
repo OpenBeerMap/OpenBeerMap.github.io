@@ -52,6 +52,7 @@
 
 /* Edit Form */
 <edit_title "Edytuj ten bar w OpenBeerMap"> 
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Nazwa"> 
 <edit_label_beers "Piwo lane jest dostępne"> 
 <edit_label_add_beer "Add beer"> /* TODO */

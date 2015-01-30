@@ -51,6 +51,7 @@
 
 /* Edit Form */
 <edit_title "Editace na OpenBeerMap">
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Název">
 <edit_label_beers "Točená piva">
 <edit_label_add_beer "Add beer"> /* TODO */

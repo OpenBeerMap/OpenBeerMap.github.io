@@ -71,7 +71,10 @@
         <div id="sidebar">
             <a class="close">&times;</a>
             <h2 data-l10n-id="edit_title">Bar edition</h2>
-            <form class="form-horizontal" name="editForm">
+            <div id="editLoading" data-l10n-id="edit_loading">
+                <i class="fa fa-spinner fa-spin"></i> Loading bar information
+            </div>
+            <form class="form-horizontal" name="editForm" id="editForm">
                 <!-- Debug information -->
                 <div class="form-group hidden">
                     <input id="editOsmType" name="editOsmType" class="form-control" type="text">

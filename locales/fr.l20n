@@ -15,8 +15,8 @@
 <modal_about_category_bar "Ajouter un bar"> 
 <modal_about_content_bar "Si un bar n'apparait pas sur OpenBeerMap, il faut l'ajouter au préalable dans OpenStreetMap. <a>Comment faire ?</a>"> 
 <modal_about_content_bar_more """
-    <p>Si vous ne trouvez pas votre bar, vous pouvez <a>créer une note</a>. Ajouter autant d'informations possible afin qu'un contributeur OpenStreetMap puisse l'ajouter.</p>
-    <p>Si vous êtes contributeur OpenStreetMap, prenez bien soin de vérifier que le noeud ou le chemin concerné possède l'un des tags suivants :</p>
+    <p>Si vous ne trouvez pas votre bar, vous pouvez <a>créer une note</a>. Renseignez autant d'informations que possible afin qu'un contributeur OpenStreetMap puisse l'ajouter.</p>
+    <p>Si vous êtes contributeur OpenStreetMap, prenez bien soin de vérifier que le noeud ou le chemin créé contienne l'un des tags suivants :</p>
     <ul>
         <li><code>amenity = bar</code></li>
         <li><code>amenity = biergarten</code></li>
@@ -29,7 +29,7 @@
 <modal_about_content_content_more "<i></i> Vous ne trouvez pas votre bar ?"> 
 <modal_about_content_about """
     <p>Cette application vous permet de trouver où boire votre bière préférée. Si des informations sont incomplètes ou erronées, n'hésitez pas à contribuer en cliquant sur le bouton <span><i></i> Ajouter des infos sur ce bar</span>.</p>
-    <p>Vous trouverez plus d'information sur la genèse de cette application <a>ici</a>.</p>
+    <p>Vous trouverez plus d'informations sur la genèse de cette application <a>ici</a>.</p>
     <p>Vous pouvez aussi contribuer en traduisant ou en améliorant cette application. Pour en savoir plus, consultez l'onglet <strong>Contribuer</strong>.</p>
 """>
 <modal_about_category_translate "Traduire">
@@ -39,21 +39,22 @@
 <modal_about_category_donate "Faire un don">
 <modal_about_content_donate "Si vous voulez nous payer une bière">
 <modal_about_category_code "Coder">
-<modal_about_content_moderate "Si vous êtes un contributeur OpenStreetMap et un amateur de bières, rejoignez l'équipe pour vérifier les informations ajoutées par les utilisateurs d'OpenBeerMap. <a>Contactez l'équipe de modération</a>.">
+<modal_about_content_moderate "Si vous êtes contributeur OpenStreetMap et amateur de bières, rejoignez l'équipe pour vérifier les informations ajoutées par les utilisateurs d'OpenBeerMap. <a>Contactez l'équipe de modération</a>.">
 <modal_about_category_moderate "Modérer">
-<modal_about_content_code "Si vous êtes un développeur Javascript ou un designer CSS, vous êtes invités à mettre les mains dans le cambouis. <a>Rendez-vous sur Github</a>.">
+<modal_about_content_code "Si vous êtes développeur Javascript ou designer CSS, vous êtes invités à mettre les mains dans le cambouis. <a>Rendez-vous sur Github</a>.">
 <modal_about_category_map "Carte">
-<modal_about_content_map "Les données de la carte proviennent des contributeurs <a>OpenStreetMap</a>, les tuiles sont de <a>Stamen</a>.">
+<modal_about_content_map "Les données de la carte proviennent des contributeurs <a>OpenStreetMap</a>, les tuiles de <a>Stamen</a>.">
 <modal_about_category_data "Données">
 <modal_about_content_data "Les données de bar et de bières sont récupérées de la base <a>OpenStreetMap</a>, via l'API <a>OverPass</a>.">
 <modal_about_category_contributors "Contributeurs">
-<modal_about_category_contributors_list "et beaucoup d'autres ..."> 
+<modal_about_category_contributors_list "et beaucoup d'autres...">
 
 /* Edit Form */
 <edit_title "Édition du bar">
+<edit_loading "<i> Chargement des informations du bar">
 <edit_label_name "Nom">
-<edit_label_beers "Bière pression dispo">
-<edit_label_add_beer "Ajouter des bières">
+<edit_label_beers "Bières pression disponibles">
+<edit_label_add_beer "Ajouter une bière">
 <edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Oui">
 <edit_label_wifi_no "<input>  Non">
@@ -80,7 +81,7 @@
 <layers_setup " Personnaliser">
 
 /* Setup */
-<modal_setup_title "Display settings"> 
+<modal_setup_title "Configuration de l'affichage">
 <modal_setup_title_favorites "<i></i> Bières préférées"> 
 <modal_setup_label_selected "Nombre de bières séléctionnées :">
 <modal_setup_button_clear "<i></i> Tout effacer">

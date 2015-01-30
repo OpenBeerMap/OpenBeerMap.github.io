@@ -51,6 +51,7 @@
 
 /* Edit Form */
 <edit_title "Breyttu upplýsingum fyrir þennan bar á OpenBeerMap"> 
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Nafn"> 
 <edit_label_beers "Bjór á krana"> 
 <edit_label_add_beer "Add beer"> /* TODO */

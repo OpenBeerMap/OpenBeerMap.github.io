@@ -48,6 +48,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 
 /* Заполните форму */
 <edit_title "Питейное заведение">
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Название">
 <edit_label_beers "Наличие разливного пива">
 <edit_label_add_beer "Добавить пиво"> 

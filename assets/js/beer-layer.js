@@ -94,7 +94,7 @@ function draw_beer(query, icon)
                     content +="</table>";
                     if(e.type == "node" || e.type == "way")
                     {
-                        content += '<p class="action"><a href="#" class="btn btn-default" onClick="sidebar.show();init_form_from_OSM(\'' + e.type + '\', ' + e.id.toString() + ')"><i class="fa fa-edit"></i> <span data-l10n-id="map_popup_edit">Edit bar information</span></a></p>';
+                        content += '<p class="action"><a href="#" class="btn btn-default" onClick="edit_bar(\'' + e.type + '\', ' + e.id.toString() + ');"><i class="fa fa-edit"></i> <span data-l10n-id="map_popup_edit">Edit bar information</span></a></p>';
                     }
 
                     var myicon = L.icon({
@@ -115,6 +115,16 @@ function draw_beer(query, icon)
             }
         }
     });
+}
+
+function edit_bar(type, id)
+{
+    sidebar.show();
+    $("#editLoading").show();
+    $("#editForm").hide();
+    init_form_from_OSM(type, id);
+    $("#editLoading").hide();
+    $("#editForm").show();
 }
  
 /* Opening Hours parsing */

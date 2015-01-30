@@ -51,6 +51,7 @@
 
 /* Edit Form */
 <edit_title "Ändra denna pub i OpenBeerMap"> 
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Name">/* TODO */
 <edit_label_beers "Fatöl finns"> 
 <edit_label_add_beer "Add beer"> /* TODO */

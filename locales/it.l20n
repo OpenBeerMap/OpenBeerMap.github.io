@@ -51,6 +51,7 @@
 
 /* Edit Form */
 <edit_title "Modifica questo bar">
+<edit_loading "<i> Loading bar information"> /* TODO */
 <edit_label_name "Nome">
 <edit_label_beers "Birre alla spina disponibili">
 <edit_label_add_beer "Add beer"> /* TODO */
