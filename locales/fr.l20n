@@ -29,11 +29,11 @@
 <modal_about_content_content_more "<i></i> Vous ne trouvez pas votre bar ?"> 
 <modal_about_content_about """
     <p>Cette application vous permet de trouver où boire votre bière préférée. Si des informations sont incomplètes ou erronées, n'hésitez pas à contribuer en cliquant sur le bouton <span><i></i> Ajouter des infos sur ce bar</span>.</p>
-    <p>Vous trouverez plus d'informations sur la genèse de cette application <a>ici</a>.</p>
+    <p>Vous trouverez plus d'informations sur la genèse de cette application <a>sur le blog de Noémie Lehuby</a>.</p>
     <p>Vous pouvez aussi contribuer en traduisant ou en améliorant cette application. Pour en savoir plus, consultez l'onglet <strong>Contribuer</strong>.</p>
 """>
 <modal_about_category_translate "Traduire">
-<modal_about_content_translate "Pour découvrir comment traduire OpenBeerMap, <a>rendez-vous sur cette page</a> (en anglais). ">
+<modal_about_content_translate "Pour découvrir comment traduire OpenBeerMap, <a>rendez-vous sur cet article de blog</a> (en anglais). ">
 <modal_about_category_suggestions "Faire des suggestions"> 
 <modal_about_content_suggestions "Vous pouvez écrire un e-mail à <strong>openbeermap [at] gmail [dot] com</strong> si vous avez des suggestions.">
 <modal_about_category_donate "Faire un don">
