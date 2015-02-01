@@ -29,11 +29,11 @@
 <modal_about_content_content "The simplest way to contribute is to add beers to the bars you know."> /* TODO */
 <modal_about_content_about """
     <p>This application was built to help people find their favourite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span><i></i> Edit bar information</span> button.</p>
-    <p>You will find more information on the genesis of this application <a>here</a> (in French).</p>
+    <p>You will find more information on the genesis of this application in <a>Noémie Lehuby's blog</a> (in French).</p>
     <p>You can also contribute by translating or improving this application. You will find more information about that in the <strong>Contribute</strong> tab.</p>
 """> /* TODO */
 <modal_about_category_translate "Translate"> /* TODO */
-<modal_about_content_translate "Please visit <a>this page</a> to learn how to help translate OpenBeerMap."> /* TODO */
+<modal_about_content_translate "Please visit <a>our diary</a> to learn how to help translate OpenBeerMap."> /* TODO */
 <modal_about_category_suggestions "Make suggestions"> /* TODO */
 <modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> if you have suggestions."> /* TODO */
 <modal_about_category_donate "Donate"> /* TODO */

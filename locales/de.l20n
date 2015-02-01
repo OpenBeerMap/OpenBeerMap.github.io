@@ -15,7 +15,7 @@
 <modal_about_title_credits "<i></i> Mitwirkende">
 <modal_about_content_about """
     <p>Diese Anwendung wurde erstellt, um Leuten zu helfen ihre Lieblingsbiersorten zu finden. Sollten Informationen fehlen oder fehlerhaft sein, zögere nicht auf <span><i></i> Füge Informationen zu dieser Kneipe hinzu</span> zu klicken.</p>
-    <p>Mehr Informationen über die Entstehung dieser Anwendung findest du <a>hier</a> (auf Französisch).</p>
+    <p>Mehr Informationen über die Entstehung dieser Anwendung findest du im <a>Blog von Noémie Lehuby</a> (auf Französisch).</p>
     <p>Du kannst ebenfalls beitragen indem du diese Anwendung übersetzt oder verbesserst. Mehr Informationen dazu findest du im Tab <strong>Mitarbeiten</strong>.</p>
 """>
 <modal_about_category_content "Inhalt hinzufügen">
@@ -33,7 +33,7 @@
     <p>Restaurants (<code>amenity = restaurant</code>) und andere Einrichtungen werden ebenfalls angezeigt, sofern sie mit <code>brewery = *</code> getaggt sind.</p>
 """>
 <modal_about_category_translate "Übersetzen">
-<modal_about_content_translate "<a>Diese Seite</a> zeigt dir wie du helfen kannst OpenBeerMap zu übersetzen.">
+<modal_about_content_translate "<a>Unser Tagebuch</a> zeigt dir, wie du helfen kannst OpenBeerMap zu übersetzen.">
 <modal_about_category_suggestions "Mache Vorschläge">
 <modal_about_content_suggestions "Solltest du Vorschläge haben, kannst du eine E-Mail an <strong>openbeermap [at] gmail [dot] com</strong> schreiben.">
 <modal_about_category_donate "Spende">

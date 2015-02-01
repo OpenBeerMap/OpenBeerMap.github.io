@@ -20,7 +20,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 	<li>amenity = pub
 	</ul></p>
 	<p>Рестораны (ресторан) и другие питейные заведения также могут отображаться, если в их меню есть brewery = * tag.</p>
-"""> 
+"""> /*TODO */
 <modal_about_category_content "Добавить содержание">
 <modal_about_content_content "Простейший способ помочь/поддержать нас это внести данные о питейном заведении которое вы знаете."> 
 <modal_about_content_content_more "<i></i> Не можете найти бар?"> 
@@ -30,7 +30,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <p>Вы также можете внести свой вклад, сделав перевод этого приложения. Подробную информацию вы можете найти <strong>Помочь</strong> tab.</p>
 """>
 <modal_about_category_translate "Перевести">
-<modal_about_content_translate "Пожалуйста посетите <a>эту страницу</a> как научиться делать перевод OpenBeerMap.">
+<modal_about_content_translate "Пожалуйста посетите <a>эту страницу</a> как научиться делать перевод OpenBeerMap."> */ TODO */
 <modal_about_category_suggestions "Ваши пожелания">
 <modal_about_content_suggestions "Вы можете написать на эл.почту <strong>openbeermap [at] gmail [dot] com</strong> ваши пожелания.">
 <modal_about_category_donate "Пожертвовать">
