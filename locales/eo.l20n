@@ -51,7 +51,7 @@
 
 /* Edit Form */
 <edit_title "Redakti ĉi tiun drinkejon">
-<edit_loading "<i> Loading bar information"> /* TODO */
+<edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "Nomo">
 <edit_label_beers "Elbarelaj bieroj disponeblas">
 <edit_label_add_beer "Add beer"> /* TODO */

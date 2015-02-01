@@ -51,7 +51,7 @@
 
 /* Edit Form */
 <edit_title "Bearbeite diese Kneipe in OpenBeerMap"> 
-<edit_loading "<i> Kneipeninformationen werden geladen">
+<edit_loading "<i></i> Kneipeninformationen werden geladen">
 <edit_label_name "Name"> 
 <edit_label_beers "Gezapfte Biersorten"> 
 <edit_label_add_beer "Biersorte hinzufügen">

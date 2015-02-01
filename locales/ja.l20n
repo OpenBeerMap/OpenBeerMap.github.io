@@ -52,7 +52,7 @@
 
 /* 編集フォーム */
 <edit_title "OpenBeerMapでビアパブを編集"> 
-<edit_loading "<i> Loading bar information"> /* TODO */
+<edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "店名"> 
 <edit_label_beers "樽生ビール"> 
 <edit_label_add_beer "Add beer"> /* TODO */

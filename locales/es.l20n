@@ -51,7 +51,7 @@
 
 /* Formulario de edición */
 <edit_title "Editar este bar"> 
-<edit_loading "<i> Loading bar information"> /* TODO */
+<edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "Nombre"> 
 <edit_label_beers "Cerveza de barril disponible"> 
 <edit_label_add_beer "Add cerveza"> /* TODO */

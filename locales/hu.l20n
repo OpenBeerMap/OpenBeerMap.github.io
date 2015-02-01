@@ -51,7 +51,7 @@
 
 /* Formulaire d'édition */
 <edit_title "Szerkeszd ezt a kocsmát OpenBeerMap-en">
-<edit_loading "<i> Loading bar information"> /* TODO */
+<edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "Név">
 <edit_label_beers "Elérhető csapolt sörök">
 <edit_label_add_beer "Add beer"> /* TODO */

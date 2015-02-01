@@ -51,7 +51,7 @@
 
 /* Formulariu d'edición */
 <edit_title "Edición del bar">
-<edit_loading "<i> Loading bar information"> /* TODO */
+<edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "Nome">
 <edit_label_beers "Cerveza de grifu disponible">
 <edit_label_add_beer "Add beer"> /* TODO */
