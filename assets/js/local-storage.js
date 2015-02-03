@@ -108,6 +108,8 @@ function add_favorite(value)
         console.log('Removing ' + value + ' from favorite beers');
     }
     localStorage.setItem("favoriteBeers", favoriteBeers.join(";"));
+	refresh_layers_list();
+    update_edit_list();
 }
 
 
@@ -125,6 +127,8 @@ function clear_favorites()
     }
     localStorage.setItem('favoriteBeers', "");
     update_setup_list();
+    refresh_layers_list();
+    update_edit_list();	
 }
 
 $(document).ready(function(){
@@ -140,8 +144,4 @@ $(document).ready(function(){
        add_favorite($(this).prev("input").val());
    });
 
-   $("#setupButtonSave").click(function(){
-        refresh_layers_list();
-        update_edit_list();
-   });
 });
