@@ -1,117 +1,61 @@
 CACHE MANIFEST
-# 2015-01-03
+#2015-02-05
 index.html
 contributors.md
-README.md
-# assets
-## 3rdparty
-### bootstrap-3.1.1
-#### css
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap.css
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap.css.map
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap.min.css
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap-theme.css
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap-theme.css.map
-assets/3rdparty/bootstrap-3.1.1/css/bootstrap-theme.min.css
-#### fonts
-assets/3rdparty/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.eot
-assets/3rdparty/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.svg
-assets/3rdparty/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.ttf
-assets/3rdparty/bootstrap-3.1.1/fonts/glyphicons-halflings-regular.woff
-### js
-assets/3rdparty/bootstrap-3.1.1/js/bootstrap.js
-assets/3rdparty/bootstrap-3.1.1/js/bootstrap.min.js
-### css
-assets/3rdparty/css/jquery-ui.css
-assets/3rdparty/css/leaflet-search.css
-assets/3rdparty/css/leaflet-search.mobile.css
-### font-awesome-4.2.0
-#### css
-assets/3rdparty/font-awesome-4.2.0/css/font-awesome.css
-assets/3rdparty/font-awesome-4.2.0/css/font-awesome.min.css
-#### fonts
-assets/3rdparty/font-awesome-4.2.0/fonts/FontAwesome.otf
-assets/3rdparty/font-awesome-4.2.0/fonts/fontawesome-webfont.eot
-assets/3rdparty/font-awesome-4.2.0/fonts/fontawesome-webfont.svg
-assets/3rdparty/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf
-assets/3rdparty/font-awesome-4.2.0/fonts/fontawesome-webfont.woff
-## img
-### js
-assets/3rdparty/js/html5shiv.js
-assets/3rdparty/js/jquery-1.11.0.min.js
-assets/3rdparty/js/jquery-ui.min.js
-assets/3rdparty/js/l20n.min.js
-assets/3rdparty/js/leaflet-search.js
-assets/3rdparty/js/OverPassLayer.js
-assets/3rdparty/js/respond.min.js
-### leaflet-0.7.3
-assets/3rdparty/leaflet-0.7.3/leaflet.css
-assets/3rdparty/leaflet-0.7.3/leaflet.js
-assets/3rdparty/leaflet-0.7.3/leaflet-src.js
-#### images
-assets/3rdparty/leaflet-0.7.3/images/layers-2x.png
-assets/3rdparty/leaflet-0.7.3/images/layers.png
-assets/3rdparty/leaflet-0.7.3/images/marker-icon-2x.png
-assets/3rdparty/leaflet-0.7.3/images/marker-icon.png
-assets/3rdparty/leaflet-0.7.3/images/marker-shadow.png
-### leaflet-hash
-assets/3rdparty/leaflet-hash/leaflet-hash.js
-### leaflet-locate
+# css
 assets/3rdparty/leaflet-locate/L.Control.Locate.min.css
-assets/3rdparty/leaflet-locate/L.Control.Locate.min.js
-### OpeningHours
-assets/3rdparty/OpeningHours/opening_hours.js
-assets/3rdparty/OpeningHours/suncalc.js
-### osm-js-editor
-assets/3rdparty/osm-js-editor/api.js
-assets/3rdparty/osm-js-editor/editor.js
-## css
+assets/css/setup-modal.css
 assets/css/edit-modal.css
+assets/3rdparty/css/leaflet-search.mobile.css
+assets/3rdparty/css/leaflet-search.css
+assets/3rdparty/leaflet-sidebar/L.Control.Sidebar.css
 assets/css/layers-selector.css
 assets/css/main.css
-assets/css/setup-modal.css
-## img
-### application
-assets/img/application/favicon-152.png
-assets/img/application/favicon-196.png
-assets/img/application/ffos-128.png
-assets/img/application/ffos-16.png
-assets/img/application/ffos-48.png
-assets/img/application/ffos-60.png
-## beer
-assets/img/beer/affligem.png
-assets/img/beer/beer1.png
-assets/img/beer/beer1.svg
-assets/img/beer/beer2.png
-assets/img/beer/beer3.png
-assets/img/beer/beer4.png
-assets/img/beer/beer_empty.png
-assets/img/beer/beer-empty.svg
-assets/img/beer/beer_pty.png
-assets/img/beer/chouffe.png
-assets/img/beer/guinness.png
-assets/img/beer/karmeliet.png
-assets/img/beer/kwak.png
-## js
-assets/js/beer-layer.js
-assets/js/local-storage.js
-assets/js/main.js
-assets/js/search.js
+assets/3rdparty/leaflet-0.7.3/leaflet.css
+assets/3rdparty/css/jquery-ui.css
+assets/3rdparty/font-awesome-4.2.0/css/font-awesome.min.css
+assets/3rdparty/bootstrap-3.1.1/css/bootstrap.min.css
+#js
 assets/js/utilities.js
+assets/js/search.js
+assets/3rdparty/leaflet-hash/leaflet-hash.js
+assets/js/main.js
+assets/3rdparty/leaflet-sidebar/L.Control.Sidebar.js
+assets/3rdparty/osm-js-editor/api.js
+assets/js/local-storage.js
+assets/3rdparty/osm-js-editor/editor.js
+assets/3rdparty/leaflet-locate/L.Control.Locate.min.js
+assets/js/beer-layer.js
+assets/3rdparty/OpeningHours/suncalc.js
+assets/3rdparty/js/OverPassLayer.js
+assets/3rdparty/js/leaflet-search.js
+assets/3rdparty/bootstrap-3.1.1/js/bootstrap.min.js
+assets/3rdparty/js/jquery-ui.min.js
+assets/3rdparty/js/l20n.min.js
+assets/3rdparty/js/jquery-1.11.0.min.js
+assets/3rdparty/leaflet-0.7.3/leaflet.js
+assets/3rdparty/OpeningHours/opening_hours.js
+# beers
+assets/img/beers/affligem.png
+assets/img/beers/beer1.png
+assets/img/beers/chouffe.png
+assets/img/beers/guinness.png
+assets/img/beers/karmeliet.png
+assets/img/beers/kwak.png
+# others markers
+assets/3rdparty/leaflet-0.7.3/images/marker-shadow.png
+assets/3rdparty/leaflet-0.7.3/images/marker-icon.png
 # locales
-locales/ast.l20n
-locales/cs.l20n
 locales/de.l20n
 locales/en.l20n
-locales/en.l20n.old
-locales/eo.l20n
 locales/es.l20n
 locales/fr.l20n
-locales/hu.l20n
-locales/is.l20n
-locales/it.l20n
-locales/ja.l20n
 locales/manifest.json
-locales/pl.l20n
-locales/ru.l20n
-locales/sv.l20n
+# external ressources
+http://api.flattr.com/button/flattr-badge-large.png
+https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif
+https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif
+http://www.google-analytics.com/analytics.js
+
+NETWORK:
+*

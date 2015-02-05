@@ -33,7 +33,7 @@ function debug_draw_beer(url, icon)
                     }
                     var popup = this.instance._poiInfo(e.tags, e.id);
                     var icon_o = icon;
-                    if (e.tags["brewery"]) {icon_o = "assets/img/beer/beer_empty.png"}
+                    if (e.tags["brewery"]) {icon_o = "assets/img/beers/beer_empty.png"}
                     var myicon = L.icon({
                         iconUrl: icon_o,
                     });
