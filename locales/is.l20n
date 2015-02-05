@@ -86,7 +86,6 @@
 <modal_setup_label_selected "Fjöldi valdra bjóra :">
 <modal_setup_button_clear "<i></i> Endursetja">
 <modal_setup_button_save "Vista">
-<modal_setup_button_discard "Henda">
 <modal_setup_label_add "Add favourite beer"> /* TODO */
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO */
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */

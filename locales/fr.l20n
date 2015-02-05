@@ -85,7 +85,7 @@
 <modal_setup_title_favorites "<i></i> Bières préférées"> 
 <modal_setup_label_selected "Nombre de bières séléctionnées :">
 <modal_setup_button_clear "<i></i> Tout effacer">
-<modal_setup_button_save "Enregistrer"> 
+<modal_setup_button_save "Fermer"> 
 <modal_setup_button_discard "Annuler"> 
 <modal_setup_label_add "Ajouter une bière préférée">
 <modal_setup_confirm_clear "Êtes-vous sûr de vouloir supprimer toutes vos bières préférées ?"> 

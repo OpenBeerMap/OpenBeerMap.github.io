@@ -86,7 +86,6 @@
 <modal_setup_label_selected "Anzahl der ausgewählten Biersorten:">
 <modal_setup_button_clear "<i></i> Liste leeren">
 <modal_setup_button_save "Speichern">
-<modal_setup_button_discard "Abbrechen">
 <modal_setup_label_add "Lieblingsbiersorte hinzufügen">
 <modal_setup_confirm_clear "Bist du dir sicher alle deine Lieblingsbiersorten entfernen zu wollen?">
 <modal_setup_favorites_empty "Du hast keine Lieblingsbiersorten. Falls du sie auf der Karte anzeigen lassen willst, füge sie durch das Eingabefeld \"Lieblingsbiersorte hinzufügen\" hinzu.">

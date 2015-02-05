@@ -83,7 +83,6 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <modal_setup_label_selected "Количество выбранного пива :">
 <modal_setup_button_clear "<i></i> Сбросить">
 <modal_setup_button_save "Сохранить"> 
-<modal_setup_button_discard "Отменить">
 <modal_setup_label_add "Добавить любимое пиво"> 
 <modal_setup_confirm_clear "Вы уверенны что хотите удалить пиво из избранного?"> 
 <modal_setup_favorites_empty "У вас нет избранного пива. Если вы хотите чтобы оно отображалось на карте, добавьте его используя \"Добавить любимое пиво\" поле."> 

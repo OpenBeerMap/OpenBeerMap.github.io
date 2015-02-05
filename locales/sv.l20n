@@ -86,7 +86,6 @@
 <modal_setup_label_selected "Number of selected beers:"> /* TODO */
 <modal_setup_button_clear "<i></i> Clear list"> /* TODO */
 <modal_setup_button_save "Spara"> 
-<modal_setup_button_discard "Cancel"> /* TODO */
 <modal_setup_label_add "Add favourite beer"> /* TODO */
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO */
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */
