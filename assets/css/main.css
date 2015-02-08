@@ -9,14 +9,28 @@ body {
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
 }
-#loading {
+
+.modal .close{
+    font-size:30px;
+    vertical-align:middle;
+    margin-top:-4px;
+}
+
+
+#loading{
   position: absolute;
-  width: 220px;
-  height: 19px;
+  width: 80%;
   top: 50%;
   left: 50%;
-  margin: -10px 0 0 -110px;
+  transform: translate(-50%, -50%);
   z-index: 20001;
+}
+
+#loading .progress{
+  height: 30px;
+}
+#loading .progress-bar{
+  width: 100%;
 }
 .leaflet-control-layers label {
   font-weight: normal;
@@ -27,12 +41,25 @@ input[type="radio"], input[type="checkbox"] {
 }
 .navbar .navbar-brand {
   font-weight: bold;
-  font-size: 25px;
   color: white;
 }
 .navbar-collapse.in {
   overflow-y: hidden;
 }
+.navbar .navbar-form.navbar-right{
+    height:34px;
+    line-height:34px;
+}
+.navbar .navbar-form.navbar-right{
+    height:34px;
+}
+
+.navbar .navbar-pulled{
+    position:absolute;
+        right:5px;
+}
+
+
 .typeahead {
   background-color: #FFFFFF;
 }
@@ -68,6 +95,19 @@ input[type="radio"], input[type="checkbox"] {
   padding: 3px 0;
   border-bottom: 2px solid #333;
 }
+
+/* Autocomplete suggestions on type */
+.ui-autocomplete{
+    background-color:#FFF;
+}
+.ui-autocomplete .ui-menu-item.ui-state-focus{
+    background-color:#428BCA;
+    color:#FFF;
+    font-weight:normal;
+    border:none;
+    margin:0;
+}
+
 .has-feedback .form-control-feedback {
   position: absolute;
   top: 0;
@@ -79,26 +119,40 @@ input[type="radio"], input[type="checkbox"] {
   text-align: center;
 }
 .leaflet-popup-content {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
 }
 .leaflet-popup-content-wrapper {
   border-radius: 5px;
 }
+
+.leaflet-container a.leaflet-popup-close-button{
+    font-size: 25px;
+    width: auto;
+    height: auto;
+    top: 4px;
+}
+
+.leaflet-popup-content h3{
+    margin: 0 0 4px;
+    font-size: 20px;
+    width: calc(100% - 1em);
+/*     text-overflow: ellipsis; */
+/*     white-space:nowrap; */
+/*     overflow-x:hidden; */
+}
+.leaflet-popup-content p.action{
+    margin:5px 0 0;
+    text-align:center;
+}
+.leaflet-popup-content .btn{
+    white-space:normal;
+}
 .leaflet-sidebar {
   z-index: 1020;
 }
-.leaflet-control-layers-separator {
-    height: 30px;
-    border-top: 1px solid #DDD;
-    margin: 5px 10px 5px 6px;
-    }
-.leaflet-sidebar .close {
-  right: 0px;
-  top: 5px;
-  background: transparent;
+
+.leaflet-sidebar>.close {
+  display:none;
 }
 .leaflet-right{z-index : 10;}
 @media (max-width: 992px) {
@@ -107,12 +161,20 @@ input[type="radio"], input[type="checkbox"] {
   }
 }
 @media (max-width: 767px){
-  .url-break {
-    word-break: break-all;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
+    .url-break {
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    .github-fork-ribbon {
+        display:none;
+    }
+    .navbar .navbar-pulled{
+        position:relative;
+        right:0;
+    }
 }
 /* Print Handling */
 @media print {
@@ -132,17 +194,110 @@ input[type="radio"], input[type="checkbox"] {
   }
 }
 /* OSM opening hours / happy hours parsing */
-.opening-hours-circle {
-    background: grey;
-    width : 15px;
-    height: 15px;
-	border:1px solid #679403;
-	border-radius:50%;
-	}
-
+.map-popup-indicator{
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 1ex;
+    width : 1em;
+    height: 1em;
+    border-radius: 50%;
+    float: right;
+}
+.map-popup-indicator-open{
+    background-color:#3C763D;
+}
+.map-popup-indicator-close{
+    background-color:#A94442;
+}
+.map-popup-indicator-unknown{
+    background-color:#DDD;
+}
 /* Beer - autocomplete */
 
 ul.ui-autocomplete {
     z-index: 1100;
 }
 
+
+/* Minimum zoom indicator */
+.leaflet-bottom.leaflet-left{
+    width:100%;
+}
+.leaflet-bottom .leaflet-control.leaflet-control-minZoomIndicator{
+    display: block;
+    position:absolute;
+        bottom:0;
+        left:0;
+    width:100%;
+    margin:0;
+    padding: 5px;
+    color: #31708F;
+    background-color: rgba(227, 241, 247, 0.9);
+    border-top: 1px solid #BCE8F1;
+    font-style:italic;
+    font-size:20px;
+    border-radius: 0;
+    text-align:center;
+}
+
+.media{
+    border:1px solid #DDD;
+    padding:5px;
+    border-radius:2px;
+    transition:all 0.2s;
+}
+.media:first-child{
+    margin-top:0;
+}
+.media:hover{
+    background-color:rgba(200, 200, 200, 0.3);
+    transition:all 0.2s;
+}
+
+.media .media-left{
+    display:block;
+    float:left;
+    height:48px;
+    width:48px;
+    line-height:48px;
+    text-align:center;
+    background-color:#BBB;
+    border-radius:2px;
+    margin: 0 10px 0 0;
+    cursor:default;
+}
+
+.media .media-left>.fa{
+    font-size:36px;
+    vertical-align:middle;
+    color:#000;
+    text-shadow:1px 1px 1px #FFF;
+    text-decoration:none;
+}
+
+#modalAboutDonateForm{
+    display:inline;
+}
+
+#modalAboutDonateForm input{
+    vertical-align:middle;
+}
+
+#modalAboutOSM{
+    display:none;
+}
+
+@media (max-width:768px){
+    .modal-dialog{
+        margin:0;
+    }
+    .modal-content{
+        border-radius:0;
+    }
+
+    #aboutTabsContent{
+        margin-top:5px;
+        padding-top:5px;
+        border-top:1px solid #AAA;
+    }
+}

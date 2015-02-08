@@ -1,0 +1,61 @@
+CACHE MANIFEST
+# 2015-02-05 
+index.html
+contributors.md
+# css
+assets/3rdparty/leaflet-locate/L.Control.Locate.min.css
+assets/css/setup-modal.css
+assets/css/edit-modal.css
+assets/3rdparty/css/leaflet-search.mobile.css
+assets/3rdparty/css/leaflet-search.css
+assets/3rdparty/leaflet-sidebar/L.Control.Sidebar.css
+assets/css/layers-selector.css
+assets/css/main.css
+assets/3rdparty/leaflet-0.7.3/leaflet.css
+assets/3rdparty/css/jquery-ui.css
+assets/3rdparty/font-awesome-4.2.0/css/font-awesome.min.css
+assets/3rdparty/bootstrap-3.1.1/css/bootstrap.min.css
+#js
+assets/js/utilities.js
+assets/js/search.js
+assets/3rdparty/leaflet-hash/leaflet-hash.js
+assets/js/main.js
+assets/3rdparty/leaflet-sidebar/L.Control.Sidebar.js
+assets/3rdparty/osm-js-editor/api.js
+assets/js/local-storage.js
+assets/3rdparty/osm-js-editor/editor.js
+assets/3rdparty/leaflet-locate/L.Control.Locate.min.js
+assets/js/beer-layer.js
+assets/3rdparty/OpeningHours/suncalc.js
+assets/3rdparty/js/OverPassLayer.js
+assets/3rdparty/js/leaflet-search.js
+assets/3rdparty/bootstrap-3.1.1/js/bootstrap.min.js
+assets/3rdparty/js/jquery-ui.min.js
+assets/3rdparty/js/l20n.min.js
+assets/3rdparty/js/jquery-1.11.0.min.js
+assets/3rdparty/leaflet-0.7.3/leaflet.js
+assets/3rdparty/OpeningHours/opening_hours.js
+# beers
+assets/img/beers/affligem.png
+assets/img/beers/beer1.png
+assets/img/beers/chouffe.png
+assets/img/beers/guinness.png
+assets/img/beers/karmeliet.png
+assets/img/beers/kwak.png
+# others markers
+assets/3rdparty/leaflet-0.7.3/images/marker-shadow.png
+assets/3rdparty/leaflet-0.7.3/images/marker-icon.png
+# locales
+locales/de.l20n
+locales/en.l20n
+locales/es.l20n
+locales/fr.l20n
+locales/manifest.json
+# external ressources
+http://api.flattr.com/button/flattr-badge-large.png
+https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif
+https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif
+http://www.google-analytics.com/analytics.js
+
+NETWORK:
+*
