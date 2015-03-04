@@ -77,7 +77,7 @@
 <map_popup_location "Vous êtes ici">
 
 /* Layers choice */
-<layers_overlays_all "Toutes les bières"> 
+<layers_overlays_all "Tous les bars"> 
 <layers_setup " Personnaliser">
 
 /* Setup */
