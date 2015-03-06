@@ -52,7 +52,7 @@ locales/es.l20n
 locales/fr.l20n
 locales/manifest.json
 # external ressources
-http://api.flattr.com/button/flattr-badge-large.png
+http://button.flattr.com/flattr-badge-large.png
 https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif
 https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif
 http://www.google-analytics.com/analytics.js
