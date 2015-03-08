@@ -37,7 +37,9 @@ assets/3rdparty/leaflet-0.7.3/leaflet.js
 assets/3rdparty/OpeningHours/opening_hours.js
 # beers
 assets/img/beers/affligem.png
-assets/img/beers/beer1.png
+assets/img/beers/blue.png
+assets/img/beers/gray.png
+assets/img/beers/green.png
 assets/img/beers/chouffe.png
 assets/img/beers/guinness.png
 assets/img/beers/karmeliet.png

@@ -3,8 +3,8 @@
  contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l
 */
 
-var overpassBaseUrl = "https://overpass-api.de/api/interpreter?"
-//var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
+//var overpassBaseUrl = "https://overpass-api.de/api/interpreter?"
+var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
 var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beers/gray.png", false);
 var beerList = new Array();
 
