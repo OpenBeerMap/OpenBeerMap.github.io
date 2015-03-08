@@ -75,7 +75,7 @@ function refresh_layers_list()
     }
         
     var overlayMaps = {
-        "<span class='image'><img src='assets/img/beers/beer1.png'></span><span data-l10n-id='layers_overlays_all'>All beers</span>": overlayAll
+        "<span class='image'><img src='assets/img/beers/blue.png'></span><span data-l10n-id='layers_overlays_all'>All beers</span>": overlayAll
     };
     
     var favoriteBeers = get_favorites();
