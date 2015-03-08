@@ -5,7 +5,7 @@
 
 //var overpassBaseUrl = "https://overpass-api.de/api/interpreter?"
 var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
-var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beers/beer1.png");
+var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar];way(BBOX)[amenity=bar];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop'];node(BBOX)[amenity=biergarten];node(BBOX)[microbrewery=yes];node(BBOX)['brewery'];way(BBOX)['brewery'];node(BBOX)[amenity=pub];way(BBOX)[amenity=pub]);out center;>;out;", "assets/img/beers/gray.png", false);
 var beerList = new Array();
 
 function debug_draw_beer(url, icon)
@@ -47,7 +47,7 @@ function debug_draw_beer(url, icon)
     })
 }
 
-function draw_beer(query, icon)
+function draw_beer(query, icon, surcharge)
 {
     return new L.OverPassLayer({
         minzoom: 14,
@@ -58,6 +58,7 @@ function draw_beer(query, icon)
                 e = data.elements[i];
                 if (e.id in this.instance._ids) return;
                 this.instance._ids[e.id] = true;
+                var icon_o = icon;
                 if(e.tags !== undefined)
                 {
                     if(e.type === "node")
@@ -92,6 +93,7 @@ function draw_beer(query, icon)
                     if(e.tags["brewery"])
                     {
                         content += "<tr><th data-l10n-id='map_popup_beer'>Type de bière pression</th><td class='mapPopupBeersList'>" + e.tags["brewery"].replace(/;/g, ", ") + "</td></tr>";
+                        if (surcharge == false) {icon_o = "assets/img/beers/blue.png"}
                     }
                     content +="</table>";
                     if(e.type == "node" || e.type == "way")
@@ -100,7 +102,7 @@ function draw_beer(query, icon)
                     }
 
                     var myicon = L.icon({
-                        iconUrl: icon,
+                        iconUrl: icon_o,
                         iconAnchor:[10, 45],
                         popupAnchor : [4, -30]
                     });
@@ -162,6 +164,6 @@ function get_beer_img(beerName)
         case "kwak":
             return "kwak.png";
         default:
-            return "beer1.png";
+            return "green.png";
     }
 }

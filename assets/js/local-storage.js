@@ -50,7 +50,7 @@ function init_layers()
 		{
 			element = favoriteBeers[i]
 			img = get_beer_img(element)
-        	beerList[element] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beers/"+img);
+        	beerList[element] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beers/"+img, true);
     	}
 };
 //Create the bar edit form in the sidebar
@@ -96,7 +96,7 @@ function add_favorite(value)
     {
         favoriteBeers.push(value);
 		img = get_beer_img(value)
-		beerList[value] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beers/"+img);
+		beerList[value] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beers/"+img, true);
     }
     else
     {
