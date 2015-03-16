@@ -15,16 +15,9 @@ var osm = new L.TileLayer(
 var map = new L.Map('map').addLayer(osm).setView(new L.LatLng(48.84702,2.37705), 17);
 
 /*User Location*/
-map.locate({setView: true, enableHighAccuracy: true, locate: true, maximumAge: 60000,timeout: 8000 })
+map.locate({setView: false, enableHighAccuracy: true, locate: true, maximumAge: 60000,timeout: 8000 })
 .on('locationfound', function(e){
     console.log("User positioning successful");
-    var marker = L.marker([e.latlng.lat, e.latlng.lng]).bindPopup('<h3 data-l10n-id="map_popup_location">You are here</h3>');
-    map.addLayer(marker);
-    marker.on('click', function (e){
-        document.l10n.localize(['map_popup_location'], function(l10n){
-            localize(l10n, ['map_popup_location']);
-        });
-    })
 })
 .on('locationerror', function(e){
     //console.log(e);
