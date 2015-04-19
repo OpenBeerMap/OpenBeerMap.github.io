@@ -54,10 +54,10 @@ locales/es.l20n
 locales/fr.l20n
 locales/manifest.json
 # external ressources
-http://button.flattr.com/flattr-badge-large.png
-https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif
-https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif
-http://www.google-analytics.com/analytics.js
+assets/img/3rdparties/flattr-badge-large.png
+assets/img/3rdparties/pixel.gif
+assets/img/3rdparties/btn_donate_SM.gif
+http://piwikobm.zz.mu/piwik.js
 
 NETWORK:
 *
