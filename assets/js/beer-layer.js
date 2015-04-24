@@ -58,7 +58,7 @@ function draw_beer(query, icon)
                 this.instance._ids[e.id] = true;
                 if(e.tags !== undefined)
                 {
-                    if(e.type === "node")
+                    if(e.type === "node" && e.tags['amenity'])
                     {
                         if (e.tags['amenity'])
                         {
