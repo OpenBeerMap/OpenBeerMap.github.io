@@ -61,7 +61,7 @@ function draw_beer(query, icon, surcharge)
                 var icon_o = icon;
                 if(e.tags !== undefined)
                 {
-                    if(e.type === "node")
+                    if(e.type === "node" && e.tags['amenity'])
                     {
                         if (e.tags['amenity'])
                         {
