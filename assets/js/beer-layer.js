@@ -47,6 +47,8 @@ function debug_draw_beer(url, icon)
     })
 }
 
+var markerIcons = [];
+
 function draw_beer(query, icon, surcharge)
 {
     return new L.OverPassLayer({
@@ -101,12 +103,16 @@ function draw_beer(query, icon, surcharge)
                         content += '<p class="action"><a href="#" class="btn btn-default" onClick="edit_bar(\'' + e.type + '\', ' + e.id.toString() + ');"><i class="fa fa-edit"></i> <span data-l10n-id="map_popup_edit">Edit bar information</span></a></p>';
                     }
 
-                    var myicon = L.icon({
-                        iconUrl: icon_o,
-                        iconAnchor:[10, 45],
-                        popupAnchor : [4, -30]
-                    });
-
+                    if(!(icon in markerIcons))
+                    {
+                        markerIcons[icon] = L.icon({
+                            iconUrl: icon_o,
+                            iconAnchor:[10, 45],
+                            popupAnchor : [4, -30]
+                        });
+                    }
+                    var myicon = markerIcons[icon];
+                    
                     var marker = L.marker(pos, {icon: myicon}).bindPopup(content);
                     this.instance.addLayer(marker);
 
