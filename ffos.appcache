@@ -36,12 +36,10 @@ assets/3rdparty/js/jquery-1.11.0.min.js
 assets/3rdparty/leaflet-0.7.3/leaflet.js
 assets/3rdparty/OpeningHours/opening_hours.js
 # beers
-assets/img/beers/affligem.png
-assets/img/beers/beer1.png
-assets/img/beers/chouffe.png
+assets/img/beers/blue.png
+assets/img/beers/gray.png
+assets/img/beers/green.png
 assets/img/beers/guinness.png
-assets/img/beers/karmeliet.png
-assets/img/beers/kwak.png
 # others markers
 assets/3rdparty/leaflet-0.7.3/images/marker-shadow.png
 assets/3rdparty/leaflet-0.7.3/images/marker-icon.png
@@ -52,10 +50,10 @@ locales/es.l20n
 locales/fr.l20n
 locales/manifest.json
 # external ressources
-http://button.flattr.com/flattr-badge-large.png
-https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif
-https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif
-http://www.google-analytics.com/analytics.js
+assets/img/3rdparties/flattr-badge-large.png
+assets/img/3rdparties/pixel.gif
+assets/img/3rdparties/btn_donate_SM.gif
+http://piwikobm.zz.mu/piwik.js
 
 NETWORK:
 *
