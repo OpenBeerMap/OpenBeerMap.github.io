@@ -1,6 +1,6 @@
 /*
  OpenBeerMap OverPass-API layer | noemie.lehuby(at)gmail.com | MIT Licensed
- contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l, Dan (DTHG)
 */
 
 var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
