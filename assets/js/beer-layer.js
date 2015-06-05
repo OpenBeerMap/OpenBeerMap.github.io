@@ -4,7 +4,7 @@
 */
 
 var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
-var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none']);out center;>;out;", "assets/img/beers/gray.png", false);
+var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none'];node(BBOX)[amenity=restaurant]['brewery'!='none'];way(BBOX)[amenity=restaurant]['brewery'!='none'];);out center;>;out;", "assets/img/beers/gray.png", false);
 var beerList = new Array();
 
 function debug_draw_beer(url, icon)
