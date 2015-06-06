@@ -43,7 +43,7 @@
 <modal_about_category_moderate "Modérer">
 <modal_about_content_code "Si vous êtes développeur Javascript ou designer CSS, vous êtes invités à mettre les mains dans le cambouis. <a>Rendez-vous sur Github</a>.">
 <modal_about_category_map "Carte">
-<modal_about_content_map "Les données de la carte proviennent des contributeurs <a>OpenStreetMap</a>, les tuiles de <a>Stamen</a>.">
+<modal_about_content_map "Les données de la carte proviennent des contributeurs <a>OpenStreetMap</a>, les tuiles de <a>Stamen</a> / <a>CartoDB</a>.">
 <modal_about_category_data "Données">
 <modal_about_content_data "Les données de bar et de bières sont récupérées de la base <a>OpenStreetMap</a>, via l'API <a>OverPass</a>.">
 <modal_about_category_contributors "Contributeurs">
@@ -82,6 +82,8 @@
 
 /* Setup */
 <modal_setup_title "Configuration de l'affichage">
+<modal_setup_title_beers "<i></i> Bières préférées">
+<modal_setup_title_tilelayer "<i></i> Fond de carte">
 <modal_setup_title_favorites "<i></i> Bières préférées"> 
 <modal_setup_label_selected "Nombre de bières séléctionnées :">
 <modal_setup_button_clear "<i></i> Tout effacer">
