@@ -43,7 +43,7 @@
 <modal_about_category_moderate "Moderate">/* TODO */
 <modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">/* TODO */
 <modal_about_category_map "Map">/* TODO */
-<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">/* TODO */
+<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a> / <a>CartoDB</a>.">/* TODO */
 <modal_about_category_data "Data">/* TODO */
 <modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">/* TODO */
 <modal_about_category_contributors "Contributors">/* TODO */
@@ -82,6 +82,8 @@
 
 /* Setup */
 <modal_setup_title "Display settings"> /* TODO */
+<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
 <modal_setup_title_favorites "<i></i> Favourite beers"> /* TODO */
 <modal_setup_label_selected "Number of selected beers:"> /* TODO */
 <modal_setup_button_clear "<i></i> Clear list"> /* TODO */
