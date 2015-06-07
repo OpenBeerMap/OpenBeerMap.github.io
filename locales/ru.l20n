@@ -30,7 +30,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <p>Вы также можете внести свой вклад, сделав перевод этого приложения. Подробную информацию вы можете найти <strong>Помочь</strong> tab.</p>
 """>
 <modal_about_category_translate "Перевести">
-<modal_about_content_translate "Пожалуйста посетите <a>эту страницу</a> как научиться делать перевод OpenBeerMap."> */ TODO */
+<modal_about_content_translate "Пожалуйста посетите <a>эту страницу</a> как научиться делать перевод OpenBeerMap."> /* TODO */
 <modal_about_category_suggestions "Ваши пожелания">
 <modal_about_content_suggestions "Вы можете написать на эл.почту <strong>openbeermap [at] gmail [dot] com</strong> ваши пожелания.">
 <modal_about_category_donate "Пожертвовать">
@@ -40,7 +40,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <modal_about_category_moderate "Изменить">
 <modal_about_content_code "Если вы Javascript программист или CSS дизайнер, мы будем очень рады вашему вкладу/изменениям к лучшему <a>проекта</a> на Github.">
 <modal_about_category_map "Карта">
-<modal_about_content_map "Данные карты представлены <a>OpenStreetMap</a> сообществом, плитки любезно <a>Stamen</a>.">
+<modal_about_content_map "Данные карты представлены <a>OpenStreetMap</a> сообществом, плитки любезно <a>Stamen</a> / <a>CartoDB</a>.">
 <modal_about_category_data "Данные">
 <modal_about_content_data "Данные о пиве и питейных заведениях сообществом <a>OpenStreetMap</a>, через <a>OverPass API</a>.">
 <modal_about_category_contributors "Сообщество">
@@ -79,6 +79,8 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 
 /* Насторойки */
 <modal_setup_title "Настройки дисплея"> 
+<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
 <modal_setup_title_favorites "<i></i> Любимое пиво"> 
 <modal_setup_label_selected "Количество выбранного пива :">
 <modal_setup_button_clear "<i></i> Сбросить">

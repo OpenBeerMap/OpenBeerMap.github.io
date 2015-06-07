@@ -159,7 +159,7 @@
             </form>
         </div>
 
-        <!-- Beer setup Modal -->
+        <!-- Setup Modal -->
         <div class="modal fade" id="modalSetup" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -169,9 +169,15 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked" id="SetupTabs">
+                            <li class="active"><a href="#modalSetupBeersTab" data-toggle="tab" data-l10n-id="modal_setup_title_beers"><i class="fa fa-beer"></i> Beers</a></li>
+                            <li><a href="#modalSetupTileLayerTab" data-toggle="tab" data-l10n-id="modal_setup_title_tilelayer"><i class="fa fa-globe"></i> TileLayer</a></li>
+                        </ul>
+                    </div>                
+                    <div class="col-md-9">
                         <div class="tab-content" id="setupTabsContent">
-                            <div class="tab-pane fade active in" id="tabSetupFavorites">
+                            <div class="tab-pane fade active in" id="modalSetupBeersTab">
                                 <form id="FormSelectedBeers" class="form-group row">
                                     <div class="col-md-6">
                                         <div id="setupFavoritesList"></div>
@@ -206,7 +212,16 @@
                                     <a href="#" data-dismiss="modal" class="btn btn-primary pull-right" data-l10n-id="modal_setup_button_save">Close</a>
                                     <a href="#" id="setupClearFavorites" class="btn btn-danger" data-l10n-id="modal_setup_button_clear"><i class="fa fa-trash-o"></i> Clear list</a>
                                 </div>
-                            </div>
+                            </div> <!-- end of modalSetupBeersTab -->
+                            <div class="tab-pane fade" id="modalSetupTileLayerTab">
+                                <ul>
+                                    <li> <a href="#" onclick="change_layer(osm_cartodb)"><img src="http://a.basemaps.cartocdn.com/light_all/17/66404/45097.png" alt="Positron" width="80" height="80"></a>
+                                    </li>
+                                    
+                                    <li> <a href="#" onclick="change_layer(osm_stamen)"><img src="http://a.tile.stamen.com/toner-lite/17/66404/45097.png" alt="Stamen" width="80" height="80"></a>
+                                    </li>
+                                </ul>
+                            </div> <!-- end of modalSetupTileLayerTab -->
                         </div>
                     </div>
                 </div>
@@ -334,7 +349,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading" data-l10n-id="modal_about_category_map">Map</h4>
-                                    <div data-l10n-id="modal_about_content_map">Map data by the <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, tiles courtesy of <a href="http://stamen.com" target="_blank">Stamen</a>.</div>
+                                    <div data-l10n-id="modal_about_content_map">Map data by the <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a> contributors, tiles courtesy of <a href="http://stamen.com" target="_blank">Stamen</a> / <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a> .</div>
                                 </div>
                             </div>
                             <div class="media">

@@ -43,7 +43,7 @@
 <modal_about_category_moderate "Moderate"> /* TODO */
 <modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github."> /* TODO */
 <modal_about_category_map "Mapa">
-<modal_about_content_map "Mapa proporcionado por <a>OpenStreetMap</a> y <a>Stamen Design</a>.">
+<modal_about_content_map "Mapa proporcionado por <a>OpenStreetMap</a> y <a>Stamen Design</a> / <a>CartoDB</a>.">
 <modal_about_category_data "Datos">
 <modal_about_content_data "Datos de bares y cervezas desde <a>OpenStreetMap</a> y sus numerosos colaboradores, via la <a>API OverPass</a>.">
 <modal_about_category_contributors "Contributors"> /* TODO */
@@ -82,6 +82,8 @@
 
 /* Configuración */
 <modal_setup_title "Display settings"> /* TODO */
+<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
 <modal_setup_title_favorites "<i></i> Favourite beers"> /* TODO */
 <modal_setup_label_selected "Número seleccionado de cervezas:">
 <modal_setup_button_clear "<i></i> Limpiar todo">
