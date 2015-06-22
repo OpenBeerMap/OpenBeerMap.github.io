@@ -83,7 +83,7 @@
 /* Setup */
 <modal_setup_title "Configuración de pantalla">
 <modal_setup_title_beers "<i></i> Cerveces favorites">
-<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Capa del mapa">
 <modal_setup_title_favorites "<i></i> Cerveces favorites">
 <modal_setup_label_selected "Númberu de cerveces esbillaes:">
 <modal_setup_button_clear "<i></i> Llimpiar too">
@@ -100,3 +100,4 @@
                 Disponible tamién na direición http://openbeermap.github.io/
 """> 
 <why_is_geoloc_needed "Necesítase pa centrar el mapa nel llugar correutu">
+
