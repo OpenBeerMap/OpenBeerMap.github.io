@@ -3,10 +3,31 @@
  contributors : nlehuby, Maxime Corteel, Poilou (labiloute), l-vincent-l, Dan (DTHG)
 */
 
-var overpassBaseUrl = "//overpass-api.de/api/interpreter?"
-var overlayAll = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none'];node(BBOX)[amenity=restaurant]['brewery'!='none'];way(BBOX)[amenity=restaurant]['brewery'!='none'];);out center;>;out;", "assets/img/beers/gray.png", false);
+var overpassBaseUrl = "//overpass-api.de/api/interpreter?";
+var restaurant_switch = false;
+var overlayAll = draw_beer(overpassBaseUrl + make_overlayAll(restaurant_switch), "assets/img/beers/gray.png", false);
 var beerList = new Array();
 
+function display_restaurant(display = true)
+{
+    if (display) {restaurant_switch = true;}
+    else {restaurant_switch = false;}
+    map.removeLayer(overlayAll);
+    refresh_layers_list();
+    map.addLayer(overlayAll);
+}
+
+function make_overlayAll(restaurant = false)
+{
+    overpass_url = "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none'];"
+    if (restaurant)
+        {
+        overpass_url += "node(BBOX)[amenity=restaurant]['brewery'!='none'];way(BBOX)[amenity=restaurant]['brewery'!='none'];"
+        }
+    overpass_url += ");out center;>;out;"
+    console.log("new !")
+    return overpass_url
+}
 function debug_draw_beer(url, icon)
 {
     return new L.OverPassLayer({

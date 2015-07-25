@@ -91,6 +91,7 @@
 <modal_setup_label_add "Lieblingsbiersorte hinzufügen">
 <modal_setup_confirm_clear "Bist du dir sicher alle deine Lieblingsbiersorten entfernen zu wollen?">
 <modal_setup_favorites_empty "Du hast keine Lieblingsbiersorten. Falls du sie auf der Karte anzeigen lassen willst, füge sie durch das Eingabefeld \"Lieblingsbiersorte hinzufügen\" hinzu.">
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """

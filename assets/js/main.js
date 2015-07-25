@@ -73,13 +73,14 @@ var layersList;
 /* Function to refresh topright controler */
 function refresh_layers_list()
 {
+    overlayAll = draw_beer(overpassBaseUrl + make_overlayAll(restaurant_switch), "assets/img/beers/gray.png", false)
     if(layersList != undefined)
     {
         layersList.removeFrom(map);
     }
         
     var overlayMaps = {
-        "<span class='image'><img src='assets/img/beers/blue.png'></span><span data-l10n-id='layers_overlays_all'>All beers</span>": overlayAll
+        "<span class='image'><img src='assets/img/beers/blue.png'></span><span data-l10n-id='layers_overlays_all'>All bars</span>": overlayAll
     };
     
     var favoriteBeers = get_favorites();
@@ -110,18 +111,13 @@ function refresh_layers_list()
 
 /* Refresh controler on page load */
 refresh_layers_list();
-map.addLayer(overlayAll);
+map.addLayer(overlayAll); 
 
 /* Indicate when zoom level is to low to display bars */
 map.zoomIndicator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
 
 /* Hash map (coordinates in the URL to make them reusable) */
 var hash = new L.Hash(map);
-
-/* Delete progress bar when all JS has been parsed */
-$(document).one("ajaxStop", function(){
-    $("#loading").hide();
-});
 
 $(document).ready(function(){
     //FIXME: nasty hack because bootstraps radio buttons don't work

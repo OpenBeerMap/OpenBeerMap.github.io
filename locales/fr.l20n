@@ -92,6 +92,7 @@
 <modal_setup_label_add "Ajouter une bière préférée">
 <modal_setup_confirm_clear "Êtes-vous sûr de vouloir supprimer toutes vos bières préférées ?"> 
 <modal_setup_favorites_empty "Vous n'avez aucune bière préférée. Pour pouvoir afficher une bière sur la carte, ajoutez-la en utilisant le champ \"Ajouter une bière préférée\".">
+<modal_setup_display_restaurant "Afficher les restaurants ?"> 
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
