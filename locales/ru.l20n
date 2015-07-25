@@ -88,6 +88,7 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <modal_setup_label_add "Добавить любимое пиво"> 
 <modal_setup_confirm_clear "Вы уверенны что хотите удалить пиво из избранного?"> 
 <modal_setup_favorites_empty "У вас нет избранного пива. Если вы хотите чтобы оно отображалось на карте, добавьте его используя \"Добавить любимое пиво\" поле."> 
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """

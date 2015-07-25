@@ -92,6 +92,7 @@
 <modal_setup_label_add "Amestar una cerveza favorita">
 <modal_setup_confirm_clear "¿Tas seguru de que quies desaniciar toles cerveces favorites?">
 <modal_setup_favorites_empty "Nun tienes cerveces favorites. Si quies poder veles nel mapa, amiéstales usando'l campu \"Amestar una cerveza favorita\".">
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """

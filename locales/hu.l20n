@@ -91,6 +91,7 @@
 <modal_setup_label_add "Add favourite beer"> /* TODO */
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO  */
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
