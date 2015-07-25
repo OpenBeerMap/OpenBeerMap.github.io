@@ -43,7 +43,7 @@
 <modal_about_category_moderate "Moderate">
 <modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github.">
 <modal_about_category_map "Map">
-<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a>.">
+<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a> / <a>CartoDB</a>.">
 <modal_about_category_data "Data">
 <modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>.">
 <modal_about_category_contributors "Contributors">
@@ -82,6 +82,8 @@
 
 /* Setup */
 <modal_setup_title "Display settings">
+<modal_setup_title_beers "<i></i> Favourite beers">
+<modal_setup_title_tilelayer "<i></i> Tile layer">
 <modal_setup_title_favorites "<i></i> Favourite beers">
 <modal_setup_label_selected "Number of selected beers:">
 <modal_setup_button_clear "<i></i> Clear list">
@@ -89,6 +91,7 @@
 <modal_setup_label_add "Add favourite beer">
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?">
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field.">
+<modal_setup_display_restaurant "Display restaurants?"> 
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
