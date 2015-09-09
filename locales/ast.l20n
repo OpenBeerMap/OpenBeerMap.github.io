@@ -4,53 +4,101 @@
 */
 
 /* Páxina d'entrada */
-<a_propos "<i></i>&nbsp; Tocante a"> 
+<nav_link_about "<i></i> Tocante a">
+<nav_link_news "<i></i> Novedaes"> 
 
-/* Blabla */
-<hello_world "¡Bienvenios a OpenBeerMap!"> 
-<about "<i></i>&nbsp; Tocante a"> 
-<about_contenu """
-                <p>¡Esti sitiu te permite alcontrar un bar que tenga la to cerveza favorita!</p>
-                <p>Si falta información o esta ta enquivocada, afalámoste a collaborar.</p>
-                <p><a>Más información tocante al orixe d'esti sitiu nel blog de la autora.</p>
-"""> 
-<contact "<i></i>&nbsp;Contautu"> 
-<contact_contenu "Pa proponer una cerveza que falte, informar d'un bug, suxerir una evolución, o simplemente pa convidame a una cerveza..."> 
-<credits "<i></i>&nbsp;Creitos"> 
-<credits_contenu """
-                <p>Mapa proporcionáu por <a>OpenStreetMap</a> y <a>Stamen</a>.</p>
-                <p>Datos sobre los bares y les cerveces proporcionaos por <a>OpenStreetMap</a> y los sos numberosos collaboradores, via <a>la API OverPass</a>.</p>
-                <p>Sitiu fechu con amor y <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
-                <p>Les fontes tan equí: <a>Github</a> </p>
-"""> 
-<repo_github "L'almacén Github">
+/* About */
+<modal_about_title "¡Bienvenios a OpenBeerMap!">
+<modal_about_title_about "<i></i> Tocante a">
+<modal_about_title_contribute "<i></i> Collaborar">
+<modal_about_title_credits "<i></i> Creitos">
+<modal_about_category_bar "Amestar un bar">
+<modal_about_content_bar "Si un bar nun apaez n'OpenBeerMap, tien d'amestase primero n'OpenStreetMap. <a>¿Cómo?</a>">
+<modal_about_content_bar_more """
+    <p>Si un bar nun apaez n'OpenBeerMap, puedes <a>dexar una nota</a>. Dexa tola información que puedas, de mou qu'un collaborador d'OpenStreetMap pueda amestar el bar al mapa.</p>
+    <p>Si yes un collaborador d'OpenStreetMap, por favor, asegúrate de que'l nodu o la vía tien una de les etiquetes siguientes:</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Los restaurantes (<code>amenity = restaurant</code>) y otres instalaciones tamién puen vese si tienen la etiqueta <code>brewery = *</code>.</p>
+""">
+<modal_about_category_content "Amestar conteníu">
+<modal_about_content_content "La manera más fácil de collaborar ye amestar cerveces a los bares que conoces.">
+<modal_about_content_content_more "<i></i> ¿Nun alcuentres un bar?">
+<modal_about_content_about """
+    <p>Esta aplicación te permite alcontrar un llugar pa beber la to cerveza favorita. Si falta información o ta enquivocada, pues collaborar faciendo clic nel botón <span><i></i> Editar información d'esti bar</span>.</p>
+    <p>Alcontrarás más información sobro la xénesis d'esta aplicación nel <a>blog de Noémie Lehuby</a> (en francés).</p>
+    <p>Tamién pues collaborar traduciendo o ameyorando esta aplicación. Alcontrarás más información tocante a esto na llingüeta <strong>Collaborar</strong>.</p>
+""">
+<modal_about_category_translate "Traducir">
+<modal_about_content_translate "Visita <a>esti artículu del blog</a> (n'inglés) pa saber cómo traducir OpenBeerMap.">
+<modal_about_category_suggestions "Facer suxerencies">
+<modal_about_content_suggestions "Pues escribir un corréu a <strong>openbeermap [at] gmail [dot] com</strong> si tienes suxerencies.">
+<modal_about_category_donate "Facer un donativu">
+<modal_about_content_donate "Si quies convidanos a una cerveza">
+<modal_about_category_code "Códigu">
+<modal_about_content_moderate "Si yes collaborador d'OpenStreetMap y amante de la cerveza, afalámoste a xunite al equipu de moderadores pa comprobar la información qu'amiesten los usuarios d'OpenBeerMap. <a>Comunícate col equipu de moderadores</a>.">
+<modal_about_category_moderate "Moderar">
+<modal_about_content_code "Si yes desendolcador en Javascript o diseñador CSS, afalámoste a manchate les manes. <a>Entra nel Github</a>.">
+<modal_about_category_map "Mapa">
+<modal_about_content_map "Los datos del mapa vienen de los collaboradores d'<a>OpenStreetMap</a>, cuadrícules cortesía de <a>Stamen</a>.">
+<modal_about_category_data "Datos">
+<modal_about_content_data "Datos de los bares y cerveces sáquense de la base d'<a>OpenStreetMap</a>, via la <a>API OverPass</a>.">
+<modal_about_category_contributors "Collaboradores">
+<modal_about_category_contributors_list "y munchos más...">
 
 /* Formulariu d'edición */
-<titre_formulaire_edition "Edición del bar en OpenBeerMap"> 
-<nom_du_bar "Nome"> 
-<liste_des_bieres "Cerveza de grifu disponible"> 
-<champ_libre_bieres "Otres cerveces">
-<wifi_oupas "Wifi"> 
-<wifi_oui "<input> si">
-<wifi_non "<input> non">
-<wifi_inconnu "<input> seique"> 
-<opening_hours "Hores d'apertura"> 
-<opening_hours_exemple "exemplu : Mo-Fr 11:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "exemplu : Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Guardar"> 
-<bouton_OSM "Editar direutamente n'OpenStreetMap"> 
+<edit_title "Edición del bar">
+<edit_loading "<i></i> Cargando la información del bar">
+<edit_label_name "Nome">
+<edit_label_beers "Cerveza de grifu disponible">
+<edit_label_add_beer "Amestar cerveza">
+<edit_label_wifi "Wifi">
+<edit_label_wifi_yes "<input> Si">
+<edit_label_wifi_no "<input>  Non">
+<edit_label_wifi_unknown "<input>  Seique">
+<edit_label_opening_hours "Hores d'apertura">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Guardar">
+<edit_button_discard "Anular">
+<edit_button_more "<i></i> Más">
+<edit_button_osm "Editar n'OpenStreetMap"> 
 
 /* Elementos del mapa */
-<attr_osm "&copy; gracies a los collaboradores de <a>OpenStreetMap</a>"> 
-<attr_overpass "datos via la <a>API Overpass</a>"> 
-<locate_ok "Tas equí"> 
-<locate_ko "Fallu na xeollocalización - Recarga la páxina pa volver a intentalo"> /* inda nun funciona */
-<choix_bieres_tous "<img> ¡Beber!">
-<popup_nom "Nome"> 
-<popup_opening_hours "Hores d'apertura"> 
-<popup_happy_hours "Happy hours"> 
-<popup_biere "Cerveces de grifu"> 
-<popup_edit "Amestar información d'esti bar"> 
-<overpass_err "Tienes d'averar más pa ver los bares.">
+<attribution_osm "&copy; gracies a los collaboradores d'<a>OpenStreetMap</a>">
+<overpass_err "Averar más pa ver los bares.">
+<map_popup_name_unknown "Nome desconocíu">
+<map_popup_opening_hours "Hores d'apertura">
+<map_popup_happy_hours "Happy hours">
+<map_popup_beer "Cerveces de grifu">
+<map_popup_edit "Amestar información d'esti bar">
+<map_popup_location "Tas equí">
+
+/* Layers choice */
+<layers_overlays_all "Tolos bares">
+<layers_setup " Personalizar">
+
+/* Setup */
+<modal_setup_title "Configuración de pantalla">
+<modal_setup_title_beers "<i></i> Cerveces favorites">
+<modal_setup_title_tilelayer "<i></i> Capa del mapa">
+<modal_setup_title_favorites "<i></i> Cerveces favorites">
+<modal_setup_label_selected "Númberu de cerveces esbillaes:">
+<modal_setup_button_clear "<i></i> Llimpiar too">
+<modal_setup_button_save "Guardar">
+<modal_setup_button_discard "Encaboxar"> 
+<modal_setup_label_add "Amestar una cerveza favorita">
+<modal_setup_confirm_clear "¿Tas seguru de que quies desaniciar toles cerveces favorites?">
+<modal_setup_favorites_empty "Nun tienes cerveces favorites. Si quies poder veles nel mapa, amiéstales usando'l campu \"Amestar una cerveza favorita\".">
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+                El mapa llibre y editable de los bares y cerveces de grifu que se sirven.
+                Los datos vienen d'OpenStreetMap y toles collaboraciones devuélvense allí.
+                Disponible tamién na direición http://openbeermap.github.io/
+"""> 
+<why_is_geoloc_needed "Necesítase pa centrar el mapa nel llugar correutu">
 

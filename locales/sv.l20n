@@ -1,56 +1,102 @@
 /*
- OpenBeerMap translation file [en] | noemie.lehuby(at)gmail.com | MIT Licensed
+ OpenBeerMap translation file [sv] | noemie.lehuby(at)gmail.com | MIT Licensed
  translator: Peter Svensson | svensson3000{guesswhatcharacter}gmail.com
 */
 
 
 /* Home Page */
-<a_propos "<i></i>&nbsp; Om kartan"> 
+<nav_link_about "<i></i> Om kartan"> 
+<nav_link_news "<i></i> News"> /* TODO */
 
 /* Blabla */
-<hello_world "Välkommen till OpenBeerMap!"> 
-<about "<i></i>&nbsp; Om kartan"> 
-<about_contenu """
-                <p>Denna sida låter dig hitta ett ställe som serverar ditt favoritöl!</p>
-                <p>Om informationen är felaktig eller inkomplett så uppmuntras du att bidra.</p>
-                <p><a>Mer information om sidans ursprung finns på skaparens blogg.</p>
-"""> 
-<contact "<i></i>&nbsp;Kontakt"> 
-<contact_contenu "För att rapportera saknad ölsort, rapportera buggar, föreslå ändringar eller för att bara bjuda mig på en öl... "> 
-<credits "<i></i>&nbsp;Bidragare"> 
-<credits_contenu """
-                <p>Karta från <a> OpenStreetMap </a> och <a> Stamen Design</a>.</p>
-                <p>Information om pubar och öl från <a>OpenStreetMap</a> och dess bidragsgivare, via <a>Overpass API</a>.</p>
-                <p>Sidan skapad med kärlek och <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
-                <p>Källkoden återfinns på: <a>Github</a> </p>
-"""> 
-<repo_github "Github repository">
+<modal_about_title "Välkommen till OpenBeerMap!">
+<modal_about_title_about "<i></i> Om kartan">
+<modal_about_title_contribute "<i></i> Contribute"> /* TODO */
+<modal_about_title_credits "<i></i> Bidragare">
+<modal_about_category_bar "Add new bar"> /* TODO */
+<modal_about_content_bar "If a bar is not listed on OpenBeerMap, it must be added first in OpenStreetMap. <a>How?</a>"> /* TODO */
+<modal_about_content_bar_more """
+    <p>If a bar does not appear on OpenBeerMap, you can <a>file a note</a>. Report as much info as you can so that an OpenStreetMap contributor can add the bar to the map.</p>
+    <p>If you are an OpenStreetMap contributor, please make sure that the node or the way has one of the following tags:</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Restaurants (<code>amenity = restaurant</code>) and the other amenities may also be displayed if they have the <code>brewery = *</code> tag.</p>
+"""> /* TODO */
+<modal_about_category_content "Add content"> /* TODO */
+<modal_about_content_content "The simplest way to contribute is to add beers to the bars you know."> /* TODO */
+<modal_about_content_about """
+    <p>This application was built to help people find their favourite beer. If information is missing or erroneous, feel free to contribute by clicking on the <span><i></i> Edit bar information</span> button.</p>
+    <p>You will find more information on the genesis of this application in <a>Noémie Lehuby's blog</a> (in French).</p>
+    <p>You can also contribute by translating or improving this application. You will find more information about that in the <strong>Contribute</strong> tab.</p>
+"""> /* TODO */
+<modal_about_category_translate "Translate"> /* TODO */
+<modal_about_content_translate "Please visit <a>our diary</a> to learn how to help translate OpenBeerMap."> /* TODO */
+<modal_about_category_suggestions "Make suggestions"> /* TODO */
+<modal_about_content_suggestions "You can write an e-mail to <strong>openbeermap [at] gmail [dot] com</strong> if you have suggestions."> /* TODO */
+<modal_about_category_donate "Donate"> /* TODO */
+<modal_about_content_donate "If you want to pay us a beer"> /* TODO */
+<modal_about_category_code "Code"> /* TODO */
+<modal_about_content_moderate "If you are an OpenStreetMap contributor and a beer lover, you are very welcome to help moderating the beers added by the other OpenBeerMap users. Please <a>contact the team</a>."> /* TODO */
+<modal_about_category_moderate "Moderate"> /* TODO */
+<modal_about_content_code "If you are a Javascript developer or CSS designer, your are very welcome to fork <a>the project</a> on Github."> /* TODO */
+<modal_about_category_map "Map"> /* TODO */
+<modal_about_content_map "Map data by the <a>OpenStreetMap</a> contributors, tiles courtesy of <a>Stamen</a> / <a>CartoDB</a>."> /* TODO */
+<modal_about_category_data "Data"> /* TODO */
+<modal_about_content_data "Bar and beer data by the <a>OpenStreetMap</a> contributors, via the <a>OverPass API</a>."> /* TODO */
+<modal_about_category_contributors "Contributors"> /* TODO */
+<modal_about_category_contributors_list "and many more ..."> /* TODO */
 
 /* Edit Form */
-<titre_formulaire_edition "Ändra denna pub i OpenBeerMap"> 
-<nom_du_bar "Name"> 
-<liste_des_bieres "Fatöl finns"> 
-<champ_libre_bieres "Övriga öl">
-<wifi_oupas "WIFI"> 
-<wifi_oui "<input> JA">
-<wifi_non "<input> NEJ">
-<wifi_inconnu "<input> kanske"> 
-<opening_hours "Öppettider"> 
-<opening_hours_exemple "t.ex. Mo-Fr 08:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "t.ex. Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Spara"> 
-<bouton_OSM "Editera direkt till OpenStreetMap"> 
+<edit_title "Ändra denna pub i OpenBeerMap"> 
+<edit_loading "<i></i> Loading bar information"> /* TODO */
+<edit_label_name "Name">/* TODO */
+<edit_label_beers "Fatöl finns"> 
+<edit_label_add_beer "Add beer"> /* TODO */
+<edit_label_wifi "Wifi"> 
+<edit_label_wifi_yes "<input> JA">
+<edit_label_wifi_no "<input> NEJ">
+<edit_label_wifi_unknown "<input> kanske"> 
+<edit_label_opening_hours "Öppettider"> 
+<edit_label_happy_hours "Happy Hours"> 
+<edit_button_save "Spara"> 
+<edit_button_discard "Discard"> /* TODO */
+<edit_button_more "<i></i> ...">
+<edit_button_osm "Editera direkt till OpenStreetMap">
 
 /* Map elements */
-<attr_osm "Map data &copy; <a>OpenStreetMap</a> contributors"> 
-<attr_overpass "data via <a>Overpass API</a>"> 
-<locate_ok "Du är här"> 
-<locate_ko "Kunde inte hitta din plats - Ladda om sidan för att försöka igen"> /* does not work yet */
-<choix_bieres_tous "<img> Drycker!">
-<popup_nom "Namn"> 
-<popup_opening_hours "Öppettider"> 
-<popup_happy_hours "Happy hour-period"> 
-<popup_biere "Fatöl"> 
-<popup_edit "Lägg till information om detta ställe."> 
-<overpass_err "Du måste zooma in för att se fler serveringar.">
+<attribution_osm "&copy; <a>OpenStreetMap</a> contributors">
+<overpass_err "Du måste zooma in för att se fler serveringar"> /* TODO */
+<map_popup_name_unknown "Unknown name"> /* TODO */
+<map_popup_opening_hours "Öppettider">
+<map_popup_happy_hours "Happy hour-period">
+<map_popup_beer "Fatöl">
+<map_popup_edit "Lägg till information om detta ställe.">
+<map_popup_location "Du är här">
+
+/* Layers choice */
+<layers_overlays_all "All beers"> /* TODO */
+<layers_setup " Customize"> /* TODO */
+
+/* Setup */
+<modal_setup_title "Display settings"> /* TODO */
+<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
+<modal_setup_title_favorites "<i></i> Favourite beers"> /* TODO */
+<modal_setup_label_selected "Number of selected beers:"> /* TODO */
+<modal_setup_button_clear "<i></i> Clear list"> /* TODO */
+<modal_setup_button_save "Spara"> 
+<modal_setup_label_add "Add favourite beer"> /* TODO */
+<modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO */
+<modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+                The free and editable map of bars and served draft beer.
+                Data come from OpenStreetMap and all contributions are transfered to OSM.
+                It is also available at http://openbeermap.github.io/
+"""> /* TODO */
+<why_is_geoloc_needed "Needed to center the map at the right place."> /* TODO */

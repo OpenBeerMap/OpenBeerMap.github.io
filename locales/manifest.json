@@ -6,11 +6,14 @@
     "eo",
     "es",
     "fr",
+	"is",
     "it",
     "ja",
     "pl",
     "sv",
-    "cs"
+    "cs",
+    "hu",
+	"ru"
   ],
   "default_locale": "fr",
   "resources": [

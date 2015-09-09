@@ -1,56 +1,102 @@
 /*
  OpenBeerMap translation file [de] | noemie.lehuby(at)gmail.com | MIT Licensed
- translator: Philip Gillißen | guerda(at)freenet.de
+ translator: Philip Gillißen | guerda(at)freenet.de, Michael (michael-k)
 */
 
 
 /* Home Page */
-<a_propos "<i></i>&nbsp; Über"> 
+<nav_link_about "<i></i>&nbsp; Über">
+<nav_link_news "<i></i>&nbsp; Neuigkeiten">
 
 /* Blabla */
-<hello_world "Willkommen auf der OpenBeerMap!"> 
-<about "<i></i>&nbsp; Über"> 
-<about_contenu """
-                <p>Diese Seite ermöglicht es dir, eine Bar zu finden, die deine Lieblingsbiersorte serviert.</p>
-                <p>Wenn die verfügbaren Informationen falsch sind oder fehlen, zögere nicht und trage zum Datenbestand bei!</p>
-                <p><a>Weitere Informationen über den Ursprung dieser Seite findest du auf dem Blog des Autors.</a></p>
-"""> 
-<contact "<i></i>&nbsp;Kontakt"> 
-<contact_contenu "Um eine fehlende Biersorte einzutragen, melde einen Fehler, mach neue Vorschläge oder lade mich auf ein Bier ein..."> 
-<credits "<i></i>&nbsp;Mitwirkende"> 
-<credits_contenu """
-                <p>Karte von <a> OpenStreetMap </a> und <a> Stamen Design</a>.</p>
-                <p>Daten von Bars und Biersorten von <a>OpenStreetMap</a> und seinen Mitwirkenden, via <a>Overpass API</a>.</p>
-                <p>Diese Seite wurde erstellt mit Liebe und <a>BootLeaf</a> (<a>Bootstrap 3</a> + <a=>Leaflet</a>).</p>
-                <p>Quelltexte findest du hier: <a>Github</a> </p>
-"""> 
-<repo_github "Github Repository">
+<modal_about_title "Willkommen auf der OpenBeerMap!">
+<modal_about_title_about "<i></i> Über">
+<modal_about_title_contribute "<i></i> Mitarbeiten">
+<modal_about_title_credits "<i></i> Mitwirkende">
+<modal_about_content_about """
+    <p>Diese Anwendung wurde erstellt, um Leuten zu helfen ihre Lieblingsbiersorten zu finden. Sollten Informationen fehlen oder fehlerhaft sein, zögere nicht auf <span><i></i> Füge Informationen zu dieser Kneipe hinzu</span> zu klicken.</p>
+    <p>Mehr Informationen über die Entstehung dieser Anwendung findest du im <a>Blog von Noémie Lehuby</a> (auf Französisch).</p>
+    <p>Du kannst ebenfalls beitragen indem du diese Anwendung übersetzt oder verbesserst. Mehr Informationen dazu findest du im Tab <strong>Mitarbeiten</strong>.</p>
+""">
+<modal_about_category_content "Inhalt hinzufügen">
+<modal_about_content_content "Die einfachste Möglichkeit mitzuarbeiten ist, Biersorten zu den dir bekannten Kneipen hinzuzufügen.">
+<modal_about_category_bar "Eine neue Kneipe hinzufügen">
+<modal_about_content_bar "Falls eine Kneipe nicht auf OpenBeerMap zu sehen ist, muss sie erst bei OpenStreetMap hinzugefügt werden. <a>Wie?</a>">
+<modal_about_content_bar_more """
+    <p>Wenn eine Kneipe nicht auf OpenBeerMap auftaucht, kannst du einen <a>Hinweis erstellen</a>. Gebe so viele Informationen wie möglich an, damit ein Mitwirkender von OpenStreetMap die Kneipe zur Karte hinzufügen kann.</p>
+    <p>Falls Du ein Mitwirkender von OpenStreetMap bist, stelle bitte sicher, dass der Knoten oder der Weg einen der folgenden Tags aufweist:</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Restaurants (<code>amenity = restaurant</code>) und andere Einrichtungen werden ebenfalls angezeigt, sofern sie mit <code>brewery = *</code> getaggt sind.</p>
+""">
+<modal_about_category_translate "Übersetzen">
+<modal_about_content_translate "<a>Unser Tagebuch</a> zeigt dir, wie du helfen kannst OpenBeerMap zu übersetzen.">
+<modal_about_category_suggestions "Mache Vorschläge">
+<modal_about_content_suggestions "Solltest du Vorschläge haben, kannst du eine E-Mail an <strong>openbeermap [at] gmail [dot] com</strong> schreiben.">
+<modal_about_category_donate "Spende">
+<modal_about_content_donate "Falls du uns ein Bier ausgeben willst">
+<modal_about_category_code "Quelltext">
+<modal_about_content_code "Solltest du ein Javascript-Programmierer oder CSS-Designer sein, bist du herzlich dazu eingeladen <a>das Projekt</a> bei Github zu forken.">
+<modal_about_category_moderate "Moderiere">
+<modal_about_content_moderate "Falls du ein Mitwirkender von OpenStreetMap und ein Bierliebhaber bist, bist du herzlich willkommen dabei zu helfen die Biersorten zu moderieren, welche andere OpenStreetMap-Benutzer hinzugefügt haben. Bitte nimm <a>Kontakt mit dem Team</a> auf.">
+<modal_about_category_map "Karte">
+<modal_about_content_map "Kartendaten von den <a>OpenStreetMap</a>-Mitwirkenden, Kartenkacheln mit freundlicher Genehmigung von <a>Stamen</a> / <a>CartoDB</a>.">
+<modal_about_category_data "Daten">
+<modal_about_content_data "Kneipen- und Biersortendaten von den <a>OpenStreetMap</a>-Mitwirkenden durch das <a>OverPass API</a>.">
+<modal_about_category_contributors "Credits">
+<modal_about_category_contributors_list "und viele weitere …">
 
 /* Edit Form */
-<titre_formulaire_edition "Bearbeite diese Kneipe in OpenBeerMap"> 
-<nom_du_bar "Name"> 
-<liste_des_bieres "Gezapfte Biersorten"> 
-<champ_libre_bieres "Andere Biersorten">
-<wifi_oupas "WLAN"> 
-<wifi_oui "<input> ja">
-<wifi_non "<input> nein">
-<wifi_inconnu "<input> vielleicht"> 
-<opening_hours "Öffnungszeiten"> 
-<opening_hours_exemple "Beispiel: Mo-Fr 11:30-20:00"> 
-<happy_hours "Happy Hours"> 
-<happy_hours_exemple "Beispiel: Mo-Fr 18:30-20:00"> 
-<bouton_enregistrer "Speichern"> 
-<bouton_OSM "Kneipe in OpenStreetMap bearbeiten"> 
+<edit_title "Bearbeite diese Kneipe in OpenBeerMap"> 
+<edit_loading "<i></i> Kneipeninformationen werden geladen">
+<edit_label_name "Name"> 
+<edit_label_beers "Gezapfte Biersorten"> 
+<edit_label_add_beer "Biersorte hinzufügen">
+<edit_label_wifi "WLAN"> 
+<edit_label_wifi_yes "<input> ja">
+<edit_label_wifi_no "<input> nein">
+<edit_label_wifi_unknown "<input> vielleicht"> 
+<edit_label_opening_hours "Öffnungszeiten"> 
+<edit_label_happy_hours "Happy Hours"> 
+<edit_button_save "Speichern"> 
+<edit_button_discard "Verwerfen">
+<edit_button_more "<i></i> …">
+<edit_button_osm "Kneipe in OpenStreetMap bearbeiten">
 
 /* Map elements */
-<attr_osm "Kartendaten &copy; <a>OpenStreetMap</a> Mitwirkende"> 
-<attr_overpass "Daten via <a>Overpass API</a>"> 
-<locate_ok "Du bist hier"> 
-<locate_ko "Geolocation-Fehler - Lade die Seite neu, um es erneut zu versuchen"> /* does not work yet */
-<choix_bieres_tous "<img> Andere Biersorten">
-<popup_nom "Name"> 
-<popup_opening_hours "Öffnungszeiten"> 
-<popup_happy_hours "Happy Hours"> 
-<popup_biere "Gezapfte Biersorten"> 
-<popup_edit "Füge Informationen zu dieser Kneipe hinzu"> 
+<attribution_osm "&copy; <a>OpenStreetMap</a> Mitwirkende">
 <overpass_err "Du musst näher heranzoomen, um Kneipen angezeigt zu bekommen">
+<map_popup_name_unknown "Unbekannter Name">
+<map_popup_opening_hours "Öffnungszeiten">
+<map_popup_happy_hours "Happy Hours">
+<map_popup_beer "Gezapfte Biersorten">
+<map_popup_edit "Füge Informationen zu dieser Kneipe hinzu">
+<map_popup_location "Du bist hier">
+
+/* Layers choice */
+<layers_overlays_all "Alle Biersorten">
+<layers_setup " Anpassen">
+
+/* Setup */
+<modal_setup_title "Anzeigeeinstellungen">
+<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
+<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
+<modal_setup_title_favorites "<i></i> Lieblingsbiersorten">
+<modal_setup_label_selected "Anzahl der ausgewählten Biersorten:">
+<modal_setup_button_clear "<i></i> Liste leeren">
+<modal_setup_button_save "Speichern">
+<modal_setup_label_add "Lieblingsbiersorte hinzufügen">
+<modal_setup_confirm_clear "Bist du dir sicher alle deine Lieblingsbiersorten entfernen zu wollen?">
+<modal_setup_favorites_empty "Du hast keine Lieblingsbiersorten. Falls du sie auf der Karte anzeigen lassen willst, füge sie durch das Eingabefeld \"Lieblingsbiersorte hinzufügen\" hinzu.">
+<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+Freie Karte von Kneipen und deren Biersorten, die auch von dir bearbeitet werden kann!
+Die Daten stammen aus OpenStreetMap und jeglicher Beitrag hier wird dorthin zurückgespielt.
+Die Karte ist ebenfalls erreichbar unter http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Notwendig, um die Karte auf deinen aktuellen Ort zu zentrieren">
