@@ -22,9 +22,8 @@ function make_overlayAll(restaurant)
     if (typeof restaurant === 'undefined' || restaurant)
     {
         overpass_url += "node(BBOX)[amenity=restaurant]['brewery'!='none'];way(BBOX)[amenity=restaurant]['brewery'!='none'];"
-    }
-    overpass_url += ");out center;>;out;";
-    console.log("new !");
+        }
+    overpass_url += ");out center;>;out;"
     return overpass_url
 }
 function debug_draw_beer(url, icon)
@@ -48,10 +47,21 @@ function debug_draw_beer(url, icon)
                         {
                             pos = new L.LatLng(e.lat, e.lon);
                         }
+                        else
+                        {
+                            return
+                        }
                     }
-                    else
+                    else if (e.type === "way")
                     {//If element is a way or a relation, get its center
-                        pos = new L.LatLng(e.center.lat, e.center.lon);
+                        if (e.tags['amenity'])
+                        {
+                            var pos = new L.LatLng(e.center.lat, e.center.lon);
+                        }
+                        else
+                        {
+                            return
+                        }
                     }
                     var popup = this.instance._poiInfo(e.tags, e.id);
                     var icon_o = icon;
@@ -84,13 +94,27 @@ function draw_beer(query, icon, surcharge)
                 var pos;
                 if(e.tags !== undefined)
                 {
-                    if(e.type === "node" && e.tags['amenity'])
-                    {
-                        pos = new L.LatLng(e.lat, e.lon);
+                    if(e.type === "node")
+                    {//If element is a node
+                        if (e.tags['amenity'])
+                        {
+                            var pos = new L.LatLng(e.lat, e.lon);
+                        }
+                        else
+                        {
+                            return
+                        }
                     }
-                    else
-                    {
-                        pos = new L.LatLng(e.center.lat, e.center.lon);
+                    else if (e.type === "way")
+                    {//If element is a way or a relation, get its center
+                        if (e.tags['amenity'])
+                        {
+                            var pos = new L.LatLng(e.center.lat, e.center.lon);
+                        }
+                        else
+                        {
+                            return
+                        }
                     }
                     var content = "";
                     if(e.tags["name"])
