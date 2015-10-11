@@ -6,14 +6,7 @@
 function get_favorites()
 {
     var favoriteBeers = localStorage.getItem('favoriteBeers');
-    if(favoriteBeers == "")
-    {
-        return [];
-    }
-    else
-    {
-        return favoriteBeers.split(";");
-    }
+    return '' !== favoriteBeers ? favoriteBeers.split(";") : [];
 }
 
 // Onload func
@@ -48,11 +41,11 @@ function init_layers()
 	var favoriteBeers = get_favorites();
 	for(var i = 0 ; i < favoriteBeers.length ; i++)
 		{
-			element = favoriteBeers[i]
-			img = get_beer_img(element)
+			element = favoriteBeers[i];
+			img = get_beer_img(element);
         	beerList[element] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\""+element+"\",i];way(BBOX)[\"brewery\"~\""+element+"\",i]);out center;", "assets/img/beers/"+img, true);
     	}
-};
+}
 //Create the bar edit form in the sidebar
 function update_edit_list()
 {
@@ -63,7 +56,7 @@ function update_edit_list()
         htmlBeers += '<div class="checkbox"><input type="checkbox" name="editBeer" id="editBeersListLocal-' + i + '" value="' + favoriteBeers[i] + '"><label for="editBeersListLocal-' + i + '">' + favoriteBeers[i] + '</label></div>';
     }
     document.getElementById('editBeersListLocal').innerHTML = htmlBeers;
-};
+}
 
 // Display the localStorage beers items in the modal
 function update_setup_list()
@@ -85,7 +78,7 @@ function update_setup_list()
        });
     }
     update_edit_list();
-};
+}
 
 //add/remove beers items to localStorage
 function add_favorite(value)
@@ -95,7 +88,7 @@ function add_favorite(value)
 	if(favoriteBeers.indexOf(value) == -1)
     {
         favoriteBeers.push(value);
-		img = get_beer_img(value)
+		img = get_beer_img(value);
 		beerList[value] = draw_beer(overpassBaseUrl + "data=[out:json];(node(BBOX)[\"brewery\"~\"" + value + "\",i];way(BBOX)[\"brewery\"~\"" + value + "\",i]);out center;", "assets/img/beers/"+img, true);
     }
     else
@@ -119,7 +112,7 @@ function clear_favorites()
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
-		element = favoriteBeers[i]
+		element = favoriteBeers[i];
         if(map.hasLayer(beerList[element]))
         {
             map.removeLayer(beerList[element]);

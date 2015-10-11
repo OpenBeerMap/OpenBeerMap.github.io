@@ -34,12 +34,8 @@
             <script src="assets/3rdparty/js/html5shiv.js"></script>
             <script src="assets/3rdparty/js/respond.min.js"></script>
         <![endif]-->
-
-
-
         <script src="assets/3rdparty/js/l20n.min.js"></script>
     </head>
-    
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
@@ -51,7 +47,6 @@
                 <a class="navbar-brand" href="#">OpenBeerMap</a>
             </div>
             <div class="navbar-collapse collapse">
-
                 <ul class="nav navbar-nav">
                     <li><a class="modal-about-toggle" href="#" data-toggle="collapse" data-target=".navbar-collapse.in" data-l10n-id="nav_link_about"><i class="fa fa-question-circle"></i> About</a></li>
                     <li><a href="https://www.openstreetmap.org/user/OpenBeerMapContributor/diary" target='_blank' data-l10n-id="nav_link_news"><i class="fa fa-rss"></i> News</a></li>
@@ -98,7 +93,7 @@
                 </div>
                 <!-- Add available beer -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput" data-l10n-id="edit_label_add_beer">Add beer</label>
+                    <label class="col-md-4 control-label" for="editAddBeerInput" data-l10n-id="edit_label_add_beer">Add beer</label>
                     <div class="col-md-8">
                         <div class="input-group">
                             <input id="editAddBeerInput" name="editAddBeerInput" class="form-control" type="text">
@@ -174,7 +169,7 @@
                             <li class="active"><a href="#modalSetupBeersTab" data-toggle="tab" data-l10n-id="modal_setup_title_beers"><i class="fa fa-beer"></i> Beers</a></li>
                             <li><a href="#modalSetupTileLayerTab" data-toggle="tab" data-l10n-id="modal_setup_title_tilelayer"><i class="fa fa-globe"></i> TileLayer</a></li>
                         </ul>
-                    </div>                
+                    </div>
                     <div class="col-md-9">
                         <div class="tab-content" id="setupTabsContent">
                             <div class="tab-pane fade active in" id="modalSetupBeersTab">
@@ -216,13 +211,9 @@
                             <div class="tab-pane fade" id="modalSetupTileLayerTab">
                                 <ul>
                                     <a href="#" onclick="change_layer(osm_cartodb)"><img src="http://a.basemaps.cartocdn.com/light_all/17/66404/45097.png" alt="Positron" width="80" height="80"></a>
-                                
-                                    
-                                     <a href="#" onclick="change_layer(osm_stamen)"><img src="http://a.tile.stamen.com/toner-lite/17/66404/45097.png" alt="Stamen" width="80" height="80"></a>
-                                
+                                    <a href="#" onclick="change_layer(osm_stamen)"><img src="http://a.tile.stamen.com/toner-lite/17/66404/45097.png" alt="Stamen" width="80" height="80"></a>
                                 </ul>
-                                <a href="#" onclick="display_restaurant()" data-l10n-id="modal_setup_display_restaurant">Display restaurants ?</a>    
-                                
+                                <a href="#" onclick="display_restaurant()" data-l10n-id="modal_setup_display_restaurant">Display restaurants ?</a>
                             </div> <!-- end of modalSetupTileLayerTab -->
                         </div>
                     </div>
@@ -383,6 +374,7 @@
                     </div>
                 </div>
                 </div>
+                </div>
             </div>
             </div>
         </div>
@@ -419,6 +411,6 @@
           })();
         </script>
         <noscript><p><img src="//piwikobm.zz.mu/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->        
+        <!-- End Piwik Code -->
     </body>
 </html> 
