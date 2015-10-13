@@ -29,3 +29,4 @@
 * Андрей Гуляйкин / Andrei Guliaikin (guland2000)
 * Michael (michael-k)
 * Dan (dthgeek)
+* Michel Roca (mRoca)
