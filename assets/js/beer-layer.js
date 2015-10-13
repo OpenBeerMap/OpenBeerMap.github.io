@@ -6,26 +6,25 @@
 var overpassBaseUrl = "//overpass-api.de/api/interpreter?";
 var restaurant_switch = false;
 var overlayAll = draw_beer(overpassBaseUrl + make_overlayAll(restaurant_switch), "assets/img/beers/gray.png", false);
-var beerList = new Array();
+var beerList = [];
 
-function display_restaurant(display = true)
+function display_restaurant(display)
 {
-    if (display) {restaurant_switch = true;}
-    else {restaurant_switch = false;}
+    restaurant_switch = (typeof display === 'undefined' || display);
     map.removeLayer(overlayAll);
     refresh_layers_list();
     map.addLayer(overlayAll);
 }
 
-function make_overlayAll(restaurant = false)
+function make_overlayAll(restaurant)
 {
-    overpass_url = "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none'];"
-    if (restaurant)
-        {
+    var overpass_url = "data=[out:json];(node(BBOX)[amenity=bar]['brewery'!='none'];way(BBOX)[amenity=bar]['brewery'!='none'];node(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];way(BBOX)[amenity=cafe]['cuisine'!='coffee_shop']['brewery'!='none'];node(BBOX)[amenity=biergarten]['brewery'!='none'];node(BBOX)[microbrewery=yes]['brewery'!='none'];node(BBOX)['brewery']['brewery'!='none'];way(BBOX)['brewery']['brewery'!='none'];node(BBOX)[amenity=pub]['brewery'!='none'];way(BBOX)[amenity=pub]['brewery'!='none'];";
+    if (typeof restaurant === 'undefined' || restaurant)
+    {
         overpass_url += "node(BBOX)[amenity=restaurant]['brewery'!='none'];way(BBOX)[amenity=restaurant]['brewery'!='none'];"
-        }
-    overpass_url += ");out center;>;out;"
-    console.log("new !")
+    }
+    overpass_url += ");out center;>;out;";
+    console.log("new !");
     return overpass_url
 }
 function debug_draw_beer(url, icon)
@@ -42,22 +41,23 @@ function debug_draw_beer(url, icon)
                 this.instance._ids[e.id] = true;
                 if(e.tags !== undefined)
                 {
+                    var pos;
                     if(e.type === "node")
                     {//If element is a node
                         if (e.tags['amenity'])
                         {
-                            var pos = new L.LatLng(e.lat, e.lon);
+                            pos = new L.LatLng(e.lat, e.lon);
                         }
                     }
                     else
                     {//If element is a way or a relation, get its center
-                        var pos = new L.LatLng(e.center.lat, e.center.lon);
+                        pos = new L.LatLng(e.center.lat, e.center.lon);
                     }
                     var popup = this.instance._poiInfo(e.tags, e.id);
                     var icon_o = icon;
                     if (e.tags["brewery"]) {icon_o = "assets/img/beers/beer_empty.png"}
                     var myicon = L.icon({
-                        iconUrl: icon_o,
+                        iconUrl: icon_o
                     });
                     var marker = L.marker(pos, {icon: myicon}).bindPopup(popup);
                     this.instance.addLayer(marker);
@@ -81,18 +81,16 @@ function draw_beer(query, icon, surcharge)
                 if (e.id in this.instance._ids) return;
                 this.instance._ids[e.id] = true;
                 var icon_o = icon;
+                var pos;
                 if(e.tags !== undefined)
                 {
                     if(e.type === "node" && e.tags['amenity'])
                     {
-                        if (e.tags['amenity'])
-                        {
-                            var pos = new L.LatLng(e.lat, e.lon);
-                        }
+                        pos = new L.LatLng(e.lat, e.lon);
                     }
                     else
                     {
-                        var pos = new L.LatLng(e.center.lat, e.center.lon);
+                        pos = new L.LatLng(e.center.lat, e.center.lon);
                     }
                     var content = "";
                     if(e.tags["name"])
