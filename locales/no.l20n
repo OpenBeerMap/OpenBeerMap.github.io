@@ -1,0 +1,102 @@
+/*
+ OpenBeerMap translation file [no] | fredrik@0v.no | MIT Licensed
+*/
+
+/* Home Page */
+<nav_link_about "<i></i> Om"> 
+<nav_link_news "<i></i> Nyheter"> 
+
+/* About */
+<modal_about_title "Velkommen til OpenBeerMap!">
+<modal_about_title_about "<i></i> Om">
+<modal_about_title_contribute "<i></i> Bidra">
+
+<modal_about_title_credits "<i></i> Bidragsytere"> 
+
+<modal_about_category_bar "Ligg til en ny bar">
+<modal_about_content_bar "Hvis baren ikke er å finne i kartet må den bli lagt til i OpenStreetMap først. <a>How?</a>">
+<modal_about_content_bar_more """
+    <p>Hvis en bar ikke dukker opp i OpenBeerMap kan du <a>plassere et notat</a>. Rapporter så mye informasjon du vet om baren så en OpenStreetMap-bidragsyter kan ligge den til i kartet.</p>
+    <p>Hvis du er en OpenStreetMap-bidragsyter, vennligst sørg for at noden eller veien har en av de følgende tagene: </p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>Restauranter (<code>amenity = restaurant</code>) og andre steder kan også bli vist hvis de har taggen <code>brewery = *</code>.</p>
+""">
+<modal_about_category_content "Ligg til innhold">
+<modal_about_content_content "Den enkleste måten å bidra er å ligge til øl du vet en bar har.">
+<modal_about_content_about """
+    <p>Denne applikasjonen var laget for å hjelpe folk til å finne deres favorittøl. Hvis informasjon mangler eller er feil, kan du bidra ved å klikke på <span><i></i> Rediger en bar</span> knappen.</p>
+    <p>Du kan finne mer informasjon om skapelsen av denne applikasjonen i <a>Noémie Lehuby sin blogg</a> (på fransk).</p>
+    <p>Du kan også bidra med å oversette og forbedre denne applikasjonen. Du finner mer informasjon om det i <strong>Bidra</strong> fanen.</p>
+""">
+<modal_about_category_translate "Oversett">
+<modal_about_content_translate "Vennligst besøk <a>dagboken vår</a> for å lære om hvordan du kan hjelpe å oversette OpenBeerMap.">
+<modal_about_category_suggestions "Kom med forslag til forbedring">
+<modal_about_content_suggestions "Du kan sende en epost til <strong>openbeermap [at] gmail [dot] com</strong> hvis du har noen forslag til forbedringer av siden.">
+<modal_about_category_donate "Donere">
+<modal_about_content_donate "Hvis du vil kjøpe en øl til oss">
+<modal_about_category_code "Kildekode">
+<modal_about_content_moderate "Hvis du er en OpenStreetMap-bidragsyter og en ølelsker er du veldig velkommen til å hjelpe til med moderering av hvilke øl som blir lagt til av andre OpenBeerMapbrukere. Vennligst <a>kontakt utviklerlaget</a>.">
+<modal_about_category_moderate "Moderer">
+<modal_about_content_code "Hvis du er en Javascriptutvikler eller en CSSdesigner er du veldig velkommen til å forke <a>prosjektet</a> på Github.">
+<modal_about_category_map "Kart">
+<modal_about_content_map "Kartdata fra bidragsytere til <a>OpenStreetMap</a>, kartfliser gjengitt av <a>Stamen</a> / <a>CartoDB</a>.">
+<modal_about_category_data "Data">
+<modal_about_content_data "Bar og øldata fra <a>OpenStreetMap</a>, via <a>OverPass API</a>.">
+<modal_about_category_contributors "Bidragsytere">
+<modal_about_category_contributors_list "og mange flere ...">
+
+/* Edit Form */
+<edit_title "Barredigering"> 
+<edit_loading "<i></i> Laster barinformasjon"> 
+<edit_label_name "Navn"> 
+<edit_label_beers "Tilgjengelig øl på tapp"> 
+<edit_label_add_beer "Ligg til en øl">
+<edit_label_wifi "Wifi"> 
+<edit_label_wifi_yes "<input> Ja">
+<edit_label_wifi_no "<input> Nei">
+<edit_label_wifi_unknown "<input> Ukjent"> 
+<edit_label_opening_hours "Åpningstider"> 
+<edit_label_happy_hours "Happy hours"> 
+<edit_button_save "Lagre"> 
+<edit_button_discard "Forkast">
+<edit_button_more "<i></i> Mer">
+<edit_button_osm "Rediger via OpenStreetMap">
+
+/* Map elements */
+<attribution_osm "&copy; <a>OpenStreetMap</a> bidragsytere">
+<overpass_err "Zoom inn for å se barer">
+<map_popup_name_unknown "Ukjent navn">
+<map_popup_opening_hours "Åpningstider">
+<map_popup_happy_hours "Happy hours">
+<map_popup_beer "Øl på tapp">
+<map_popup_edit "Rediger barinformasjon">
+<map_popup_location "Du er her">
+
+/* Layers choice */
+<layers_overlays_all "Alle barer">
+<layers_setup "Tilpass">
+
+/* Setup */
+<modal_setup_title "Endre hva som vises">
+<modal_setup_title_beers "<i></i> Favourittøl">
+<modal_setup_title_tilelayer "<i></i> Flislag">
+<modal_setup_title_favorites "<i></i> Favourittøl">
+<modal_setup_label_selected "Antall valgte øl:">
+<modal_setup_button_clear "<i></i> Tøm liste">
+<modal_setup_button_save "Lukk">
+<modal_setup_label_add "Ligg til en favorittøl">
+<modal_setup_confirm_clear "Er du sikker på du vil slette alle dine favorittøl?">
+<modal_setup_favorites_empty "Du har ingen favorittøl. Hvis du vil vise de på kartet, må du ligge de til ved å bruke \"Ligg til en favorittøl\" feltet.">
+<modal_setup_display_restaurant "Vis restauranter?"> 
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+				Det åpne og redigerbare kartet over barer og øl på tapp.
+				Dataene kommer fra OpenBeerMap og alle bidrag overføres til OSM.
+				Kartet er også tilgjengelig på http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Trengs for å sentrere kartet på rett plass.">
