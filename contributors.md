@@ -30,3 +30,5 @@
 * Michael (michael-k)
 * Dan (dthgeek)
 * Michel Roca (mRoca)
+* tassoman
+* FredrikLindseth
