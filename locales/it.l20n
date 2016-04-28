@@ -1,12 +1,14 @@
 /*
  OpenBeerMap translation file [it] | noemie.lehuby(at)gmail.com | MIT Licensed
  translator: Michael Moroni | michael.moroni(at)mailoo.org
- translator: Tassoman | tassoman(at)gmail.com 
+ translator: Tassoman | tassoman(at)gmail.com
 */
 
 /* Home Page */
 <nav_link_about "<i></i> Informazioni">
 <nav_link_news "<i></i> Notizie">
+<nav_link_share_tw "<i></i> Condividi su Twitter">
+<nav_link_share_fb "<i></i> Condividi su Facebook">
 
 /* Blabla */
 <modal_about_title "Benvenuti su OpenBeerMap!">
@@ -65,11 +67,11 @@
 <edit_button_save "Salva">
 <edit_button_discard "Annulla">
 <edit_button_more "<i></i> ...">
-<edit_button_osm "Modifica direttamente su OpenStreetMap"> 
+<edit_button_osm "Modifica direttamente su OpenStreetMap">
 
 /* Map elements */
 <attribution_osm "© contributori di <a>OpenStreetMap</a>">
-<overpass_err "Ingrandisci la mappa per vedere i locali"> 
+<overpass_err "Ingrandisci la mappa per vedere i locali">
 <map_popup_name_unknown "Sconosciuto">
 <map_popup_opening_hours "Orario">
 <map_popup_happy_hours "Happy hour">

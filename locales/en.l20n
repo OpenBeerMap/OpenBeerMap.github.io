@@ -5,8 +5,10 @@
 
 
 /* Home Page */
-<nav_link_about "<i></i> About"> 
-<nav_link_news "<i></i> News"> 
+<nav_link_about "<i></i> About">
+<nav_link_news "<i></i> News">
+<nav_link_share_tw "Share on Twitter">
+<nav_link_share_fb "Share on Facebook">
 
 /* About */
 <modal_about_title "Welcome to OpenBeerMap!">
@@ -50,18 +52,18 @@
 <modal_about_category_contributors_list "and many more ...">
 
 /* Edit Form */
-<edit_title "Bar edition"> 
-<edit_loading "<i></i> Loading bar information"> 
-<edit_label_name "Name"> 
-<edit_label_beers "Available draft beers"> 
+<edit_title "Bar edition">
+<edit_loading "<i></i> Loading bar information">
+<edit_label_name "Name">
+<edit_label_beers "Available draft beers">
 <edit_label_add_beer "Add beer">
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Yes">
 <edit_label_wifi_no "<input> No">
-<edit_label_wifi_unknown "<input> Unknown"> 
-<edit_label_opening_hours "Opening hours"> 
-<edit_label_happy_hours "Happy hours"> 
-<edit_button_save "Save"> 
+<edit_label_wifi_unknown "<input> Unknown">
+<edit_label_opening_hours "Opening hours">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Save">
 <edit_button_discard "Discard">
 <edit_button_more "<i></i> More">
 <edit_button_osm "Edit via OpenStreetMap">
@@ -91,7 +93,7 @@
 <modal_setup_label_add "Add favourite beer">
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?">
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field.">
-<modal_setup_display_restaurant "Display restaurants?"> 
+<modal_setup_display_restaurant "Display restaurants?">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
