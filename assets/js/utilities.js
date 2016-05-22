@@ -1,6 +1,6 @@
 /*
  OpenBeerMap main.js | noemie.lehuby(at)gmail.com, Poilou | MIT Licensed
- contributors : nlehuby, Maxime Corteel, Poilou (labiloute)
+ contributors : nlehuby, Maxime Corteel, Poilou (labiloute), tassoman
 */
 
 //This method deletes a given value in an array
@@ -38,4 +38,25 @@ function localize(l10n, array)
             console.log("ERROR: cannot translate string " + array[i]);
         }
     }
+}
+
+// Share to social networks by tassoman
+function social_share(network)
+{
+    var intent;
+    switch (network)
+    {
+        case 'diaspora':
+            intent = 'https://sharetodiaspora.github.io/?title=Look%20at%20this%20OpenBeerMap!&url=';
+            break;
+        case 'twitter':
+            intent = 'https://twitter.com/intent/tweet?text=Look%20at%20this%20OpenBeerMap!&hashtags=openbeermap,beer,osm&url='
+            break;
+        case 'facebook':
+            intent = 'https://www.facebook.com/sharer/sharer.php?p[url]=';
+            break;
+        default:
+            return false;
+    }
+    window.location.assign(intent + document.URL);
 }
