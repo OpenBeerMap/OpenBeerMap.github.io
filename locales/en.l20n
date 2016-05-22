@@ -7,8 +7,6 @@
 /* Home Page */
 <nav_link_about "<i></i> About">
 <nav_link_news "<i></i> News">
-<nav_link_share_tw "Share on Twitter">
-<nav_link_share_fb "Share on Facebook">
 
 /* About */
 <modal_about_title "Welcome to OpenBeerMap!">
