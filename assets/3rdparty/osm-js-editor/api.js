@@ -124,7 +124,7 @@ function xml_to_string(xml_node)
 
 function prepare_put_changeset(changeset_comment)
 {
-    changeset_comment = changeset_comment || "Modification avec OBM_js_editor";
+    changeset_comment = changeset_comment || "OpenBeerMap - mise à jour d'un bar";
     return "<osm><changeset><tag k='created_by' v='OpenBeerMap javascript editor'/><tag k='comment' v='" + changeset_comment + "'/></changeset></osm>"
 }
 
