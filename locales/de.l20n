@@ -58,7 +58,7 @@
 <edit_label_wifi "WLAN"> 
 <edit_label_wifi_yes "<input> ja">
 <edit_label_wifi_no "<input> nein">
-<edit_label_wifi_unknown "<input> vielleicht"> 
+<edit_label_wifi_unknown "<input> unbekannt"> 
 <edit_label_opening_hours "Öffnungszeiten"> 
 <edit_label_happy_hours "Happy Hours"> 
 <edit_button_save "Speichern"> 
