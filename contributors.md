@@ -32,3 +32,4 @@
 * Michel Roca (mRoca)
 * tassoman
 * FredrikLindseth
+* Florian Sternke (dalori)

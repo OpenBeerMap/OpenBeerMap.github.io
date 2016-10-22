@@ -58,7 +58,7 @@
 <edit_label_wifi "WLAN"> 
 <edit_label_wifi_yes "<input> ja">
 <edit_label_wifi_no "<input> nein">
-<edit_label_wifi_unknown "<input> vielleicht"> 
+<edit_label_wifi_unknown "<input> unbekannt"> 
 <edit_label_opening_hours "Öffnungszeiten"> 
 <edit_label_happy_hours "Happy Hours"> 
 <edit_button_save "Speichern"> 
@@ -82,8 +82,8 @@
 
 /* Setup */
 <modal_setup_title "Anzeigeeinstellungen">
-<modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
-<modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
+<modal_setup_title_beers "<i></i> Lieblingsbiere">
+<modal_setup_title_tilelayer "<i></i> Kartenhintergrund">
 <modal_setup_title_favorites "<i></i> Lieblingsbiersorten">
 <modal_setup_label_selected "Anzahl der ausgewählten Biersorten:">
 <modal_setup_button_clear "<i></i> Liste leeren">
@@ -91,7 +91,7 @@
 <modal_setup_label_add "Lieblingsbiersorte hinzufügen">
 <modal_setup_confirm_clear "Bist du dir sicher alle deine Lieblingsbiersorten entfernen zu wollen?">
 <modal_setup_favorites_empty "Du hast keine Lieblingsbiersorten. Falls du sie auf der Karte anzeigen lassen willst, füge sie durch das Eingabefeld \"Lieblingsbiersorte hinzufügen\" hinzu.">
-<modal_setup_display_restaurant "Display restaurants?"> /* TODO */
+<modal_setup_display_restaurant "Restaurants anzeigen?">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
