@@ -148,12 +148,7 @@ function send_form_content(form)
 	//if needed, send modified XML to OSM
     if(send != 0)
     {
-        //Open changeset
-        changeset_id = put_changeset();
-        //Send new node/way
-        put_node_or_way(osmXml, changeset_id, osmId, osmType);
-        //Close changeset
-        close_changeset(changeset_id);
+        send_data_to_osm(osmXml, osmId, osmType, "OpenBeerMap - modification de bar")
     }
     //Update popup content
     $(".leaflet-popup:visible .mapPopupBeersList").text(brewery.replace(/;/g, ", "));
