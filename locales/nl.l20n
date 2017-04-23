@@ -1,0 +1,103 @@
+/*
+ OpenBeerMap translation file [nl] | noemie.lehuby(at)gmail.com | MIT Licensed
+ translator: hugo(at)sutherland-lutgen.be
+*/
+
+
+/* Home Page */
+<nav_link_about "<i></i> Over">
+<nav_link_news "<i></i> Nieuws">
+
+/* About */
+<modal_about_title "Welkom op OpenBeerMap !">
+<modal_about_title_about "<i></i> Over">
+<modal_about_title_contribute "<i></i> Bijdragen">
+<modal_about_title_credits "<i></i> Crédits">
+<modal_about_category_bar "Voeg een café toe">
+<modal_about_content_bar "Indien een café niet op OpenBeerMap verschijnt, moet het eerst nog in OpenStreetMap toegevoegd worden. <a>Hoe doe je dat ?</a>">
+<modal_about_content_bar_more """
+    <p>Als je je café niet kunt vinden, kunt u <a>Een notitie maken</a>. Verzamel zoveel mogelijk informatie zodat een medewerker van OpenStreetMap deze kan toevoegen.</p>
+    <p>Bent U medewerker van OpenStreetMap, controleer zorgvuldig of de  que le noeud ou le chemin créé contienne l'un des tags suivants :</p>
+    <ul>
+        <li><code>amenity = bar</code></li>
+        <li><code>amenity = biergarten</code></li>
+        <li><code>amenity = pub</code></li>
+    </ul>
+    <p>De restaurants (<code>amenity = restaurant</code>) et d'autres lieux peuvent aussi apparaitre à condition qu'ils aient le tag <code>brewery = *</code>.</p>
+""">
+<modal_about_category_content "Gegevens toevoegen">
+<modal_about_content_content "De makkelijkste manier om bij te dragen is het toevoegen van bier in de cafés die je kent.">
+<modal_about_content_content_more "<i></i> U vindt uw café niet ?">
+<modal_about_content_about """
+    <p>Deze applicatie stelt u in staat om uit te vinden waar uw favoriete bier geschonken wordt. Indien de informatie onvolledig of onjuist is, dan kunt u helpen door te klikken op de knop<span><i></i> Info over dit café toevoegen</span>.</p>
+    <p>U vindt meer informatie over deze app <a>op de blog van Noémie Lehuby</a>.</p>
+    <p>U kunt ook een bijdrage leveren door het vertalen of te verbeteren van deze toepassing. Voor meer informatie, zie het tabblad<strong>Bijdragen</strong>.</p>
+""">
+<modal_about_category_translate "Vertalen">
+<modal_about_content_translate "Om te ontdekken hoe je OpenBeerMap mee kunt vertalen, <a>bezoek dit blog artikel</a> (in het Engels). ">
+<modal_about_category_suggestions "Suggesties doen">
+<modal_about_content_suggestions "U kunt een e-mail schrijven aan <strong>openbeermap [at] gmail [dot] com</strong> Indien u suggesties hebt.">
+<modal_about_category_donate "Donneren">
+<modal_about_content_donate "Als je ons een biertje wilt betalen">
+<modal_about_category_code "Coder">
+<modal_about_content_moderate "Als U bijdragen levert aan OpenStreetMap en bierliefhebber bent, sluit je dan aan bij onze ploeg om de gegeven info van gebruikers vanOpenBeerMap na te zien. <a>Neem contact op met een moderator</a>.">
+<modal_about_category_moderate "Moderator">
+<modal_about_content_code "Ben jij Javascript ontwikkelaar of CSS ontwerper, dan ben je uitgenodigd om om handen te gebruiken. <a>Bezoek Github</a>.">
+<modal_about_category_map "Kaart">
+<modal_about_content_map "De kaartgegevens zijn afkomstig van medewerkers van <a>OpenStreetMap</a>, les tuiles de <a>Stamen</a> / <a>CartoDB</a>.">
+<modal_about_category_data "Gegevens">
+<modal_about_content_data "De gegevens over de cafés en de bieren zijn verkregen van <a>OpenStreetMap</a>, via l'API <a>OverPass</a>.">
+<modal_about_category_contributors "Bijdragers">
+<modal_about_category_contributors_list "en vele anderen...">
+
+/* Edit Form */
+<edit_title "Bewerken van een café">
+<edit_loading "<i></i> Gegevens van het café aanpassen">
+<edit_label_name "Naam">
+<edit_label_beers "Aangeboden bieren">
+<edit_label_add_beer "Voeg een bier toe">
+<edit_label_wifi "Wifi">
+<edit_label_wifi_yes "<input> Ja">
+<edit_label_wifi_no "<input>  Neen">
+<edit_label_wifi_unknown "<input>Misschien">
+<edit_label_opening_hours "Openingsuren">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Gegevens opslaan">
+<edit_button_discard "Annuleren">
+<edit_button_more "<i></i>">
+<edit_button_osm "Aanpassen in OpenStreetMap">
+
+/* Map elements */
+<attribution_osm "&copy; bedankt om bij te dragen aan <a>OpenStreetMap</a>">
+<overpass_err "Zoom in om cafés te zien">
+<map_popup_name_unknown "Naam onbekend">
+<map_popup_opening_hours "Openingsuren">
+<map_popup_happy_hours "Happy hours">
+<map_popup_beer "Aangeboden bieren">
+<map_popup_edit "Gegevens opslaan">
+<map_popup_location "U bent hier">
+
+/* Layers choice */
+<layers_overlays_all "Alle café's">
+<layers_setup " Aanpassen">
+
+/* Setup */
+<modal_setup_title "Aanpassen voorkeuren">
+<modal_setup_title_beers "<i></i> Voorkeurbieren">
+<modal_setup_title_tilelayer "<i></i> Basiskaart">
+<modal_setup_title_favorites "<i></i> Voorkeur bieren">
+<modal_setup_label_selected "Aantal geselecteerde bieren :">
+<modal_setup_button_clear "<i></i> Alles wissen">
+<modal_setup_button_save "Sluiten">
+<modal_setup_button_discard "Annuleren">
+<modal_setup_label_add "Voeg voorkeur bier toe">
+<modal_setup_confirm_clear "Bent zeker dat u al uw favoriete bieren wilt verwijderen ?">
+<modal_setup_favorites_empty "Je hebt geen favoriete bier. Om een bier op de kaart te toene, voeg er één toe met het veld \"Voeg voorkeur bier toe\".">
+<modal_setup_display_restaurant "Toon restaurants ?">
+
+/* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
+<app_description """
+                De vrije en bewerkbare kaart van cafés en hun aangeboden bieren. De gegevens komen van OpenStreetMap en zijn onder voorbehoud.
+Ook beschikbaar op http://openbeermap.github.io/
+""">
+<why_is_geoloc_needed "Noodzakelijk om de kaart op de juiste plaats te centreren.">
