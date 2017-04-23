@@ -15,7 +15,8 @@
     "cs",
     "hu",
     "ru",
-    "no"
+    "no",
+    "nl"
   ],
   "default_locale": "fr",
   "resources": [
