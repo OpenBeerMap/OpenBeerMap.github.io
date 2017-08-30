@@ -77,6 +77,9 @@
         <div id="sidebar">
             <a class="close">&times;</a>
             <h2 data-l10n-id="edit_title">Bar edition</h2>
+            <div class="alert alert-danger" role="alert" id="alert_no_auth">You need to authenticate with your OSM account to edit this bar. <button id='OSM_authenticate'>Login</button></div>
+            <div class="alert alert-success" role="alert" id="alert_auth">You are logged as <span id=OSM_user>...</span>. <a id='OSM_logout'>Log out</a>
+            </div>
             <div id="editLoading" data-l10n-id="edit_loading">
                 <i class="fa fa-spinner fa-spin"></i> Loading bar information
             </div>
