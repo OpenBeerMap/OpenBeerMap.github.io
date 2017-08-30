@@ -34,3 +34,4 @@
 * FredrikLindseth
 * Florian Sternke (dalori)
 * Hugosu
+* tassoman
