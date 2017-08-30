@@ -8,7 +8,7 @@ var tilelayer_properties = {
     opacity: 0.7,
     attribution: '<span data-l10n-id="attribution_osm">Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors</span>'
     }
-    
+
 var osm_stamen = new L.TileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', tilelayer_properties);
 var osm_cartodb = new L.TileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', tilelayer_properties);
 var tile_layer_list = [osm_cartodb, osm_stamen]
@@ -78,11 +78,11 @@ function refresh_layers_list()
     {
         layersList.removeFrom(map);
     }
-        
+
     var overlayMaps = {
         "<span class='image'><img src='assets/img/beers/blue.png'></span><span data-l10n-id='layers_overlays_all'>All bars</span>": overlayAll
     };
-    
+
     var favoriteBeers = get_favorites();
     for(var i = 0 ; i < favoriteBeers.length ; i++)
     {
@@ -100,7 +100,7 @@ function refresh_layers_list()
     .click(function(){
         $('#modalSetup').modal('show');
     });
-    
+
     $(layersList['_separator']).html(button)
                          .insertAfter($(layersList['_separator']).next());
 
@@ -111,7 +111,7 @@ function refresh_layers_list()
 
 /* Refresh controler on page load */
 refresh_layers_list();
-map.addLayer(overlayAll); 
+map.addLayer(overlayAll);
 
 /* Indicate when zoom level is to low to display bars */
 map.zoomIndicator._container.innerHTML = "<span data-l10n-id='overpass_err'>Zoom zoom zoom ! </span>";
@@ -132,7 +132,7 @@ $(document).ready(function(){
             $(this).parent().removeClass("active");
         }
     });
-    
+
     $(".modal-about-toggle").click(function(e){
         e.preventDefault();
         $("#modalAbout").modal("show");
@@ -144,4 +144,51 @@ $(document).ready(function(){
     $("#modalAboutOSMToggle").click(function(){
        $("#modalAboutOSM").toggle();
     });
+    update_auth_visual_return();
 });
+
+function show_OSM_username() {
+    auth.xhr({
+        method: 'GET',
+        path: '/api/0.6/user/details'
+    }, OSM_user_name_done);
+}
+function OSM_user_name_done(err, res) {
+    if (err) {
+        console.log(err);
+        alert("Échec autour de l'authentification OSM")
+        return;
+    }
+    var u = res.getElementsByTagName('user')[0];
+    document.getElementById('OSM_user').innerHTML = u.getAttribute('display_name');
+
+}
+
+function update_auth_visual_return(){
+    //affichage des bandeaux d'avertissement
+    if (auth.authenticated())
+    {
+        document.getElementById('alert_no_auth').style.display = 'none';
+        document.getElementById('alert_auth').style.display = 'block';
+        document.getElementById('editButtonSave').className += "btn btn-primary";
+        show_OSM_username();
+    }
+    else
+    {
+        document.getElementById('alert_auth').style.display = 'none';
+        document.getElementById('alert_no_auth').style.display = 'block';
+        document.getElementById('editButtonSave').className += " disabled";
+    }
+}
+
+document.getElementById('OSM_authenticate').onclick = function() {
+    auth.authenticate(function() {
+            console.log("authenfication terminée")
+            update_auth_visual_return()
+        });
+};
+document.getElementById('OSM_logout').onclick = function() {
+    auth.logout();
+    console.log("déconnexion en cours");
+    update_auth_visual_return()
+};

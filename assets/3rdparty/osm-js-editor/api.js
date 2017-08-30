@@ -4,7 +4,9 @@
 
 var auth = osmAuth({
     oauth_secret: 'lpPYPdMQ9hYQ1SQSScZQaTK3b69UbJIwwewnKDbJ',
-    oauth_consumer_key: 'WWlDytmah8FbawPuxl49XbuByAmMW6WR9bAOrGtE'
+    oauth_consumer_key: 'WWlDytmah8FbawPuxl49XbuByAmMW6WR9bAOrGtE',
+    landing: 'land.html',
+    url: 'https://www.openstreetmap.org'
 });
 
 function basic_auth()
