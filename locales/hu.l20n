@@ -24,14 +24,14 @@
     </ul>
     <p>Éttermek (<code>amenity = restaurant</code>) és egyéb szolgáltató helyek is megjelennek, hogyha van <code>brewery = *</code> tagjuk.</p>
 """>
-<modal_about_category_content "Tartalom hozzáadása"> 
+<modal_about_category_content "Tartalom hozzáadása">
 <modal_about_content_content "A legegyszerűbb mód, hogyha hozzáadod az általad ismert söröket és kocsmákat.">
 <modal_about_content_content_more "<i></i> Nem találod a kocsmádat?">
 <modal_about_content_about """
     <p>Az alkalmazás azért született, hogy segítsen az embereknek megtalálni a kedvenc sörüket. Ha az információ hiányos vagy hibás, nyugodtan szerkeszd a <span><i></i> Kocsma információ szerkesztése</span> gombra kattintva.</p>
     <p><a>Noémie Lehuby blog</a>ján (franciául) több információt találsz az alkalmazás születésével kapcsolatban.</p>
     <p>Segíthetsz fordítással és az alkalmazás javításával is. Bővebb információt a <strong>Közreműködés</strong> fülre kattintva találsz.</p>
-"""> 
+""">
 <modal_about_category_translate "Fordítás">
 <modal_about_content_translate "Kérünk látogasd meg <a>a naplónkat</a>, hogy megtudd hogy tudsz segíteni a fordításban.">
 <modal_about_category_suggestions "Javaslat hozzáadása">
@@ -51,6 +51,9 @@
 
 /* Formulaire d'édition */
 <edit_title "Szerkeszd ezt a kocsmát OpenBeerMap-en">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_loading "<i></i> Kocsma adatainak betöltése">
 <edit_label_name "Név">
 <edit_label_beers "Elérhető csapolt sörök">
@@ -62,9 +65,9 @@
 <edit_label_opening_hours "Nyitvatartási idő">
 <edit_label_happy_hours "Boldog óra">
 <edit_button_save "Mentés">
-<edit_button_discard "Mégse"> 
+<edit_button_discard "Mégse">
 <edit_button_more "<i></i> ...">
-<edit_button_osm "Szerkesztés közvetlenül az OpenStreetMap-en"> 
+<edit_button_osm "Szerkesztés közvetlenül az OpenStreetMap-en">
 
 /* Éléments de la carte */
 <attribution_osm "A térképi adatokért köszönet az <a>OpenStreetMap</a> szerkesztőinek">
@@ -77,20 +80,20 @@
 <map_popup_location "Itt vagy.">
 
 /* Layers choice */
-<layers_overlays_all "Minden sör"> 
-<layers_setup " Testreszabás"> 
+<layers_overlays_all "Minden sör">
+<layers_setup " Testreszabás">
 
 /* Setup */
-<modal_setup_title "Beállítások"> 
+<modal_setup_title "Beállítások">
 <modal_setup_title_beers "<i></i> Kedvenc sörök">
 <modal_setup_title_tilelayer "<i></i> Réteg">
-<modal_setup_title_favorites "<i></i> Kedvenc sörök"> 
-<modal_setup_label_selected "Kiválasztott sörök száma:"> 
-<modal_setup_button_clear "<i></i> Lista törlése"> 
+<modal_setup_title_favorites "<i></i> Kedvenc sörök">
+<modal_setup_label_selected "Kiválasztott sörök száma:">
+<modal_setup_button_clear "<i></i> Lista törlése">
 <modal_setup_button_save "Mentés">
-<modal_setup_label_add "Kedvenc sör hozzáadása"> 
+<modal_setup_label_add "Kedvenc sör hozzáadása">
 <modal_setup_confirm_clear "Biztos, hogy szeretnéd törölni az összes kedvenc sörödet?">
-<modal_setup_favorites_empty "Nincs még kedvenc söröd. Ha meg szeretnéd jeleníteni őket a térképen, add hozzá őket a \"Kedvenc sör hozzáadása\" mező használatával."> 
+<modal_setup_favorites_empty "Nincs még kedvenc söröd. Ha meg szeretnéd jeleníteni őket a térképen, add hozzá őket a \"Kedvenc sör hozzáadása\" mező használatával.">
 <modal_setup_display_restaurant "Éttermek megjelenítése?">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
@@ -98,5 +101,5 @@
                 Ingyenes és szerkeszthető térkép a kocsmákról és a felszolgált sörökről.
                 Az adatok az OpenStreetMap-ből származnak és hozzáadott/módosított információ is oda kerül.
                 Elérhető a http://openbeermap.github.io/ címen is.
-"""> 
+""">
 <why_is_geoloc_needed "Szükséges, hogy a térkép közepét a tartózkodási helyedre tudjuk igazítani.">

@@ -53,6 +53,9 @@
 /* Edit Form */
 <edit_title "Modifica questo locale">
 <edit_loading "<i></i> Caricamento informazioni">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_label_name "Nome">
 <edit_label_beers "Birre alla spina disponibili">
 <edit_label_add_beer "Aggiungi birra">
