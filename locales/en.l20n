@@ -52,6 +52,9 @@
 /* Edit Form */
 <edit_title "Bar edition">
 <edit_loading "<i></i> Loading bar information">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>">
+<oauth_alert_auth "You are logged as ">
+<oauth_alert_logout "<a>Log out</a>">
 <edit_label_name "Name">
 <edit_label_beers "Available draft beers">
 <edit_label_add_beer "Add beer">

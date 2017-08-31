@@ -3,15 +3,15 @@
 */
 
 /* Home Page */
-<nav_link_about "<i></i> Om"> 
-<nav_link_news "<i></i> Nyheter"> 
+<nav_link_about "<i></i> Om">
+<nav_link_news "<i></i> Nyheter">
 
 /* About */
 <modal_about_title "Velkommen til OpenBeerMap!">
 <modal_about_title_about "<i></i> Om">
 <modal_about_title_contribute "<i></i> Bidra">
 
-<modal_about_title_credits "<i></i> Bidragsytere"> 
+<modal_about_title_credits "<i></i> Bidragsytere">
 
 <modal_about_category_bar "Ligg til en ny bar">
 <modal_about_content_bar "Hvis baren ikke er å finne i kartet må den bli lagt til i OpenStreetMap først. <a>How?</a>">
@@ -50,18 +50,21 @@
 <modal_about_category_contributors_list "og mange flere ...">
 
 /* Edit Form */
-<edit_title "Barredigering"> 
-<edit_loading "<i></i> Laster barinformasjon"> 
-<edit_label_name "Navn"> 
-<edit_label_beers "Tilgjengelig øl på tapp"> 
+<edit_title "Barredigering">
+<edit_loading "<i></i> Laster barinformasjon">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
+<edit_label_name "Navn">
+<edit_label_beers "Tilgjengelig øl på tapp">
 <edit_label_add_beer "Ligg til en øl">
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Ja">
 <edit_label_wifi_no "<input> Nei">
-<edit_label_wifi_unknown "<input> Ukjent"> 
-<edit_label_opening_hours "Åpningstider"> 
-<edit_label_happy_hours "Happy hours"> 
-<edit_button_save "Lagre"> 
+<edit_label_wifi_unknown "<input> Ukjent">
+<edit_label_opening_hours "Åpningstider">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Lagre">
 <edit_button_discard "Forkast">
 <edit_button_more "<i></i> Mer">
 <edit_button_osm "Rediger via OpenStreetMap">
@@ -91,7 +94,7 @@
 <modal_setup_label_add "Ligg til en favorittøl">
 <modal_setup_confirm_clear "Er du sikker på du vil slette alle dine favorittøl?">
 <modal_setup_favorites_empty "Du har ingen favorittøl. Hvis du vil vise de på kartet, må du ligge de til ved å bruke \"Ligg til en favorittøl\" feltet.">
-<modal_setup_display_restaurant "Vis restauranter?"> 
+<modal_setup_display_restaurant "Vis restauranter?">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """

@@ -51,6 +51,9 @@
 
 /* Edit Form */
 <edit_title "Editace na OpenBeerMap">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_loading "<i></i> Loading bar information"> /* TODO */
 <edit_label_name "Název">
 <edit_label_beers "Točená piva">
@@ -64,7 +67,7 @@
 <edit_button_save "Uložit">
 <edit_button_discard "Discard"> /* TODO */
 <edit_button_more "<i></i> More"> /* TODO */
-<edit_button_osm "Editovat na OpenStreetMap"> 
+<edit_button_osm "Editovat na OpenStreetMap">
 
 /* Map elements */
 <attribution_osm "Mapová data &copy; přispěvatelé <a>OpenStreetMap</a>">

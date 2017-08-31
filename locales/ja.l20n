@@ -5,7 +5,7 @@
 
 
 /* 初期ページ */
-<nav_link_about "<i></i> このページについて"> 
+<nav_link_about "<i></i> このページについて">
 <nav_link_news "<i></i> News"> /* TODO */
 
 /* いろいろ */
@@ -51,18 +51,21 @@
 
 
 /* 編集フォーム */
-<edit_title "OpenBeerMapでビアパブを編集"> 
+<edit_title "OpenBeerMapでビアパブを編集">
 <edit_loading "<i></i> Loading bar information"> /* TODO */
-<edit_label_name "店名"> 
-<edit_label_beers "樽生ビール"> 
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
+<edit_label_name "店名">
+<edit_label_beers "樽生ビール">
 <edit_label_add_beer "Add beer"> /* TODO */
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> あり">
 <edit_label_wifi_no "<input> なし">
-<edit_label_wifi_unknown "<input> 不明"> 
-<edit_label_opening_hours "開店時間"> 
-<edit_label_happy_hours "ハッピーアワー"> 
-<edit_button_save "投稿"> 
+<edit_label_wifi_unknown "<input> 不明">
+<edit_label_opening_hours "開店時間">
+<edit_label_happy_hours "ハッピーアワー">
+<edit_button_save "投稿">
 <edit_button_discard "Discard"> /* TODO */
 <edit_button_more "<i></i> ...">
 <edit_button_osm "OpenStreetMapを直接編集">

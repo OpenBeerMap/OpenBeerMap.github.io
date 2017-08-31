@@ -5,8 +5,8 @@
 
 
 /* Home Page */
-<nav_link_about "<i></i> Um"> 
-<nav_link_news "<i></i> Fréttir">  
+<nav_link_about "<i></i> Um">
+<nav_link_news "<i></i> Fréttir">
 
 /* About */
 <modal_about_title "Velkomin á heimasíðu OpenBeerMap!">
@@ -50,18 +50,21 @@
 <modal_about_category_contributors_list "and many more ..."> /* TODO */
 
 /* Edit Form */
-<edit_title "Breyttu upplýsingum fyrir þennan bar á OpenBeerMap"> 
+<edit_title "Breyttu upplýsingum fyrir þennan bar á OpenBeerMap">
 <edit_loading "<i></i> Loading bar information"> /* TODO */
-<edit_label_name "Nafn"> 
-<edit_label_beers "Bjór á krana"> 
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
+<edit_label_name "Nafn">
+<edit_label_beers "Bjór á krana">
 <edit_label_add_beer "Add beer"> /* TODO */
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> já">
 <edit_label_wifi_no "<input> nei">
-<edit_label_wifi_unknown "<input> kannski"> 
-<edit_label_opening_hours "Opnunartímar"> 
-<edit_label_happy_hours "Happy hours"> 
-<edit_button_save "Vista"> 
+<edit_label_wifi_unknown "<input> kannski">
+<edit_label_opening_hours "Opnunartímar">
+<edit_label_happy_hours "Happy hours">
+<edit_button_save "Vista">
 <edit_button_discard "Henda">
 <edit_button_more "<i></i> ...">
 <edit_button_osm "Breyta beint frá OpenStreetMap">

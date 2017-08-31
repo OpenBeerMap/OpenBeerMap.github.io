@@ -22,8 +22,8 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 	<p>Рестораны (ресторан) и другие питейные заведения также могут отображаться, если в их меню есть brewery = * tag.</p>
 """> /*TODO */
 <modal_about_category_content "Добавить содержание">
-<modal_about_content_content "Простейший способ помочь/поддержать нас это внести данные о питейном заведении которое вы знаете."> 
-<modal_about_content_content_more "<i></i> Не можете найти бар?"> 
+<modal_about_content_content "Простейший способ помочь/поддержать нас это внести данные о питейном заведении которое вы знаете.">
+<modal_about_content_content_more "<i></i> Не можете найти бар?">
 <modal_about_content_about """
 <p>Это приложение было разработано, чтобы помочь людям найти своё любимое пиво. Если информация ошибочна или попросту отсутствует, не стесняйтесь внести свой вклад, нажав на <span><i></i> Редактировать информацию о баре</span> button.</p>
 <p>Вы найдете более подробную информацию о происхождении этого приложения <a>здесь</a> (на Французком языке).</p>
@@ -49,9 +49,12 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 /* Заполните форму */
 <edit_title "Питейное заведение">
 <edit_loading "<i></i> Loading bar information"> /* TODO */
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_label_name "Название">
 <edit_label_beers "Наличие разливного пива">
-<edit_label_add_beer "Добавить пиво"> 
+<edit_label_add_beer "Добавить пиво">
 <edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> Да">
 <edit_label_wifi_no "<input> Нет">
@@ -60,13 +63,13 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <edit_label_happy_hours "Скидки/Акции">
 <edit_button_save "Сообщить">
 <edit_button_discard "Сброс">
-<edit_button_more "<i></i>"> 
+<edit_button_more "<i></i>">
 <edit_button_osm "Редактировать прямо на картах OpenStreetMap">
 
 /* Элементы карты */
 <attribution_osm "&copy; благодарим участников <a>OpenStreetMap</a>">
-<overpass_err "Используйте функцию «Увеличения» для просмотра бóльшего количества пивных заведений"> 
-<map_popup_name_unknown "Название неизвестно"> 
+<overpass_err "Используйте функцию «Увеличения» для просмотра бóльшего количества пивных заведений">
+<map_popup_name_unknown "Название неизвестно">
 <map_popup_opening_hours "Часы работы">
 <map_popup_happy_hours "Скидки/Акции">
 <map_popup_beer "Разливное пиво">
@@ -74,20 +77,20 @@ OpenBeerMap translation file [ru] | noemie.lehuby(at)gmail.com | MIT Licensed
 <map_popup_location "Я здесь">
 
 /* Выбор слоя */
-<layers_overlays_all "Всё пиво"> 
+<layers_overlays_all "Всё пиво">
 <layers_setup "Выбрать">
 
 /* Насторойки */
-<modal_setup_title "Настройки дисплея"> 
+<modal_setup_title "Настройки дисплея">
 <modal_setup_title_beers "<i></i> Favourite beers"> /* TODO */
 <modal_setup_title_tilelayer "<i></i> Tile layer"> /* TODO */
-<modal_setup_title_favorites "<i></i> Любимое пиво"> 
+<modal_setup_title_favorites "<i></i> Любимое пиво">
 <modal_setup_label_selected "Количество выбранного пива :">
 <modal_setup_button_clear "<i></i> Сбросить">
-<modal_setup_button_save "Сохранить"> 
-<modal_setup_label_add "Добавить любимое пиво"> 
-<modal_setup_confirm_clear "Вы уверенны что хотите удалить пиво из избранного?"> 
-<modal_setup_favorites_empty "У вас нет избранного пива. Если вы хотите чтобы оно отображалось на карте, добавьте его используя \"Добавить любимое пиво\" поле."> 
+<modal_setup_button_save "Сохранить">
+<modal_setup_label_add "Добавить любимое пиво">
+<modal_setup_confirm_clear "Вы уверенны что хотите удалить пиво из избранного?">
+<modal_setup_favorites_empty "У вас нет избранного пива. Если вы хотите чтобы оно отображалось на карте, добавьте его используя \"Добавить любимое пиво\" поле.">
 <modal_setup_display_restaurant "Display restaurants?"> /* TODO */
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
