@@ -5,7 +5,7 @@
 
 /* Páxina d'entrada */
 <nav_link_about "<i></i> Tocante a">
-<nav_link_news "<i></i> Novedaes"> 
+<nav_link_news "<i></i> Novedaes">
 
 /* About */
 <modal_about_title "¡Bienvenios a OpenBeerMap!">
@@ -51,6 +51,9 @@
 
 /* Formulariu d'edición */
 <edit_title "Edición del bar">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_loading "<i></i> Cargando la información del bar">
 <edit_label_name "Nome">
 <edit_label_beers "Cerveza de grifu disponible">
@@ -64,7 +67,7 @@
 <edit_button_save "Guardar">
 <edit_button_discard "Anular">
 <edit_button_more "<i></i> Más">
-<edit_button_osm "Editar n'OpenStreetMap"> 
+<edit_button_osm "Editar n'OpenStreetMap">
 
 /* Elementos del mapa */
 <attribution_osm "&copy; gracies a los collaboradores d'<a>OpenStreetMap</a>">
@@ -88,7 +91,7 @@
 <modal_setup_label_selected "Númberu de cerveces esbillaes:">
 <modal_setup_button_clear "<i></i> Llimpiar too">
 <modal_setup_button_save "Guardar">
-<modal_setup_button_discard "Encaboxar"> 
+<modal_setup_button_discard "Encaboxar">
 <modal_setup_label_add "Amestar una cerveza favorita">
 <modal_setup_confirm_clear "¿Tas seguru de que quies desaniciar toles cerveces favorites?">
 <modal_setup_favorites_empty "Nun tienes cerveces favorites. Si quies poder veles nel mapa, amiéstales usando'l campu \"Amestar una cerveza favorita\".">
@@ -99,6 +102,5 @@
                 El mapa llibre y editable de los bares y cerveces de grifu que se sirven.
                 Los datos vienen d'OpenStreetMap y toles collaboraciones devuélvense allí.
                 Disponible tamién na direición http://openbeermap.github.io/
-"""> 
+""">
 <why_is_geoloc_needed "Necesítase pa centrar el mapa nel llugar correutu">
-

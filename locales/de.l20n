@@ -50,18 +50,21 @@
 <modal_about_category_contributors_list "und viele weitere …">
 
 /* Edit Form */
-<edit_title "Bearbeite diese Kneipe in OpenBeerMap"> 
+<edit_title "Bearbeite diese Kneipe in OpenBeerMap">
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_loading "<i></i> Kneipeninformationen werden geladen">
-<edit_label_name "Name"> 
-<edit_label_beers "Gezapfte Biersorten"> 
+<edit_label_name "Name">
+<edit_label_beers "Gezapfte Biersorten">
 <edit_label_add_beer "Biersorte hinzufügen">
-<edit_label_wifi "WLAN"> 
+<edit_label_wifi "WLAN">
 <edit_label_wifi_yes "<input> ja">
 <edit_label_wifi_no "<input> nein">
-<edit_label_wifi_unknown "<input> unbekannt"> 
-<edit_label_opening_hours "Öffnungszeiten"> 
-<edit_label_happy_hours "Happy Hours"> 
-<edit_button_save "Speichern"> 
+<edit_label_wifi_unknown "<input> unbekannt">
+<edit_label_opening_hours "Öffnungszeiten">
+<edit_label_happy_hours "Happy Hours">
+<edit_button_save "Speichern">
 <edit_button_discard "Verwerfen">
 <edit_button_more "<i></i> …">
 <edit_button_osm "Kneipe in OpenStreetMap bearbeiten">
