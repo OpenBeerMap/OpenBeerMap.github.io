@@ -12,56 +12,56 @@
   "tags": [
     {
       "key": "brewery",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "draf beers served : diplayed on the map ; can be edited"
     },
     {
       "key": "brewery:note",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "note on draft beers : created by the project ; included to brewery after moderation ; can be edited"
     },
     {
       "key": "name",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "name of the bar : diplayed on the map ; can be edited"
     },
     {
       "key": "internet_access",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; can be edited"
     },
     {
       "key": "opening_hours",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; cannot be edited"
     },
     {
       "key": "happy_hours",
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; cannot be edited"
     },    
     {
       "key": "amenity",
       "value": "bar",      
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; cannot be edited"
     }, 
     {
       "key": "amenity",
       "value": "cafe",      
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map if not cuisine = coffee_shop; cannot be edited"
     }, 
     {
       "key": "amenity",
       "value": "biergaten",      
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; cannot be edited"
     },     
     {
       "key": "amenity",
       "value": "pub",      
-      "object_types": ["way", "node"],
+      "object_types": ["area", "node"],
       "description": "diplayed on the map ; cannot be edited"
     }
   ]
