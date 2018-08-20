@@ -35,3 +35,4 @@
 * Florian Sternke (dalori)
 * Hugosu
 * tassoman
+* Richard Finegold (goldfndr)
