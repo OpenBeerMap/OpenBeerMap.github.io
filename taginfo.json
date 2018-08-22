@@ -19,7 +19,7 @@
       "key": "brewery",
       "tag": "none",
       "object_types": ["area", "node"],
-      "description": "exclusion from display on the map"
+      "description": "excluded from display on the map"
     },
     {
       "key": "brewery:note",
