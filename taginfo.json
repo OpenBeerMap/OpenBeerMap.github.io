@@ -17,7 +17,7 @@
     },
     {
       "key": "brewery",
-      "tag": "none",
+      "value": "none",
       "object_types": ["area", "node"],
       "description": "excluded from display on the map"
     },
