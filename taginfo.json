@@ -13,7 +13,13 @@
     {
       "key": "brewery",
       "object_types": ["area", "node"],
-      "description": "draf beers served : diplayed on the map ; can be edited"
+      "description": "draft beers served : displayed on the map ; can be edited"
+    },
+    {
+      "key": "brewery",
+      "value": "none",
+      "object_types": ["area", "node"],
+      "description": "excluded from display on the map"
     },
     {
       "key": "brewery:note",
@@ -23,46 +29,52 @@
     {
       "key": "name",
       "object_types": ["area", "node"],
-      "description": "name of the bar : diplayed on the map ; can be edited"
+      "description": "name of the bar : displayed on the map ; can be edited"
     },
     {
       "key": "internet_access",
       "object_types": ["area", "node"],
-      "description": "diplayed on the map ; can be edited"
+      "description": "displayed on the map ; can be edited"
     },
     {
       "key": "opening_hours",
       "object_types": ["area", "node"],
-      "description": "diplayed on the map ; cannot be edited"
+      "description": "displayed on the map ; cannot be edited"
     },
     {
       "key": "happy_hours",
       "object_types": ["area", "node"],
-      "description": "diplayed on the map ; cannot be edited"
+      "description": "displayed on the map ; cannot be edited"
     },    
     {
       "key": "amenity",
       "value": "bar",      
       "object_types": ["area", "node"],
-      "description": "diplayed on the map ; cannot be edited"
+      "description": "displayed on the map ; cannot be edited"
     }, 
     {
       "key": "amenity",
       "value": "cafe",      
       "object_types": ["area", "node"],
-      "description": "diplayed on the map if not cuisine = coffee_shop; cannot be edited"
+      "description": "displayed on the map if not cuisine = coffee_shop; cannot be edited"
     }, 
     {
       "key": "amenity",
-      "value": "biergaten",      
-      "object_types": ["area", "node"],
-      "description": "diplayed on the map ; cannot be edited"
+      "value": "biergarten",      
+      "object_types": ["node"],
+      "description": "displayed on the map ; cannot be edited"
+    },     
+    {
+      "key": "microbrewery",
+      "value": "yes",      
+      "object_types": ["node"],
+      "description": "displayed on the map if tagged on an amenity; cannot be edited"
     },     
     {
       "key": "amenity",
       "value": "pub",      
       "object_types": ["area", "node"],
-      "description": "diplayed on the map ; cannot be edited"
+      "description": "displayed on the map ; cannot be edited"
     }
   ]
 }
