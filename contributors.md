@@ -36,3 +36,4 @@
 * Hugosu
 * tassoman
 * Richard Finegold (goldfndr)
+* Stefan Haan (haansn08)
