@@ -5,7 +5,7 @@
 
 
 /* Home Page */
-<nav_link_about "<i></i> Om kartan"> 
+<nav_link_about "<i></i> Om kartan">
 <nav_link_news "<i></i> News"> /* TODO */
 
 /* Blabla */
@@ -50,18 +50,21 @@
 <modal_about_category_contributors_list "and many more ..."> /* TODO */
 
 /* Edit Form */
-<edit_title "Ändra denna pub i OpenBeerMap"> 
+<edit_title "Ändra denna pub i OpenBeerMap">
 <edit_loading "<i></i> Loading bar information"> /* TODO */
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_label_name "Name">/* TODO */
-<edit_label_beers "Fatöl finns"> 
+<edit_label_beers "Fatöl finns">
 <edit_label_add_beer "Add beer"> /* TODO */
-<edit_label_wifi "Wifi"> 
+<edit_label_wifi "Wifi">
 <edit_label_wifi_yes "<input> JA">
 <edit_label_wifi_no "<input> NEJ">
-<edit_label_wifi_unknown "<input> kanske"> 
-<edit_label_opening_hours "Öppettider"> 
-<edit_label_happy_hours "Happy Hours"> 
-<edit_button_save "Spara"> 
+<edit_label_wifi_unknown "<input> kanske">
+<edit_label_opening_hours "Öppettider">
+<edit_label_happy_hours "Happy Hours">
+<edit_button_save "Spara">
 <edit_button_discard "Discard"> /* TODO */
 <edit_button_more "<i></i> ...">
 <edit_button_osm "Editera direkt till OpenStreetMap">
@@ -87,7 +90,7 @@
 <modal_setup_title_favorites "<i></i> Favourite beers"> /* TODO */
 <modal_setup_label_selected "Number of selected beers:"> /* TODO */
 <modal_setup_button_clear "<i></i> Clear list"> /* TODO */
-<modal_setup_button_save "Spara"> 
+<modal_setup_button_save "Spara">
 <modal_setup_label_add "Add favourite beer"> /* TODO */
 <modal_setup_confirm_clear "Are you sure that you want to delete all your favourite beers?"> /* TODO */
 <modal_setup_favorites_empty "You have no favourite beers. If you want to be able to display them on the map, add them using the \"Add favourite beer\" field."> /* TODO */

@@ -52,6 +52,9 @@
 /* Edit Form */
 <edit_title "Redakti ĉi tiun drinkejon">
 <edit_loading "<i></i> Loading bar information"> /* TODO */
+<oauth_alert_no_auth "You need to authenticate with your OSM account to edit this bar. <button>Login</button>"> /* TODO */
+<oauth_alert_auth "You are logged as "> /* TODO */
+<oauth_alert_logout "<a>Log out</a>"> /* TODO */
 <edit_label_name "Nomo">
 <edit_label_beers "Elbarelaj bieroj disponeblas">
 <edit_label_add_beer "Add beer"> /* TODO */
@@ -64,7 +67,7 @@
 <edit_button_save "Konservi">
 <edit_button_discard "Discard"> /* TODO */
 <edit_button_more "<i></i> More"> /* TODO */
-<edit_button_osm "Redakti rekte en OpenStreetMap"> 
+<edit_button_osm "Redakti rekte en OpenStreetMap">
 
 /* Map elements */
 <attribution_osm "Datumoj de mapo &copy; kontribuantoj de <a>OpenStreetMap</a>">

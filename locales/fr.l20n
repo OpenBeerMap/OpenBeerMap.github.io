@@ -12,8 +12,8 @@
 <modal_about_title_about "<i></i> À propos">
 <modal_about_title_contribute "<i></i> Contribuer">
 <modal_about_title_credits "<i></i> Crédits">
-<modal_about_category_bar "Ajouter un bar"> 
-<modal_about_content_bar "Si un bar n'apparait pas sur OpenBeerMap, il faut l'ajouter au préalable dans OpenStreetMap. <a>Comment faire ?</a>"> 
+<modal_about_category_bar "Ajouter un bar">
+<modal_about_content_bar "Si un bar n'apparait pas sur OpenBeerMap, il faut l'ajouter au préalable dans OpenStreetMap. <a>Comment faire ?</a>">
 <modal_about_content_bar_more """
     <p>Si vous ne trouvez pas votre bar, vous pouvez <a>créer une note</a>. Renseignez autant d'informations que possible afin qu'un contributeur OpenStreetMap puisse l'ajouter.</p>
     <p>Si vous êtes contributeur OpenStreetMap, prenez bien soin de vérifier que le noeud ou le chemin créé contienne l'un des tags suivants :</p>
@@ -23,10 +23,10 @@
         <li><code>amenity = pub</code></li>
     </ul>
     <p>Les restaurants (<code>amenity = restaurant</code>) et d'autres lieux peuvent aussi apparaitre à condition qu'ils aient le tag <code>brewery = *</code>.</p>
-"""> 
-<modal_about_category_content "Ajouter du contenu"> 
-<modal_about_content_content "Le moyen le plus simple de contribuer et d'ajouter des bières aux bars que vous connaissez."> 
-<modal_about_content_content_more "<i></i> Vous ne trouvez pas votre bar ?"> 
+""">
+<modal_about_category_content "Ajouter du contenu">
+<modal_about_content_content "Le moyen le plus simple de contribuer et d'ajouter des bières aux bars que vous connaissez.">
+<modal_about_content_content_more "<i></i> Vous ne trouvez pas votre bar ?">
 <modal_about_content_about """
     <p>Cette application vous permet de trouver où boire votre bière préférée. Si des informations sont incomplètes ou erronées, n'hésitez pas à contribuer en cliquant sur le bouton <span><i></i> Ajouter des infos sur ce bar</span>.</p>
     <p>Vous trouverez plus d'informations sur la genèse de cette application <a>sur le blog de Noémie Lehuby</a>.</p>
@@ -34,7 +34,7 @@
 """>
 <modal_about_category_translate "Traduire">
 <modal_about_content_translate "Pour découvrir comment traduire OpenBeerMap, <a>rendez-vous sur cet article de blog</a> (en anglais). ">
-<modal_about_category_suggestions "Faire des suggestions"> 
+<modal_about_category_suggestions "Faire des suggestions">
 <modal_about_content_suggestions "Vous pouvez écrire un e-mail à <strong>openbeermap [at] gmail [dot] com</strong> si vous avez des suggestions.">
 <modal_about_category_donate "Faire un don">
 <modal_about_content_donate "Si vous voulez nous payer une bière">
@@ -52,6 +52,9 @@
 /* Edit Form */
 <edit_title "Édition du bar">
 <edit_loading "<i></i> Chargement des informations du bar">
+<oauth_alert_no_auth "Vous devez vous connecter avec votre compte OSM pour modifier ce bar. <button>Connexion</button>">
+<oauth_alert_auth "Vous êtes connecté(e) en tant que ">
+<oauth_alert_logout "<a>Déconnexion</a>">
 <edit_label_name "Nom">
 <edit_label_beers "Bières pression disponibles">
 <edit_label_add_beer "Ajouter une bière">
@@ -63,13 +66,13 @@
 <edit_label_happy_hours "Happy hours">
 <edit_button_save "Enregistrer">
 <edit_button_discard "Annuler">
-<edit_button_more "<i></i>"> 
+<edit_button_more "<i></i>">
 <edit_button_osm "Éditer dans OpenStreetMap">
 
 /* Map elements */
 <attribution_osm "&copy; merci aux contributeurs <a>OpenStreetMap</a>">
 <overpass_err "Zoomer pour voir les bars">
-<map_popup_name_unknown "Nom inconnu"> 
+<map_popup_name_unknown "Nom inconnu">
 <map_popup_opening_hours "Horaires d'ouverture">
 <map_popup_happy_hours "Happy hours">
 <map_popup_beer "Bières pression">
@@ -77,27 +80,27 @@
 <map_popup_location "Vous êtes ici">
 
 /* Layers choice */
-<layers_overlays_all "Tous les bars"> 
+<layers_overlays_all "Tous les bars">
 <layers_setup " Personnaliser">
 
 /* Setup */
 <modal_setup_title "Configuration de l'affichage">
 <modal_setup_title_beers "<i></i> Bières préférées">
 <modal_setup_title_tilelayer "<i></i> Fond de carte">
-<modal_setup_title_favorites "<i></i> Bières préférées"> 
+<modal_setup_title_favorites "<i></i> Bières préférées">
 <modal_setup_label_selected "Nombre de bières séléctionnées :">
 <modal_setup_button_clear "<i></i> Tout effacer">
-<modal_setup_button_save "Fermer"> 
-<modal_setup_button_discard "Annuler"> 
+<modal_setup_button_save "Fermer">
+<modal_setup_button_discard "Annuler">
 <modal_setup_label_add "Ajouter une bière préférée">
-<modal_setup_confirm_clear "Êtes-vous sûr de vouloir supprimer toutes vos bières préférées ?"> 
+<modal_setup_confirm_clear "Êtes-vous sûr de vouloir supprimer toutes vos bières préférées ?">
 <modal_setup_favorites_empty "Vous n'avez aucune bière préférée. Pour pouvoir afficher une bière sur la carte, ajoutez-la en utilisant le champ \"Ajouter une bière préférée\".">
-<modal_setup_display_restaurant "Afficher les restaurants ?"> 
+<modal_setup_display_restaurant "Afficher les restaurants ?">
 
 /* Firefox OS Manifest : https://marketplace.firefox.com/app/openbeermap */
 <app_description """
                 La carte libre et éditable des bars et bières pression qui y sont servies.
-                Les données proviennent d'OpenStreetMap et toute contribution y est reversée. 
+                Les données proviennent d'OpenStreetMap et toute contribution y est reversée.
                 Aussi disponible à l'adresse http://openbeermap.github.io/
 """>
 <why_is_geoloc_needed "Nécessaire pour centrer la carte au bon endroit.">
