@@ -1,7 +1,7 @@
 # Contributors
 
 ## special thanks to
-* Noémie Lehuby (@nlehuby)
+* Noémie Lehuby (nlehuby)
 * Xuacu Saturio
 * Poilou (labiloute)
 * Maxime Corteel (mcorteel)
@@ -37,3 +37,4 @@
 * tassoman
 * Richard Finegold (goldfndr)
 * Stefan Haan (haansn08)
+* Pascal Rhod (prhod)
