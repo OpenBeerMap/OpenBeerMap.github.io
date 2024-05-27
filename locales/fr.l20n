@@ -53,7 +53,7 @@
 <edit_title "Édition du bar">
 <edit_loading "<i></i> Chargement des informations du bar">
 <oauth_alert_no_auth "Vous devez vous connecter avec votre compte OSM pour modifier ce bar. <button>Connexion</button>">
-<oauth_alert_auth "Vous êtes connecté en tant que ">
+<oauth_alert_auth "Vous êtes connecté(e) en tant que ">
 <oauth_alert_logout "<a>Déconnexion</a>">
 <edit_label_name "Nom">
 <edit_label_beers "Bières pression disponibles">
