@@ -7,7 +7,6 @@ var auth = osmAuth.osmAuth({
     redirect_uri: window.location.origin + window.location.pathname + "land.html",
     scope: "read_prefs write_api",
     singlepage: false,
-    url: 'https://www.openstreetmap.org'
 });
 
 function basic_auth() {
