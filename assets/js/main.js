@@ -9,10 +9,11 @@ var tilelayer_properties = {
     attribution: '<span data-l10n-id="attribution_osm">Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors</span>'
 }
 
+var osm_standard = new L.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', tilelayer_properties);
 var osm_stamen = new L.TileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', tilelayer_properties);
 var osm_cartodb = new L.TileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', tilelayer_properties);
-var tile_layer_list = [osm_cartodb, osm_stamen]
-var map = new L.Map('map').addLayer(osm_cartodb).setView(new L.LatLng(48.84702,2.37705), 17);
+var tile_layer_list = [osm_standard, osm_cartodb, osm_stamen]
+var map = new L.Map('map').addLayer(osm_standard).setView(new L.LatLng(48.84702,2.37705), 17);
 
 function change_layer(layer_to_add) {
     for (var i = 0; i < tile_layer_list.length; i++) {
@@ -94,7 +95,7 @@ function refresh_layers_list() {
     }
 
     layersList = L.control.layers({
-        "OpenStreetMap": osm_stamen
+        "OpenStreetMap": osm_standard
     }, overlayMaps, {
         collapsed: document.body.clientWidth < 768
     });
